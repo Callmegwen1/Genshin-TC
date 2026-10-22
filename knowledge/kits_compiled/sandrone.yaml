@@ -1,0 +1,141 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Sandrone:
+  schema: 3
+  element: Cryo
+  weapon: claymore
+  roles:
+  - on_field_carry
+  - enabler
+  behavior:
+    field_time: medium
+    on_field_damage: true
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Cryo
+      types:
+      - charged
+      - summon
+      - skill
+      - burst
+      - reaction
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: medium
+    - element: Cryo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - summon
+    - skill
+    - burst
+  - stat: atk
+    for: buff
+    source:
+    - reaction
+  effects:
+  - kind: reaction_conversion
+    target: party
+    affects:
+      elements:
+      - Cryo
+      - Electro
+      - Anemo
+      reactions:
+      - superconduct
+      - swirl-cryo
+    amount: Superconduct becomes Stellar-Conduct and Cryo Swirl becomes Stellar Swirl
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - superconduct
+      - swirl-cryo
+      text: a party member triggers Superconduct or Cryo Swirl
+    source: 'Stellar Jubilee: Light of Rationalisme'
+  - kind: reaction_base
+    target: party
+    affects:
+      reactions:
+      - superconduct
+      - swirl-cryo
+    amount: 0.7% Base DMG per 100 of Sandrone's ATK, max 14%
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - superconduct
+      - swirl-cryo
+      text: applies to the Stellar-Conduct / Stellar Swirl reactions
+    source: 'Stellar Jubilee: Light of Rationalisme (Base DMG increase)'
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 8 Elemental Mastery per 100 ATK, max 160
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: A Lady's Code of Conduct
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - skill
+      - burst
+    amount: second Prism Shot deals 400% of original DMG when Decoding Power > 50; Convective Inhibition Ray deals 100% +
+      10% per Refined Tactics stack cleared (max 10 stacks)
+    duration: Refined Tactics stacks last 60s
+    stacking: 1 Refined Tactics stack per 10 Decoding Power lost, max 10
+    conditions:
+    - type: character_state
+      state: 'Radiance: Stellar Glimmer'
+      text: 'Sandrone in the Radiance: Stellar Glimmer state'
+    source: Eternal Speculation Engine
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - superconduct
+    - swirl-cryo
+    - freeze
+    - melt
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Formule Phenomenale: Self-Evident Proposition, Formule Phenomenale: Differential
+      Analysis, Formule Phenomenale: Q.E.D., Eternal Speculation Engine, A Lady''s Code of Conduct, Stellar Jubilee: Light
+      of Rationalisme'
+    engine: 'Engine measurements: field share 50%, team damage share 52%, Cryo on 3.5 / off 2.0 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

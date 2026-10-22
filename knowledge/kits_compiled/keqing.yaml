@@ -1,0 +1,104 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Keqing:
+  schema: 3
+  element: Electro
+  weapon: sword
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Electro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 40
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Electro Infusion
+    duration: 5
+    stacking: none
+    conditions: []
+    source: Thundering Penance
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.15
+    duration: 8
+    stacking: none
+    conditions: []
+    source: Aristocratic Dignity
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Energy Recharge +15%
+    duration: 8
+    stacking: none
+    conditions: []
+    source: Aristocratic Dignity
+  conditions: []
+  reactions:
+    owns:
+    - aggravate
+    - overloaded
+    - electrocharged
+    - superconduct
+    enables: []
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Yunlai Swordsmanship, Stellar Restoration, Starward Sword, Thundering
+      Penance, Aristocratic Dignity'
+    community: 'How the character is played and engine measurements: on-field Electro carry (58% field share)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

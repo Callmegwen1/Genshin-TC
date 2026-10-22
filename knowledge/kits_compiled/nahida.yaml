@@ -1,0 +1,173 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Nahida:
+  schema: 3
+  element: Dendro
+  weapon: catalyst
+  roles:
+  - off_field_sub_dps
+  - buffer
+  - applier
+  - enabler
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Dendro
+      types:
+      - skill
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: medium
+    - element: Dendro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 50
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: em
+    for: damage
+    source:
+    - skill
+  - stat: atk
+    for: damage
+    source:
+    - skill
+  - stat: em
+    for: buff
+    source:
+    - Compassion Illuminated
+  effects:
+  - kind: em
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 25% of the highest party member's Elemental Mastery, max 250
+    duration: Shrine of Maya duration (15s base)
+    stacking: none
+    conditions:
+    - type: character_state
+      state: inside Shrine of Maya
+      text: active character within the Shrine of Maya
+    source: Compassion Illuminated
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - skill
+    amount: 26.78% / 40.18% to Tri-Karma Purification with 1 / 2+ Pyro members
+    duration: Shrine of Maya duration
+    stacking: none; at talent level 10
+    conditions:
+    - type: party_element_count
+      elements:
+      - Pyro
+      full: 2
+      text: Pyro party members; increased further with at least 2
+    source: Illusory Heart (Pyro at talent level 10)
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - skill
+    amount: Tri-Karma Purification interval -0.45s / -0.67s with 1 / 2+ Electro members
+    duration: Shrine of Maya duration
+    stacking: none; at talent level 10
+    conditions:
+    - type: party_element_count
+      elements:
+      - Electro
+      full: 2
+      text: Electro party members; increased further with at least 2
+    source: Illusory Heart (Electro at talent level 10)
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: Shrine of Maya duration +6.02s / +9.03s with 1 / 2+ Hydro members
+    duration: unknown
+    stacking: none; at talent level 10
+    conditions:
+    - type: party_element_count
+      elements:
+      - Hydro
+      full: 2
+      text: Hydro party members; increased further with at least 2
+    source: Illusory Heart (Hydro at talent level 10)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - skill
+    amount: 0.1% per Elemental Mastery point beyond 200 to Tri-Karma Purification, max 80%
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Awakening Elucidated
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - skill
+    amount: 0.03% per Elemental Mastery point beyond 200 to Tri-Karma Purification, max 24%
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Awakening Elucidated
+  conditions:
+  - type: party_element_count
+    elements:
+    - Pyro
+    - Electro
+    - Hydro
+    full: 2
+    text: Illusory Heart effects depend on Pyro, Electro and Hydro party members, increased further with at least 2 of a type
+  reactions:
+    owns: []
+    enables:
+    - quicken
+    - spread
+    - bloom
+    - burning
+    - hyperbloom
+    - burgeon
+    requires: []
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Akara, All Schemes to Know, Illusory Heart, Compassion Illuminated, Awakening
+      Elucidated'
+    community: 'Engine measurements and general play pattern: off-field Dendro applier, EM buffer and sub-DPS'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

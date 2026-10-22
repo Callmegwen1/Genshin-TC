@@ -1,0 +1,87 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Xiangling:
+  schema: 3
+  element: Pyro
+  weapon: polearm
+  roles:
+  - off_field_sub_dps
+  - applier
+  - buffer
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Pyro
+      types:
+      - skill
+      - summon
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: medium
+    - element: Pyro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - summon
+    - burst
+  effects:
+  - kind: atk_pct
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 0.1
+    duration: 10
+    stacking: none
+    conditions:
+    - type: character_state
+      state: picks up Guoba's chili pepper
+      text: character picks up the chili pepper left when Guoba Attack ends
+    source: Beware, It's Super Hot!
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - burgeon
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Guoba Attack, Pyronado, Crossfire, Beware, It''s Super Hot!'
+    community: 'How the character is played and engine measurements: off-field Pyro sub-DPS through Pyronado and Guoba'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,44 @@
+# Known data-coverage gaps (development diagnostics): mechanics the sourced data does not describe, so a failure that
+# runs through them is a DATA COVERAGE failure, not a model failure. Each entry: character, what is missing, which
+# failure labels it explains, and its status. Remove an entry only when sourced data closes it.
+gaps:
+  - character: Flins
+    missing: "energy refund that funds Thunderous Symphony (30 Energy) between Bursts: not in the Amber kit text or tables"
+    labels: [ENERGY_ERROR, TIMING_ERROR, CALCULATOR_DAMAGE_ERROR, ROTATION_SELECTION_ERROR]
+    status: open
+  - character: Mona
+    missing: "Illusory Bubble pop timing depends on teammates' hits (event dependency); not modelled generically"
+    labels: [REACTION_ERROR, APPLICATION_ERROR]
+    status: open (documented limitation)
+  - character: Zhongli
+    missing: "Stone Stele particle schedule: only reference-team logs contain his Skill casts (excluded from measurement)"
+    labels: [ENERGY_ERROR]
+    status: open (measurement coverage)
+  - character: Chevreuse
+    missing: "Overcharged Ball: her Skill fires it only after a party Overloaded (gcsim '[Overcharged]' in 236 of 959
+      shots); the timeline cannot see reactions before the reaction model runs, so the plain Press DMG is used"
+    labels: [CALCULATOR_DAMAGE_ERROR, KIT_DATA_ERROR]
+    status: "open (model capability: reaction-gated action variants)"
+assumptions:
+  - "stamina regeneration 25/s starting 1.82 s after a dash begins (measured from gcsim stam_post, 955 samples)"
+  - "Neuvillette Charged Attack with exactly 1 Sourcewater Droplet: interpolated duration"
+  - "Favonius procs only while the wearer is active: gcsim behaviour (4396/4396 logged procs), not stated in game text"
+  - "Rain Swords / Exquisite Throw: triggered by the Normal Attack ACTION (game text 'performs a Normal Attack'), and
+    sustained: an ICD that ends while the attack is still being performed triggers then (modal wave spacing 1.00 s in
+    other teams' gcsim logs); trigger delays measured (0.18 s / 0.0 s on top of the kit offsets)"
+  - "Xingqiu Rain Screen orbitals: duration 15 s (measured 7 ticks, 0.9 s then every 2.25 s; the exact end lies in
+    14.5-16.75 s)"
+  - "swap cooldown 1.0 s from the swap's completion (gcsim: 60 frames after the swap executes); no community log
+    contains a refused swap, so it is gcsim's rule, not a measurement"
+  - "transitions the community rotations never play (fifth consecutive attack, attacks inside a Burst state) are
+    frame data from single-character gcsim probe scripts (gtc/forward/frames.py probe), not team results"
+  - "Skill cooldowns that differ while the owner's own Burst is active (Bennett's field) are measured per context; the
+    reduction applies after 1.0 s on field (gcsim: the field ticks onto the character; 15% reduced within 0.5 s of a
+    swap-in, ~100% after 1 s)"
+  - "dash lockout: two dashes within 0.82 s lock the next one for 1.5 s after the second (single-character gcsim probes,
+    575 samples)"
+  - "Normal Attack positions the source rotations never played are built from the Amber 'N-Hit DMG' rows with the
+    nearest measured attack's element, gauge, ICD and timing"
+  - "Raiden's Musou Isshin runs 7 s from the end of the Burst animation (gcsim status 518 f = 420 + 98); hitlag
+    extensions (up to ~0.9 s more in gcsim) are not modelled, so Musou attack counts are slightly conservative"
+  - "Yae Miko Sesshou Sakura schedule (first strike 2.0 s, every 2.93 s, 6 strikes) measured from single turrets"

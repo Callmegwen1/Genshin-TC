@@ -1,0 +1,153 @@
+# Every tunable value in the engine, in one versioned file. Game constants (reaction multipliers, enemy level,
+# level caps) stay in the code; this file holds judgments and fitted settings.
+#
+# Rules:
+#   - Change a value only together with a version bump, and run `python -m gtc benchmark --record` after it.
+#     tests/test_model.py fails when this file (or scoring.yaml) changes without a recorded benchmark run.
+#   - Each value says where it came from: measured, cross-validated, tuned on the benchmark, or a judgment.
+
+model_version: "6.7"
+
+account:
+  plan_weights: [1.0, 1.0, 0.5, 0.25]   # weight of the 1st..4th team in a plan (two Spiral Abyss halves count fully); judgment
+  teams_per_template: 12                 # candidate lineups kept per archetype in the plan search; speed setting
+  viable_carry_potential: 45.0           # a carry whose best team reaches this potential counts as a real main DPS; judgment
+  carry_category_min: 3                  # carry-role quality that marks a character as a carry when Prydwen has no rating; judgment
+  replacement_value: 20.0                # a plan team earns max(0, value - this); also the only viability threshold since model 6.3
+                                         # (the separate useful-team gate of 30 was removed: calibration 86.4% for 15..25 without it,
+                                         # 86.7% with it, the difference one gap-size class); calibrated, middle of the plateau
+  fill_lift: 0.15                        # a pull that lifts the team it joins by this share 'fills a gap' (a label only); judgment
+
+report:
+  built_threshold: 0.75                  # investment above which a character counts as built; judgment
+  candidates_per_template: 8             # lineups assessed per archetype in the team report; speed setting
+
+decision:                                # phase 10, gtc/decision.py: the policy that turns expected power and sd into choices
+  risk: 0.674                            # plans and rankings maximise expected - risk x sd; calibrated by decision regret (phase 4)
+  claim_accuracy: 0.8                    # "better" is claimed only where held-out claims are right this often; judgment
+
+knowledge:
+  non_preferred_factor: 0.8              # a slot's non-preferred roles count at this share of their quality; judgment
+
+teams:
+  pair_thresholds: [0.30, 0.22, 0.15, 0.08]  # share of team damage with a carry for teammate quality 5, 4, 3, 2; derived from synergy data
+  unproven_quality: 2.0                  # teammate never simulated with this carry; judgment
+  single_team_cap: 4.0                   # most quality from a single simulated team with this carry; judgment
+
+capabilities:
+  onfield_share: 0.35                    # field time above which a character counts as on-field; measured split
+  neighbour_base: 100.0                  # weight per shared teammate when predicting structure; cross-validated (phase 1)
+
+validity:
+  min_lineups: 8                         # simulated teams of their own a carry needs before their teammate elements are learned; design
+  carry_element_share: 0.95              # a carry needs teammates of an element present in this share of their teams; tuned on recall
+
+synergy:
+  enable_share: 0.5                      # share of a transformative or catalyze reaction credited to the aura's owners; judgment
+  structure_rules:                       # damage-structure thresholds; judgment, checked against measured lineups
+    hypercarry: 0.55
+    dual_carry: 0.25
+    reaction_core: 0.50
+    driver_field: 0.40
+    driver_damage: 0.25
+
+pairmodel:
+  lambda_char: 0.3                       # ridge penalty for character effects; cross-validated
+  lambda_pair: 1.0                       # ridge penalty for pair effects; cross-validated
+  min_pair_lineups: 2                    # lineups a pair needs for its own effect; design
+  capacity_floor: 0.05                   # damage capacity never counts below this in the log term (model 6.3); numerical design
+  carry_like_share: 0.5                  # a character simulated as the damage owner in at least this share of their lineups is a
+                                         # carry; two carries never simulated together are outside the pair model (phase 5); design
+
+investment:
+  artifact_rarity_value: {5: 1.0, 4: 0.7, 3: 0.4, 2: 0.2, 1: 0.1}  # value of an artifact by rarity; judgment
+  roll_quality_share: 0.6                # artifact score = (1 - this) x pieces and levels + this x useful-roll quality; judgment
+
+artifacts:
+  tier_weights: [1.0, 0.85, 0.65, 0.45, 0.3]  # weight of a substat by its tier in the Keqing Mains priority; judgment
+  fallback_weights: {critRate_: 1.0, critDMG_: 1.0, atk_: 0.6, eleMas: 0.5, enerRech_: 0.4, hp_: 0.3, def_: 0.2}  # no guide; judgment
+  benchmark_rolls: 30.0                  # useful rolls of a well-built set of five; the plan's suggested benchmark
+  flat_factor: 0.33                      # flat ATK/HP/DEF counts at this share of the % stat's weight; judgment
+
+review:
+  swap_min_gain: 0.04                    # a teammate swap is suggested only above this expected gain in team power (5.3.1); judgment
+  swap_min_confidence: 0.8               # ... and only when at least this likely to be better, after the coverage cap (5.3.1); judgment
+  estimate:                              # rough team-damage gain of rule findings no simulation measured; judgment
+    main_stat_carry: 0.10
+    main_stat_support: 0.03
+    er_low: 0.05
+    missing_team_set: 0.08
+    duplicate_team_set: 0.03
+    no_set: 0.08
+    unrecommended_set: 0.04
+    crit_ratio: 0.04
+    talent_carry: 0.03
+    talent_support: 0.01
+    level: 0.04
+
+aoe:
+  lineups_per_family: 4                  # strongest lineups per archetype family run against three targets; coverage setting
+  iterations: 100                        # gcsim iterations per AoE run; speed setting
+  min_own_share: 0.03                    # a member's own ratio counts only above this share of team damage; noise floor
+
+profiles:
+  core_loss: 0.15                        # explanation: a member is core when removing them costs this share of the team; judgment
+  definitions:                           # content modes (planner v2, phase 12); weights and gates are judgments, see gtc/profiles.py
+    abyss: {objective: balanced, epsilon: 0.1, minimum_secondary_value: 30.0, weights: {single_target: 0.5, aoe: 0.5}}
+    stygian: {team_weights: [1.0], weights: {single_target: 1.0}}
+    general: {team_weights: [1.0, 1.0, 0.5, 0.25], weights: {single_target: 0.6, aoe: 0.4}}
+    theater: {objective: breadth, weights: {single_target: 0.5, aoe: 0.5}, competent_value: 30.0, max_teams: 6, element_coverage: 0.4}
+
+theory_guard:
+  max_unsupported_share: 0.05            # the calculator refuses a swap when more damage than this runs through reactions it does not model; set on the 200-swap validation
+  min_lunar_share: 0.6                   # and when Lunar-Charged is less than this share of the damage: only Lunar teams validate (19 of 20 accepted swaps within 10%; 0.5 gives 27 of 30)
+
+coverage:                                # TEMPORARY (5.3.1): confidence guard until phases 6, 10, 11, 12; see gtc/coverage.py
+  min_mechanic_share: 0.03               # a member's buff kind is an important mechanic at this mean share of team damage; judgment
+  dealer_share: 0.15                     # without measured owners, members averaging this share of team damage are its dealers; judgment
+  confidence_cap: {partial: 0.8, unknown: 0.65}  # most confidence shown when a mechanic is not represented / unknown; judgment
+
+structure:                               # phase 7, gtc/structure.py: probabilistic damage structure
+  samples: 200                           # draws per lineup when propagating share uncertainty (400 gave the same held-out metrics
+                                         # within 0.5 points at twice the run time); precision setting
+  sample_noise: {log_damage: 0.031, field: 0.0012, reaction: 0.01}  # one gcsim sample's noise: damage and field measured in the
+                                         # phase 6 rebuild against its predecessor; reaction share a judgment
+  on_field_carry: 0.6                    # the top damage dealer's field share that makes an on-field carry; plan definition
+  quickswap_field: 0.25                  # two or more members on field at least this much make a quickswap team; plan definition
+
+typicality:                              # phase 9, gtc/typicality.py: findings that widen extrapolated uncertainty
+  onfield_percentile: 0.98               # more predicted on-field characters than this share of simulated teams is a finding; design
+  capacity_percentile: 0.02              # a lineup whose damage capacity (sum of members' average damage shares) is below this share of
+                                         # simulated teams is a finding: the pair model extrapolates outside its data; design, mirrors the above
+
+estimate:                                # model 6.4, gtc/estimate.community_quality: grading of community simulations; presentation only
+  quality_spread_mixed: 0.25                     # submitter medians differing by more than this share of the value: mixed; judgment
+  quality_spread_poor: 0.5                       # by more than this: poor; judgment
+  quality_carry_share: 0.45                      # a member usually dealing this share of team damage is a usual carry; judgment
+  quality_owner_share: 0.3                       # a measured damage owner usually dealing less than this is an unusual owner; judgment
+
+identity:                                # phase 8, gtc/identity.py: what a team is, from measurements
+  scales: {reaction_damage: 0.3, carry_amplified: 0.4, team_amplified: 0.3, catalyzed: 0.3, aura_at_hit: 0.3,
+           conditioned_buffs: 0.15, trigger_rate: 20.0}  # value of each signal at which a mechanic counts as fully central; judgment
+  central: 0.5                           # centrality at which a mechanic is part of the team's identity; judgment
+  incidental: 0.15                       # below central but at least this: present, named as incidental; judgment
+  owner_share: 0.25                      # a member owns a mechanic at this share of its damage (or of their own hits amplified); judgment
+
+account_power:                           # phase 11, gtc/account_power.py: MetaPower, CurrentPower, AccountCeiling
+  unknown_constellation_sd: 0.15         # relative sd for a constellation whose effect has no same-lineup measurement; judgment
+  min_constellation_comparisons: 2       # same-lineup comparisons needed before a constellation's effect counts as measured; design
+  weapon_sd: 0.15                        # sd per member on a weapon below 5 stars at the ceiling, times their damage share; judgment
+  personal_sim_sd: 0.05                  # relative sd of current power from an exact personal simulation (rotation and Burst-skipping
+                                         # assumptions remain); judgment, model 6.3 moved it out of the code
+
+provisional:                             # phase 6.5, gtc/provisional.py: characters with only a provisional kit
+  min_own_lineups: 3                     # a simulated carry enters the Prydwen tier fit with this many own lineups; design
+  min_shared_with_listed: 2              # a provisional team is valued only if it shares this many members (the character and
+                                         # a teammate) with a Prydwen-listed team; cut the back-test sd from 24% to 19%
+
+kitgen:
+  min_uptime: 0.1                        # generated buffs active on less than this share of receivers' damage are dropped; noise floor
+
+sim:
+  burst_wait_frames: 300                 # reality mode waits this long for a Burst before skipping it; tuned on community configs
+  iterations: 300                        # gcsim iterations for personal simulations; speed and precision setting

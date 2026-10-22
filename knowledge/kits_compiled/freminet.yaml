@@ -1,0 +1,112 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Freminet:
+  schema: 3
+  element: Cryo
+  weapon: claymore
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Cryo
+      types:
+      - normal
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - skill
+    - burst
+  effects:
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - Cryo
+      damage_types:
+      - skill
+    amount: Pressurized Floe CD decreased by 70%; CD reset on cast
+    duration: 10
+    stacking: canceled when Freminet leaves the field
+    conditions: []
+    source: Shadowhunter's Ambush (Subnautical Hunter)
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - Cryo
+      damage_types:
+      - skill
+    amount: Pressurized Floe CD decreased by 1s
+    duration: unknown
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: Pers Timer below Pressure Level 4
+      text: Shattering Pressure unleashed before Pressure Level 4
+    source: Saturation Deep Dive
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Cryo
+      - Physical
+      damage_types:
+      - skill
+    amount: 0.4
+    duration: 5
+    stacking: Shattering Pressure DMG only
+    conditions:
+    - type: reaction_required
+      reactions:
+      - shatter
+      text: Freminet triggers Shatter against opponents
+    source: Parallel Condensers
+  conditions: []
+  reactions:
+    owns:
+    - shatter
+    enables:
+    - freeze
+    - superconduct
+    - melt
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Flowing Eddies, Pressurized Floe, Shadowhunter''s Ambush, Saturation
+      Deep Dive, Parallel Condensers'
+    engine: 'Engine measurements from community simulations: field share 66%, team damage share 52%, all own damage on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

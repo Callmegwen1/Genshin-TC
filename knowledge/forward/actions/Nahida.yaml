@@ -1,0 +1,219 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Nahida:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 9HKFkCzLkMCL (house builds)
+    - gcsim community rotation FtMpJDdBjM6C (house builds)
+    - gcsim community rotation MKTzfNzCrfTk (house builds)
+    - gcsim community rotation WLCCDPDMPhPP (house builds)
+    - gcsim community rotation brhTnFMFpmMj (house builds)
+    - gcsim community rotation h97kFbH7Dn6K (house builds)
+    - gcsim community rotation hnGjRLMDjKtd (house builds)
+    - gcsim community rotation tqfFB9Ckrwqt (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 10 of 10 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.467
+      particles: 3.0
+      hits:
+      - offset: 0.217
+        type: skill
+        table:
+        - skill
+        - Press DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+    burst:
+      duration: 1.867
+      particles: 0.0
+      hits: []
+    dash:
+      duration: 0.35
+      particles: 0.0
+      hits: []
+    charge:
+      duration: 0.183
+      particles: 0.0
+      hits:
+      - offset: 0.917
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+    attack#0:
+      duration: 0.5
+      particles: 0.0
+      hits:
+      - offset: 0.383
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.383
+      particles: 0.0
+      hits:
+      - offset: 0.25
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.633
+      particles: 0.0
+      hits:
+      - offset: 0.433
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+    attack#3:
+      duration: 0.683
+      particles: 0.0
+      hits:
+      - offset: 0.667
+        type: normal
+        table:
+        - normal
+        - 4-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - charge
+    - dash
+    - attack
+    - attack
+    - charge
+    - dash
+    - attack
+    - attack
+    - charge
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - charge
+  - - attack
+    - attack
+    - charge
+  follow:
+    skill: attack
+    burst: attack
+  first: skill
+  causal:
+    facts: &id003
+      known:
+      - Seed of Skandha 25 s; Tri-Karma Purification on party damage to marked enemies, 2.5 s interval, ATK x 175.4% + EM x 350.9% (level 9)
+      - 'Shrine of Maya with an Electro teammate: Tri-Karma interval minus the Burst table''s decrease (gcsim gaps 126-138 f vs 150 f outside)'
+      assumed:
+      - 'Shrine of Maya: the Electro interval decrease applies for the Burst''s base duration (the Hydro extension is not modelled)'
+      unknown: []
+    summons: &id001
+      seed:
+        start_on: skill
+        duration:
+          table:
+          - skill
+          - Seed of Skandha Duration
+        interval: 999
+        hits: []
+      shrine:
+        start_on: burst
+        duration:
+          table:
+          - burst
+          - Base Duration
+        interval: 999
+        hits: []
+    procs: &id002
+      tri_karma:
+        'on':
+          event: hit
+          by: party
+        requires:
+          summon: seed
+        icd: 2.5
+        hits:
+        - offset: 0.2
+          table:
+          - skill
+          - Tri-Karma Purification DMG
+          - 0
+          element: Dendro
+          type: skill
+          gauge: 1.0
+        - offset: 0.2
+          table:
+          - skill
+          - Tri-Karma Purification DMG
+          - 1
+          element: Dendro
+          type: skill
+          scaling: em
+          gauge: 0.0
+        icd_reduce:
+          summon: shrine
+          party_element: Electro
+          by:
+            table:
+            - burst
+            - 'Electro: Trigger Interval Decrease'
+    drop_hits:
+      skill:
+      - Tri-Karma
+      burst:
+      - Tri-Karma
+      attack#0:
+      - Tri-Karma
+      charge:
+      - Tri-Karma
+  summons: *id001
+  procs: *id002
+  facts: *id003

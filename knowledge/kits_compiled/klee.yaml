@@ -1,0 +1,111 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Klee:
+  schema: 3
+  element: Pyro
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  - battery
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - charged
+    amount: 0.5
+    duration: next Charged Attack
+    stacking: 50% chance per Jumpy Dumpty or Normal Attack hit to gain an Explosive Spark
+    conditions: []
+    source: Pounding Surprise (Explosive Spark)
+  - kind: energy
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 2
+    duration: unknown
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: Charged Attack CRIT Hit
+      text: Klee's Charged Attack CRITs
+    source: Sparkling Burst
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - charged
+    amount: Boom-Boom Strike deals 115% / 130% / 150% of original DMG with 1 / 2 / 3 Boom Badges
+    duration: 20
+    stacking: 1 badge per attack type (Normal, Skill, Burst), independent timers
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: 'Hexerei: Secret Rite needs at least 2 Hexerei characters in the party'
+    source: 'Witch''s Eve Rite: Sparkborne Magic (Hexerei: Secret Rite)'
+  conditions: []
+  reactions:
+    owns:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    enables: []
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Kaboom!, Jumpy Dumpty, Sparks ''n'' Splash, Pounding Surprise, Sparkling
+      Burst, Witch''s Eve Rite: Sparkborne Magic'
+    engine: 'Engine measurements: field share 60%, share of team damage 50%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,37 @@
+# Copy this file to a new name without the leading underscore (for example nova.yaml), then fill in
+# the numbers from the official kit or the version announcement. Files starting with "_" are ignored.
+#
+# Then ask the engine:
+#   python -m gtc theory --team "Flins,Ineffa,Columbina,Sucrose" --replace Ineffa --with "Nova"
+#
+# Every field is explained in knowledge/kits.yaml. Values are at talent level 9 unless you say otherwise.
+
+Nova:                      # the character's name, used on the command line
+  element: Electro
+
+  # For the account plan and pull values: where the character fits until simulations exist. Archetype ids
+  # are in knowledge/templates.yaml and knowledge/generated/auto_templates.yaml. These are judgments, so
+  # their teams are evidence tier E (role rules only).
+  expected_archetypes:
+    lunar_charged: {as: support, quality: 4}
+    auto_overloaded_electro_carry: {as: carry, quality: 3}
+  # What they do in a team, per 10 seconds, so validity rules can judge them. Optional.
+  capabilities: {field_share: 0.1, damage_share: 0.2, apply: {Electro.off: 3.0}}
+  moonsign: 1              # 1 if Nod-Krai Moonsign, else leave out
+  enables: [lunar_charged] # if their passive converts Electro-Charged into Lunar-Charged
+  applies: {Electro: 0.8}  # off-field application strength, 0 to 1 (Ineffa is 0.8, Fischl 1.0)
+  cons: 0
+  sets: [Silken Moon's Serenade]   # the 4-piece set you expect them to hold
+
+  # Total stats in combat before team buffs, as a community-standard build would have them.
+  stats: {atk: 2100, hp: 18000, em: 120, cr: 0.65, cd: 1.3}
+
+  effects:
+    - {kind: react_bonus, target: party, value: 0.30, uptime: 0.8, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: "Burst: party Lunar-Charged DMG +30%"}
+    - {kind: res_shred, element: Electro, value: 0.20, uptime: 0.9, note: "Skill: Electro RES -20%"}
+    - {kind: stat, stat: em, target: active, value: 100, uptime: 0.7, note: "A4: active character EM +100"}
+
+  # Own damage per rotation. kind: direct or lunar_charged_direct. mult is the talent multiplier (1.2 = 120%).
+  hits:
+    - {name: Skill turret, kind: lunar_charged_direct, scaling: atk, mult: 0.55, per_rotation: 10}
+    - {name: Burst, kind: direct, scaling: atk, mult: 3.2, per_rotation: 1}

@@ -1,0 +1,143 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role healer added (measured placement role or owned Swirl)
+Clorinde:
+  schema: 3
+  element: Electro
+  weapon: sword
+  roles:
+  - on_field_carry
+  - healer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Electro
+      types:
+      - normal
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - skill
+    - burst
+  - stat: atk
+    for: buff
+    source:
+    - Dark-Shattering Flame
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - normal
+    amount: Normal Attacks become Swift Hunt pistolet attacks dealing Electro DMG that cannot be overridden
+    duration: 7.5
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Night Vigil
+      text: while in the Night Vigil state; ends when she leaves the field
+    source: Hunter's Vigil (Night Vigil)
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 104% / 110% of Bond of Life value (below 100% / at or above 100% of Max HP)
+    duration: instant
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Night Vigil
+      text: Impale the Night with a Bond of Life
+    source: Hunter's Vigil (Impale the Night Healing at talent level 10)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - normal
+      - burst
+    amount: 20% of Clorinde's ATK per stack, max 1,800
+    duration: 15
+    stacking: max 3 stacks, each counted independently
+    conditions:
+    - type: reaction_required
+      reactions:
+      - overloaded
+      - electrocharged
+      - superconduct
+      - quicken
+      - aggravate
+      - hyperbloom
+      - swirl-electro
+      - lunarcharged
+      text: after a nearby party member triggers an Electro-related reaction
+    source: Dark-Shattering Flame
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.1
+    duration: 15
+    stacking: max 2 stacks, each counted independently
+    conditions:
+    - type: character_state
+      state: Bond of Life at least 100% of Max HP
+      text: whenever her Bond of Life increases or decreases while it is at least 100% of Max HP
+    source: Lawful Remuneration
+  conditions: []
+  reactions:
+    owns:
+    - aggravate
+    - overloaded
+    - electrocharged
+    enables:
+    - aggravate
+    - overloaded
+    - electrocharged
+    - superconduct
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Oath of Hunting Shadows, Hunter''s Vigil, Last Lightfall, Dark-Shattering
+      Flame, Lawful Remuneration'
+    community: 'Engine measurements and general play pattern: on-field Electro Normal Attack carry'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

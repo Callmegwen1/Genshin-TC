@@ -1,0 +1,649 @@
+{
+ "benchmark_cases": [
+  "hyperbloom_core"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 54.3,
+   "fit_source": "gcsim",
+   "label": "Kuki Shinobu hypercarry · Hyperbloom + Quicken · incidental Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 51.7,
+   "route": "exact_community",
+   "sd": 3.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 51.0,
+   "fit_source": "gcsim",
+   "label": "Kuki Shinobu dual carry · Hyperbloom + Quicken + Aggravate · incidental Spread, Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Fischl",
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "ranking": 48.5,
+   "route": "exact_community",
+   "sd": 3.7,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 49.5,
+   "fit_source": "gcsim",
+   "label": "Kuki Shinobu dual carry · Quicken + Hyperbloom + Spread + Aggravate",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Fischl",
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan"
+   ],
+   "ranking": 46.1,
+   "route": "exact_community",
+   "sd": 5.1,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 48.7,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Quicken + Hyperbloom · incidental Aggravate, Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 46.0,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 43.9,
+   "fit_source": "pairmodel",
+   "label": "Bennett dual carry · Burgeon + Quicken · incidental Overloaded, Vaporize",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "ranking": 41.8,
+   "route": "exact_community",
+   "sd": 3.1,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.1,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 40.4,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 41.9,
+   "fit_source": "pairmodel",
+   "label": "Bennett dual carry · Quicken + Vaporize from Yelan + Burgeon · incidental Burning, Overloaded",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Nahida",
+    "Yelan"
+   ],
+   "ranking": 39.1,
+   "route": "exact_community",
+   "sd": 4.2,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.3,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu spread damage · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 37.7,
+   "route": "pair_model",
+   "sd": 8.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.6,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Quicken + Vaporize + Hyperbloom + Burgeon · incidental Overloaded, Burning",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan"
+   ],
+   "ranking": 37.0,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_hyperbloom_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.1,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Yelan dual carry · incidental Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Fischl",
+    "Kuki Shinobu",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 37.0,
+   "route": "pair_model",
+   "sd": 7.6,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 38.6,
+   "fit_source": "pairmodel",
+   "label": "Bennett dual carry · Vaporize + Burgeon",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 36.8,
+   "route": "exact_community",
+   "sd": 2.7,
+   "template": "auto_bloom_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 39.3,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu hypercarry · Quicken + Hyperbloom + Burgeon · incidental Overloaded, Vaporize",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "ranking": 36.7,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.4,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kuki Shinobu",
+    "Xingqiu"
+   ],
+   "ranking": 35.1,
+   "route": "pair_model",
+   "sd": 6.4,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.2,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Fischl dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kuki Shinobu",
+    "Yelan"
+   ],
+   "ranking": 34.9,
+   "route": "pair_model",
+   "sd": 6.4,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.0,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Fischl dual carry · Quicken · incidental Aggravate, Spread",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kuki Shinobu",
+    "Nahida"
+   ],
+   "ranking": 33.4,
+   "route": "pair_model",
+   "sd": 6.8,
+   "template": "auto_quicken_dendro_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Fischl",
+    "Yelan"
+   ],
+   55.5
+  ],
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Fischl",
+    "Mavuika",
+    "Yelan"
+   ],
+   52.2
+  ],
+  [
+   "Razor",
+   [
+    "Bennett",
+    "Fischl",
+    "Nahida",
+    "Razor"
+   ],
+   52.2
+  ],
+  [
+   "Flins",
+   [
+    "Fischl",
+    "Flins",
+    "Nahida",
+    "Yelan"
+   ],
+   51.3
+  ],
+  [
+   "Alhaitham",
+   [
+    "Alhaitham",
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan"
+   ],
+   50.7
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 3.7,
+   "teams": [
+    [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 36.0,
+   "teams": [
+    [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Nahida"
+   ],
+   "note": "",
+   "score": 31.7,
+   "teams": [
+    [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 44.1,
+   "teams": [
+    [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 54.3,
+   "fit_source": "gcsim",
+   "label": "Kuki Shinobu hypercarry · Hyperbloom + Quicken · incidental Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 51.7,
+   "route": "exact_community",
+   "sd": 3.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 31.7,
+ "pulls": [
+  {
+   "best_team": [
+    "Columbina",
+    "Fischl",
+    "Nahida",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.3,
+    "displaced": [
+     "Kuki Shinobu",
+     "Xingqiu"
+    ],
+    "improved": [
+     "Nahida",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.37,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 10.6,
+   "gain": 8.3,
+   "kind": "sidegrade",
+   "name": "Columbina",
+   "sd": 8.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Neuvillette",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 2.4,
+    "displaced": [
+     "Yelan"
+    ],
+    "improved": [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.39,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 3.4,
+   "gain": 2.4,
+   "kind": "upgrade",
+   "name": "Neuvillette",
+   "sd": 6.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.5,
+    "displaced": [
+     "Xingqiu"
+    ],
+    "improved": [
+     "Kuki Shinobu",
+     "Nahida",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.52,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.5,
+   "gain": 1.5,
+   "kind": "upgrade",
+   "name": "Furina",
+   "sd": 5.5,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Fischl",
+    "Mavuika",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.5,
+    "displaced": [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu"
+    ],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.1,
+   "gain": 0.5,
+   "kind": "no change",
+   "name": "Mavuika",
+   "sd": 6.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Fischl",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.09,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Citlali",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.23,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Escoffier",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Fischl",
+    "Varka",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.05,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Nahida",
+    "Xilonen",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.23,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Xilonen",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": []
+}

@@ -1,0 +1,482 @@
+{
+ "benchmark_cases": [
+  "pull_shenhe_for_ayaka"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.3,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka and Xiangling dual carry · Melt · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "ranking": 36.3,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.9,
+   "fit_source": "gcsim",
+   "label": "Kamisato Ayaka hypercarry · Freeze · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Mona"
+   ],
+   "ranking": 34.5,
+   "route": "exact_community",
+   "sd": 3.7,
+   "template": "freeze",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka and Xiangling dual carry · Melt",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "ranking": 34.2,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.7,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Melt · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka"
+   ],
+   "ranking": 33.4,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.0,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Melt · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "ranking": 31.4,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.3,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · Melt · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 24.4,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.1,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Melt",
+   "lead": "Xiangling",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Mona",
+    "Xiangling"
+   ],
+   "ranking": 19.8,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.1,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · Melt + Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Mona",
+    "Xiangling"
+   ],
+   "ranking": 19.5,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.9,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize + Melt · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Kaedehara Kazuha",
+    "Mona"
+   ],
+   "ranking": 19.3,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 17.2,
+   "fit_source": "model",
+   "label": "No single carry spread damage · Vaporize · incidental Swirl",
+   "lead": null,
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mona",
+    "Xiangling"
+   ],
+   "ranking": 16.1,
+   "route": "exact_community",
+   "sd": 1.7,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Kamisato Ayaka",
+    "Mavuika",
+    "Xiangling"
+   ],
+   50.5
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Lyney",
+    "Xiangling"
+   ],
+   46.3
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   44.1
+  ],
+  [
+   "Skirk",
+   [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Mona",
+    "Skirk"
+   ],
+   42.6
+  ],
+  [
+   "Mualani",
+   [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mualani",
+    "Xiangling"
+   ],
+   42.4
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Bennett",
+    "Kamisato Ayaka"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 1.8,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Xiangling"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Bennett",
+    "Kamisato Ayaka"
+   ],
+   "note": "",
+   "score": 17.8,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Xiangling"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Kamisato Ayaka"
+   ],
+   "note": "",
+   "score": 16.3,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Xiangling"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 29.4,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Xiangling"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.3,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka and Xiangling dual carry · Melt · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "ranking": 36.3,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "melt",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 16.3,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 4.6,
+    "displaced": [
+     "Kamisato Ayaka"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xiangling"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 4.6,
+   "gain": 4.6,
+   "kind": "new archetype",
+   "name": "Furina",
+   "sd": 6.2,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 4.5,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Kamisato Ayaka",
+     "Xiangling"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 18,
+    "redundancy_score": 0.41,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 4.3,
+   "gain": 4.5,
+   "kind": "upgrade",
+   "name": "Escoffier",
+   "sd": 6.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 4.2,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Kamisato Ayaka",
+     "Xiangling"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 14,
+    "redundancy_score": 0.4,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 4.1,
+   "gain": 4.2,
+   "kind": "upgrade",
+   "name": "Citlali",
+   "sd": 6.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 4.0,
+    "displaced": [
+     "Bennett"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Xiangling"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.4,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 3.8,
+   "gain": 4.0,
+   "kind": "upgrade",
+   "name": "Shenhe",
+   "sd": 6.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 6,
+    "redundancy_score": 0.25,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Nahida",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": []
+}

@@ -1,0 +1,40 @@
+{
+ "history": [
+  {
+   "date": "2026-10-16",
+   "hash": "7f6252b2238dac68",
+   "reason": "Initial lock of the locked validation set (15 cases), proposed by Claude; awaiting the user's review.",
+   "approval_reset": false
+  },
+  {
+   "date": "2026-10-16",
+   "hash": "66d128aac81f41b4",
+   "reason": "Before the user's review: fixed two badly posed cases (Skirk enabler roster has no Hydro, so Furina must rank above Escoffier; Hyperbloom trigger roster included an Ayaka team that Escoffier upgrades, removed) and annotated the Xiao close call, which gcsim data contradicts.",
+   "approval_reset": false
+  },
+  {
+   "date": "2026-10-16",
+   "hash": "c2c6d50d3fd3700f",
+   "reason": "User review: Skirk pull now Escoffier > Furina (shred matters more than Hydro; my earlier flip was wrong), Kuki > Escoffier gap large, Columbina vs Aino team gap medium, Xiao case kept with the user's explanation of the gcsim disagreement",
+   "approval_reset": false
+  },
+  {
+   "date": "2026-10-16",
+   "hash": "c2c6d50d3fd3700f",
+   "reason": "approved by the user"
+  },
+  {
+   "date": "2026-10-16",
+   "hash": "29faae04262f6176",
+   "reason": "User review: Ayaka / Bennett / Xiangling / Mona is off-meta Melt, so rejecting it is acceptable; keep only the not-Freeze assertion",
+   "approval_reset": true
+  },
+  {
+   "date": "2026-10-16",
+   "hash": "29faae04262f6176",
+   "reason": "approved by the user"
+  }
+ ],
+ "approved": true,
+ "hash": "29faae04262f6176"
+}

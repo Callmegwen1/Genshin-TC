@@ -1,0 +1,38 @@
+Zibai:
+  schema: 2
+  provisional: true
+  role: carry
+  element: Geo
+  weapon: sword
+  analogue: Navia            # simulated Geo on-field carry whose damage rides on Crystallize with Hydro/Pyro teammates
+  field: {behaviour: on_field, share: [0.5, 0.75]}
+  personal_damage: {tier: high, share: [0.45, 0.7]}
+  application: {Geo.on: [3.0, 6.0]}
+  buffs:
+    - {kind: reaction_conversion, target: party, condition: "always (Moonsign Benediction)",
+       text: "Hydro Crystallize becomes Lunar-Crystallize; its Base DMG +0.7% per 100 DEF, max 14%; party Moonsign +1 level"}
+    - {kind: def, target: self, condition: "always (Layered Peaks)", text: "DEF +15% per other Geo member; EM +60 per Hydro member"}
+    - {kind: damage_scaling, target: self, condition: "Selenic Descent, 4 s after her Skill or a party Moondrift Harmony",
+       text: "Spirit Steed's Stride 2nd hit +60% of DEF"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [lunarcrystallize], enables: [crystallize], converts: {crystallize: Lunar-Crystallize}}
+  preferred_systems: [lunarcrystallize]
+  restrictions:
+    - {rule: needs_element, any_of: [Hydro], why: "Lunar-Crystallize comes from Hydro Crystallize"}
+  synergies:
+    - {with: Linnea, why: "Lunar-Crystallize enabler and Geo shred in her best team"}
+    - {with: Illuga, why: "Geo and Lunar-Crystallize buffs"}
+    - {with: Columbina, why: "Hydro and Lunar buffs"}
+  expected_archetypes:
+    auto_geo_carry: {as: carry, quality: 4}
+  sources:
+    amber: "Official kit text (Project Amber cache): Heaven and Earth Made Manifest, Tri-Sphere Eminence, The Selenic Adeptus Descends, Layered Peaks, Moonsign Benediction"
+    prydwen: "Prydwen guide: DPS tier T0; teams Zibai / Linnea / Columbina / Illuga (100), C6 Gorou variant (85), Aino variant (80), full 4-stars (70.8)"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: judgment, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

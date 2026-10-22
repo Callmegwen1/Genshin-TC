@@ -1,0 +1,203 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Chevreuse:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 7jp8Hrbjk7mR (house builds)
+    - gcsim community rotation NfgfqWNHbQMq (house builds)
+    - gcsim community rotation QjmdtjhwdwJB (house builds)
+    - gcsim community rotation b7zgnw7FGpfN (house builds)
+    - gcsim community rotation hLLjpCLTWJLd (house builds)
+    - gcsim community rotation rgL6pCTwhLWR (house builds)
+    - gcsim community rotation wHnjMk9JrBdg (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 13 of 13 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    burst:
+      duration: 0.983
+      particles: 0.0
+      hits:
+      - offset: 0.983
+        type: burst
+        table:
+        - burst
+        - Explosive Grenade DMG
+        - 0
+        element: Pyro
+        gauge: 2.0
+      - offset: 1.383
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 1.533
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+      - offset: 1.533
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+      - offset: 1.683
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 1.683
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+      - offset: 1.833
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+      - offset: 1.833
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+      - offset: 1.983
+        type: burst
+        table:
+        - burst
+        - Secondary Explosive Shell DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+    skill:
+      duration: 0.417
+      particles: 4.0
+      hits:
+      - offset: 0.317
+        type: skill
+        table:
+        - skill
+        - Press DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 0.917
+        type: skill
+        table:
+        - skill
+        - Surging Blade DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+    charge:
+      duration: 0.45
+      particles: 0.0
+      hits:
+      - offset: 0.45
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    dash:
+      duration: 0.333
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.583
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - charge
+    - dash
+    - attack
+  - - attack
+    - charge
+    - dash
+    - attack
+    - charge
+    - dash
+    - attack
+    - charge
+    - dash
+    - attack
+    - charge
+    - dash
+  - - attack
+    - attack
+    - attack
+  follow:
+    burst: skill
+  first: burst
+  # the press shot is Press DMG (the measured link chose Overcharged Ball, which needs a prior Overloaded)
+  actions_override:
+    skill:
+      duration: 0.417
+      particles: 4.0
+      hits:
+      - offset: 0.317
+        type: skill
+        table:
+        - skill
+        - Press DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 0.917
+        type: skill
+        table:
+        - skill
+        - Surging Blade DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+  causal: {}

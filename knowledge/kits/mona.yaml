@@ -1,0 +1,29 @@
+Mona:
+  schema: 3
+  element: Hydro
+  weapon: catalyst
+  roles: [buffer, applier]
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage: {element: Hydro, types: [skill, burst]}
+    application: [{element: Hydro, mode: off_field, strength: medium}, {element: Hydro, mode: on_field, strength: medium}]
+    energy: {burst_cost: 60, dependency: medium}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: atk, for: damage, source: [skill, burst]}, {stat: er, for: damage, source: [normal, charged, skill, burst]}]
+  effects:
+    - {kind: dmg_taken, target: enemy, affects: {elements: [all]}, amount: unknown, duration: unknown, stacking: none,
+       conditions: [], source: "Stellaris Phantasm (Omen)"}
+    - {kind: elemental_dmg_bonus, target: self, affects: {elements: [Hydro]}, amount: "20% of Energy Recharge",
+       duration: permanent, stacking: none, conditions: [], source: "Waterborne Destiny"}
+  conditions: []
+  reactions: {owns: [], enables: [freeze, vaporize, electrocharged, bloom, swirl-hydro], requires: [], aura_supplied: [hydro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Mirror Reflection of Doom, Stellaris Phantasm, Waterborne Destiny"
+    community: "How the character is played (KQM, Prydwen): Hydro applier and Omen buffer, notably in Freeze"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

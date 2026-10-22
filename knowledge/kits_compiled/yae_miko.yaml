@@ -1,0 +1,116 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Yae Miko:
+  schema: 3
+  element: Electro
+  weapon: catalyst
+  roles:
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: off_field
+      strength: medium
+    - element: Electro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 90
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: em
+    for: damage
+    source:
+    - skill
+  effects:
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+    amount: 'resets 1 Yakan Evocation: Sesshou Sakura charge per Sesshou Sakura destroyed'
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: The Shrine's Sacred Shade
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+    amount: 0.15% Sesshou Sakura DMG per point of Elemental Mastery
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Enlightened Blessing
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+    amount: 80% of Yae Miko's ATK on the next Sesshou Sakura lightning
+    duration: unknown
+    stacking: once every 2.5s
+    conditions:
+    - type: reaction_required
+      reactions:
+      - superconduct
+      text: a nearby party member triggers Superconduct or Stellar-Conduct
+    source: Edict of Cleansing
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - aggravate
+    - electrocharged
+    - overloaded
+    - superconduct
+    - quicken
+    - hyperbloom
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (packet): Spiritfox Sin-Eater, Yakan Evocation: Sesshou Sakura, Great Secret Art: Tenko Kenshin,
+      The Shrine''s Sacred Shade, Enlightened Blessing, Edict of Cleansing'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

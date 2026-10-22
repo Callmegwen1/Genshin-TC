@@ -1,0 +1,1101 @@
+{
+ "benchmark_cases": [
+  "raiden_national"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "mixed",
+   "evidence_state": "simulation",
+   "expected": 47.7,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 43.1,
+   "route": "exact_community",
+   "sd": 6.9,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.5,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 38.9,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.2,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Raiden Shogun",
+    "Sucrose",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 38.7,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 38.6,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 38.3,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.6,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Xingqiu dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 37.0,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.1,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Vaporize · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 34.9,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 38.3,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 34.7,
+   "route": "exact_community",
+   "sd": 5.4,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.7,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 33.5,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.4,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Xiangling dual carry · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "ranking": 32.3,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 34.5,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · Overloaded · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 32.2,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "electro_hypercarry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 34.5,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 32.1,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.5,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 32.1,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 34.3,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Xiangling",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.0,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Xiangling dual carry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "ranking": 31.6,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 31.0,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Swirl, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Raiden Shogun",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 29.9,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Sucrose"
+   ],
+   "ranking": 29.7,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.4,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 29.4,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.1,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Xingqiu dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Sucrose",
+    "Xiangling",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 28.0,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.6,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Xiangling dual carry · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 27.7,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "ranking": 27.2,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.3,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 26.7,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.3,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Zhongli"
+   ],
+   "ranking": 26.4,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.7,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Xingqiu dual carry · Vaporize · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 25.7,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.5,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Raiden Shogun",
+    "Sucrose",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 25.7,
+   "route": "pair_model",
+   "sd": 2.6,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.5,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 24.8,
+   "route": "pair_model",
+   "sd": 5.6,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.4,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 24.5,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 23.8,
+   "route": "pair_model",
+   "sd": 4.8,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry",
+   "lead": "Xiangling",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 22.3,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 21.9,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_geo_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 23.2,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 21.7,
+   "route": "exact_community",
+   "sd": 2.3,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.2,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 20.5,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 21.7,
+   "fit_source": "pairmodel",
+   "label": "Bennett and Kaedehara Kazuha dual carry",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 18.6,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Mavuika",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   54.4
+  ],
+  [
+   "Neuvillette",
+   [
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   49.4
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Lyney",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   48.4
+  ],
+  [
+   "Flins",
+   [
+    "Bennett",
+    "Flins",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   48.3
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   48.2
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 2.7,
+   "teams": [
+    [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 26.5,
+   "teams": [
+    [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 23.1,
+   "teams": [
+    [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 36.5,
+   "teams": [
+    [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling",
+     "Xingqiu"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "mixed",
+   "evidence_state": "simulation",
+   "expected": 47.7,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 43.1,
+   "route": "exact_community",
+   "sd": 6.9,
+   "template": "national",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 23.1,
+ "pulls": [
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 3.2,
+    "displaced": [],
+    "improved": [
+     "Xiangling"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 35,
+    "redundancy_score": 0.26,
+    "second_team_gain": 38.9,
+    "support_contention": []
+   },
+   "expected": 24.3,
+   "gain": 22.1,
+   "kind": "upgrade",
+   "name": "Neuvillette",
+   "sd": 10.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Mavuika",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 2.3,
+    "displaced": [],
+    "improved": [
+     "Bennett"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 34,
+    "redundancy_score": 0.37,
+    "second_team_gain": 38.6,
+    "support_contention": []
+   },
+   "expected": 21.5,
+   "gain": 20.9,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 8.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.5,
+    "displaced": [],
+    "improved": [
+     "Xiangling"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 32,
+    "redundancy_score": 0.12,
+    "second_team_gain": 38.9,
+    "support_contention": []
+   },
+   "expected": 21.9,
+   "gain": 20.4,
+   "kind": "upgrade",
+   "name": "Columbina",
+   "sd": 9.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Skirk",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": -0.6,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 8,
+    "redundancy_score": 0.1,
+    "second_team_gain": 31.0,
+    "support_contention": []
+   },
+   "expected": 15.9,
+   "gain": 10.4,
+   "kind": "new archetype",
+   "name": "Skirk",
+   "sd": 14.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 3.8,
+    "displaced": [],
+    "improved": [
+     "Raiden Shogun",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 35,
+    "redundancy_score": 0.23,
+    "second_team_gain": 24.8,
+    "support_contention": []
+   },
+   "expected": 11.3,
+   "gain": 8.6,
+   "kind": "upgrade",
+   "name": "Furina",
+   "sd": 10.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.2,
+    "displaced": [],
+    "improved": [
+     "Raiden Shogun",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "hyperbloom",
+     "quicken"
+    ],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.16,
+    "second_team_gain": 27.2,
+    "support_contention": []
+   },
+   "expected": 12.1,
+   "gain": 8.4,
+   "kind": "upgrade",
+   "name": "Nahida",
+   "sd": 11.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -6.1,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 33,
+    "redundancy_score": 0.18,
+    "second_team_gain": 33.4,
+    "support_contention": []
+   },
+   "expected": 8.1,
+   "gain": 7.3,
+   "kind": "upgrade",
+   "name": "Escoffier",
+   "sd": 8.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Xiangling",
+    "Xilonen",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -6.1,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 33,
+    "redundancy_score": 0.24,
+    "second_team_gain": 33.1,
+    "support_contention": []
+   },
+   "expected": 8.8,
+   "gain": 7.0,
+   "kind": "upgrade",
+   "name": "Xilonen",
+   "sd": 9.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 3.7,
+    "displaced": [],
+    "improved": [
+     "Bennett",
+     "Raiden Shogun",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 33,
+    "redundancy_score": 0.29,
+    "second_team_gain": 22.3,
+    "support_contention": []
+   },
+   "expected": 8.3,
+   "gain": 6.0,
+   "kind": "upgrade",
+   "name": "Citlali",
+   "sd": 10.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Xiangling",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -6.1,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 33,
+    "redundancy_score": 0.43,
+    "second_team_gain": 31.9,
+    "support_contention": []
+   },
+   "expected": 6.2,
+   "gain": 5.8,
+   "kind": "upgrade",
+   "name": "Yelan",
+   "sd": 8.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Sucrose",
+    "Varka",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -4.5,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 6,
+    "redundancy_score": 0.05,
+    "second_team_gain": 27.0,
+    "support_contention": []
+   },
+   "expected": 23.1,
+   "gain": 2.5,
+   "kind": "new archetype",
+   "name": "Varka",
+   "sd": 34.8,
+   "tier": "C"
+  }
+ ],
+ "viable_carries": []
+}

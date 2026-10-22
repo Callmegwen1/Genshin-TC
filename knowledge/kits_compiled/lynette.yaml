@@ -1,0 +1,125 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 3 note(s).
+#   role grouping added (measured placement role or owned Swirl)
+#   party_element_count over all elements read as party_element_types
+#   party_element_count over all elements read as party_element_types
+Lynette:
+  schema: 3
+  element: Anemo
+  weapon: sword
+  roles:
+  - buffer
+  - swirl_support
+  - grouping
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+      - summon
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: medium
+    - element: Anemo
+      mode: off_field
+      strength: low
+    - element: Pyro
+      mode: off_field
+      strength: low
+    - element: Hydro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 70
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: atk_pct
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 8% / 12% / 16% / 20% with 1 / 2 / 3 / 4 Elemental Types in the party
+    duration: 10
+    stacking: none
+    conditions:
+    - type: party_element_types
+      full: 4
+      text: ATK bonus scales with the number of Elemental Types in the party (full with 4)
+    source: 'Sophisticated Synergy (after using Magic Trick: Astonishing Shift)'
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - burst
+    amount: 0.15
+    duration: until the Bogglecat Box's duration ends
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Bogglecat Box performed Elemental Conversion
+      text: after the Bogglecat Box absorbs an element
+    source: Props Positively Prepped
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - all
+    amount: taunts nearby opponents
+    duration: 12
+    stacking: none
+    conditions: []
+    source: 'Magic Trick: Astonishing Shift (Bogglecat Box)'
+  conditions:
+  - type: party_element_types
+    full: 4
+    text: Party ATK bonus scales with the number of Elemental Types in the party (full with four)
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Enigmatic Feint, Magic Trick: Astonishing Shift, Sophisticated Synergy,
+      Props Positively Prepped'
+    engine: 'Engine measurements: field share 23%, off-field share of own damage 45%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

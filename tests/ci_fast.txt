@@ -1,0 +1,21 @@
+# Fast CI subset: the API plus forward-model, formula, reaction and golden regression tests.
+# Every file here passes in a clean checkout (git-tracked files + the Amber cache from S3), in about a minute.
+# Not here: tests that need local-only data (HoYoLAB snapshots, data/sources community data), and the two slow
+# files (test_generator.py, test_phases_gn.py, about 5 minutes together). Full suite, locally:
+#   .venv/Scripts/python -m pytest -q
+# Usage: python -m pytest -q $(grep -v '^#' tests/ci_fast.txt)
+tests/test_api.py
+tests/test_forward.py
+tests/test_model.py
+tests/test_engine.py
+tests/test_metamorphic.py
+tests/test_prerelease.py
+tests/test_reactions.py
+tests/test_reactions_model.py
+tests/test_actionprocs.py
+tests/test_gear.py
+tests/test_golden.py
+tests/test_theory.py
+tests/test_theory_guard.py
+tests/test_measurements.py
+tests/test_aggregation.py

@@ -1,0 +1,877 @@
+{
+ "benchmark_cases": [
+  "flins_lunar_core"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 100.0,
+   "fit_source": "gcsim",
+   "label": "Flins dual carry · Lunar-Charged · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Columbina",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 93.3,
+   "route": "exact_community",
+   "sd": 9.9,
+   "template": "lunar_charged",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 88.2,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Flins",
+    "Ineffa"
+   ],
+   "ranking": 80.3,
+   "route": "pair_model",
+   "sd": 11.8,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 83.5,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Vaporize + Lunar-Charged · incidental Overloaded",
+   "lead": "Flins",
+   "lineup": [
+    "Bennett",
+    "Columbina",
+    "Flins",
+    "Ineffa"
+   ],
+   "ranking": 75.6,
+   "route": "pair_model",
+   "sd": 11.7,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 81.8,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Columbina",
+    "Flins",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 74.0,
+   "route": "pair_model",
+   "sd": 11.6,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 78.0,
+   "fit_source": "gcsim",
+   "label": "Flins dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 72.8,
+   "route": "exact_community",
+   "sd": 7.7,
+   "template": "lunar_charged",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 73.5,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Columbina dual carry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Columbina",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 68.0,
+   "route": "pair_model",
+   "sd": 8.3,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 71.5,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Columbina dual carry · Lunar-Charged",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 66.7,
+   "route": "exact_community",
+   "sd": 7.1,
+   "template": "auto_lunar_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 71.0,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Columbina dual carry · Vaporize · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Columbina",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 65.8,
+   "route": "pair_model",
+   "sd": 7.8,
+   "template": "auto_lunar_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 70.8,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Flins",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 64.1,
+   "route": "pair_model",
+   "sd": 9.9,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 68.8,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Vaporize · incidental Lunar-Charged, Overloaded",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Flins",
+    "Ineffa"
+   ],
+   "ranking": 62.6,
+   "route": "pair_model",
+   "sd": 9.2,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 66.5,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 59.6,
+   "route": "pair_model",
+   "sd": 10.2,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 64.6,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Columbina dual carry · Lunar-Charged",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 58.9,
+   "route": "pair_model",
+   "sd": 8.5,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 62.7,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Columbina dual carry · Vaporize · incidental Lunar-Charged, Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Columbina",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 58.7,
+   "route": "pair_model",
+   "sd": 5.9,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 62.9,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Columbina dual carry · Vaporize · incidental Lunar-Charged, Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Columbina",
+    "Ineffa"
+   ],
+   "ranking": 57.8,
+   "route": "pair_model",
+   "sd": 7.5,
+   "template": "auto_lunar_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 66.1,
+   "fit_source": "pairmodel",
+   "label": "Flins dual carry · incidental Lunar-Charged, Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Columbina",
+    "Flins",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 53.9,
+   "route": "pair_model",
+   "sd": 18.1,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 66.1,
+   "fit_source": "pairmodel",
+   "label": "Flins on-field · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Flins",
+    "Sucrose"
+   ],
+   "ranking": 53.8,
+   "route": "pair_model",
+   "sd": 18.3,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 63.0,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Vaporize · incidental Overloaded",
+   "lead": "Flins",
+   "lineup": [
+    "Bennett",
+    "Flins",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 53.6,
+   "route": "pair_model",
+   "sd": 13.9,
+   "template": "lunar_charged",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.5,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · Vaporize · incidental Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 51.0,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.8,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 49.6,
+   "route": "pair_model",
+   "sd": 7.8,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.2,
+   "fit_source": "pairmodel",
+   "label": "Columbina dual carry · Vaporize",
+   "lead": "Columbina",
+   "lineup": [
+    "Bennett",
+    "Columbina",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 46.9,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 53.0,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · Vaporize · incidental Lunar-Charged, Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 44.3,
+   "route": "pair_model",
+   "sd": 12.9,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 59.1,
+   "fit_source": "pairmodel",
+   "label": "Flins dual carry · Vaporize · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Bennett",
+    "Columbina",
+    "Flins",
+    "Xingqiu"
+   ],
+   "ranking": 42.3,
+   "route": "pair_model",
+   "sd": 24.9,
+   "template": "lunar_charged_offfield",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.5,
+   "fit_source": "pairmodel",
+   "label": "Columbina on-field",
+   "lead": "Columbina",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 41.4,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 56.2,
+   "fit_source": "pairmodel",
+   "label": "Flins dual carry · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Flins",
+    "Xingqiu"
+   ],
+   "ranking": 39.7,
+   "route": "pair_model",
+   "sd": 24.5,
+   "template": "lunar_charged_offfield",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.8,
+   "fit_source": "pairmodel",
+   "label": "Columbina on-field · Vaporize",
+   "lead": "Columbina",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Columbina",
+    "Sucrose"
+   ],
+   "ranking": 38.7,
+   "route": "pair_model",
+   "sd": 10.6,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.2,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 27.8,
+   "route": "pair_model",
+   "sd": 7.9,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Gaming",
+   [
+    "Columbina",
+    "Gaming",
+    "Ineffa",
+    "Sucrose"
+   ],
+   82.2
+  ],
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Columbina",
+    "Ineffa",
+    "Mavuika"
+   ],
+   80.7
+  ],
+  [
+   "Neuvillette",
+   [
+    "Columbina",
+    "Ineffa",
+    "Neuvillette",
+    "Sucrose"
+   ],
+   78.6
+  ],
+  [
+   "Ganyu",
+   [
+    "Columbina",
+    "Flins",
+    "Ganyu",
+    "Ineffa"
+   ],
+   75.9
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Columbina",
+    "Ineffa",
+    "Lyney"
+   ],
+   73.9
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Columbina",
+    "Flins",
+    "Ineffa"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 7.4,
+   "teams": [
+    [
+     "Columbina",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Columbina",
+    "Flins",
+    "Ineffa"
+   ],
+   "note": "",
+   "score": 74.0,
+   "teams": [
+    [
+     "Columbina",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Columbina",
+    "Flins",
+    "Ineffa"
+   ],
+   "note": "",
+   "score": 73.3,
+   "teams": [
+    [
+     "Columbina",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 72.6,
+   "teams": [
+    [
+     "Columbina",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 100.0,
+   "fit_source": "gcsim",
+   "label": "Flins dual carry · Lunar-Charged · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Columbina",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 93.3,
+   "route": "exact_community",
+   "sd": 9.9,
+   "template": "lunar_charged",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 73.3,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Mavuika",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -13.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 15,
+    "redundancy_score": 0.17,
+    "second_team_gain": 54.4,
+    "support_contention": []
+   },
+   "expected": 26.7,
+   "gain": 21.4,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 16.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Columbina",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -20.5,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 23,
+    "redundancy_score": 0.13,
+    "second_team_gain": 54.5,
+    "support_contention": []
+   },
+   "expected": 16.5,
+   "gain": 14.0,
+   "kind": "upgrade",
+   "name": "Xilonen",
+   "sd": 13.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Columbina",
+    "Furina",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -20.5,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.18,
+    "second_team_gain": 48.8,
+    "support_contention": []
+   },
+   "expected": 10.6,
+   "gain": 8.3,
+   "kind": "upgrade",
+   "name": "Furina",
+   "sd": 13.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Neuvillette",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -13.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 21,
+    "redundancy_score": 0.06,
+    "second_team_gain": 41.3,
+    "support_contention": []
+   },
+   "expected": 12.7,
+   "gain": 8.3,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 16.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Columbina",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": -20.5,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.18,
+    "second_team_gain": 47.0,
+    "support_contention": []
+   },
+   "expected": 9.0,
+   "gain": 6.5,
+   "kind": "upgrade",
+   "name": "Yelan",
+   "sd": 13.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -13.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "freeze",
+     "melt",
+     "vaporize"
+    ],
+    "new_viable_teams": 22,
+    "redundancy_score": 0.13,
+    "second_team_gain": 36.8,
+    "support_contention": []
+   },
+   "expected": 7.6,
+   "gain": 3.8,
+   "kind": "new archetype",
+   "name": "Escoffier",
+   "sd": 15.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Nahida",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -30.7,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.16,
+    "second_team_gain": 52.9,
+    "support_contention": []
+   },
+   "expected": 5.5,
+   "gain": 2.2,
+   "kind": "upgrade",
+   "name": "Nahida",
+   "sd": 14.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -13.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt",
+     "vaporize"
+    ],
+    "new_viable_teams": 22,
+    "redundancy_score": 0.09,
+    "second_team_gain": 34.4,
+    "support_contention": []
+   },
+   "expected": 7.5,
+   "gain": 1.4,
+   "kind": "upgrade",
+   "name": "Citlali",
+   "sd": 17.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Columbina",
+    "Ineffa",
+    "Varka"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 5,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Flins"
+ ]
+}

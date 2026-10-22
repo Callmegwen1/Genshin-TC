@@ -1,0 +1,7 @@
+# Runtime dependencies of the cloud API only. The engine's forward model needs nothing beyond PyYAML; the CLI's
+# other dependencies (genshin, aiohttp, numpy, python-dotenv) are for local commands and stay out of the image.
+fastapi==0.115.12
+starlette==0.46.2
+pydantic==2.14.0
+uvicorn==0.34.2
+PyYAML==6.0.3

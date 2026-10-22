@@ -1,0 +1,1527 @@
+{
+ "benchmark_cases": [
+  "hutao_double_hydro"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 51.7,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao on-field · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Hu Tao",
+    "Yelan"
+   ],
+   "ranking": 49.2,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 51.0,
+   "fit_source": "gcsim",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 47.6,
+   "route": "exact_community",
+   "sd": 5.1,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 47.1,
+   "fit_source": "gcsim",
+   "label": "Yelan dual carry · Electro-Charged from Fischl · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Fischl",
+    "Sucrose",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 43.9,
+   "route": "exact_community",
+   "sd": 4.7,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 45.2,
+   "fit_source": "gcsim",
+   "label": "Yelan dual carry · Electro-Charged from Fischl and Xingqiu · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 43.0,
+   "route": "exact_community",
+   "sd": 3.2,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.6,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · incidental Overloaded",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Hu Tao",
+    "Sucrose"
+   ],
+   "ranking": 42.6,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 44.3,
+   "fit_source": "gcsim",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Sucrose",
+    "Yelan"
+   ],
+   "ranking": 42.2,
+   "route": "exact_community",
+   "sd": 3.1,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.8,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao and Fischl dual carry · incidental Overloaded, Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Fischl",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 41.8,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.7,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Yelan"
+   ],
+   "ranking": 41.7,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.6,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Sucrose",
+    "Yelan"
+   ],
+   "ranking": 41.5,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.5,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 40.5,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.1,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 40.4,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.6,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao dual carry · incidental Overloaded, Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Hu Tao",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 39.9,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 41.9,
+   "fit_source": "gcsim",
+   "label": "Hu Tao hypercarry · Vaporize · incidental Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 39.1,
+   "route": "exact_community",
+   "sd": 4.2,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 40.5,
+   "fit_source": "gcsim",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 38.5,
+   "route": "exact_community",
+   "sd": 2.8,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.7,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Yelan"
+   ],
+   "ranking": 38.2,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 37.7,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.2,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 37.4,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.6,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao on-field · incidental Overloaded",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Hu Tao",
+    "Zhongli"
+   ],
+   "ranking": 37.1,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 39.8,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Fischl",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 37.1,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.9,
+   "fit_source": "pairmodel",
+   "label": "Yelan dual carry · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 36.2,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kaedehara Kazuha dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 36.0,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.6,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · Vaporize · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 35.7,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.3,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.9,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · incidental Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.2,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Sucrose",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.1,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 33.9,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.1,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · Vaporize · incidental Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 33.9,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.4,
+   "fit_source": "gcsim",
+   "label": "Yelan on-field",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 33.9,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.2,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao dual carry · incidental Overloaded, Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Fischl",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 33.8,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.0,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 33.5,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.7,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 33.2,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.6,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.6,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.7,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.5,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.0,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 31.7,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Fischl dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.5,
+   "route": "pair_model",
+   "sd": 6.5,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.6,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Hu Tao",
+    "Sucrose",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.3,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.4,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.1,
+   "route": "exact_community",
+   "sd": 3.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan dual carry · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Sucrose",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 30.7,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.8,
+   "fit_source": "pairmodel",
+   "label": "Fischl hypercarry · incidental Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 29.8,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl hypercarry · incidental Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 29.3,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.6,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry · Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Yelan"
+   ],
+   "ranking": 29.2,
+   "route": "pair_model",
+   "sd": 11.1,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.6,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · incidental Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 28.5,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.2,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 28.3,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.9,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 27.9,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 28.4,
+   "fit_source": "gcsim",
+   "label": "Hu Tao hypercarry · Vaporize · incidental Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 26.5,
+   "route": "exact_community",
+   "sd": 2.8,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.8,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry · Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 25.7,
+   "route": "pair_model",
+   "sd": 9.0,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.8,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry · incidental Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 25.4,
+   "route": "pair_model",
+   "sd": 9.6,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 26.9,
+   "fit_source": "gcsim",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Hu Tao",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 25.1,
+   "route": "exact_community",
+   "sd": 2.7,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.6,
+   "fit_source": "pairmodel",
+   "label": "Hu Tao hypercarry · incidental Swirl",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 24.7,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 23.8,
+   "route": "pair_model",
+   "sd": 4.8,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.2,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 23.5,
+   "route": "pair_model",
+   "sd": 8.5,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.2,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 20.5,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 21.7,
+   "fit_source": "pairmodel",
+   "label": "Bennett and Kaedehara Kazuha dual carry",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 18.6,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Fischl",
+    "Sucrose"
+   ],
+   58.2
+  ],
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Fischl",
+    "Mavuika",
+    "Sucrose"
+   ],
+   57.4
+  ],
+  [
+   "Flins",
+   [
+    "Fischl",
+    "Flins",
+    "Sucrose",
+    "Yelan"
+   ],
+   57.3
+  ],
+  [
+   "Clorinde",
+   [
+    "Clorinde",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   53.4
+  ],
+  [
+   "Neuvillette",
+   [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Sucrose"
+   ],
+   51.0
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [],
+   "note": "",
+   "score": 19.5,
+   "teams": [
+    [
+     "Fischl",
+     "Hu Tao",
+     "Kaedehara Kazuha",
+     "Sucrose"
+    ],
+    [
+     "Bennett",
+     "Xingqiu",
+     "Yelan",
+     "Zhongli"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Bennett",
+    "Hu Tao",
+    "Yelan"
+   ],
+   "note": "",
+   "score": 42.0,
+   "teams": [
+    [
+     "Bennett",
+     "Hu Tao",
+     "Kaedehara Kazuha",
+     "Yelan"
+    ],
+    [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu",
+     "Zhongli"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Bennett",
+    "Hu Tao"
+   ],
+   "note": "",
+   "score": 29.2,
+   "teams": [
+    [
+     "Bennett",
+     "Fischl",
+     "Hu Tao",
+     "Yelan"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "2 competent teams over 8 characters, 5 of 7 elements",
+   "score": 73.1,
+   "teams": [
+    [
+     "Bennett",
+     "Hu Tao",
+     "Kaedehara Kazuha",
+     "Yelan"
+    ],
+    [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu",
+     "Zhongli"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 51.0,
+   "fit_source": "gcsim",
+   "label": "Hu Tao hypercarry · Vaporize",
+   "lead": "Hu Tao",
+   "lineup": [
+    "Bennett",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 47.6,
+   "route": "exact_community",
+   "sd": 5.1,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.6,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.6,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 40.2,
+ "pulls": [
+  {
+   "best_team": [
+    "Columbina",
+    "Fischl",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 7.4,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 39,
+    "redundancy_score": 0.22,
+    "second_team_gain": 15.0,
+    "support_contention": []
+   },
+   "expected": 24.6,
+   "gain": 22.4,
+   "kind": "new archetype",
+   "name": "Columbina",
+   "sd": 6.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Mavuika",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.4,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 44,
+    "redundancy_score": 0.27,
+    "second_team_gain": 15.0,
+    "support_contention": []
+   },
+   "expected": 18.1,
+   "gain": 16.4,
+   "kind": "fills a gap",
+   "name": "Mavuika",
+   "sd": 6.4,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Neuvillette",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.7,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 45,
+    "redundancy_score": 0.19,
+    "second_team_gain": 15.0,
+    "support_contention": []
+   },
+   "expected": 16.9,
+   "gain": 15.7,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 5.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Nahida",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "aggravate",
+     "hyperbloom",
+     "quicken"
+    ],
+    "new_viable_teams": 36,
+    "redundancy_score": 0.24,
+    "second_team_gain": 13.8,
+    "support_contention": []
+   },
+   "expected": 14.1,
+   "gain": 13.8,
+   "kind": "fills a gap",
+   "name": "Nahida",
+   "sd": 4.6,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Furina",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 48,
+    "redundancy_score": 0.32,
+    "second_team_gain": 12.1,
+    "support_contention": []
+   },
+   "expected": 13.3,
+   "gain": 12.1,
+   "kind": "fills a gap",
+   "name": "Furina",
+   "sd": 5.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Sucrose",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 50,
+    "redundancy_score": 0.29,
+    "second_team_gain": 11.9,
+    "support_contention": []
+   },
+   "expected": 12.7,
+   "gain": 11.9,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 5.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Fischl",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 50,
+    "redundancy_score": 0.19,
+    "second_team_gain": 11.0,
+    "support_contention": []
+   },
+   "expected": 11.8,
+   "gain": 11.0,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 5.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Fischl",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Fischl",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 50,
+    "redundancy_score": 0.23,
+    "second_team_gain": 8.4,
+    "support_contention": []
+   },
+   "expected": 9.2,
+   "gain": 8.4,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 5.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Skirk",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Zhongli"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Skirk",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Varka",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Zhongli"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Hu Tao"
+ ]
+}

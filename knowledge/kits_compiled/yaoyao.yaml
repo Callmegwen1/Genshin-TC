@@ -1,0 +1,111 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Yaoyao:
+  schema: 3
+  element: Dendro
+  weapon: polearm
+  roles:
+  - healer
+  - applier
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Dendro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: low
+    - element: Dendro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: low
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: hp
+    for: heal
+    source:
+    - skill
+    - burst
+    - In Others' Shoes
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 3.09% of Yaoyao's Max HP + 363 per White Jade Radish to characters in its AoE
+    duration: 10
+    stacking: 'at talent level 10; max 2 Yuegui: Throwing Mode'
+    conditions: []
+    source: Raphanus Sky Cluster (White Jade Radish Healing at talent level 10)
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 3.63% of Yaoyao's Max HP + 427 per Adeptal Legacy radish explosion to all nearby party members
+    duration: 5
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Adeptal Legacy
+      text: while Yaoyao is on field in Adeptal Legacy
+    source: Moonjade Descent (Adeptal Legacy White Jade Radish Healing at talent level 10)
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 0.8% of Yaoyao's Max HP every 1s
+    duration: 5
+    stacking: unknown
+    conditions: []
+    source: In Others' Shoes
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - bloom
+    - quicken
+    - spread
+    - burning
+    - hyperbloom
+    - burgeon
+    requires: []
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Toss ''N'' Turn Spear, Raphanus Sky Cluster, Moonjade Descent, Starscatter,
+      In Others'' Shoes'
+    community: 'Engine measurements and general play pattern: off-field Dendro applier and healer via Yuegui'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

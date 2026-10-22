@@ -1,0 +1,621 @@
+{
+ "benchmark_cases": [
+  "skirk_not_with_geo"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 67.7,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Chiori",
+    "Escoffier",
+    "Furina",
+    "Skirk"
+   ],
+   "ranking": 63.1,
+   "route": "pair_model",
+   "sd": 6.9,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 65.4,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Lan Yan",
+    "Skirk"
+   ],
+   "ranking": 57.3,
+   "route": "pair_model",
+   "sd": 12.1,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 56.9,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Skirk",
+    "Zhongli"
+   ],
+   "ranking": 53.4,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.6,
+   "fit_source": "pairmodel",
+   "label": "Skirk dual carry",
+   "lead": "Skirk",
+   "lineup": [
+    "Chiori",
+    "Escoffier",
+    "Skirk",
+    "Zhongli"
+   ],
+   "ranking": 44.8,
+   "route": "pair_model",
+   "sd": 8.5,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 48.0,
+   "fit_source": "pairmodel",
+   "label": "Skirk dual carry · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Skirk",
+    "Zhongli"
+   ],
+   "ranking": 42.3,
+   "route": "pair_model",
+   "sd": 8.5,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.6,
+   "fit_source": "pairmodel",
+   "label": "Chiori and Furina dual carry · Freeze",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Escoffier",
+    "Furina",
+    "Zhongli"
+   ],
+   "ranking": 40.4,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.4,
+   "fit_source": "pairmodel",
+   "label": "Chiori and Escoffier dual carry",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Escoffier",
+    "Lan Yan",
+    "Zhongli"
+   ],
+   "ranking": 36.2,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.4,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Freeze",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Escoffier",
+    "Furina",
+    "Lan Yan"
+   ],
+   "ranking": 34.9,
+   "route": "pair_model",
+   "sd": 8.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.9,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Freeze",
+   "lead": "Furina",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Lan Yan",
+    "Zhongli"
+   ],
+   "ranking": 34.8,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.3,
+   "fit_source": "pairmodel",
+   "label": "Skirk spread damage",
+   "lead": "Skirk",
+   "lineup": [
+    "Chiori",
+    "Escoffier",
+    "Lan Yan",
+    "Skirk"
+   ],
+   "ranking": 32.8,
+   "route": "pair_model",
+   "sd": 21.5,
+   "template": "auto_mono_cryo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 46.1,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Lan Yan",
+    "Skirk",
+    "Zhongli"
+   ],
+   "ranking": 32.8,
+   "route": "pair_model",
+   "sd": 19.7,
+   "template": "auto_mono_cryo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 46.4,
+   "fit_source": "pairmodel",
+   "label": "Skirk spread damage · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Lan Yan",
+    "Skirk"
+   ],
+   "ranking": 32.2,
+   "route": "pair_model",
+   "sd": 21.1,
+   "template": "auto_mono_cryo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.3,
+   "fit_source": "pairmodel",
+   "label": "Chiori and Furina dual carry",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Lan Yan",
+    "Zhongli"
+   ],
+   "ranking": 31.5,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Sandrone",
+   [
+    "Chiori",
+    "Escoffier",
+    "Lan Yan",
+    "Sandrone"
+   ],
+   62.2
+  ],
+  [
+   "Mavuika",
+   [
+    "Escoffier",
+    "Furina",
+    "Mavuika",
+    "Zhongli"
+   ],
+   57.5
+  ],
+  [
+   "Lohen",
+   [
+    "Escoffier",
+    "Furina",
+    "Lohen",
+    "Zhongli"
+   ],
+   56.6
+  ],
+  [
+   "Neuvillette",
+   [
+    "Escoffier",
+    "Lan Yan",
+    "Neuvillette",
+    "Skirk"
+   ],
+   54.1
+  ],
+  [
+   "Gaming",
+   [
+    "Escoffier",
+    "Furina",
+    "Gaming",
+    "Zhongli"
+   ],
+   52.5
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Escoffier",
+    "Furina",
+    "Skirk"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 4.3,
+   "teams": [
+    [
+     "Chiori",
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Escoffier",
+    "Furina",
+    "Skirk"
+   ],
+   "note": "",
+   "score": 43.4,
+   "teams": [
+    [
+     "Chiori",
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Escoffier",
+    "Furina",
+    "Skirk"
+   ],
+   "note": "",
+   "score": 43.1,
+   "teams": [
+    [
+     "Chiori",
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 48.9,
+   "teams": [
+    [
+     "Chiori",
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 67.7,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Chiori",
+    "Escoffier",
+    "Furina",
+    "Skirk"
+   ],
+   "ranking": 63.1,
+   "route": "pair_model",
+   "sd": 6.9,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 43.1,
+ "pulls": [
+  {
+   "best_team": [
+    "Citlali",
+    "Escoffier",
+    "Furina",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 25.7,
+    "displaced": [
+     "Chiori"
+    ],
+    "improved": [
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 25.0,
+   "gain": 25.7,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 9.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Escoffier",
+    "Furina",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 22.3,
+    "displaced": [
+     "Chiori"
+    ],
+    "improved": [
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 13,
+    "redundancy_score": 0.41,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 23.8,
+   "gain": 22.3,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 11.4,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Furina",
+    "Neuvillette",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 11.4,
+    "displaced": [
+     "Chiori"
+    ],
+    "improved": [
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.4,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 12.1,
+   "gain": 11.4,
+   "kind": "fills a gap",
+   "name": "Neuvillette",
+   "sd": 10.5,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Furina",
+    "Skirk",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.9,
+    "displaced": [
+     "Chiori"
+    ],
+    "improved": [
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.46,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 8.9,
+   "gain": 8.9,
+   "kind": "upgrade",
+   "name": "Xilonen",
+   "sd": 9.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Furina",
+    "Skirk",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.4,
+    "displaced": [
+     "Chiori"
+    ],
+    "improved": [
+     "Escoffier",
+     "Furina",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.52,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 14.4,
+   "gain": 8.4,
+   "kind": "upgrade",
+   "name": "Yelan",
+   "sd": 17.2,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Furina",
+    "Mavuika",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.2,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Mavuika",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Furina",
+    "Lan Yan",
+    "Nahida"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 6,
+    "redundancy_score": 0.36,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Nahida",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Furina",
+    "Varka",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.3,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Skirk"
+ ]
+}

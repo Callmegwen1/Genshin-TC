@@ -1,0 +1,168 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Shenhe:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 8rwGqNTCHdBg (house builds)
+    - gcsim community rotation CCfCgbn8d6Gq (house builds)
+    - gcsim community rotation TPtLDd8Gmwm8 (house builds)
+    - gcsim community rotation wdWgfTPhWk77 (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 14 of 15 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.75
+      particles: 4.0
+      hits:
+      - offset: 0.55
+        type: skill
+        mult: 3.3984
+        abil: Spring Spirit Summoning (Hold)
+        source: gcsim
+        element: Cryo
+        gauge: 2.0
+    burst:
+      duration: 1.65
+      particles: 0.0
+      hits:
+      - offset: 1.3
+        type: burst
+        table:
+        - burst
+        - Skill DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 2.15
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 2.65
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 4.1
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 4.633
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 6.05
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 6.617
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 8.0
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 8.5
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 9.95
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 10.483
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 11.9
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 12.467
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Cryo
+        gauge: 1.0
+    attack#0:
+      duration: 0.317
+      particles: 0.0
+      hits:
+      - offset: 0.233
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - attack
+  follow:
+    burst: attack
+  first: skill
+  causal: {}

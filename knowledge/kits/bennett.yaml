@@ -1,0 +1,29 @@
+Bennett:
+  schema: 3
+  element: Pyro
+  weapon: sword
+  roles: [buffer, healer]
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage: {element: Pyro, types: [skill, burst]}
+    application: [{element: Pyro, mode: on_field, strength: medium}]
+    energy: {burst_cost: 60, dependency: high}
+    sustain: {heal: high, shield: none}
+  scaling: [{stat: atk, for: buff, source: [burst]}, {stat: hp, for: heal, source: [burst]}]
+  effects:
+    - {kind: atk, target: active, affects: {elements: [all]}, amount: "based on Bennett's Base ATK", duration: "in the Inspiration Field",
+       stacking: none, conditions: [], source: "Fantastic Voyage (Inspiration Field)"}
+    - {kind: heal, target: active, affects: {elements: [all]}, amount: "based on Bennett's Max HP, below 70% HP", duration: "in the field",
+       stacking: none, conditions: [], source: "Fantastic Voyage (Inspiration Field)"}
+  conditions: []
+  reactions: {owns: [], enables: [vaporize, melt, overloaded, burning, swirl-pyro], requires: [], aura_supplied: [pyro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Passion Overload, Fantastic Voyage, Rekindle, Fearnaught"
+    community: "How the character is played (KQM, Prydwen): ATK buffer and healer through his Burst field"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

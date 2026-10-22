@@ -1,0 +1,103 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Ganyu:
+  schema: 3
+  element: Cryo
+  weapon: bow
+  roles:
+  - on_field_carry
+  - off_field_sub_dps
+  - buffer
+  behavior:
+    field_time: medium
+    on_field_damage: true
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Cryo
+      types:
+      - charged
+      - burst
+      - skill
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: high
+    - element: Cryo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - Cryo
+      damage_types:
+      - charged
+    amount: 0.2
+    duration: 5
+    stacking: none
+    conditions: []
+    source: Undivided Heart (subsequent Frostflake Arrows and blooms)
+  - kind: elemental_dmg_bonus
+    target: active
+    affects:
+      elements:
+      - Cryo
+    amount: 0.2
+    duration: while in the Celestial Shower AoE
+    stacking: none
+    conditions: []
+    source: Harmony Between Heaven and Earth
+  conditions: []
+  reactions:
+    owns:
+    - melt
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    - swirl-cryo
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Liutian Archery, Trail of the Qilin, Celestial Shower, Undivided Heart,
+      Harmony Between Heaven and Earth'
+    engine: 'Engine measurements: field share 52%, team damage share 54%, 30% off-field damage, Cryo application 6.2 on /
+      2.2 off field per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    reactions:
+      source: engine
+      span: reactions she triggers
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

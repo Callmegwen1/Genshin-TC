@@ -1,0 +1,49 @@
+# Artifact sets whose 4-piece effect helps the whole team. YOU own this file.
+#
+# one_per_team: the effect does not stack, so a second holder wastes a set.
+# holder_elements: who can trigger it (empty = anyone).
+# wanted_when: the team should have a holder when any member has one of these elements or roles.
+#   elements_any / roles_any. Leave out when the set is a good option but never mandatory.
+# note: shown in the review.
+
+Viridescent Venerer:
+  one_per_team: true
+  holder_elements: [Anemo]
+  wanted_when: {elements_any: [Anemo]}
+  note: Swirling shreds the swirled element's RES by 40%. Almost every Anemo support in a reaction team should hold it, and only one per team.
+
+Deepwood Memories:
+  one_per_team: true
+  holder_elements: [Dendro]
+  wanted_when: {elements_any: [Dendro]}
+  note: Shreds Dendro RES by 30%. One Dendro holder per team.
+
+Noblesse Oblige:
+  one_per_team: true
+  note: Party ATK +20% after the holder's Burst. Does not stack.
+
+Tenacity of the Millelith:
+  one_per_team: true
+  note: Party ATK +20% when the holder's Skill hits. Does not stack.
+
+Instructor:
+  one_per_team: true
+  note: Party Elemental Mastery +120 after the holder triggers a reaction. Does not stack.
+
+Archaic Petra:
+  one_per_team: true
+  holder_elements: [Geo]
+  note: Party elemental DMG bonus for the crystallized element. Does not stack.
+
+Scroll of the Hero of Cinder City:
+  one_per_team: true
+  note: Party elemental DMG bonus after Nightsoul or reaction triggers. Does not stack.
+
+Song of Days Past:
+  one_per_team: true
+  note: Boosts the party's next hits after the holder heals. Does not stack.
+
+Silken Moon's Serenade:
+  one_per_team: true
+  wanted_when: {roles_any: [moonsign]}
+  note: Buffs the party's Lunar reaction damage. Keqing Mains recommends one holder in every Lunar team.

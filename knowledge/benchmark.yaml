@@ -1,0 +1,301 @@
+# Benchmark: accounts, a question, and the answer an expert theorycrafter would give.
+# `python -m gtc benchmark` scores the engine on these; `--tune` fits chosen parameters against them with
+# leave-one-out cross-validation; `--record` writes the result for the current model version.
+#
+# Add your own cases. Each needs an id, a `kind`, the inputs for that kind, and `source` (who says so).
+# Rosters list characters at full build: 5-stars C0, 4-stars C6 unless `cons` says otherwise.
+#
+# Kinds:
+#   best_team      roster, lead or template; expect includes/excludes for the best team the engine forms
+#   no_team        roster, template; expect that no valid team forms (with `lead` or `members` if given)
+#   plan_team      roster, lead or member; expect the plan's team led by `lead` (or containing `member`) includes/excludes
+#   pull_top       roster, pool; expect the top-valued character in `top_in`, or an answer in `top_in` within noise
+#                  of the top pick (the top is not likely better, under 80%), the same rule the reports use
+#   pull_kind      roster, pool, character; expect its kind in `kind_in` (and optional `not_top: 2`)
+#   better_lineup  better, worse: full lineups; expect the first to have the higher potential
+#   carry_gap      roster; expect no viable carry and a recommended carry built on three owned supports
+#
+# Sources: "scenario" cases came from the user's own corrections in earlier sessions. "consensus" cases are
+# Claude's reading of community theorycrafting (Keqing Mains, Prydwen, gcsim) and should be reviewed.
+
+cases:
+  # ---------- best team for a carry ----------
+  - id: hutao_double_hydro
+    kind: best_team
+    roster: [Hu Tao, Xingqiu, Yelan, Zhongli, Bennett, Kaedehara Kazuha, Fischl, Sucrose]
+    lead: Hu Tao
+    expect: {includes_any: [Xingqiu, Yelan]}  # relaxed: gcsim has Hu Tao / Yelan / Bennett / Kazuha at 75k, double Hydro with Zhongli at 41k
+    source: consensus
+  - id: neuvillette_furina_kazuha
+    kind: best_team
+    roster: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli, Bennett, Xiangling, Fischl]
+    lead: Neuvillette
+    expect: {includes: [Furina]}
+    source: consensus
+  - id: ayaka_freeze_core
+    kind: best_team
+    roster: [Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona, Sucrose, Bennett, Xingqiu]
+    template: freeze
+    expect: {includes: [Kamisato Ayaka, Shenhe], excludes: [Bennett]}
+    source: consensus
+  - id: ayaka_kazuha_over_sucrose
+    kind: best_team
+    roster: [Kamisato Ayaka, Mona, Shenhe, Kaedehara Kazuha, Sucrose, Bennett, Xiangling, Zhongli]
+    template: freeze
+    expect: {includes: [Kaedehara Kazuha]}
+    source: scenario
+  - id: raiden_national
+    kind: best_team
+    roster: [Raiden Shogun, Bennett, Xiangling, Xingqiu, Kaedehara Kazuha, Sucrose, Zhongli]
+    lead: Raiden Shogun
+    expect: {includes: [Xingqiu]}
+    source: consensus
+  - id: hyperbloom_core
+    kind: best_team
+    roster: [Nahida, Kuki Shinobu, Xingqiu, Yelan, Fischl, Bennett]
+    template: hyperbloom
+    expect: {includes: [Nahida, Kuki Shinobu]}
+    source: consensus
+  - id: alhaitham_nahida
+    kind: best_team
+    roster: [Alhaitham, Nahida, Fischl, Kuki Shinobu, Yae Miko, Zhongli, Xingqiu]
+    lead: Alhaitham
+    expect: {includes: [Nahida]}
+    source: consensus
+  - id: arlecchino_bennett
+    kind: best_team
+    roster: [Arlecchino, Bennett, Chevreuse, Fischl, Xingqiu, Kaedehara Kazuha, Zhongli, Yelan]
+    lead: Arlecchino
+    expect: {includes: [Bennett]}
+    source: consensus
+  - id: mavuika_citlali
+    kind: best_team
+    roster: [Mavuika, Citlali, Bennett, Xilonen, Xingqiu, Kaedehara Kazuha]
+    lead: Mavuika
+    expect: {includes: [Citlali]}
+    source: consensus
+  - id: skirk_hydro_cryo
+    kind: best_team
+    roster: [Skirk, Escoffier, Furina, Shenhe, Kaedehara Kazuha, Bennett, Xiangling]
+    lead: Skirk
+    expect: {includes: [Escoffier, Furina], excludes: [Bennett, Xiangling]}
+    source: consensus
+  - id: flins_lunar_core
+    kind: best_team
+    roster: [Flins, Ineffa, Columbina, Aino, Sucrose, Xingqiu, Bennett]
+    lead: Flins
+    expect: {includes: [Ineffa, Columbina]}
+    source: consensus
+  - id: flins_aino_over_xingqiu
+    kind: best_team
+    roster: [Flins, Ineffa, Aino, Xingqiu, Sucrose, Kaedehara Kazuha, Bennett, Zhongli]
+    lead: Flins
+    expect: {includes: [Aino], excludes: [Xingqiu]}
+    source: scenario
+  - id: navia_xilonen
+    kind: best_team
+    roster: [Navia, Chiori, Zhongli, Xilonen, Bennett, Furina, Xingqiu]
+    lead: Navia
+    expect: {includes: [Xilonen]}
+    source: consensus
+  - id: xiao_faruzan
+    kind: best_team
+    roster: [Xiao, Faruzan, Furina, Bennett, Zhongli, Xianyun]
+    lead: Xiao
+    expect: {includes_any: [Faruzan, Xianyun]}  # relaxed: gcsim has Xiao / Furina / Bennett / Xianyun above the Faruzan version
+    source: consensus
+  - id: wanderer_faruzan
+    kind: best_team
+    roster: [Wanderer, Faruzan, Bennett, Furina, Zhongli, Yelan]
+    lead: Wanderer
+    expect: {includes: [Faruzan]}
+    source: consensus
+  - id: yoimiya_hydro
+    kind: best_team
+    roster: [Yoimiya, Yelan, Yun Jin, Zhongli, Bennett, Kaedehara Kazuha, Xingqiu]
+    lead: Yoimiya
+    expect: {includes_any: [Yelan, Xingqiu]}
+    source: consensus
+  - id: razor_chevreuse
+    kind: best_team
+    roster: [Razor, Fischl, Bennett, Chevreuse, Kaedehara Kazuha, Sucrose]
+    lead: Razor
+    expect: {includes: [Chevreuse], excludes: [Kaedehara Kazuha]}
+    source: scenario
+  - id: skirk_not_with_geo
+    kind: best_team
+    roster: [Skirk, Chiori, Lan Yan, Furina, Escoffier, Zhongli]
+    lead: Skirk
+    expect: {includes: [Furina, Escoffier]}  # one off-element flex is fine; Chiori and Lan Yan together is not (no_skirk_without_hydro)
+    source: scenario
+
+  # ---------- teams that must not form ----------
+  - id: no_neuvillette_mono_pyro
+    kind: no_team
+    roster: [Diluc, Xiangling, Yun Jin, Neuvillette, Bennett, Zhongli, Kaedehara Kazuha, Thoma]
+    template: auto_mono_pyro
+    members: [Neuvillette]
+    source: scenario
+  - id: no_raiden_damage_anemo_carry
+    kind: no_team
+    roster: [Kaedehara Kazuha, Raiden Shogun, Shenhe, Citlali]
+    template: auto_anemo_carry
+    source: scenario
+  - id: no_clorinde_lunar
+    kind: no_team
+    roster: [Clorinde, Columbina, Ineffa, Kaedehara Kazuha, Nicole, Aino]
+    template: lunar_charged
+    lead: Clorinde
+    source: scenario
+  - id: no_skirk_without_hydro
+    # Phase 9: was "no Skirk team forms without Hydro". Simulations show such teams work, at far lower damage
+    # (Skirk / Chiori / Yelan / Zhongli 64k against about 131k), so the case now asks for that order.
+    kind: better_lineup
+    better: [Skirk, Escoffier, Furina, Citlali]
+    worse: [Skirk, Chiori, Kaedehara Kazuha, Zhongli]
+    source: scenario
+  - id: no_mizuki_hyperbloom_lead
+    kind: no_team
+    roster: [Nahida, Xingqiu, Fischl, Yumemizuki Mizuki]
+    template: hyperbloom
+    lead: Yumemizuki Mizuki
+    source: scenario
+  - id: no_freeze_with_pyro
+    kind: no_team
+    roster: [Kamisato Ayaka, Bennett, Xiangling, Mona]
+    template: freeze
+    source: consensus
+
+  # ---------- account plans ----------
+  - id: plan_hutao_and_ayaka
+    kind: plan_team
+    roster: [Hu Tao, Xingqiu, Yelan, Zhongli, Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona]
+    lead: Hu Tao
+    expect: {includes_any: [Xingqiu, Yelan]}  # relaxed: gcsim has Hu Tao / Yelan / Bennett / Kazuha at 75k, double Hydro with Zhongli at 41k
+    source: consensus
+  - id: plan_ayaka_with_hutao
+    kind: plan_team
+    roster: [Hu Tao, Xingqiu, Yelan, Zhongli, Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona]
+    lead: Kamisato Ayaka
+    expect: {includes: [Shenhe, Mona]}
+    source: consensus
+  - id: plan_raiden_and_nahida
+    kind: plan_team
+    roster: [Raiden Shogun, Bennett, Xiangling, Xingqiu, Nahida, Kuki Shinobu, Yelan, Zhongli]
+    member: Raiden Shogun  # National's measured top damage dealer is Xiangling, so ask for Raiden's team, not Raiden-led
+    expect: {includes: [Bennett, Xiangling]}
+    source: consensus
+  - id: plan_flins_keeps_lunar_core
+    kind: plan_team
+    roster: [Flins, Ineffa, Columbina, Sucrose, Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona]
+    lead: Flins
+    expect: {includes: [Ineffa, Columbina]}
+    source: consensus
+
+  # ---------- pulls ----------
+  - id: pull_columbina_for_flins
+    kind: pull_top
+    roster: [Flins, Ineffa, Sucrose, Barbara, Bennett, Kaedehara Kazuha, Zhongli, Xiangling, Fischl, Diona]
+    pool: [Columbina, Mavuika, Varka, Furina, Yelan, Escoffier, Nahida, Neuvillette, Xilonen, Citlali, Skirk]
+    top_in: [Columbina]
+    source: scenario
+  - id: pull_hydro_for_hutao
+    kind: pull_top
+    roster: [Hu Tao, Zhongli, Bennett, Kaedehara Kazuha, Fischl, Sucrose, Xiangling]
+    pool: [Yelan, Furina, Nahida, Escoffier, Xilonen]  # supports only: which one completes Hu Tao
+    top_in: [Yelan, Furina]
+    source: consensus
+  - id: pull_shenhe_for_ayaka
+    kind: pull_top
+    roster: [Kamisato Ayaka, Mona, Kaedehara Kazuha, Diona, Bennett, Xiangling]
+    pool: [Shenhe, Escoffier, Furina, Nahida, Citlali]  # supports only
+    top_in: [Shenhe, Escoffier, Furina]
+    source: consensus
+  - id: pull_furina_for_neuvillette
+    kind: pull_top
+    roster: [Neuvillette, Kaedehara Kazuha, Zhongli, Xiangling, Bennett, Fischl]
+    pool: [Furina, Escoffier, Nahida, Citlali, Xilonen]  # supports only
+    top_in: [Furina]
+    source: consensus
+  - id: pull_trigger_for_hyperbloom
+    kind: pull_top
+    roster: [Nahida, Xingqiu, Bennett, Kaedehara Kazuha, Zhongli]
+    pool: [Kuki Shinobu, Raiden Shogun, Escoffier, Citlali, Xilonen]
+    top_in: [Kuki Shinobu, Raiden Shogun]
+    source: consensus
+  - id: pull_citlali_for_mavuika
+    kind: pull_top
+    roster: [Mavuika, Bennett, Xiangling, Kaedehara Kazuha, Zhongli, Xingqiu]
+    pool: [Citlali, Xilonen, Furina, Yelan, Escoffier]
+    top_in: [Citlali, Xilonen]
+    source: consensus
+  - id: pull_enabler_for_skirk
+    kind: pull_top
+    roster: [Skirk, Shenhe, Kaedehara Kazuha, Zhongli, Bennett]
+    pool: [Escoffier, Furina, Citlali, Yelan, Xilonen]  # supports only
+    top_in: [Escoffier, Furina]
+    source: consensus
+  - id: mavuika_sidegrade_for_arlecchino
+    kind: pull_kind
+    roster: [Arlecchino, Bennett, Xingqiu, Kaedehara Kazuha, Zhongli, Xiangling, Fischl, Sucrose, Chevreuse]
+    pool: [Columbina, Mavuika, Varka, Furina, Yelan, Escoffier, Nahida, Neuvillette, Xilonen, Citlali, Skirk]
+    character: Mavuika
+    # Model 6.4: kinds describe the observed plan change (phase 12). Her best plan builds a separate team without
+    # taking Arlecchino's supports, so it is a new archetype; her overlap with Arlecchino is reported separately as
+    # functional redundancy. The user's point (not a top pick for this account) is kept as not_top.
+    kind_in: [new archetype]
+    not_top: 2
+    source: scenario
+  - id: neuvillette_sidegrade_with_neuvillette_like
+    kind: pull_kind
+    roster: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli, Bennett, Xiangling, Fischl, Xingqiu]
+    pool: [Mualani, Nahida, Raiden Shogun, Columbina]
+    character: Mualani
+    kind_in: [sidegrade, no change]
+    source: consensus
+  - id: carry_gap_supports_only
+    kind: carry_gap
+    roster: [Bennett, Xingqiu, Xiangling, Kaedehara Kazuha, Sucrose, Zhongli, Fischl, Furina]
+    source: scenario
+
+  # ---------- lineup comparisons ----------
+  - id: vape_beats_mono_pyro_hutao
+    kind: better_lineup
+    better: [Hu Tao, Xingqiu, Yelan, Zhongli]
+    worse: [Hu Tao, Bennett, Xiangling, Zhongli]
+    source: consensus
+  - id: shenhe_kazuha_freeze_beats_diona_sucrose
+    kind: better_lineup
+    better: [Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona]
+    worse: [Kamisato Ayaka, Diona, Sucrose, Mona]
+    source: consensus
+  - id: columbina_beats_aino_for_flins
+    kind: better_lineup
+    better: [Flins, Ineffa, Columbina, Sucrose]
+    worse: [Flins, Ineffa, Aino, Sucrose]
+    source: consensus
+  - id: hyperbloom_beats_mixed_nahida
+    kind: better_lineup
+    better: [Nahida, Kuki Shinobu, Xingqiu, Yelan]
+    worse: [Nahida, Fischl, Xingqiu, Bennett]
+    source: consensus
+  - id: mavuika_meta_beats_filler
+    kind: better_lineup
+    better: [Mavuika, Citlali, Xilonen, Bennett]
+    worse: [Mavuika, Xiangling, Bennett, Zhongli]
+    source: consensus
+  - id: skirk_double_hydro_beats_charlotte_layla
+    kind: better_lineup
+    better: [Skirk, Escoffier, Furina, Citlali]
+    worse: [Skirk, Charlotte, Furina, Layla]
+    source: consensus
+  - id: neuvillette_furina_beats_bennett
+    kind: better_lineup
+    better: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli]
+    worse: [Neuvillette, Bennett, Fischl, Zhongli]
+    source: consensus
+  - id: raiden_national_beats_raiden_lone
+    kind: better_lineup
+    better: [Raiden Shogun, Bennett, Xiangling, Xingqiu]
+    worse: [Raiden Shogun, Diona, Sucrose, Zhongli]
+    source: consensus

@@ -1,0 +1,199 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Baizhu:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation BWCmJCMqJQLT (house builds)
+    - gcsim community rotation QrtdNGzRDnLL (house builds)
+    - gcsim community rotation drPNjjWjgwWc (house builds)
+    - gcsim community rotation p7hkQN6BdRK7 (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 14 of 14 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.5
+      particles: 3.0
+      hits:
+      - offset: 0.217
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+      - offset: 1.017
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Dendro
+        gauge: 0.0
+      - offset: 1.817
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Dendro
+        gauge: 0.0
+    burst:
+      duration: 1.733
+      particles: 0.0
+      hits:
+      - offset: 4.2
+        type: burst
+        table:
+        - burst
+        - Spiritvein DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+      - offset: 6.633
+        type: burst
+        table:
+        - burst
+        - Spiritvein DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+      - offset: 9.067
+        type: burst
+        table:
+        - burst
+        - Spiritvein DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+      - offset: 11.5
+        type: burst
+        table:
+        - burst
+        - Spiritvein DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+      - offset: 13.933
+        type: burst
+        table:
+        - burst
+        - Spiritvein DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+      - offset: 16.467
+        type: burst
+        table:
+        - burst
+        - Spiritvein DMG
+        - 0
+        element: Dendro
+        gauge: 1.0
+    dash:
+      duration: 0.317
+      particles: 0.0
+      hits: []
+    walk:
+      duration: 0.05
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.367
+      particles: 0.0
+      hits:
+      - offset: 0.283
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.55
+      particles: 0.0
+      hits:
+      - offset: 0.417
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.583
+      particles: 0.0
+      hits:
+      - offset: 0.383
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+      - offset: 0.583
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+    attack#3:
+      duration: 0.5
+      particles: 0.0
+      hits:
+      - offset: 0.5
+        type: normal
+        table:
+        - normal
+        - 4-Hit DMG
+        - 0
+        element: Dendro
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - dash
+  - - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - dash
+  follow: {}
+  first: skill
+  causal: {}

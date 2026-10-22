@@ -1,0 +1,1625 @@
+{
+ "benchmark_cases": [
+  "arlecchino_bennett"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 67.3,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field · Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Chevreuse",
+    "Fischl"
+   ],
+   "ranking": 64.1,
+   "route": "exact_community",
+   "sd": 4.8,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 61.0,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 58.0,
+   "route": "exact_community",
+   "sd": 4.4,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 58.2,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Fischl",
+    "Yelan"
+   ],
+   "ranking": 55.5,
+   "route": "exact_community",
+   "sd": 4.1,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 56.3,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Chevreuse",
+    "Yelan"
+   ],
+   "ranking": 52.6,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 55.8,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · incidental Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 52.4,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 53.9,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 51.4,
+   "route": "exact_community",
+   "sd": 3.8,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.5,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 51.1,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 52.5,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 49.5,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 50.6,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 48.2,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_mono_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 51.5,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field · Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Chevreuse",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 48.0,
+   "route": "exact_community",
+   "sd": 5.1,
+   "template": "auto_mono_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.0,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Overloaded · incidental Swirl",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 47.9,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 49.5,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 47.2,
+   "route": "exact_community",
+   "sd": 3.5,
+   "template": "auto_mono_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 50.4,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Overloaded + Vaporize · incidental Electro-Charged",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Chevreuse",
+    "Fischl",
+    "Yelan"
+   ],
+   "ranking": 47.0,
+   "route": "exact_community",
+   "sd": 5.0,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 49.1,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Chevreuse",
+    "Xingqiu"
+   ],
+   "ranking": 45.7,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.5,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Chevreuse",
+    "Zhongli"
+   ],
+   "ranking": 44.3,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 47.1,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field · incidental Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Fischl",
+    "Zhongli"
+   ],
+   "ranking": 44.0,
+   "route": "exact_community",
+   "sd": 4.7,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.2,
+   "fit_source": "pairmodel",
+   "label": "No single carry spread damage · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Yelan",
+   "lineup": [
+    "Arlecchino",
+    "Fischl",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 44.0,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 46.4,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino dual carry · Vaporize · incidental Swirl",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 43.3,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 45.2,
+   "fit_source": "gcsim",
+   "label": "Yelan dual carry · Electro-Charged from Fischl and Xingqiu · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 43.0,
+   "route": "exact_community",
+   "sd": 3.2,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 44.3,
+   "fit_source": "pairmodel",
+   "label": "Chevreuse hypercarry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Chevreuse",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Yelan"
+   ],
+   "ranking": 42.2,
+   "route": "exact_community",
+   "sd": 3.1,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.9,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · incidental Overloaded, Swirl",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 41.8,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.1,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 41.6,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.0,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Chevreuse",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 41.0,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 43.7,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Fischl",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 40.7,
+   "route": "exact_community",
+   "sd": 4.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Overloaded · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 40.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.1,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 40.4,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.8,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field · Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Chevreuse",
+    "Fischl",
+    "Zhongli"
+   ],
+   "ranking": 40.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 43.1,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 40.2,
+   "route": "exact_community",
+   "sd": 4.3,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.6,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 39.7,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.1,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · Overloaded · incidental Electro-Charged",
+   "lead": "Yelan",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 39.7,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 42.4,
+   "fit_source": "gcsim",
+   "label": "Arlecchino hypercarry · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 39.6,
+   "route": "exact_community",
+   "sd": 4.2,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 41.2,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino dual carry · Vaporize",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 39.2,
+   "route": "exact_community",
+   "sd": 2.9,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.8,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 38.4,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 38.3,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.6,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Xingqiu"
+   ],
+   "ranking": 37.9,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "ranking": 37.7,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.4,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino dual carry · incidental Electro-Charged, Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Fischl",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 37.1,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.8,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kaedehara Kazuha dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 36.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.6,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · Vaporize · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 35.7,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.4,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · Overloaded · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 35.0,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.3,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.9,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · incidental Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.2,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.8,
+   "fit_source": "pairmodel",
+   "label": "Yelan dual carry",
+   "lead": "Yelan",
+   "lineup": [
+    "Chevreuse",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.1,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.4,
+   "fit_source": "pairmodel",
+   "label": "Arlecchino on-field",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 34.0,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 33.9,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.4,
+   "fit_source": "gcsim",
+   "label": "Yelan on-field",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 33.9,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.3,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Overloaded · incidental Electro-Charged",
+   "lead": "Yelan",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 33.1,
+   "route": "pair_model",
+   "sd": 7.7,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.7,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · Vaporize · incidental Electro-Charged, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.5,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.8,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Zhongli"
+   ],
+   "ranking": 31.7,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Fischl dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.5,
+   "route": "pair_model",
+   "sd": 6.5,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.7,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · Overloaded · incidental Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 31.3,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.4,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Yelan dual carry · Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.1,
+   "route": "exact_community",
+   "sd": 3.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl hypercarry · Overloaded · incidental Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 30.8,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.3,
+   "fit_source": "pairmodel",
+   "label": "Chevreuse dual carry · Vaporize",
+   "lead": "Chevreuse",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 29.6,
+   "route": "pair_model",
+   "sd": 10.0,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.7,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry",
+   "lead": "Yelan",
+   "lineup": [
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 28.4,
+   "route": "pair_model",
+   "sd": 9.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.2,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 28.3,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.8,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry · Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 25.7,
+   "route": "pair_model",
+   "sd": 9.0,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.1,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha dual carry · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 20.8,
+   "route": "pair_model",
+   "sd": 7.7,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Lyney"
+   ],
+   64.5
+  ],
+  [
+   "Mavuika",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Mavuika",
+    "Xingqiu"
+   ],
+   62.5
+  ],
+  [
+   "Razor",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   60.5
+  ],
+  [
+   "Varesa",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Varesa"
+   ],
+   56.5
+  ],
+  [
+   "Clorinde",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Clorinde",
+    "Fischl"
+   ],
+   55.7
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Arlecchino"
+   ],
+   "note": "",
+   "score": 28.1,
+   "teams": [
+    [
+     "Arlecchino",
+     "Bennett",
+     "Chevreuse",
+     "Zhongli"
+    ],
+    [
+     "Fischl",
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Arlecchino",
+    "Bennett",
+    "Fischl"
+   ],
+   "note": "",
+   "score": 57.6,
+   "teams": [
+    [
+     "Arlecchino",
+     "Bennett",
+     "Chevreuse",
+     "Fischl"
+    ],
+    [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan",
+     "Zhongli"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Arlecchino",
+    "Bennett",
+    "Fischl"
+   ],
+   "note": "",
+   "score": 44.1,
+   "teams": [
+    [
+     "Arlecchino",
+     "Bennett",
+     "Chevreuse",
+     "Fischl"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "2 competent teams over 8 characters, 5 of 7 elements",
+   "score": 86.4,
+   "teams": [
+    [
+     "Arlecchino",
+     "Bennett",
+     "Chevreuse",
+     "Fischl"
+    ],
+    [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan",
+     "Zhongli"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 67.3,
+   "fit_source": "gcsim",
+   "label": "Arlecchino on-field · Overloaded",
+   "lead": "Arlecchino",
+   "lineup": [
+    "Arlecchino",
+    "Bennett",
+    "Chevreuse",
+    "Fischl"
+   ],
+   "ranking": 64.1,
+   "route": "exact_community",
+   "sd": 4.8,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.4,
+   "fit_source": "gcsim",
+   "label": "Yelan on-field",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 33.9,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 58.0,
+ "pulls": [
+  {
+   "best_team": [
+    "Mavuika",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Xingqiu",
+     "Yelan",
+     "Zhongli"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 47,
+    "redundancy_score": 0.27,
+    "second_team_gain": 12.2,
+    "support_contention": []
+   },
+   "expected": 13.0,
+   "gain": 12.2,
+   "kind": "fills a gap",
+   "name": "Mavuika",
+   "sd": 6.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Xingqiu"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Yelan",
+     "Zhongli"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 43,
+    "redundancy_score": 0.22,
+    "second_team_gain": 11.8,
+    "support_contention": []
+   },
+   "expected": 12.9,
+   "gain": 11.8,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 6.4,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 51,
+    "redundancy_score": 0.32,
+    "second_team_gain": 11.2,
+    "support_contention": []
+   },
+   "expected": 11.6,
+   "gain": 11.2,
+   "kind": "fills a gap",
+   "name": "Furina",
+   "sd": 5.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 47,
+    "redundancy_score": 0.39,
+    "second_team_gain": 8.2,
+    "support_contention": []
+   },
+   "expected": 8.8,
+   "gain": 8.2,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 5.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Arlecchino",
+    "Bennett",
+    "Chevreuse",
+    "Citlali"
+   ],
+   "decomposition": {
+    "best_team_gain": -1.1,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 49,
+    "redundancy_score": 0.19,
+    "second_team_gain": 9.1,
+    "support_contention": []
+   },
+   "expected": 10.0,
+   "gain": 8.0,
+   "kind": "upgrade",
+   "name": "Citlali",
+   "sd": 10.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Xilonen",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 50,
+    "redundancy_score": 0.29,
+    "second_team_gain": 6.7,
+    "support_contention": []
+   },
+   "expected": 6.9,
+   "gain": 6.7,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 5.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 42,
+    "redundancy_score": 0.24,
+    "second_team_gain": 5.6,
+    "support_contention": []
+   },
+   "expected": 5.7,
+   "gain": 5.6,
+   "kind": "fills a gap",
+   "name": "Nahida",
+   "sd": 5.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 53,
+    "redundancy_score": 0.23,
+    "second_team_gain": 5.1,
+    "support_contention": []
+   },
+   "expected": 5.9,
+   "gain": 5.1,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 6.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Arlecchino",
+    "Kaedehara Kazuha",
+    "Skirk",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 4,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Arlecchino"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Skirk",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Varka",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 8,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Bennett"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Arlecchino"
+ ]
+}

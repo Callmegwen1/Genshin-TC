@@ -1,0 +1,155 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Noelle:
+  schema: 3
+  element: Geo
+  weapon: claymore
+  roles:
+  - on_field_carry
+  - shielder
+  - healer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Geo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: medium
+      shield: strong
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - skill
+    - normal
+    - charged
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - burst
+  - stat: def
+    for: shield
+    source:
+    - skill
+    - Devotion
+  - stat: def
+    for: heal
+    source:
+    - skill
+  - stat: def
+    for: buff
+    source:
+    - burst
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 288% DEF + 1694, 150% absorption efficiency, at talent level 10
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Breastplate (shield)
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 38.3% DEF + 226, 59% chance on Normal or Charged Attack hit, at talent level 10
+    duration: while the shield lasts
+    stacking: none
+    conditions: []
+    source: Breastplate (Healing)
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: attack DMG converted to Geo, cannot be overridden
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Sweeping Time
+  - kind: atk
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 72% of Noelle's DEF, at talent level 10
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Sweeping Time (ATK Bonus)
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 400% of Noelle's DEF, 150% absorption effectiveness
+    duration: 20
+    stacking: once every 60s
+    conditions:
+    - type: character_state
+      state: active character HP below 30%, Noelle off field
+      text: Noelle in the party but not on the field
+    source: Devotion
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - skill
+    amount: -1s Breastplate CD per 4 Normal or Charged Attack hits
+    duration: unknown
+    stacking: one hit counted every 0.1s
+    conditions: []
+    source: Nice and Clean
+  conditions: []
+  reactions:
+    owns:
+    - crystallize
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Favonius Bladework - Maid, Breastplate, Sweeping Time, Devotion, Nice
+      and Clean'
+    engine: 'Engine measurements: field share 58%, team damage share 34%, Geo 6.9 on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

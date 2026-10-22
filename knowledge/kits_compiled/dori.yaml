@@ -1,0 +1,133 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Dori:
+  schema: 3
+  element: Electro
+  weapon: claymore
+  roles:
+  - healer
+  - battery
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: high
+    - element: Electro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: medium
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - burst
+  effects:
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 12.01% of Dori's Max HP + 1412, continuously (at talent level 10)
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Alcazarzaray's Exactitude (Jinni, connected character)
+  - kind: energy
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 2.5 Energy, continuously (at talent level 10)
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Alcazarzaray's Exactitude (Jinni, connected character)
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+    amount: Troubleshooter Cannon CD -1s
+    duration: unknown
+    stacking: once every 3s
+    conditions:
+    - type: reaction_required
+      reactions:
+      - electrocharged
+      - lunarcharged
+      - superconduct
+      - overloaded
+      - quicken
+      - aggravate
+      - hyperbloom
+      - swirl-electro
+      - crystallize
+      text: the character connected to the Jinni triggers an Electro-related reaction (Electro-Charged, Lunar-Charged, Superconduct,
+        Stellar-Conduct, Overloaded, Quicken, Aggravate, Hyperbloom, Electro Swirl, Electro Crystallize)
+    source: An Eye for Gold
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 5 Energy per 100% Energy Recharge, max 15
+    duration: unknown
+    stacking: once per Troubleshooter Cannon
+    conditions: []
+    source: Compound Interest
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - electrocharged
+    - superconduct
+    - overloaded
+    - quicken
+    - aggravate
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Spirit-Warding Lamp: Troubleshooter Cannon, Alcazarzaray''s Exactitude,
+      An Eye for Gold, Compound Interest'
+    community: Engine measurements and general knowledge of how the character is played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

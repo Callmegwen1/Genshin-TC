@@ -1,0 +1,244 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Zhongli:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 8HBbCDDrCnQQ (house builds)
+    - gcsim community rotation CRHd8W8tzNkd (house builds)
+    - gcsim community rotation MRTFmLBb7cMM (house builds)
+    - gcsim community rotation PgNbWBwBdJcK (house builds)
+    - gcsim community rotation QnDtK77fWrrg (house builds)
+    - gcsim community rotation RPpkQ7fFdRFg (house builds)
+    - gcsim community rotation d6fgpDkMD9zW (house builds)
+    - gcsim community rotation rWChHNrwMBfb (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 17 of 17 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.917
+      particles: 4.0
+      hits:
+      - offset: 0.8
+        type: skill
+        table:
+        - skill
+        - Hold DMG
+        - 0
+        element: Geo
+        gauge: 1.0
+      - offset: 0.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 0
+        element: Geo
+        gauge: 0.0
+      - offset: 2.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 0.0
+      - offset: 4.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 1.0
+      - offset: 6.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 0.0
+      - offset: 8.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 1.0
+      - offset: 10.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 0.0
+      - offset: 12.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 1.0
+      - offset: 14.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 0.0
+      - offset: 16.8
+        type: skill
+        table:
+        - skill
+        - Stone Stele/Resonance DMG
+        - 1
+        element: Geo
+        gauge: 1.0
+    dash:
+      duration: 0.317
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.383
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.267
+      particles: 0.0
+      hits:
+      - offset: 0.15
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.367
+      particles: 0.0
+      hits:
+      - offset: 0.133
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#3:
+      duration: 0.567
+      particles: 0.0
+      hits:
+      - offset: 0.267
+        type: normal
+        table:
+        - normal
+        - 4-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#4:
+      duration: 0.083
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - normal
+        - 5-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+      - offset: 0.3
+        type: normal
+        table:
+        - normal
+        - 5-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+      - offset: 0.383
+        type: normal
+        table:
+        - normal
+        - 5-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+  follow:
+    skill: dash
+  first: skill
+  causal: {}

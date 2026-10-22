@@ -1,0 +1,186 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Xilonen:
+  schema: 3
+  element: Geo
+  weapon: sword
+  roles:
+  - debuffer
+  - healer
+  - buffer
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Geo
+      types:
+      - normal
+      - plunge
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - normal
+    - plunge
+    - skill
+    - burst
+  - stat: def
+    for: heal
+    source:
+    - burst
+  effects:
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Geo
+      - Pyro
+      - Hydro
+      - Cryo
+      - Electro
+    amount: 0.36
+    duration: 15
+    stacking: at talent level 10; one Source Sample per Sampler (3), each starts Geo and changes to Pyro/Hydro/Cryo/Electro
+      per matching party member; same-element samples do not stack; Geo sample always active in Nightsoul's Blessing; works
+      off-field
+    conditions:
+    - type: party_element_count
+      elements:
+      - Pyro
+      - Hydro
+      - Cryo
+      - Electro
+      full: 3
+      text: one Geo sample changes per Pyro/Hydro/Cryo/Electro party member, 3 Samplers
+    source: Yohual's Scratch (Source Samples)
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 187.2% DEF + 1102 at intervals
+    duration: 12
+    stacking: at talent level 10
+    conditions:
+    - type: party_element_count
+      elements:
+      - Pyro
+      - Hydro
+      - Cryo
+      - Electro
+      full: 2
+      text: at least 2 Source Samples changed (Ebullient rhythm)
+    source: Ocelotlicue Point! (Ebullient rhythm)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: gains 35 Nightsoul points when Normal or Plunging Attacks hit (once per 0.1s)
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: party_element_count
+      elements:
+      - Pyro
+      - Hydro
+      - Cryo
+      - Electro
+      full: 2
+      text: at least 2 Source Samples changed, in Nightsoul's Blessing
+    source: Netotiliztli's Echoes
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - normal
+      - plunge
+    amount: 0.3
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Nightsoul's Blessing
+      text: in Nightsoul's Blessing with fewer than 2 Source Samples changed
+    source: Netotiliztli's Echoes (fewer than 2 samples changed)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: DEF +20%
+    duration: 15
+    stacking: none
+    conditions:
+    - type: character_state
+      state: party member triggers Nightsoul Burst
+      text: when nearby party members trigger a Nightsoul Burst
+    source: Portable Armored Sheath
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - normal
+      - plunge
+    amount: Nightsoul-aligned Geo DMG based on DEF that cannot be overridden (Blade Roller)
+    duration: while in Nightsoul's Blessing
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Nightsoul's Blessing
+      text: Blade Roller mode
+    source: Ehecatl's Roar (Blade Roller)
+  conditions:
+  - type: party_element_count
+    elements:
+    - Pyro
+    - Hydro
+    - Cryo
+    - Electro
+    full: 3
+    text: RES shred covers more elements with each Pyro/Hydro/Cryo/Electro party member (3 Samplers); healing needs at least
+      2 changed samples
+  reactions:
+    owns: []
+    enables:
+    - crystallize
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Ehecatl''s Roar, Yohual''s Scratch, Ocelotlicue Point!, Netotiliztli''s
+      Echoes, Portable Armored Sheath'
+    engine: 'Engine measurements: field share 14%, team damage share 4%, Geo on 1.7 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

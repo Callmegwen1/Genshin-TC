@@ -1,0 +1,8383 @@
+{
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 78.0,
+   "fit_source": "gcsim",
+   "label": "Flins dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 72.8,
+   "route": "exact_community",
+   "sd": 7.7,
+   "template": "lunar_charged",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 70.8,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Flins",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 64.1,
+   "route": "pair_model",
+   "sd": 9.9,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 68.5,
+   "fit_source": "pairmodel",
+   "label": "Flins dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Fischl",
+    "Flins",
+    "Ineffa"
+   ],
+   "ranking": 61.3,
+   "route": "pair_model",
+   "sd": 10.7,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 64.8,
+   "fit_source": "gcsim",
+   "label": "Razor on-field · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "ranking": 60.5,
+   "route": "exact_community",
+   "sd": 6.4,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 66.5,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 59.6,
+   "route": "pair_model",
+   "sd": 10.2,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 65.4,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Lunar-Charged · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 59.4,
+   "route": "pair_model",
+   "sd": 8.8,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 62.5,
+   "fit_source": "gcsim",
+   "label": "Flins on-field · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Fischl",
+    "Flins",
+    "Sucrose"
+   ],
+   "ranking": 58.3,
+   "route": "exact_community",
+   "sd": 6.2,
+   "template": "lunar_charged",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 63.3,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Lan Yan"
+   ],
+   "ranking": 57.4,
+   "route": "pair_model",
+   "sd": 8.6,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 59.8,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Yae Miko dual carry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Sucrose",
+    "Yae Miko"
+   ],
+   "ranking": 54.9,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 58.0,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Fischl",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 52.9,
+   "route": "pair_model",
+   "sd": 7.6,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 62.5,
+   "fit_source": "model",
+   "label": "Flins on-field · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Alyosha",
+    "Flins",
+    "Sucrose"
+   ],
+   "ranking": 52.2,
+   "route": "provisional_kit",
+   "sd": 15.3,
+   "template": "lunar_charged_offfield",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 60.8,
+   "fit_source": "model",
+   "label": "Ineffa dual carry · incidental Swirl, Hyperbloom",
+   "lead": "Ineffa",
+   "lineup": [
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 52.1,
+   "route": "pair_model",
+   "sd": 12.8,
+   "template": "hyperbloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Ineffa dual carry · Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Chevreuse",
+    "Ineffa",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 51.4,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "overloaded",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 60.8,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Zhongli"
+   ],
+   "ranking": 51.0,
+   "route": "pair_model",
+   "sd": 14.5,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 55.1,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Razor",
+    "Yae Miko"
+   ],
+   "ranking": 51.0,
+   "route": "pair_model",
+   "sd": 6.0,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 57.6,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Fischl dual carry · incidental Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Ineffa",
+    "Xiangling"
+   ],
+   "ranking": 50.4,
+   "route": "pair_model",
+   "sd": 10.8,
+   "template": "overloaded",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.8,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 49.6,
+   "route": "pair_model",
+   "sd": 7.8,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 51.1,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko dual carry · Overloaded from Xiangling",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Xiangling",
+    "Yae Miko"
+   ],
+   "ranking": 48.7,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "overloaded",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 58.0,
+   "fit_source": "model",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Alyosha",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 48.5,
+   "route": "provisional_kit",
+   "sd": 14.2,
+   "template": "lunar_charged_offfield",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 51.9,
+   "fit_source": "gcsim",
+   "label": "Razor dual carry · Overloaded from Xiangling",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Razor",
+    "Xiangling"
+   ],
+   "ranking": 48.5,
+   "route": "exact_community",
+   "sd": 5.2,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.5,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Vaporize, Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Razor",
+    "Xingqiu"
+   ],
+   "ranking": 48.2,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.7,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Ineffa",
+    "Raiden Shogun",
+    "Razor",
+    "Xingqiu"
+   ],
+   "ranking": 48.1,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 52.0,
+   "fit_source": "model",
+   "label": "Ineffa and Fischl dual carry · Quicken",
+   "lead": "Ineffa",
+   "lineup": [
+    "Fischl",
+    "Ineffa",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 47.6,
+   "route": "pair_model",
+   "sd": 6.5,
+   "template": "hyperbloom",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.6,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Ineffa",
+    "Razor",
+    "Xingqiu"
+   ],
+   "ranking": 47.1,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 49.1,
+   "fit_source": "gcsim",
+   "label": "Yoimiya dual carry · Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Yoimiya"
+   ],
+   "ranking": 46.8,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 55.7,
+   "fit_source": "pairmodel",
+   "label": "Flins dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Diona",
+    "Flins",
+    "Ineffa"
+   ],
+   "ranking": 46.7,
+   "route": "pair_model",
+   "sd": 13.4,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.1,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Raiden Shogun",
+    "Razor"
+   ],
+   "ranking": 46.5,
+   "route": "pair_model",
+   "sd": 5.4,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.1,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Beidou",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 45.7,
+   "route": "pair_model",
+   "sd": 6.6,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.7,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Ineffa",
+    "Razor",
+    "Xingqiu"
+   ],
+   "ranking": 45.4,
+   "route": "pair_model",
+   "sd": 9.2,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 48.3,
+   "fit_source": "model",
+   "label": "Fischl dual carry · Quicken · incidental Swirl, Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Sucrose",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 45.1,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "hyperbloom",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.8,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Citlali",
+    "Yoimiya"
+   ],
+   "ranking": 44.7,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 49.4,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Fischl dual carry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Fischl",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 44.6,
+   "route": "pair_model",
+   "sd": 7.1,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 49.1,
+   "fit_source": "pairmodel",
+   "label": "Flins on-field · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Beidou",
+    "Flins",
+    "Sucrose"
+   ],
+   "ranking": 44.3,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.4,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field",
+   "lead": "Razor",
+   "lineup": [
+    "Citlali",
+    "Fischl",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 44.3,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 46.0,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 43.9,
+   "route": "exact_community",
+   "sd": 3.2,
+   "template": "overloaded",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.0,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Aggravate + Quicken · incidental Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Fischl",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 43.9,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.0,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Ineffa dual carry · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   "ranking": 43.8,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Hyperbloom, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Raiden Shogun",
+    "Sucrose",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 43.7,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 45.5,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko dual carry · Overloaded from Xiangling",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Chevreuse",
+    "Raiden Shogun",
+    "Xiangling",
+    "Yae Miko"
+   ],
+   "ranking": 43.3,
+   "route": "exact_community",
+   "sd": 3.2,
+   "template": "overloaded",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "mixed",
+   "evidence_state": "simulation",
+   "expected": 47.7,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 43.1,
+   "route": "exact_community",
+   "sd": 6.9,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 44.9,
+   "fit_source": "gcsim",
+   "label": "Yae Miko and Fischl dual carry · Aggravate + Quicken · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yae Miko",
+    "Yaoyao"
+   ],
+   "ranking": 42.8,
+   "route": "exact_community",
+   "sd": 3.2,
+   "template": "aggravate",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 46.8,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Hyperbloom, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 42.8,
+   "route": "pair_model",
+   "sd": 6.0,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.1,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 42.4,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.3,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Fischl dual carry · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Citlali",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yae Miko"
+   ],
+   "ranking": 42.3,
+   "route": "pair_model",
+   "sd": 7.4,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.0,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 42.2,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.7,
+   "fit_source": "model",
+   "label": "Yae Miko dual carry · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Sucrose",
+    "Xingqiu",
+    "Yae Miko",
+    "Yaoyao"
+   ],
+   "ranking": 42.2,
+   "route": "pair_model",
+   "sd": 8.3,
+   "template": "hyperbloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.5,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 41.9,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.3,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 41.6,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.2,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "ranking": 41.4,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.0,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · Overloaded · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Razor",
+    "Xingqiu"
+   ],
+   "ranking": 41.3,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.0,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Ineffa",
+    "Razor",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 40.9,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.2,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · Overloaded · incidental Swirl",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Razor"
+   ],
+   "ranking": 40.6,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Xiangling",
+    "Yoimiya"
+   ],
+   "ranking": 40.6,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 43.5,
+   "fit_source": "gcsim",
+   "label": "Kamisato Ayaka hypercarry · Freeze · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 40.1,
+   "route": "exact_community",
+   "sd": 5.0,
+   "template": "freeze",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 42.0,
+   "fit_source": "gcsim",
+   "label": "Chevreuse dual carry · Overloaded from Fischl",
+   "lead": "Chevreuse",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Xiangling"
+   ],
+   "ranking": 40.0,
+   "route": "exact_community",
+   "sd": 2.9,
+   "template": "overloaded",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 47.7,
+   "fit_source": "model",
+   "label": "Raiden Shogun dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Iansan",
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 39.9,
+   "route": "provisional_kit",
+   "sd": 11.6,
+   "template": "national",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 42.6,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Overloaded from Xiangling",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 39.8,
+   "route": "exact_community",
+   "sd": 4.2,
+   "template": "overloaded",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe",
+    "Sucrose"
+   ],
+   "ranking": 39.7,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Yoimiya"
+   ],
+   "ranking": 39.5,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.1,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Sucrose",
+    "Yoimiya"
+   ],
+   "ranking": 39.5,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.2,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Lan Yan",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 39.4,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.9,
+   "fit_source": "model",
+   "label": "Ineffa hypercarry",
+   "lead": "Ineffa",
+   "lineup": [
+    "Ineffa",
+    "Xingqiu",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 39.2,
+   "route": "pair_model",
+   "sd": 8.4,
+   "template": "hyperbloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.4,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Ineffa",
+    "Razor",
+    "Xingqiu",
+    "Yae Miko"
+   ],
+   "ranking": 39.1,
+   "route": "pair_model",
+   "sd": 9.4,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.0,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Ineffa",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 39.0,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.9,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Ineffa",
+    "Razor",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 39.0,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.4,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Quicken + Hyperbloom + Aggravate · incidental Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Collei",
+    "Fischl",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 38.8,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 46.0,
+   "fit_source": "model",
+   "label": "Raiden Shogun dual carry · Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Chevreuse",
+    "Iansan",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 38.5,
+   "route": "provisional_kit",
+   "sd": 11.2,
+   "template": "overloaded",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.4,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Fischl dual carry · Aggravate + Quicken + Overloaded",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Fischl",
+    "Xiangling",
+    "Yae Miko",
+    "Yaoyao"
+   ],
+   "ranking": 38.5,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.2,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Rosaria",
+    "Shenhe"
+   ],
+   "ranking": 38.5,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 38.3,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.1,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Lan Yan",
+    "Shenhe"
+   ],
+   "ranking": 38.3,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.6,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Xiangling",
+    "Yoimiya"
+   ],
+   "ranking": 38.1,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "mixed",
+   "evidence_state": "simulation",
+   "expected": 39.7,
+   "fit_source": "gcsim",
+   "label": "Tartaglia dual carry · Vaporize · incidental Swirl",
+   "lead": "Tartaglia",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 37.9,
+   "route": "exact_community",
+   "sd": 2.8,
+   "template": "international",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.7,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Citlali",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 37.9,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.0,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Freeze, Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Diona",
+    "Ineffa",
+    "Razor",
+    "Xingqiu"
+   ],
+   "ranking": 37.9,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 40.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl, Melt",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "ranking": 37.7,
+   "route": "exact_community",
+   "sd": 4.0,
+   "template": "auto_mono_cryo",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 40.3,
+   "fit_source": "gcsim",
+   "label": "Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   "ranking": 37.6,
+   "route": "exact_community",
+   "sd": 4.0,
+   "template": "electro_hypercarry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.2,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Hyperbloom · incidental Electro-Charged, Quicken",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Citlali",
+    "Collei",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 37.2,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.0,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Fischl dual carry · Aggravate + Quicken · incidental Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Yaoyao"
+   ],
+   "ranking": 37.0,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.6,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya and Fischl dual carry · Overloaded · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yoimiya"
+   ],
+   "ranking": 36.9,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 39.6,
+   "fit_source": "gcsim",
+   "label": "Fischl dual carry · Aggravate + Quicken",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Keqing",
+    "Yaoyao"
+   ],
+   "ranking": 36.9,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "aggravate",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.5,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Overloaded, Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yoimiya"
+   ],
+   "ranking": 36.8,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.0,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Razor",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 36.6,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.0,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Razor",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 36.5,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 39.2,
+   "fit_source": "gcsim",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Layla",
+    "Shenhe"
+   ],
+   "ranking": 36.5,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "auto_mono_cryo",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.0,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Diona",
+    "Fischl",
+    "Razor"
+   ],
+   "ranking": 36.4,
+   "route": "pair_model",
+   "sd": 5.4,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.0,
+   "fit_source": "pairmodel",
+   "label": "Razor and Fischl dual carry · Quicken · incidental Aggravate, Swirl",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Razor",
+    "Yaoyao"
+   ],
+   "ranking": 36.4,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.1,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · Quicken · incidental Aggravate",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Razor",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 36.4,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.6,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Swirl, Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Razor",
+    "Xingqiu"
+   ],
+   "ranking": 36.4,
+   "route": "pair_model",
+   "sd": 7.8,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.2,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Chiori",
+    "Kamisato Ayaka",
+    "Shenhe",
+    "Zhongli"
+   ],
+   "ranking": 35.9,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.6,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Aggravate + Overloaded + Quicken",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Fischl",
+    "Raiden Shogun",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 35.9,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.6,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Fischl dual carry · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Raiden Shogun",
+    "Sucrose"
+   ],
+   "ranking": 35.8,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Candace",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 35.8,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.3,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Electro-Charged",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Razor",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 35.8,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.7,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kamisato Ayato dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Citlali",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato"
+   ],
+   "ranking": 35.8,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.8,
+   "fit_source": "model",
+   "label": "No single carry dual carry · Aggravate + Quicken · incidental Electro-Charged",
+   "lead": "Yaoyao",
+   "lineup": [
+    "Fischl",
+    "Xingqiu",
+    "Yae Miko",
+    "Yaoyao"
+   ],
+   "ranking": 35.8,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "hyperbloom",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.4,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · Quicken · incidental Overloaded, Aggravate",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Razor",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 35.7,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 42.6,
+   "fit_source": "model",
+   "label": "Raiden Shogun dual carry · Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Alyosha",
+    "Chevreuse",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 35.6,
+   "route": "provisional_kit",
+   "sd": 10.4,
+   "template": "overloaded",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · incidental Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 35.5,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.8,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Hyperbloom",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 35.5,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.1,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko dual carry",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Citlali",
+    "Fischl",
+    "Kujou Sara",
+    "Yae Miko"
+   ],
+   "ranking": 35.3,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.3,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Dahlia",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 35.3,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Hyperbloom · incidental Electro-Charged, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Collei",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 35.2,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 42.0,
+   "fit_source": "model",
+   "label": "Fischl and Xiangling dual carry · incidental Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Iansan",
+    "Xiangling"
+   ],
+   "ranking": 35.1,
+   "route": "provisional_kit",
+   "sd": 10.3,
+   "template": "overloaded",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.7,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 34.9,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "national",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.1,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Citlali",
+    "Fischl",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 34.8,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 38.3,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 34.7,
+   "route": "exact_community",
+   "sd": 5.4,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 37.1,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct, Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 34.6,
+   "route": "exact_community",
+   "sd": 3.7,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.9,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Fischl dual carry · incidental Overloaded",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kujou Sara",
+    "Yae Miko"
+   ],
+   "ranking": 34.5,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.7,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Yoimiya"
+   ],
+   "ranking": 34.5,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "auto_melt_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Keqing dual carry · Aggravate + Quicken + Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Keqing",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 34.4,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.7,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Rosaria",
+    "Sucrose",
+    "Yoimiya"
+   ],
+   "ranking": 34.3,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Hyperbloom + Burgeon + Vaporize · incidental Overloaded, Quicken",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Collei",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 34.2,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.5,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko hypercarry · incidental Overloaded",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kujou Sara",
+    "Yae Miko"
+   ],
+   "ranking": 34.1,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_mono_electro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.8,
+   "fit_source": "pairmodel",
+   "label": "Chiori hypercarry",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Rosaria",
+    "Zhongli"
+   ],
+   "ranking": 34.0,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Rosaria",
+    "Yoimiya"
+   ],
+   "ranking": 33.9,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.2,
+   "fit_source": "gcsim",
+   "label": "Chiori dual carry · incidental Overloaded",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Fischl",
+    "Zhongli"
+   ],
+   "ranking": 33.8,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.2,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Xingqiu",
+    "Yoimiya"
+   ],
+   "ranking": 33.8,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.1,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Fischl",
+    "Xiangling",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 33.8,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.1,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Yae Miko"
+   ],
+   "ranking": 33.7,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "electro_hypercarry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 40.3,
+   "fit_source": "model",
+   "label": "Raiden Shogun and Fischl dual carry · incidental Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Fischl",
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   "ranking": 33.7,
+   "route": "provisional_kit",
+   "sd": 9.8,
+   "template": "electro_hypercarry",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.1,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Kujou Sara",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 33.7,
+   "route": "pair_model",
+   "sd": 6.6,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.1,
+   "fit_source": "gcsim",
+   "label": "Ganyu on-field · Melt",
+   "lead": "Ganyu",
+   "lineup": [
+    "Bennett",
+    "Ganyu",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 33.6,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "melt",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.0,
+   "fit_source": "gcsim",
+   "label": "Chiori dual carry · incidental Superconduct",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Fischl",
+    "Rosaria",
+    "Zhongli"
+   ],
+   "ranking": 33.6,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.8,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Raiden Shogun",
+    "Yoimiya"
+   ],
+   "ranking": 33.5,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.8,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 33.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato and Ineffa dual carry · incidental Swirl, Lunar-Charged",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Zhongli"
+   ],
+   "ranking": 33.1,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.5,
+   "fit_source": "pairmodel",
+   "label": "Ningguang on-field",
+   "lead": "Ningguang",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Ningguang",
+    "Zhongli"
+   ],
+   "ranking": 33.0,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.0,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "ranking": 32.7,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.6,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.6,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.6,
+   "fit_source": "model",
+   "label": "Fischl and Xingqiu dual carry · Quicken · incidental Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Aino",
+    "Fischl",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 32.5,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "hyperbloom",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.8,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya and Raiden Shogun dual carry · Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Chevreuse",
+    "Raiden Shogun",
+    "Xiangling",
+    "Yoimiya"
+   ],
+   "ranking": 32.5,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "overloaded",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.3,
+   "fit_source": "pairmodel",
+   "label": "Shikanoin Heizou and Xiangling dual carry · Overloaded · incidental Swirl",
+   "lead": "Shikanoin Heizou",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Shikanoin Heizou",
+    "Xiangling"
+   ],
+   "ranking": 32.4,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.9,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Lan Yan",
+    "Shenhe",
+    "Zhongli"
+   ],
+   "ranking": 32.4,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.9,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt + Vaporize + Freeze",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Xingqiu",
+    "Yoimiya"
+   ],
+   "ranking": 32.3,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.8,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Fischl",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 32.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.6,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Layla",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 32.3,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.1,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · Vaporize · incidental Overloaded",
+   "lead": "Xiangling",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 32.2,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "national",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.6,
+   "fit_source": "pairmodel",
+   "label": "Ningguang on-field",
+   "lead": "Ningguang",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Ningguang",
+    "Zhongli"
+   ],
+   "ranking": 32.2,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 34.5,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · Overloaded · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 32.2,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "electro_hypercarry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.1,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Raiden Shogun",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 32.2,
+   "route": "pair_model",
+   "sd": 5.7,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.6,
+   "fit_source": "pairmodel",
+   "label": "Ganyu dual carry · Melt · incidental Swirl",
+   "lead": "Ganyu",
+   "lineup": [
+    "Bennett",
+    "Ganyu",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 32.1,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 34.5,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 32.1,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Yaoyao",
+    "Yoimiya"
+   ],
+   "ranking": 32.0,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 32.0,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 38.3,
+   "fit_source": "model",
+   "label": "Xiangling dual carry · Vaporize · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Iansan",
+    "Sucrose",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 32.0,
+   "route": "provisional_kit",
+   "sd": 9.3,
+   "template": "national",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe",
+    "Yun Jin"
+   ],
+   "ranking": 32.0,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.4,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field",
+   "lead": "Razor",
+   "lineup": [
+    "Diona",
+    "Fischl",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 31.9,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.3,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Keqing dual carry · Aggravate + Quicken",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Keqing",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 31.9,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.0,
+   "fit_source": "model",
+   "label": "Fischl and Xingqiu dual carry · Quicken · incidental Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Xingqiu",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 31.9,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "hyperbloom",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 31.8,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "auto_melt_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.9,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Fischl dual carry · incidental Superconduct, Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Layla",
+    "Yae Miko"
+   ],
+   "ranking": 31.8,
+   "route": "pair_model",
+   "sd": 6.0,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.1,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Overloaded, Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 31.8,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.9,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Rosaria",
+    "Yoimiya"
+   ],
+   "ranking": 31.7,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.0,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Fischl dual carry",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Fischl",
+    "Kujou Sara",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 31.7,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.9,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yoimiya"
+   ],
+   "ranking": 31.6,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.8,
+   "fit_source": "gcsim",
+   "label": "Ningguang on-field",
+   "lead": "Ningguang",
+   "lineup": [
+    "Bennett",
+    "Ningguang",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 31.6,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Xiangling dual carry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "ranking": 31.6,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 33.0,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Electro-Charged, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato"
+   ],
+   "ranking": 31.5,
+   "route": "exact_community",
+   "sd": 2.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.8,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha dual carry · Overloaded",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yae Miko"
+   ],
+   "ranking": 31.5,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "auto_mono_electro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 37.7,
+   "fit_source": "model",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Chevreuse",
+    "Iansan",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 31.5,
+   "route": "provisional_kit",
+   "sd": 9.2,
+   "template": "national",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.9,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yoimiya",
+    "Yun Jin"
+   ],
+   "ranking": 31.4,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.0,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Yae Miko dual carry · Aggravate + Quicken",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Fischl",
+    "Yae Miko",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 31.4,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.8,
+   "fit_source": "pairmodel",
+   "label": "Chiori and Yae Miko dual carry",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 31.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.8,
+   "fit_source": "pairmodel",
+   "label": "Noelle and Chiori dual carry",
+   "lead": "Noelle",
+   "lineup": [
+    "Chiori",
+    "Fischl",
+    "Noelle",
+    "Zhongli"
+   ],
+   "ranking": 31.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Mika",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 31.3,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.0,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Kaeya dual carry · Melt",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaeya",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 31.2,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.7,
+   "fit_source": "pairmodel",
+   "label": "Chiori and Yae Miko dual carry · incidental Superconduct",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Rosaria",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 31.2,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.3,
+   "fit_source": "gcsim",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Razor",
+    "Rosaria",
+    "Zhongli"
+   ],
+   "ranking": 31.1,
+   "route": "exact_community",
+   "sd": 3.3,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.2,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Fischl dual carry · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Diona",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yae Miko"
+   ],
+   "ranking": 31.0,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.4,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yaoyao",
+    "Yoimiya"
+   ],
+   "ranking": 30.9,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.5,
+   "fit_source": "pairmodel",
+   "label": "Noelle and Chiori dual carry",
+   "lead": "Noelle",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Noelle",
+    "Zhongli"
+   ],
+   "ranking": 30.7,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.1,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Hyperbloom + Freeze · incidental Electro-Charged, Quicken",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Collei",
+    "Layla",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 30.7,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.0,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kamisato Ayato dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Lan Yan"
+   ],
+   "ranking": 30.7,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xiangling dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 30.6,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.7,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko hypercarry · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kujou Sara",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 30.6,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.2,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · incidental Overloaded, Swirl",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Fischl",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 30.4,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.6,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Rosaria",
+    "Shenhe",
+    "Zhongli"
+   ],
+   "ranking": 30.4,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.6,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · Melt · incidental Vaporize",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato"
+   ],
+   "ranking": 30.3,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.9,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Xiangling",
+    "Yaoyao",
+    "Yoimiya"
+   ],
+   "ranking": 30.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.1,
+   "fit_source": "pairmodel",
+   "label": "Ningguang dual carry",
+   "lead": "Ningguang",
+   "lineup": [
+    "Chiori",
+    "Fischl",
+    "Ningguang",
+    "Zhongli"
+   ],
+   "ranking": 30.3,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.9,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Swirl",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Razor",
+    "Zhongli"
+   ],
+   "ranking": 30.2,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.6,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Melt",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Citlali",
+    "Sucrose",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 30.2,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "auto_melt_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.6,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry",
+   "lead": "Noelle",
+   "lineup": [
+    "Chiori",
+    "Noelle",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 30.1,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 36.1,
+   "fit_source": "model",
+   "label": "Ganyu hypercarry · Melt",
+   "lead": "Ganyu",
+   "lineup": [
+    "Ganyu",
+    "Iansan",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 30.1,
+   "route": "provisional_kit",
+   "sd": 8.8,
+   "template": "melt",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Yaoyao",
+    "Yoimiya"
+   ],
+   "ranking": 30.1,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.7,
+   "fit_source": "pairmodel",
+   "label": "Diluc dual carry",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Diluc",
+    "Xiangling"
+   ],
+   "ranking": 30.0,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 32.1,
+   "fit_source": "gcsim",
+   "label": "Yae Miko dual carry · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 30.0,
+   "route": "exact_community",
+   "sd": 3.2,
+   "template": "auto_mono_electro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.8,
+   "fit_source": "model",
+   "label": "Yae Miko dual carry",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Xingqiu",
+    "Yae Miko",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 30.0,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "hyperbloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 32.0,
+   "fit_source": "gcsim",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe",
+    "Zhongli"
+   ],
+   "ranking": 29.9,
+   "route": "exact_community",
+   "sd": 3.2,
+   "template": "auto_mono_cryo",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.6,
+   "fit_source": "pairmodel",
+   "label": "Diluc on-field",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Diluc",
+    "Zhongli"
+   ],
+   "ranking": 29.8,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Yoimiya"
+   ],
+   "ranking": 29.8,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.1,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko hypercarry · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Kujou Sara",
+    "Yae Miko"
+   ],
+   "ranking": 29.8,
+   "route": "pair_model",
+   "sd": 6.3,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.1,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Fischl dual carry · Aggravate + Quicken",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Fischl",
+    "Raiden Shogun",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 29.8,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.3,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Sayu",
+    "Shenhe"
+   ],
+   "ranking": 29.8,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.4,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Lynette",
+    "Zhongli"
+   ],
+   "ranking": 29.7,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.8,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Shikanoin Heizou dual carry · incidental Swirl, Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Shikanoin Heizou",
+    "Zhongli"
+   ],
+   "ranking": 29.7,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.1,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Chiori",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Zhongli"
+   ],
+   "ranking": 29.7,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 35.1,
+   "fit_source": "model",
+   "label": "Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Aino",
+    "Iansan",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 29.4,
+   "route": "provisional_kit",
+   "sd": 8.6,
+   "template": "national",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.4,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Hyperbloom · incidental Quicken, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Collei",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 29.4,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.6,
+   "fit_source": "pairmodel",
+   "label": "Diluc and Xiangling dual carry",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Diluc",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "ranking": 29.3,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 35.0,
+   "fit_source": "model",
+   "label": "Xingqiu dual carry",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Alyosha",
+    "Xingqiu",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 29.2,
+   "route": "provisional_kit",
+   "sd": 8.5,
+   "template": "hyperbloom",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.7,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kamisato Ayato dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Barbara",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato"
+   ],
+   "ranking": 29.2,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Chongyun dual carry · Melt · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Chongyun",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 29.2,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.5,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Yaoyao",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 29.1,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 40.9,
+   "fit_source": "model",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Iansan",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 29.1,
+   "route": "provisional_kit",
+   "sd": 17.5,
+   "template": "freeze",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.7,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Kaeya dual carry · Melt · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kaeya",
+    "Xiangling"
+   ],
+   "ranking": 29.0,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kamisato Ayato dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Zhongli"
+   ],
+   "ranking": 28.9,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 34.6,
+   "fit_source": "model",
+   "label": "Ganyu dual carry · Melt · incidental Swirl",
+   "lead": "Ganyu",
+   "lineup": [
+    "Ganyu",
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 28.9,
+   "route": "provisional_kit",
+   "sd": 8.4,
+   "template": "melt",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.3,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Yun Jin"
+   ],
+   "ranking": 28.9,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.3,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Hyperbloom + Freeze · incidental Electro-Charged, Quicken",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Collei",
+    "Diona",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 28.8,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 34.5,
+   "fit_source": "model",
+   "label": "Raiden Shogun dual carry · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 28.8,
+   "route": "provisional_kit",
+   "sd": 8.4,
+   "template": "electro_hypercarry",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 34.5,
+   "fit_source": "model",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 28.8,
+   "route": "provisional_kit",
+   "sd": 8.4,
+   "template": "national",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.2,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Chongyun dual carry · Melt",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Chongyun",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.9,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko hypercarry · incidental Swirl",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Chiori",
+    "Xiangling",
+    "Yaoyao",
+    "Yoimiya"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_burning_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Layla"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 5.4,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 34.3,
+   "fit_source": "model",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Iansan",
+    "Xingqiu",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 28.7,
+   "route": "provisional_kit",
+   "sd": 8.4,
+   "template": "vaporize_pyro",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Chevreuse",
+    "Xiangling"
+   ],
+   "ranking": 28.6,
+   "route": "pair_model",
+   "sd": 9.4,
+   "template": "national",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.9,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Melt · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   "ranking": 28.6,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.9,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Zhongli"
+   ],
+   "ranking": 28.6,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.3,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu and Nilou dual carry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Nilou",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 28.6,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_bloom_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 34.0,
+   "fit_source": "model",
+   "label": "Xiangling and Kaeya dual carry",
+   "lead": "Xiangling",
+   "lineup": [
+    "Iansan",
+    "Kaeya",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 28.4,
+   "route": "provisional_kit",
+   "sd": 8.3,
+   "template": "melt",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.5,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Chiori",
+    "Kaedehara Kazuha",
+    "Yaoyao",
+    "Yoimiya"
+   ],
+   "ranking": 28.3,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "auto_burning_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.2,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Xingqiu dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 28.3,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 39.7,
+   "fit_source": "model",
+   "label": "Tartaglia and Xiangling dual carry · incidental Swirl",
+   "lead": "Tartaglia",
+   "lineup": [
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 28.3,
+   "route": "provisional_kit",
+   "sd": 17.0,
+   "template": "international",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 33.9,
+   "fit_source": "model",
+   "label": "Yoimiya hypercarry · Vaporize · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yoimiya"
+   ],
+   "ranking": 28.3,
+   "route": "provisional_kit",
+   "sd": 8.3,
+   "template": "vaporize_pyro",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.2,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Rosaria",
+    "Zhongli"
+   ],
+   "ranking": 28.3,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Tartaglia dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Lynette",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 28.2,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "international",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 30.3,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 28.2,
+   "route": "exact_community",
+   "sd": 3.0,
+   "template": "international",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.5,
+   "fit_source": "pairmodel",
+   "label": "Rosaria and Xingqiu dual carry · Freeze + Melt + Vaporize · incidental Swirl",
+   "lead": "Rosaria",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Rosaria",
+    "Xingqiu"
+   ],
+   "ranking": 28.1,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.2,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Tartaglia dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Lan Yan",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 28.1,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "international",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.1,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya and Xingqiu dual carry · Freeze + Melt + Vaporize · incidental Swirl, Shatter",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yoimiya"
+   ],
+   "ranking": 28.1,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.3,
+   "fit_source": "pairmodel",
+   "label": "Diluc hypercarry · incidental Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Diluc",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 28.0,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.2,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kaedehara Kazuha dual carry · Melt · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Diona",
+    "Fischl",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 28.0,
+   "route": "pair_model",
+   "sd": 6.3,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.1,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Mona",
+    "Xingqiu",
+    "Yoimiya"
+   ],
+   "ranking": 28.0,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 33.5,
+   "fit_source": "model",
+   "label": "Noelle and Chiori dual carry",
+   "lead": "Noelle",
+   "lineup": [
+    "Chiori",
+    "Iansan",
+    "Noelle",
+    "Zhongli"
+   ],
+   "ranking": 28.0,
+   "route": "provisional_kit",
+   "sd": 8.2,
+   "template": "mono_geo",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.9,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Diona",
+    "Fischl",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 27.9,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.1,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Barbara",
+    "Fischl",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 27.7,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.2,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Hyperbloom · incidental Electro-Charged, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Collei",
+    "Raiden Shogun",
+    "Sayu",
+    "Xingqiu"
+   ],
+   "ranking": 27.7,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.9,
+   "fit_source": "pairmodel",
+   "label": "Diluc and Xiangling dual carry · incidental Burning",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Diluc",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 27.6,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 29.6,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Xiangling"
+   ],
+   "ranking": 27.6,
+   "route": "exact_community",
+   "sd": 2.9,
+   "template": "international",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.8,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kamisato Ayato dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Fischl",
+    "Kamisato Ayato",
+    "Lan Yan",
+    "Zhongli"
+   ],
+   "ranking": 27.6,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.9,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Lan Yan",
+    "Zhongli"
+   ],
+   "ranking": 27.5,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.8,
+   "fit_source": "pairmodel",
+   "label": "Zhongli and Noelle dual carry",
+   "lead": "Zhongli",
+   "lineup": [
+    "Fischl",
+    "Noelle",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 27.4,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.5,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kamisato Ayato dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Diona",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato"
+   ],
+   "ranking": 27.3,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Xiangling",
+    "Yaoyao",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 27.3,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.3,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Kaeya",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 27.1,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.1,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · incidental Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Raiden Shogun",
+    "Zhongli"
+   ],
+   "ranking": 27.1,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 28.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · Overloaded · incidental Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 27.0,
+   "route": "exact_community",
+   "sd": 2.9,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.1,
+   "fit_source": "pairmodel",
+   "label": "Diluc dual carry",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Diluc",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 26.9,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.7,
+   "fit_source": "pairmodel",
+   "label": "Yae Miko and Fischl dual carry",
+   "lead": "Yae Miko",
+   "lineup": [
+    "Diona",
+    "Fischl",
+    "Kujou Sara",
+    "Yae Miko"
+   ],
+   "ranking": 26.9,
+   "route": "pair_model",
+   "sd": 5.7,
+   "template": "auto_mono_electro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.7,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Layla",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 26.9,
+   "route": "pair_model",
+   "sd": 2.7,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.8,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Sucrose",
+    "Xingqiu",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 26.9,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 28.6,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kamisato Ayato",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "ranking": 26.7,
+   "route": "exact_community",
+   "sd": 2.8,
+   "template": "international",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.8,
+   "fit_source": "pairmodel",
+   "label": "Noelle and Chiori dual carry",
+   "lead": "Noelle",
+   "lineup": [
+    "Chiori",
+    "Noelle",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 26.7,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "mono_geo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.9,
+   "fit_source": "pairmodel",
+   "label": "Chiori hypercarry · incidental Swirl",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 26.6,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.6,
+   "fit_source": "pairmodel",
+   "label": "Diluc and Xiangling dual carry · incidental Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Chevreuse",
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 26.6,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 31.9,
+   "fit_source": "model",
+   "label": "Xiangling dual carry · Melt · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Chongyun",
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 26.6,
+   "route": "provisional_kit",
+   "sd": 7.8,
+   "template": "melt",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 31.7,
+   "fit_source": "model",
+   "label": "Xiangling and Kaeya dual carry · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Kaeya",
+    "Xiangling"
+   ],
+   "ranking": 26.5,
+   "route": "provisional_kit",
+   "sd": 7.7,
+   "template": "melt",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.3,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Overloaded, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Zhongli"
+   ],
+   "ranking": 26.4,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 31.2,
+   "fit_source": "model",
+   "label": "Xiangling dual carry · Melt",
+   "lead": "Xiangling",
+   "lineup": [
+    "Chongyun",
+    "Iansan",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 26.1,
+   "route": "provisional_kit",
+   "sd": 7.6,
+   "template": "melt",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.0,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · Vaporize · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 26.1,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 27.8,
+   "fit_source": "gcsim",
+   "label": "Diluc dual carry · incidental Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 25.9,
+   "route": "exact_community",
+   "sd": 2.8,
+   "template": "auto_mono_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.9,
+   "fit_source": "pairmodel",
+   "label": "Diluc and Xiangling dual carry · incidental Burning, Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 25.9,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.0,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · Vaporize · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 25.7,
+   "route": "pair_model",
+   "sd": 9.3,
+   "template": "national",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.5,
+   "fit_source": "pairmodel",
+   "label": "Diluc hypercarry",
+   "lead": "Diluc",
+   "lineup": [
+    "Chevreuse",
+    "Diluc",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 25.6,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_mono_pyro",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.2,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Citlali",
+    "Diona",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato"
+   ],
+   "ranking": 25.6,
+   "route": "pair_model",
+   "sd": 9.8,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Rosaria",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 25.6,
+   "route": "pair_model",
+   "sd": 2.6,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.6,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · incidental Overloaded",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Raiden Shogun",
+    "Xiangling",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 25.6,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.4,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Mona",
+    "Xingqiu",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 25.5,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.4,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Candace",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 25.4,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.5,
+   "fit_source": "pairmodel",
+   "label": "Diluc hypercarry · incidental Burning, Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Yaoyao"
+   ],
+   "ranking": 25.4,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.4,
+   "fit_source": "pairmodel",
+   "label": "Diluc hypercarry",
+   "lead": "Diluc",
+   "lineup": [
+    "Diluc",
+    "Sucrose",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 25.3,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Rosaria",
+    "Sucrose",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 25.2,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_melt_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.8,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Yaoyao",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 24.8,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "auto_burning_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 29.6,
+   "fit_source": "model",
+   "label": "Kamisato Ayato and Xiangling dual carry · Vaporize · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Xiangling"
+   ],
+   "ranking": 24.7,
+   "route": "provisional_kit",
+   "sd": 7.2,
+   "template": "international",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.4,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 24.5,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 29.1,
+   "fit_source": "model",
+   "label": "Noelle hypercarry",
+   "lead": "Noelle",
+   "lineup": [
+    "Bennett",
+    "Kachina",
+    "Noelle",
+    "Zhongli"
+   ],
+   "ranking": 24.3,
+   "route": "provisional_kit",
+   "sd": 7.1,
+   "template": "mono_geo",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 29.0,
+   "fit_source": "model",
+   "label": "Noelle and Fischl dual carry",
+   "lead": "Noelle",
+   "lineup": [
+    "Fischl",
+    "Kachina",
+    "Noelle",
+    "Zhongli"
+   ],
+   "ranking": 24.3,
+   "route": "provisional_kit",
+   "sd": 7.1,
+   "template": "mono_geo",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.0,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Shenhe",
+    "Zhongli"
+   ],
+   "ranking": 24.1,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.2,
+   "fit_source": "model",
+   "label": "Xingqiu dual carry",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Collei",
+    "Nilou",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 23.9,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "nilou_bloom",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 28.6,
+   "fit_source": "model",
+   "label": "Kamisato Ayato and Xiangling dual carry · Vaporize",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Iansan",
+    "Kamisato Ayato",
+    "Sucrose",
+    "Xiangling"
+   ],
+   "ranking": 23.9,
+   "route": "provisional_kit",
+   "sd": 7.0,
+   "template": "international",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.6,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato dual carry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Lan Yan",
+    "Zhongli"
+   ],
+   "ranking": 23.8,
+   "route": "pair_model",
+   "sd": 2.7,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.6,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato and Fischl dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Yun Jin"
+   ],
+   "ranking": 23.7,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.9,
+   "fit_source": "model",
+   "label": "Fischl hypercarry · Quicken · incidental Aggravate",
+   "lead": "Fischl",
+   "lineup": [
+    "Aino",
+    "Fischl",
+    "Yaoyao",
+    "Zhongli"
+   ],
+   "ranking": 23.6,
+   "route": "pair_model",
+   "sd": 7.8,
+   "template": "hyperbloom",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 28.3,
+   "fit_source": "model",
+   "label": "Raiden Shogun hypercarry · incidental Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Iansan",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Zhongli"
+   ],
+   "ranking": 23.6,
+   "route": "provisional_kit",
+   "sd": 6.9,
+   "template": "electro_hypercarry",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.7,
+   "fit_source": "pairmodel",
+   "label": "Flins on-field · Freeze · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Diona",
+    "Flins",
+    "Xingqiu"
+   ],
+   "ranking": 23.3,
+   "route": "pair_model",
+   "sd": 27.3,
+   "template": "lunar_charged_offfield",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.5,
+   "fit_source": "pairmodel",
+   "label": "Diluc hypercarry · incidental Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Chevreuse",
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 23.2,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_mono_pyro",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.7,
+   "fit_source": "model",
+   "label": "Kamisato Ayato and Xingqiu dual carry",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kamisato Ayato",
+    "Nilou",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 23.1,
+   "route": "pair_model",
+   "sd": 6.9,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.0,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kamisato Ayato",
+    "Lan Yan",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 23.0,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "auto_mono_hydro",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.5,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu and Rosaria dual carry · Freeze · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Rosaria",
+    "Xingqiu"
+   ],
+   "ranking": 22.8,
+   "route": "pair_model",
+   "sd": 2.6,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.3,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato and Xiangling dual carry · Vaporize · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Xiangling",
+    "Yun Jin"
+   ],
+   "ranking": 22.7,
+   "route": "pair_model",
+   "sd": 2.4,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Yun Jin"
+   ],
+   "ranking": 22.5,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.1,
+   "fit_source": "pairmodel",
+   "label": "Diluc hypercarry · incidental Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Bennett",
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 22.4,
+   "route": "pair_model",
+   "sd": 2.6,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.8,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu and Rosaria dual carry · Freeze · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Rosaria",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 22.3,
+   "route": "pair_model",
+   "sd": 2.2,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.0,
+   "fit_source": "pairmodel",
+   "label": "Barbara dual carry · Vaporize",
+   "lead": "Barbara",
+   "lineup": [
+    "Barbara",
+    "Bennett",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 22.2,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.0,
+   "fit_source": "pairmodel",
+   "label": "Diluc dual carry · incidental Swirl",
+   "lead": "Diluc",
+   "lineup": [
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 22.2,
+   "route": "pair_model",
+   "sd": 2.7,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.1,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Superconduct",
+   "lead": "Razor",
+   "lineup": [
+    "Fischl",
+    "Qiqi",
+    "Razor",
+    "Rosaria"
+   ],
+   "ranking": 22.1,
+   "route": "pair_model",
+   "sd": 2.9,
+   "template": "auto_superconduct_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.2,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu and Rosaria dual carry · Freeze · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Layla",
+    "Rosaria",
+    "Xingqiu"
+   ],
+   "ranking": 22.1,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.0,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · incidental Electro-Charged, Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Qiqi"
+   ],
+   "ranking": 21.9,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Layla",
+    "Yun Jin"
+   ],
+   "ranking": 21.8,
+   "route": "pair_model",
+   "sd": 2.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 23.2,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 21.7,
+   "route": "exact_community",
+   "sd": 2.3,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 30.3,
+   "fit_source": "model",
+   "label": "Tartaglia and Xiangling dual carry",
+   "lead": "Tartaglia",
+   "lineup": [
+    "Iansan",
+    "Sucrose",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 21.5,
+   "route": "provisional_kit",
+   "sd": 13.0,
+   "template": "international",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.1,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu and Kaeya dual carry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kaeya",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.5,
+   "route": "pair_model",
+   "sd": 2.4,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.5,
+   "fit_source": "pairmodel",
+   "label": "Noelle on-field",
+   "lead": "Noelle",
+   "lineup": [
+    "Noelle",
+    "Xiangling",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 21.5,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "mono_geo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.2,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.4,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.1,
+   "fit_source": "pairmodel",
+   "label": "Noelle on-field",
+   "lead": "Noelle",
+   "lineup": [
+    "Bennett",
+    "Noelle",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 21.3,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 25.1,
+   "fit_source": "model",
+   "label": "Noelle hypercarry",
+   "lead": "Noelle",
+   "lineup": [
+    "Iansan",
+    "Noelle",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 21.0,
+   "route": "provisional_kit",
+   "sd": 6.1,
+   "template": "mono_geo",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Lan Yan",
+    "Yun Jin"
+   ],
+   "ranking": 21.0,
+   "route": "pair_model",
+   "sd": 2.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.5,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Tartaglia dual carry · Vaporize · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Sayu",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 20.9,
+   "route": "pair_model",
+   "sd": 2.5,
+   "template": "international",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.3,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Mona",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 20.4,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.7,
+   "fit_source": "model",
+   "label": "Xingqiu and Nilou dual carry",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Barbara",
+    "Nilou",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 20.3,
+   "route": "pair_model",
+   "sd": 6.4,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.7,
+   "fit_source": "model",
+   "label": "Kamisato Ayato and Nilou dual carry",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Aino",
+    "Kamisato Ayato",
+    "Nilou",
+    "Yaoyao"
+   ],
+   "ranking": 20.1,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 21.9,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 20.1,
+   "route": "pair_model",
+   "sd": 2.7,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.5,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Yaoyao dual carry",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Dahlia",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 20.0,
+   "route": "pair_model",
+   "sd": 12.6,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 23.8,
+   "fit_source": "model",
+   "label": "Noelle and Xiangling dual carry",
+   "lead": "Noelle",
+   "lineup": [
+    "Kachina",
+    "Noelle",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 19.9,
+   "route": "provisional_kit",
+   "sd": 5.8,
+   "template": "mono_geo",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.4,
+   "fit_source": "model",
+   "label": "Xingqiu and Nilou dual carry",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Aino",
+    "Nilou",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 19.8,
+   "route": "pair_model",
+   "sd": 14.2,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.1,
+   "fit_source": "pairmodel",
+   "label": "Thoma dual carry · Burgeon",
+   "lead": "Thoma",
+   "lineup": [
+    "Candace",
+    "Thoma",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 19.4,
+   "route": "pair_model",
+   "sd": 8.4,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 19.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Barbara",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Yun Jin"
+   ],
+   "ranking": 17.9,
+   "route": "pair_model",
+   "sd": 2.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.3,
+   "fit_source": "pairmodel",
+   "label": "Thoma and Xiangling dual carry · Burgeon",
+   "lead": "Thoma",
+   "lineup": [
+    "Dahlia",
+    "Thoma",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 17.7,
+   "route": "pair_model",
+   "sd": 9.8,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 20.0,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Diona",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Yun Jin"
+   ],
+   "ranking": 17.7,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.1,
+   "fit_source": "pairmodel",
+   "label": "Yaoyao and Thoma dual carry · incidental Burgeon",
+   "lead": "Yaoyao",
+   "lineup": [
+    "Bennett",
+    "Candace",
+    "Thoma",
+    "Yaoyao"
+   ],
+   "ranking": 17.6,
+   "route": "pair_model",
+   "sd": 6.7,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 18.7,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Vaporize, Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Yun Jin"
+   ],
+   "ranking": 17.5,
+   "route": "exact_community",
+   "sd": 1.9,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.1,
+   "fit_source": "pairmodel",
+   "label": "Thoma dual carry · Burgeon",
+   "lead": "Thoma",
+   "lineup": [
+    "Mona",
+    "Thoma",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 17.0,
+   "route": "pair_model",
+   "sd": 7.6,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 19.7,
+   "fit_source": "model",
+   "label": "Kamisato Ayato and Nilou dual carry",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Barbara",
+    "Kamisato Ayato",
+    "Nilou",
+    "Yaoyao"
+   ],
+   "ranking": 16.8,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.4,
+   "fit_source": "pairmodel",
+   "label": "Thoma and Yaoyao dual carry · Vaporize · incidental Burgeon",
+   "lead": "Thoma",
+   "lineup": [
+    "Bennett",
+    "Mona",
+    "Thoma",
+    "Yaoyao"
+   ],
+   "ranking": 16.5,
+   "route": "pair_model",
+   "sd": 10.2,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 17.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayato hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayato",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayato",
+    "Qiqi",
+    "Yun Jin"
+   ],
+   "ranking": 16.1,
+   "route": "pair_model",
+   "sd": 2.1,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "kit-model",
+   "expected": 22.5,
+   "fit_source": "model",
+   "label": "Tartaglia and Xiangling dual carry · incidental Swirl",
+   "lead": "Tartaglia",
+   "lineup": [
+    "Iansan",
+    "Sayu",
+    "Tartaglia",
+    "Xiangling"
+   ],
+   "ranking": 16.0,
+   "route": "provisional_kit",
+   "sd": 9.7,
+   "template": "international",
+   "tier": "E"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 20.8,
+   "fit_source": "pairmodel",
+   "label": "Thoma and Barbara dual carry · Burgeon",
+   "lead": "Thoma",
+   "lineup": [
+    "Barbara",
+    "Thoma",
+    "Xiangling",
+    "Yaoyao"
+   ],
+   "ranking": 15.4,
+   "route": "pair_model",
+   "sd": 8.0,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.5,
+   "fit_source": "model",
+   "label": "Nilou hypercarry",
+   "lead": "Nilou",
+   "lineup": [
+    "Aino",
+    "Mona",
+    "Nilou",
+    "Yaoyao"
+   ],
+   "ranking": 15.2,
+   "route": "pair_model",
+   "sd": 15.3,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.2,
+   "fit_source": "model",
+   "label": "Nilou and Xingqiu dual carry",
+   "lead": "Nilou",
+   "lineup": [
+    "Mona",
+    "Nilou",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 15.1,
+   "route": "pair_model",
+   "sd": 19.4,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 21.3,
+   "fit_source": "pairmodel",
+   "label": "Yaoyao and Thoma dual carry · incidental Burgeon",
+   "lead": "Yaoyao",
+   "lineup": [
+    "Bennett",
+    "Dahlia",
+    "Thoma",
+    "Yaoyao"
+   ],
+   "ranking": 15.0,
+   "route": "pair_model",
+   "sd": 9.5,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.9,
+   "fit_source": "model",
+   "label": "Nilou and Collei dual carry",
+   "lead": "Nilou",
+   "lineup": [
+    "Aino",
+    "Collei",
+    "Nilou",
+    "Yaoyao"
+   ],
+   "ranking": 14.6,
+   "route": "pair_model",
+   "sd": 13.8,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.6,
+   "fit_source": "pairmodel",
+   "label": "Barbara dual carry · Vaporize · incidental Burgeon",
+   "lead": "Barbara",
+   "lineup": [
+    "Barbara",
+    "Bennett",
+    "Thoma",
+    "Yaoyao"
+   ],
+   "ranking": 13.7,
+   "route": "pair_model",
+   "sd": 14.8,
+   "template": "auto_bloom_dendro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 21.8,
+   "fit_source": "model",
+   "label": "Nilou hypercarry",
+   "lead": "Nilou",
+   "lineup": [
+    "Barbara",
+    "Mona",
+    "Nilou",
+    "Yaoyao"
+   ],
+   "ranking": 13.5,
+   "route": "pair_model",
+   "sd": 12.4,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 19.6,
+   "fit_source": "model",
+   "label": "Nilou dual carry",
+   "lead": "Nilou",
+   "lineup": [
+    "Barbara",
+    "Collei",
+    "Nilou",
+    "Yaoyao"
+   ],
+   "ranking": 12.1,
+   "route": "pair_model",
+   "sd": 11.0,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.0,
+   "fit_source": "model",
+   "label": "Nilou and Barbara dual carry",
+   "lead": "Nilou",
+   "lineup": [
+    "Aino",
+    "Barbara",
+    "Nilou",
+    "Yaoyao"
+   ],
+   "ranking": 7.9,
+   "route": "pair_model",
+   "sd": 21.0,
+   "template": "nilou_bloom",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "none",
+   "expected": 0.0,
+   "fit_source": "model",
+   "label": "Fischl and Xiangling dual carry · incidental Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Alyosha",
+    "Chevreuse",
+    "Fischl",
+    "Xiangling"
+   ],
+   "ranking": 0.0,
+   "route": "none",
+   "sd": 0.0,
+   "template": "overloaded",
+   "tier": "F"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "none",
+   "expected": 0.0,
+   "fit_source": "model",
+   "label": "Fischl dual carry · Quicken · incidental Electro-Charged",
+   "lead": "Fischl",
+   "lineup": [
+    "Alyosha",
+    "Fischl",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 0.0,
+   "route": "none",
+   "sd": 0.0,
+   "template": "hyperbloom",
+   "tier": "F"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Citlali",
+    "Mavuika",
+    "Sucrose"
+   ],
+   77.6
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   65.9
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Lyney"
+   ],
+   64.5
+  ],
+  [
+   "Sandrone",
+   [
+    "Alyosha",
+    "Kaedehara Kazuha",
+    "Sandrone",
+    "Yae Miko"
+   ],
+   62.2
+  ],
+  [
+   "Gaming",
+   [
+    "Bennett",
+    "Gaming",
+    "Rosaria",
+    "Sucrose"
+   ],
+   61.5
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Aino",
+    "Sucrose"
+   ],
+   "note": "",
+   "score": 41.3,
+   "teams": [
+    [
+     "Aino",
+     "Alyosha",
+     "Flins",
+     "Sucrose"
+    ],
+    [
+     "Chevreuse",
+     "Ineffa",
+     "Raiden Shogun",
+     "Xiangling"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "note": "",
+   "score": 105.1,
+   "teams": [
+    [
+     "Aino",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ],
+    [
+     "Bennett",
+     "Chevreuse",
+     "Fischl",
+     "Razor"
+    ],
+    [
+     "Kaedehara Kazuha",
+     "Raiden Shogun",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    [
+     "Kamisato Ayaka",
+     "Mona",
+     "Rosaria",
+     "Shenhe"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "note": "",
+   "score": 52.8,
+   "teams": [
+    [
+     "Aino",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "5 competent teams over 20 characters, 7 of 7 elements",
+   "score": 241.8,
+   "teams": [
+    [
+     "Aino",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ],
+    [
+     "Bennett",
+     "Chevreuse",
+     "Fischl",
+     "Razor"
+    ],
+    [
+     "Kaedehara Kazuha",
+     "Raiden Shogun",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    [
+     "Kamisato Ayaka",
+     "Mona",
+     "Rosaria",
+     "Shenhe"
+    ],
+    [
+     "Chiori",
+     "Noelle",
+     "Yae Miko",
+     "Zhongli"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 78.0,
+   "fit_source": "gcsim",
+   "label": "Flins dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 72.8,
+   "route": "exact_community",
+   "sd": 7.7,
+   "template": "lunar_charged",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 64.8,
+   "fit_source": "gcsim",
+   "label": "Razor on-field · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "ranking": 60.5,
+   "route": "exact_community",
+   "sd": 6.4,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 46.8,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Hyperbloom, Swirl",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "ranking": 42.8,
+   "route": "pair_model",
+   "sd": 6.0,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.2,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Lan Yan",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 39.4,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "freeze",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 109.5,
+ "pulls": [
+  {
+   "best_team": [
+    "Columbina",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "decomposition": {
+    "best_team_gain": 20.5,
+    "displaced": [
+     "Aino"
+    ],
+    "improved": [
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 138,
+    "redundancy_score": 0.46,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 22.0,
+   "gain": 20.5,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 12.6,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan",
+     "Mona",
+     "Shenhe",
+     "Yaoyao"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 244,
+    "redundancy_score": 0.23,
+    "second_team_gain": 8.6,
+    "support_contention": [
+     "Kaedehara Kazuha"
+    ]
+   },
+   "expected": 14.7,
+   "gain": 12.8,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 11.1,
+   "tier": "E"
+  },
+  {
+   "best_team": [
+    "Alyosha",
+    "Sandrone",
+    "Yae Miko",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan",
+     "Mona",
+     "Shenhe"
+    ],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 5,
+    "redundancy_score": 0.05,
+    "second_team_gain": 1.7,
+    "support_contention": []
+   },
+   "expected": 18.1,
+   "gain": 11.4,
+   "kind": "new archetype",
+   "name": "Sandrone",
+   "sd": 15.6,
+   "tier": "E"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Durin",
+    "Fischl"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Razor"
+    ],
+    "improved": [
+     "Bennett",
+     "Chevreuse",
+     "Fischl"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 197,
+    "redundancy_score": 0.48,
+    "second_team_gain": 10.7,
+    "support_contention": []
+   },
+   "expected": 9.9,
+   "gain": 10.7,
+   "kind": "sidegrade",
+   "name": "Durin",
+   "sd": 8.3,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Lauma",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Yaoyao"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Mona",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 201,
+    "redundancy_score": 0.16,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 9.1,
+   "gain": 8.6,
+   "kind": "luxury",
+   "name": "Lauma",
+   "sd": 4.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Mona",
+    "Shenhe",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan"
+    ],
+    "improved": [
+     "Mona",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 35,
+    "redundancy_score": 0.43,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 8.9,
+   "gain": 8.5,
+   "kind": "sidegrade",
+   "name": "Skirk",
+   "sd": 3.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Arlecchino",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona",
+     "Yaoyao"
+    ],
+    "improved": [
+     "Chevreuse",
+     "Fischl",
+     "Kamisato Ayaka",
+     "Razor",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 209,
+    "redundancy_score": 0.45,
+    "second_team_gain": 5.4,
+    "support_contention": []
+   },
+   "expected": 6.8,
+   "gain": 6.1,
+   "kind": "sidegrade",
+   "name": "Arlecchino",
+   "sd": 10.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Nicole",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 247,
+    "redundancy_score": 0.25,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 6.7,
+   "gain": 6.1,
+   "kind": "luxury",
+   "name": "Nicole",
+   "sd": 5.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 223,
+    "redundancy_score": 0.48,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 4.8,
+   "gain": 4.6,
+   "kind": "luxury",
+   "name": "Escoffier",
+   "sd": 2.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Neuvillette",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 206,
+    "redundancy_score": 0.23,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 4.5,
+   "gain": 4.3,
+   "kind": "luxury",
+   "name": "Neuvillette",
+   "sd": 4.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Lyney"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Razor"
+    ],
+    "improved": [
+     "Bennett",
+     "Chevreuse",
+     "Fischl"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 69,
+    "redundancy_score": 0.5,
+    "second_team_gain": 4.0,
+    "support_contention": []
+   },
+   "expected": 2.9,
+   "gain": 4.0,
+   "kind": "sidegrade",
+   "name": "Lyney",
+   "sd": 8.1,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 237,
+    "redundancy_score": 0.28,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 3.9,
+   "gain": 3.7,
+   "kind": "luxury",
+   "name": "Furina",
+   "sd": 4.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Gaming",
+    "Rosaria"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan",
+     "Mona",
+     "Shenhe"
+    ],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 203,
+    "redundancy_score": 0.17,
+    "second_team_gain": -2.1,
+    "support_contention": []
+   },
+   "expected": 3.5,
+   "gain": 2.8,
+   "kind": "luxury",
+   "name": "Gaming",
+   "sd": 9.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Clorinde",
+    "Kaedehara Kazuha",
+    "Yae Miko",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan",
+     "Mona",
+     "Shenhe"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 198,
+    "redundancy_score": 0.41,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 3.3,
+   "gain": 2.3,
+   "kind": "luxury",
+   "name": "Clorinde",
+   "sd": 5.0,
+   "tier": "E"
+  },
+  {
+   "best_team": [
+    "Prune",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 239,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 3.6,
+   "gain": 2.3,
+   "kind": "luxury",
+   "name": "Prune",
+   "sd": 5.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Diluc",
+    "Kaedehara Kazuha",
+    "Xianyun"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan",
+     "Mona",
+     "Shenhe",
+     "Yaoyao"
+    ],
+    "improved": [
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 278,
+    "redundancy_score": 0.14,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 2.9,
+   "gain": 1.7,
+   "kind": "luxury",
+   "name": "Xianyun",
+   "sd": 5.1,
+   "tier": "E"
+  },
+  {
+   "best_team": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 259,
+    "redundancy_score": 0.49,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.5,
+   "gain": 1.6,
+   "kind": "luxury",
+   "name": "Xilonen",
+   "sd": 2.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kirara",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 220,
+    "redundancy_score": 0.25,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.3,
+   "gain": 1.2,
+   "kind": "luxury",
+   "name": "Kirara",
+   "sd": 4.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona",
+     "Yaoyao"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "hyperbloom",
+     "quicken"
+    ],
+    "new_viable_teams": 110,
+    "redundancy_score": 0.19,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.1,
+   "gain": 1.2,
+   "kind": "luxury",
+   "name": "Nahida",
+   "sd": 4.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Faruzan",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 237,
+    "redundancy_score": 0.24,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.2,
+   "gain": 1.1,
+   "kind": "luxury",
+   "name": "Faruzan",
+   "sd": 4.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Raiden Shogun",
+    "Sangonomiya Kokomi",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Raiden Shogun",
+     "Shenhe",
+     "Xingqiu",
+     "Yaoyao"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 233,
+    "redundancy_score": 0.25,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.0,
+   "gain": 1.0,
+   "kind": "luxury",
+   "name": "Sangonomiya Kokomi",
+   "sd": 4.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe",
+    "Venti"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 223,
+    "redundancy_score": 0.4,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.9,
+   "gain": 0.8,
+   "kind": "luxury",
+   "name": "Venti",
+   "sd": 1.5,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Kujou Sara",
+    "Varesa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan",
+     "Mona",
+     "Shenhe",
+     "Yaoyao"
+    ],
+    "improved": [
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 57,
+    "redundancy_score": 0.35,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 2.9,
+   "gain": 0.6,
+   "kind": "luxury",
+   "name": "Varesa",
+   "sd": 6.1,
+   "tier": "E"
+  },
+  {
+   "best_team": [
+    "Iansan",
+    "Lohen",
+    "Mona",
+    "Shenhe"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan"
+    ],
+    "improved": [
+     "Mona",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.23,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.5,
+   "gain": 0.5,
+   "kind": "no change",
+   "name": "Lohen",
+   "sd": 2.8,
+   "tier": "E"
+  },
+  {
+   "best_team": [
+    "Baizhu",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Yaoyao"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Raiden Shogun",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "quicken"
+    ],
+    "new_viable_teams": 214,
+    "redundancy_score": 0.27,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.1,
+   "gain": 0.4,
+   "kind": "no change",
+   "name": "Baizhu",
+   "sd": 3.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Shenhe"
+    ],
+    "new_mechanics": [
+     "hyperbloom",
+     "quicken"
+    ],
+    "new_viable_teams": 218,
+    "redundancy_score": 0.26,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.2,
+   "gain": 0.3,
+   "kind": "no change",
+   "name": "Kuki Shinobu",
+   "sd": 4.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Lynette",
+    "Mualani",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kamisato Ayaka",
+     "Lan Yan",
+     "Mona",
+     "Shenhe"
+    ],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 33,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.4,
+   "gain": 0.3,
+   "kind": "no change",
+   "name": "Mualani",
+   "sd": 1.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yaoyao",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Lan Yan",
+     "Mona"
+    ],
+    "improved": [
+     "Kamisato Ayaka",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 243,
+    "redundancy_score": 0.28,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": -0.2,
+   "gain": 0.2,
+   "kind": "no change",
+   "name": "Yelan",
+   "sd": 4.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Albedo",
+    "Flins",
+    "Ineffa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 123,
+    "redundancy_score": 0.49,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Albedo",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Alhaitham",
+    "Bennett",
+    "Citlali",
+    "Yae Miko"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 36,
+    "redundancy_score": 0.05,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Alhaitham",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Arataki Itto",
+    "Bennett",
+    "Chiori",
+    "Citlali"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 21,
+    "redundancy_score": 0.25,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Arataki Itto",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Charlotte",
+    "Flins",
+    "Ineffa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 200,
+    "redundancy_score": 0.45,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Charlotte",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chasca",
+    "Citlali",
+    "Ineffa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 12,
+    "redundancy_score": 0.12,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Bennett"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Chasca",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Chevreuse",
+    "Citlali",
+    "Cyno",
+    "Fischl"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 47,
+    "redundancy_score": 0.53,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Cyno",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Chevreuse",
+    "Dehya",
+    "Fischl",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 195,
+    "redundancy_score": 0.43,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Dehya",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Dori",
+    "Flins",
+    "Ineffa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 220,
+    "redundancy_score": 0.41,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Dori",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Emilie",
+    "Flins",
+    "Ineffa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 132,
+    "redundancy_score": 0.45,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Emilie",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Eula",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 45,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Eula",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chiori",
+    "Freminet",
+    "Rosaria"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 46,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Freminet",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Chevreuse",
+    "Fischl",
+    "Gorou",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 205,
+    "redundancy_score": 0.48,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Gorou",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Chevreuse",
+    "Fischl",
+    "Hu Tao",
+    "Ineffa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 68,
+    "redundancy_score": 0.57,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Ineffa"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Hu Tao",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ifa",
+    "Ineffa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 244,
+    "redundancy_score": 0.42,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Ifa",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Chiori",
+    "Illuga",
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 44,
+    "redundancy_score": 0.2,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Illuga",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Jahoda"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 172,
+    "redundancy_score": 0.45,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Jahoda",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Jean"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 231,
+    "redundancy_score": 0.44,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Jean",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Fischl",
+    "Kaveh",
+    "Raiden Shogun"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.12,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Raiden Shogun"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Kaveh",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Fischl",
+    "Kinich"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 47,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Kinich",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Klee"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 189,
+    "redundancy_score": 0.22,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Klee",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Linnea"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 199,
+    "redundancy_score": 0.41,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Linnea",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chiori",
+    "Navia",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 24,
+    "redundancy_score": 0.25,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Navia",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Odette"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 71,
+    "redundancy_score": 0.44,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Odette",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Ororon"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 147,
+    "redundancy_score": 0.47,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Ororon",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Sigewinne"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 201,
+    "redundancy_score": 0.55,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Sigewinne",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Mona",
+    "Raiden Shogun",
+    "Tighnari"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 22,
+    "redundancy_score": 0.18,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Mona",
+     "Raiden Shogun"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Tighnari",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Fischl",
+    "Varka",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 5,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Flins",
+    "Ineffa",
+    "Vodyanitsa"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 212,
+    "redundancy_score": 0.25,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Fischl"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Vodyanitsa",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Ineffa",
+    "Wanderer",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 12,
+    "redundancy_score": 0.12,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Bennett"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Wanderer",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Wriothesley"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 169,
+    "redundancy_score": 0.5,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Wriothesley",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chiori",
+    "Xiangling",
+    "Xiao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 12,
+    "redundancy_score": 0.05,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Xiao",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Flins",
+  "Raiden Shogun",
+  "Razor",
+  "Yoimiya"
+ ]
+}

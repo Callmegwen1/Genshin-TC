@@ -1,0 +1,204 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Kaedehara Kazuha:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation FLzqPph8QDJD (house builds)
+    - gcsim community rotation HDJJ7Dbwwf9B (house builds)
+    - gcsim community rotation KWjBm7zFQMjf (house builds)
+    - gcsim community rotation Kc6dJt8nmq7C (house builds)
+    - gcsim community rotation N9BnBwHtT9rG (house builds)
+    - gcsim community rotation PPnMQwJDWphj (house builds)
+    - gcsim community rotation QzbhDQnc9Mb6 (house builds)
+    - gcsim community rotation djprtcCPkdtP (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 16 of 16 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.4
+      particles: 3.0
+      hits:
+      - offset: 0.167
+        type: skill
+        table:
+        - skill
+        - Press Skill DMG
+        - 0
+        element: Anemo
+        gauge: 1.0
+    high_plunge:
+      duration: 0.783
+      particles: 0.0
+      hits:
+      - offset: 0.5
+        type: plunge
+        table:
+        - normal
+        - Plunge DMG
+        - 0
+        element: Anemo
+        icd: standard
+        gauge: 1.0
+      - offset: 0.6
+        type: plunge
+        table:
+        - normal
+        - Low/High Plunge DMG
+        - 1
+        element: Anemo
+        icd: standard
+        gauge: 1.0
+    jump:
+      duration: 0.15
+      particles: 0.0
+      hits: []
+    dash:
+      duration: 0.033
+      particles: 0.0
+      hits: []
+    burst:
+      duration: 1.55
+      particles: 0.0
+      hits:
+      - offset: 1.367
+        type: burst
+        table:
+        - burst
+        - Slashing DMG
+        - 0
+        element: Anemo
+        gauge: 2.0
+      - offset: 2.383
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+      - offset: 2.383
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+      - offset: 4.333
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+      - offset: 4.333
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+      - offset: 6.283
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+      - offset: 6.283
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+      - offset: 8.233
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+      - offset: 8.233
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+      - offset: 10.183
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+      - offset: 10.183
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+    attack#0:
+      duration: 0.383
+      particles: 0.0
+      hits:
+      - offset: 0.217
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.283
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - jump
+    - high_plunge
+  - - high_plunge
+    - jump
+    - high_plunge
+  - - attack
+    - attack
+  follow:
+    skill: high_plunge
+  first: skill
+  causal: {}

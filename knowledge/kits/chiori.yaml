@@ -1,0 +1,30 @@
+Chiori:
+  schema: 3
+  element: Geo
+  weapon: sword
+  roles: [off_field_sub_dps]
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage: {element: Geo, types: [skill, summon, burst]}
+    application: [{element: Geo, mode: off_field, strength: medium}]
+    energy: {burst_cost: 50, dependency: low}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: atk, for: damage, source: [skill, summon, burst]}, {stat: def, for: damage, source: [skill, summon, burst]}]
+  effects:
+    - {kind: elemental_dmg_bonus, target: self, affects: {elements: [Geo]}, amount: 0.20, duration: 20, stacking: none,
+       conditions: [{type: character_state, state: "a party member creates a Geo Construct", text: "when a nearby party member creates a Geo Construct"}],
+       source: "The Finishing Touch"}
+    - {kind: other, target: active, affects: {damage_types: [normal, charged, plunge]}, amount: "100% of the upward sweep DMG, 2 coordinated attacks",
+       duration: 8, stacking: none, conditions: [], source: "Tailor-Made (Tapestry: Seize the Moment)"}
+  conditions: []
+  reactions: {owns: [], enables: [crystallize], requires: [], aura_supplied: [], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Fluttering Hasode, Hiyoku: Twin Blades, Tailor-Made, The Finishing Touch"
+    community: "How the character is played (KQM, Prydwen): off-field Geo sub-DPS, strongest with Geo Construct makers"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

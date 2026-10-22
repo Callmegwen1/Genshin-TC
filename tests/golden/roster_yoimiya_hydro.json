@@ -1,0 +1,992 @@
+{
+ "benchmark_cases": [
+  "yoimiya_hydro"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 42.4,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Yoimiya"
+   ],
+   "ranking": 39.5,
+   "route": "exact_community",
+   "sd": 4.2,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 41.2,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Yelan",
+    "Yoimiya",
+    "Yun Jin"
+   ],
+   "ranking": 38.5,
+   "route": "exact_community",
+   "sd": 4.1,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 39.0,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Yelan",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 36.4,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.6,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · Vaporize · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 35.7,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.9,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Yelan",
+    "Yoimiya",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 34.5,
+   "route": "exact_community",
+   "sd": 3.7,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · incidental Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.2,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.4,
+   "fit_source": "gcsim",
+   "label": "Yelan on-field",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 33.9,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 32.0,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.9,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yoimiya"
+   ],
+   "ranking": 31.6,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.9,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yoimiya",
+    "Yun Jin"
+   ],
+   "ranking": 31.4,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.5,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 31.3,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.3,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yelan",
+    "Yun Jin"
+   ],
+   "ranking": 30.3,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.4,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Yoimiya",
+    "Yun Jin"
+   ],
+   "ranking": 29.3,
+   "route": "pair_model",
+   "sd": 3.1,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 31.3,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Xingqiu",
+    "Yoimiya",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 29.2,
+   "route": "exact_community",
+   "sd": 3.1,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.9,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 28.0,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.1,
+   "fit_source": "pairmodel",
+   "label": "Yelan dual carry · incidental Swirl",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan",
+    "Yun Jin"
+   ],
+   "ranking": 26.8,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.2,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · Vaporize · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yoimiya",
+    "Yun Jin"
+   ],
+   "ranking": 26.3,
+   "route": "pair_model",
+   "sd": 2.7,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.3,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry",
+   "lead": "Yelan",
+   "lineup": [
+    "Xingqiu",
+    "Yelan",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 26.3,
+   "route": "pair_model",
+   "sd": 7.4,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.0,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya dual carry · Vaporize · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yoimiya",
+    "Zhongli"
+   ],
+   "ranking": 26.1,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 27.9,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yoimiya",
+    "Yun Jin"
+   ],
+   "ranking": 26.0,
+   "route": "exact_community",
+   "sd": 2.8,
+   "template": "auto_mono_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 27.7,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Yoimiya",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 25.9,
+   "route": "exact_community",
+   "sd": 2.7,
+   "template": "auto_mono_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.8,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry · Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 25.7,
+   "route": "pair_model",
+   "sd": 9.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.3,
+   "fit_source": "pairmodel",
+   "label": "Yoimiya hypercarry · incidental Swirl",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Yoimiya",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 24.5,
+   "route": "pair_model",
+   "sd": 2.7,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.3,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry · incidental Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Yelan",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 22.7,
+   "route": "pair_model",
+   "sd": 9.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.3,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 21.3,
+   "route": "pair_model",
+   "sd": 6.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.6,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry · Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Yun Jin"
+   ],
+   "ranking": 20.6,
+   "route": "pair_model",
+   "sd": 8.9,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.6,
+   "fit_source": "pairmodel",
+   "label": "Yelan hypercarry",
+   "lead": "Yelan",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 20.0,
+   "route": "pair_model",
+   "sd": 8.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.4,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yun Jin"
+   ],
+   "ranking": 18.9,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 20.7,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 17.4,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 20.0,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha spread damage · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "ranking": 15.5,
+   "route": "pair_model",
+   "sd": 6.6,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   58.0
+  ],
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Yelan"
+   ],
+   52.0
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Lyney",
+    "Yelan"
+   ],
+   47.9
+  ],
+  [
+   "Hu Tao",
+   [
+    "Bennett",
+    "Hu Tao",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   47.6
+  ],
+  [
+   "Raiden Shogun",
+   [
+    "Bennett",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yelan"
+   ],
+   45.3
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Yelan"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 1.8,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Yelan"
+   ],
+   "note": "",
+   "score": 17.8,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Bennett",
+    "Yelan"
+   ],
+   "note": "",
+   "score": 19.5,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Yelan",
+     "Yoimiya"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 29.6,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 42.4,
+   "fit_source": "gcsim",
+   "label": "Yoimiya hypercarry · Vaporize",
+   "lead": "Yoimiya",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Yelan",
+    "Yoimiya"
+   ],
+   "ranking": 39.5,
+   "route": "exact_community",
+   "sd": 4.2,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 19.5,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.4,
+    "displaced": [],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 27,
+    "redundancy_score": 0.62,
+    "second_team_gain": 34.5,
+    "support_contention": []
+   },
+   "expected": 25.9,
+   "gain": 22.9,
+   "kind": "upgrade",
+   "name": "Mavuika",
+   "sd": 7.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.3,
+    "displaced": [],
+    "improved": [
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.12,
+    "second_team_gain": 38.5,
+    "support_contention": []
+   },
+   "expected": 22.3,
+   "gain": 19.8,
+   "kind": "new archetype",
+   "name": "Columbina",
+   "sd": 7.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Neuvillette",
+    "Xingqiu",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 27,
+    "redundancy_score": 0.04,
+    "second_team_gain": 35.9,
+    "support_contention": []
+   },
+   "expected": 18.8,
+   "gain": 15.9,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 4.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 2.5,
+    "displaced": [],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 33,
+    "redundancy_score": 0.52,
+    "second_team_gain": 29.2,
+    "support_contention": []
+   },
+   "expected": 14.0,
+   "gain": 11.7,
+   "kind": "upgrade",
+   "name": "Furina",
+   "sd": 6.9,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Xilonen",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 6.4,
+    "displaced": [],
+    "improved": [
+     "Bennett",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 33,
+    "redundancy_score": 0.24,
+    "second_team_gain": 24.5,
+    "support_contention": []
+   },
+   "expected": 12.8,
+   "gain": 10.9,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 6.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Yoimiya",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -3.8,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 32,
+    "redundancy_score": 0.13,
+    "second_team_gain": 33.9,
+    "support_contention": []
+   },
+   "expected": 12.7,
+   "gain": 10.1,
+   "kind": "upgrade",
+   "name": "Escoffier",
+   "sd": 7.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Yoimiya",
+    "Yun Jin",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -3.8,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 29,
+    "redundancy_score": 0.12,
+    "second_team_gain": 32.5,
+    "support_contention": []
+   },
+   "expected": 11.4,
+   "gain": 8.7,
+   "kind": "upgrade",
+   "name": "Citlali",
+   "sd": 7.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.16,
+    "second_team_gain": 25.9,
+    "support_contention": []
+   },
+   "expected": 7.4,
+   "gain": 5.9,
+   "kind": "upgrade",
+   "name": "Nahida",
+   "sd": 6.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Skirk",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -5.7,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.1,
+    "second_team_gain": 31.4,
+    "support_contention": []
+   },
+   "expected": 12.2,
+   "gain": 5.7,
+   "kind": "new archetype",
+   "name": "Skirk",
+   "sd": 11.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Varka",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -5.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 11,
+    "redundancy_score": 0.3,
+    "second_team_gain": 29.8,
+    "support_contention": []
+   },
+   "expected": 29.1,
+   "gain": 4.8,
+   "kind": "upgrade",
+   "name": "Varka",
+   "sd": 37.1,
+   "tier": "C"
+  }
+ ],
+ "viable_carries": []
+}

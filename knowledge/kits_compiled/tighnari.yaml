@@ -1,0 +1,110 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Tighnari:
+  schema: 3
+  element: Dendro
+  weapon: bow
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: medium
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Dendro
+      types:
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: high
+    - element: Dendro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 40
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  - stat: em
+    for: damage
+    source:
+    - charged
+    - burst
+  effects:
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 50
+    duration: 4
+    stacking: none
+    conditions: []
+    source: Keen Sight (after firing a Wreath Arrow)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - charged
+      - burst
+    amount: 0.06% per point of Elemental Mastery, max 60%
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Scholarly Blade
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: Wreath Arrow charging time -2.4s for up to 3 Wreath Arrows
+    duration: 12
+    stacking: at talent level 10
+    conditions: []
+    source: Vijnana-Phala Mine (Vijnana Suffusion)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - spread
+    - quicken
+    - bloom
+    - burning
+    requires: []
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Khanda Barrier-Buster, Vijnana-Phala Mine, Fashioner''s Tanglevine Shaft,
+      Keen Sight, Scholarly Blade'
+    engine: 'Engine measurements: field share 34%, team damage share 29%, Dendro on 6.3 / off 0.8 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,136 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role grouping added (measured placement role or owned Swirl)
+Sayu:
+  schema: 3
+  element: Anemo
+  weapon: claymore
+  roles:
+  - healer
+  - swirl_support
+  - applier
+  - grouping
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+      - summon
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: medium
+    - element: Anemo
+      mode: off_field
+      strength: low
+    - element: Electro
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+    - summon
+  - stat: atk
+    for: heal
+    source:
+    - burst
+  - stat: em
+    for: heal
+    source:
+    - Someone More Capable
+  effects:
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 165.89% ATK + 1270 at talent level 10
+    duration: instant on cast
+    stacking: none
+    conditions: []
+    source: 'Yoohoo Art: Mujina Flurry (Skill Activation Healing)'
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 143.77% ATK + 1101 at talent level 10, to the active character with the lowest HP% at 70% HP or less
+    duration: 12
+    stacking: at intervals
+    conditions: []
+    source: 'Yoohoo Art: Mujina Flurry (Muji-Muji Daruma)'
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 300 HP + 1.2 HP per point of Sayu's Elemental Mastery
+    duration: instant
+    stacking: once every 2s
+    conditions:
+    - type: reaction_required
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+      text: Sayu triggers Swirl while active
+    source: Someone More Capable
+  - kind: heal
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 20% of the Daruma's healing to characters near the healed character
+    duration: 12
+    stacking: none
+    conditions: []
+    source: No Work Today!
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Shuumatsuban Ninja Blade, Yoohoo Art: Fuuin Dash, Yoohoo Art: Mujina
+      Flurry, Someone More Capable, No Work Today!'
+    engine: 'Engine measurements from community simulations: field share 26%, team damage share 10%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

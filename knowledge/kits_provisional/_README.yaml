@@ -1,0 +1,21 @@
+# Provisional kits, schema v2 (phase 13): characters with no community simulations yet.
+# Files starting with "_" are ignored. One file per character, written by hand from the official kit text
+# (Project Amber cache) and Prydwen's guide. Nothing here is a measurement.
+#
+# The schema, its vocabulary and its validation are in gtc/kit_schema.py; `python -m gtc audit` validates every
+# kit. In short:
+#   schema: 2, provisional: true
+#   role: carry | sub_dps | support       element, weapon
+#   analogue                              simulated character with the closest measured role (stands in for this
+#                                         one in the pair model)
+#   field, personal_damage, application   capability ranges [low, high]; the midpoint is used
+#   buffs, sustain, reactions             what the kit does, in the normalised vocabulary, with the kit text
+#   preferred_systems                     reaction keys from gtc/reactions.py
+#   restrictions                          machine-checked rules (needs_element, needs_count): a lineup that breaks
+#                                         one gets no number, with the reason
+#   synergies                             explanation only
+#   expected_archetypes / roles           placement into candidate teams (generators, never power)
+#   sources {id: text}, provenance {field: {source, confidence, method}}   "*" is the default
+#
+# Superseded automatically: once the character has simulations, the measured routes value them and the audit
+# reports the kit as stale (delete it then).

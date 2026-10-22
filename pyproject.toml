@@ -1,0 +1,12 @@
+[project]
+name = "gtc"
+version = "0.1.0"
+description = "Personal Genshin Impact theorycrafting tool: team recognition, pull value, resin planning."
+requires-python = ">=3.11"
+dependencies = ["genshin>=1.0", "python-dotenv", "pyyaml", "numpy"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["gtc", "gtc.importers"]

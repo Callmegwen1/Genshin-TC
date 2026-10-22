@@ -1,0 +1,157 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role swirl_support added (measured placement role or owned Swirl)
+Vesna:
+  schema: 3
+  element: Anemo
+  weapon: sword
+  roles:
+  - on_field_carry
+  - enabler
+  - swirl_support
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Anemo
+      types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+      - reaction
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+    - burst
+  - stat: atk
+    for: buff
+    source:
+    - 'Stellar Jubilee: Splendid Prelude'
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Anemo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Anemo, cannot be overridden
+    duration: 15
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Armed for Action
+      text: while in Armed for Action mode
+    source: The Art of Victory (Armed for Action, at talent level 10)
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 6% per Cryo or Anemo party member
+    duration: 'while in Radiance: Stellar Swirl'
+    stacking: per party member
+    conditions:
+    - type: character_state
+      state: 'Radiance: Stellar Swirl'
+      text: 'Vesna in Radiance: Stellar Swirl'
+    source: Truth Prevails
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 25 per party member of another Elemental Type
+    duration: 'while in Radiance: Stellar Swirl'
+    stacking: per party member
+    conditions:
+    - type: character_state
+      state: 'Radiance: Stellar Swirl'
+      text: 'Vesna in Radiance: Stellar Swirl'
+    source: Truth Prevails
+  - kind: reaction_conversion
+    target: party
+    affects:
+      elements:
+      - all
+      reactions:
+      - swirl-cryo
+    amount: Cryo Swirl becomes Stellar Swirl
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - swirl-cryo
+      text: a party member triggers Cryo Swirl
+    source: 'Stellar Jubilee: Splendid Prelude'
+  - kind: reaction_base
+    target: party
+    affects:
+      elements:
+      - all
+      reactions: []
+    amount: 0.7% Base Stellar Swirl DMG per 100 Vesna ATK, max 14%
+    duration: unknown
+    stacking: max 14%
+    conditions:
+    - type: reaction_required
+      reactions:
+      - swirl-cryo
+      text: Stellar Swirl (converted Cryo Swirl)
+    source: 'Stellar Jubilee: Splendid Prelude'
+  conditions: []
+  reactions:
+    owns:
+    - swirl-cryo
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - cryo
+    - pyro
+    - hydro
+    - electro
+  sources:
+    amber: 'Official kit text (packet): Vila Blade Dance, The Art of Victory, For the Tsaritsa!, Rite of Spring''s Procession,
+      Truth Prevails, Stellar Jubilee: Splendid Prelude'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

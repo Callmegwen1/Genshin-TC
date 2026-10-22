@@ -1,0 +1,129 @@
+# Benchmark v2: LOCKED validation set. Never read by tuning; never edited during tuning.
+# Same format as benchmark_calibration.yaml. Its hash is pinned in knowledge/benchmark_locked.lock.json, and
+# tests fail if this file changes without `python -m gtc bench --unlock --reason "..."`, which logs the change.
+#
+# Review status: these cases are Claude's proposals plus the user's own earlier corrections. The lock file
+# records whether the user has approved them (`python -m gtc bench --approve`). Until then, locked scores are
+# reported as provisional.
+
+cases:
+  - id: locked_columbina_over_aino_for_flins
+    question: pull_ranking
+    account: {roster: [Flins, Ineffa, Aino, Sucrose, Bennett, Kaedehara Kazuha, Zhongli, Xiangling, Fischl]}
+    candidates: [Columbina, Furina, Citlali]
+    pairs:
+      - {better: Columbina, worse: Citlali, gap: large}
+      - {better: Columbina, worse: Furina, gap: medium}
+    confidence: high
+    reason_tags: [upgrade-over-slot]
+    source: scenario
+  - id: locked_skirk_enabler
+    question: pull_ranking
+    account: {roster: [Skirk, Shenhe, Kaedehara Kazuha, Zhongli, Bennett, Xiangling, Fischl]}
+    candidates: [Escoffier, Furina, Xilonen]
+    pairs:
+      - {better: Escoffier, worse: Furina, gap: medium}  # user: Skirk teams have no Anemo for VV, so Escoffier's Cryo/Hydro shred is the big gain; Furina's Hydro is replaceable
+      - {better: Escoffier, worse: Xilonen, gap: large}  # Skirk is locked to Hydro and Cryo teammates
+      - {better: Furina, worse: Xilonen, gap: large}
+    confidence: high
+    reason_tags: [shred, element-lock]
+    source: user
+  - id: locked_hyperbloom_trigger
+    question: pull_ranking
+    account: {roster: [Nahida, Xingqiu, Bennett, Kaedehara Kazuha, Zhongli, Xiangling, Fischl]}
+    candidates: [Kuki Shinobu, Escoffier, Citlali]
+    pairs:
+      - {better: Kuki Shinobu, worse: Escoffier, gap: large}  # user: Escoffier is a Freeze unit, zero value for Hyperbloom
+    confidence: high
+    reason_tags: [fills-gap, new-team-enabled]
+    source: consensus
+  - id: locked_mavuika_core_vs_filler_for_owner
+    question: pull_ranking
+    account: {roster: [Arlecchino, Bennett, Xingqiu, Kaedehara Kazuha, Zhongli, Xiangling, Fischl, Sucrose, Chevreuse]}
+    candidates: [Mavuika, Columbina]
+    pairs:
+      - {better: Columbina, worse: Mavuika, gap: small}
+    confidence: low
+    reason_tags: [role-redundancy, close-call]
+    source: consensus
+  - id: locked_skirk_double_hydro
+    question: team_ranking
+    lineups:
+      core: [Skirk, Escoffier, Furina, Citlali]
+      budget: [Skirk, Charlotte, Furina, Layla]
+    pairs: [{better: core, worse: budget, gap: large}]
+    confidence: high
+    source: consensus
+  - id: locked_columbina_vs_aino
+    question: team_ranking
+    lineups:
+      columbina: [Flins, Ineffa, Columbina, Sucrose]
+      aino: [Flins, Ineffa, Aino, Sucrose]
+    pairs: [{better: columbina, worse: aino, gap: medium}]  # user: clearly better, not hugely
+    confidence: high
+    source: data
+  - id: locked_xiao_close_call
+    question: team_ranking
+    lineups:
+      faruzan: [Xiao, Faruzan, Furina, Xianyun]
+      bennett: [Xiao, Furina, Bennett, Xianyun]
+    pairs: [{better: faruzan, worse: bennett, gap: small}]
+    confidence: low
+    source: consensus
+    note: "Kept by the user. gcsim data shows the Bennett team ahead (about 84k vs 65k, one submitter each), but that config appears to run a Vaporize Xiao; for standard Xiao, Faruzan is slightly but noticeably better (also eases Xiao's energy as a same-element teammate)."
+  - id: locked_two_teams_on_a_wide_account
+    question: plan
+    account: {roster: [Raiden Shogun, Bennett, Xiangling, Xingqiu, Nahida, Kuki Shinobu, Yelan, Zhongli]}
+    expect: {members_in_plan: [Raiden Shogun, Nahida], team_with: Nahida, includes: [Kuki Shinobu]}
+    confidence: high
+    sensitive_to: [account.plan_weights]
+    source: consensus
+  - id: locked_skirk_plan_core
+    question: plan
+    account: {roster: [Skirk, Escoffier, Furina, Shenhe, Kaedehara Kazuha, Bennett, Xiangling, Zhongli]}
+    expect: {team_with: Skirk, includes: [Escoffier, Furina], excludes: [Bennett, Xiangling]}
+    confidence: high
+    source: consensus
+  - id: locked_mizuki_hyperbloom_is_valid
+    question: validity
+    lineup: [Nahida, Xingqiu, Fischl, Yumemizuki Mizuki]
+    classification: valid_misclassified
+    expect: {forms_team: true}
+    confidence: medium
+    reason_tags: [old-known-invalid]
+    source: scenario
+  - id: locked_clorinde_with_lunar_supports_is_valid
+    question: validity
+    lineup: [Clorinde, Columbina, Ineffa, Kaedehara Kazuha]
+    classification: valid_misclassified
+    expect: {forms_team: true, not_identity: [lunar_charged]}
+    confidence: medium
+    reason_tags: [old-known-invalid]
+    source: scenario
+  - id: locked_ayaka_with_pyro_is_not_freeze
+    question: validity
+    lineup: [Kamisato Ayaka, Bennett, Xiangling, Mona]
+    classification: off_meta
+    expect: {not_identity: [freeze]}   # user: a Melt Ayaka team is plausible but off-meta, so rejecting it is fine; it must never count as Freeze
+    confidence: medium
+    reason_tags: [old-known-invalid, off-meta]
+    source: user
+  - id: locked_aggravate_needs_dendro
+    question: validity
+    lineup: [Keqing, Fischl, Kaedehara Kazuha, Bennett]
+    classification: invalid
+    expect: {invalid_as: [aggravate]}
+    confidence: high
+    source: consensus
+  - id: locked_nahida_kuki_is_a_reaction_core
+    question: identity
+    lineup: [Nahida, Kuki Shinobu, Xingqiu, Yelan]
+    expect: {central: [hyperbloom], structure: reactionCore}
+    confidence: medium
+    source: consensus
+  - id: locked_neuvillette_hypercarry
+    question: identity
+    lineup: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli]
+    expect: {primary_actor: Neuvillette, structure: hypercarry}
+    confidence: high
+    source: data

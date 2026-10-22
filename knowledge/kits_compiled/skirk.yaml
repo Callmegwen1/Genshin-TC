@@ -1,0 +1,165 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Skirk:
+  schema: 3
+  element: Cryo
+  weapon: sword
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Cryo
+      types:
+      - normal
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: unknown
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - burst
+  effects:
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: Normal Attack DMG in Seven-Phase Flash to 110% / 120% / 170% of original with 1 / 2 / 3 stacks
+    duration: 20
+    stacking: max 3 stacks, each duration independent, at most 1 stack per character
+    conditions:
+    - type: party_element_count
+      elements:
+      - Hydro
+      - Cryo
+      full: 3
+      text: Hydro party members hitting with Hydro attacks or Cryo party members other than Skirk hitting with Cryo attacks;
+        each grants at most 1 stack
+    source: Return to Oblivion (Death's Crossing)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - burst
+    amount: 'Havoc: Ruin DMG to 105% / 115% / 160% of original with 1 / 2 / 3 stacks'
+    duration: 20
+    stacking: max 3 stacks, each duration independent, at most 1 stack per character
+    conditions:
+    - type: party_element_count
+      elements:
+      - Hydro
+      - Cryo
+      full: 3
+      text: Hydro or Cryo teammates (other than Skirk) hitting opponents with their element
+    source: Return to Oblivion (Death's Crossing)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: 8% / 12% / 16% / 20% with 0 / 1 / 2 / 3 Void Rifts absorbed
+    duration: until Seven-Phase Flash ends or 10 triggers
+    stacking: at talent level 10; canceled after 10 triggers
+    conditions:
+    - type: character_state
+      state: All Shall Wither
+      text: 'after using Havoc: Extinction in Seven-Phase Flash mode'
+    source: 'Havoc: Ruin (Havoc: Extinction, Void Rift Absorption DMG Bonus at talent level 10)'
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Void Rift created; each absorbed Rift grants 8 Serpent's Subtlety
+    duration: unknown
+    stacking: once every 2.5s; max 3 Rifts
+    conditions:
+    - type: reaction_required
+      reactions:
+      - freeze
+      - superconduct
+      - swirl-cryo
+      - crystallize
+      text: when nearby party members trigger Frozen, Superconduct, Stellar-Conduct, Cryo Swirl, Stellar Swirl or Cryo Crystallize
+    source: Reason Beyond Reason
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: Elemental Skill Level +1
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: party_elements_only
+      elements:
+      - Hydro
+      - Cryo
+      each_required: true
+      text: all party members Hydro or Cryo, with at least 1 of each
+    source: Mutual Weapons Mentorship
+  conditions:
+  - type: party_element_count
+    elements:
+    - Hydro
+    - Cryo
+    full: 3
+    text: Death's Crossing stacks come from Hydro or Cryo teammates, 1 per character, max 3
+  - type: party_elements_only
+    elements:
+    - Hydro
+    - Cryo
+    each_required: true
+    text: Mutual Weapons Mentorship needs an all Hydro/Cryo party with at least 1 of each
+  reactions:
+    owns:
+    - freeze
+    - melt
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Havoc: Sunder, Havoc: Warp, Havoc: Ruin, Reason Beyond Reason, Return
+      to Oblivion, Mutual Weapons Mentorship'
+    community: 'Engine measurements and general play pattern: on-field Cryo Normal Attack carry'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

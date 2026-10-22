@@ -1,0 +1,174 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Bennett:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 67LJzDcJkzpp (house builds)
+    - gcsim community rotation 9wjKFzCgfD9W (house builds)
+    - gcsim community rotation FzcfMQJmQw6j (house builds)
+    - gcsim community rotation JRLrhkQDpgk8 (house builds)
+    - gcsim community rotation PBLNd8pm7JPQ (house builds)
+    - gcsim community rotation QLLnkdGRjWp8 (house builds)
+    - gcsim community rotation kNgftcWMgtfT (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 9 of 9 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    burst:
+      duration: 0.883
+      particles: 0.0
+      hits:
+      - offset: 0.617
+        type: burst
+        table:
+        - burst
+        - Skill DMG
+        - 0
+        element: Pyro
+        gauge: 2.0
+    skill:
+      duration: 0.533
+      particles: 2.0
+      hits:
+      - offset: 0.267
+        type: skill
+        table:
+        - skill
+        - Press DMG
+        - 0
+        element: Pyro
+        gauge: 2.0
+    dash:
+      duration: 0.192
+      particles: 0.0
+      hits: []
+    jump:
+      duration: 0.15
+      particles: 0.0
+      hits: []
+    high_plunge:
+      duration: 0.783
+      particles: 0.0
+      hits:
+      - offset: 0.633
+        type: plunge
+        table:
+        - normal
+        - Low/High Plunge DMG
+        - 1
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    charge:
+      duration: 0.35
+      particles: 0.0
+      hits:
+      - offset: 0.167
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+      - offset: 0.35
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 1
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#0:
+      duration: 0.317
+      particles: 0.0
+      hits:
+      - offset: 0.217
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.383
+      particles: 0.0
+      hits:
+      - offset: 0.15
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.75
+      particles: 0.0
+      hits:
+      - offset: 0.217
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#3:
+      duration: 0.567
+      particles: 0.0
+      hits:
+      - offset: 0.417
+        type: normal
+        table:
+        - normal
+        - 4-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - jump
+    - high_plunge
+    - attack
+    - jump
+    - high_plunge
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - charge
+    - dash
+    - attack
+  - - attack
+    - attack
+    - attack
+  follow:
+    burst: skill
+    skill: burst
+  first: burst
+  causal: {}

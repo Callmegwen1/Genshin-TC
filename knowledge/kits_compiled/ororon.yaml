@@ -1,0 +1,107 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Ororon:
+  schema: 3
+  element: Electro
+  weapon: bow
+  roles:
+  - off_field_sub_dps
+  - applier
+  - battery
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: off_field
+      strength: high
+    - element: Electro
+      mode: on_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - Electro
+    amount: 'Hypersense: Nightsoul-aligned Electro DMG equal to 160% of Ororon''s ATK to up to 4 opponents, costs 10 Nightsoul
+      points'
+    duration: Nightsoul's Blessing lasts 6s
+    stacking: once every 1.8s
+    conditions:
+    - type: reaction_required
+      reactions:
+      - electrocharged
+      - lunarcharged
+      text: nearby opponents take Electro-Charged or Lunar-Charged DMG, or Nightsoul-aligned DMG from other characters
+    source: Nightshade Synesthesia (Hypersense)
+  - kind: energy
+    target: active
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: 3 Energy to the active character (and 3 to Ororon if off-field)
+    duration: 15
+    stacking: once every 1s, 3 times per duration
+    conditions:
+    - type: character_state
+      state: Aspect Sigil
+      text: after Night's Sling's Spirit Orb hits; active member hits with Normal, Charged or Plunging Attacks
+    source: Aspect Catalyst (Aspect Sigil)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - electrocharged
+    - lunarcharged
+    - overloaded
+    - superconduct
+    - quicken
+    - aggravate
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Night''s Sling, Dark Voices Echo, Nightshade Synesthesia, Aspect Catalyst'
+    community: Engine measurements and general knowledge of how the character is played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

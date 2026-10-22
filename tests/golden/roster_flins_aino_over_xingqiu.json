@@ -1,0 +1,1250 @@
+{
+ "benchmark_cases": [
+  "flins_aino_over_xingqiu"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 78.0,
+   "fit_source": "gcsim",
+   "label": "Flins dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 72.8,
+   "route": "exact_community",
+   "sd": 7.7,
+   "template": "lunar_charged",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 70.8,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Flins",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 64.1,
+   "route": "pair_model",
+   "sd": 9.9,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 68.8,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Vaporize · incidental Lunar-Charged, Overloaded",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Flins",
+    "Ineffa"
+   ],
+   "ranking": 62.6,
+   "route": "pair_model",
+   "sd": 9.2,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 66.5,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 59.6,
+   "route": "pair_model",
+   "sd": 10.2,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 65.4,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Lunar-Charged · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 59.4,
+   "route": "pair_model",
+   "sd": 8.8,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 63.0,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Vaporize · incidental Overloaded",
+   "lead": "Flins",
+   "lineup": [
+    "Bennett",
+    "Flins",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 53.6,
+   "route": "pair_model",
+   "sd": 13.9,
+   "template": "lunar_charged",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 60.8,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Zhongli"
+   ],
+   "ranking": 51.0,
+   "route": "pair_model",
+   "sd": 14.5,
+   "template": "lunar_charged",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.5,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · Vaporize · incidental Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 51.0,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 58.7,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry · incidental Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Flins",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 50.1,
+   "route": "pair_model",
+   "sd": 12.8,
+   "template": "lunar_charged",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.8,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 49.6,
+   "route": "pair_model",
+   "sd": 7.8,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 52.3,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · Vaporize · incidental Lunar-Charged, Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Ineffa",
+    "Xingqiu"
+   ],
+   "ranking": 46.7,
+   "route": "pair_model",
+   "sd": 8.3,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.2,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · incidental Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 44.8,
+   "route": "pair_model",
+   "sd": 9.6,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 53.0,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · Vaporize · incidental Lunar-Charged, Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 44.3,
+   "route": "pair_model",
+   "sd": 12.9,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 52.4,
+   "fit_source": "pairmodel",
+   "label": "Flins on-field · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 42.7,
+   "route": "pair_model",
+   "sd": 14.4,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 46.1,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Xingqiu dual carry · Vaporize · incidental Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 42.6,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.1,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 42.4,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.3,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · Vaporize · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 42.3,
+   "route": "pair_model",
+   "sd": 7.4,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.3,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · incidental Vaporize, Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 41.0,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.6,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Xingqiu dual carry",
+   "lead": "Ineffa",
+   "lineup": [
+    "Ineffa",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 40.6,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 55.0,
+   "fit_source": "pairmodel",
+   "label": "Flins and Ineffa dual carry",
+   "lead": "Flins",
+   "lineup": [
+    "Flins",
+    "Ineffa",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 40.5,
+   "route": "pair_model",
+   "sd": 21.5,
+   "template": "lunar_charged",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.5,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 39.2,
+   "route": "pair_model",
+   "sd": 6.3,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 52.4,
+   "fit_source": "pairmodel",
+   "label": "Flins on-field · Vaporize · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Flins",
+    "Xingqiu"
+   ],
+   "ranking": 36.5,
+   "route": "pair_model",
+   "sd": 23.6,
+   "template": "lunar_charged_offfield",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.4,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 36.3,
+   "route": "pair_model",
+   "sd": 16.5,
+   "template": "auto_mono_pyro",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.8,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Xingqiu dual carry · incidental Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 36.2,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.5,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · incidental Overloaded",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 33.6,
+   "route": "pair_model",
+   "sd": 11.6,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.3,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Overloaded, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Bennett",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 33.2,
+   "route": "pair_model",
+   "sd": 7.5,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.2,
+   "fit_source": "pairmodel",
+   "label": "Flins on-field · incidental Lunar-Charged, Swirl",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 32.1,
+   "route": "pair_model",
+   "sd": 19.4,
+   "template": "lunar_charged_offfield",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.3,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 26.7,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.4,
+   "fit_source": "pairmodel",
+   "label": "Flins on-field · incidental Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 24.4,
+   "route": "pair_model",
+   "sd": 28.2,
+   "template": "lunar_charged_offfield",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.6,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 23.9,
+   "route": "pair_model",
+   "sd": 8.4,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 23.8,
+   "route": "pair_model",
+   "sd": 4.8,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.9,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha spread damage · Vaporize",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 21.9,
+   "route": "pair_model",
+   "sd": 11.8,
+   "template": "vaporize_pyro",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.1,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Aino",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 20.6,
+   "route": "pair_model",
+   "sd": 6.6,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.2,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 20.5,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.4,
+   "fit_source": "pairmodel",
+   "label": "Bennett hypercarry · Vaporize",
+   "lead": "Bennett",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 19.7,
+   "route": "pair_model",
+   "sd": 6.9,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 21.7,
+   "fit_source": "pairmodel",
+   "label": "Bennett and Kaedehara Kazuha dual carry",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Zhongli"
+   ],
+   "ranking": 18.6,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.8,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha dual carry · Vaporize · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Aino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   "ranking": 17.4,
+   "route": "pair_model",
+   "sd": 9.6,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Ineffa",
+    "Mavuika",
+    "Sucrose"
+   ],
+   68.2
+  ],
+  [
+   "Gaming",
+   [
+    "Bennett",
+    "Gaming",
+    "Ineffa",
+    "Sucrose"
+   ],
+   61.1
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Ineffa",
+    "Lyney",
+    "Sucrose"
+   ],
+   59.3
+  ],
+  [
+   "Neuvillette",
+   [
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Sucrose"
+   ],
+   58.9
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Ineffa",
+    "Sucrose"
+   ],
+   57.0
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [],
+   "note": "",
+   "score": 19.3,
+   "teams": [
+    [
+     "Aino",
+     "Flins",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    [
+     "Bennett",
+     "Ineffa",
+     "Kaedehara Kazuha",
+     "Zhongli"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Flins",
+    "Ineffa"
+   ],
+   "note": "",
+   "score": 57.5,
+   "teams": [
+    [
+     "Aino",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ],
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu",
+     "Zhongli"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Flins",
+    "Ineffa"
+   ],
+   "note": "",
+   "score": 52.8,
+   "teams": [
+    [
+     "Aino",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 57.0,
+   "teams": [
+    [
+     "Aino",
+     "Flins",
+     "Ineffa",
+     "Sucrose"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 78.0,
+   "fit_source": "gcsim",
+   "label": "Flins dual carry · Lunar-Charged",
+   "lead": "Flins",
+   "lineup": [
+    "Aino",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "ranking": 72.8,
+   "route": "exact_community",
+   "sd": 7.7,
+   "template": "lunar_charged",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 54.4,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Mavuika",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Xingqiu",
+     "Zhongli"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 24,
+    "redundancy_score": 0.27,
+    "second_team_gain": 26.8,
+    "support_contention": []
+   },
+   "expected": 26.3,
+   "gain": 26.8,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 6.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Flins",
+    "Ineffa",
+    "Sucrose"
+   ],
+   "decomposition": {
+    "best_team_gain": 20.5,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Flins",
+     "Ineffa",
+     "Kaedehara Kazuha",
+     "Sucrose",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 35,
+    "redundancy_score": 0.46,
+    "second_team_gain": 2.3,
+    "support_contention": []
+   },
+   "expected": 26.7,
+   "gain": 22.8,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 15.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 28,
+    "redundancy_score": 0.36,
+    "second_team_gain": 16.1,
+    "support_contention": []
+   },
+   "expected": 15.0,
+   "gain": 16.1,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 6.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 39,
+    "redundancy_score": 0.48,
+    "second_team_gain": 14.1,
+    "support_contention": []
+   },
+   "expected": 13.7,
+   "gain": 14.1,
+   "kind": "new archetype",
+   "name": "Yelan",
+   "sd": 6.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 40,
+    "redundancy_score": 0.48,
+    "second_team_gain": 13.8,
+    "support_contention": []
+   },
+   "expected": 13.4,
+   "gain": 13.8,
+   "kind": "new archetype",
+   "name": "Furina",
+   "sd": 6.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Xingqiu",
+     "Zhongli"
+    ],
+    "new_mechanics": [
+     "freeze",
+     "melt"
+    ],
+    "new_viable_teams": 25,
+    "redundancy_score": 0.23,
+    "second_team_gain": 12.9,
+    "support_contention": []
+   },
+   "expected": 12.2,
+   "gain": 12.9,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 6.4,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "melt",
+     "vaporize"
+    ],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.19,
+    "second_team_gain": 10.1,
+    "support_contention": []
+   },
+   "expected": 11.2,
+   "gain": 10.1,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 8.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.29,
+    "second_team_gain": 8.9,
+    "support_contention": []
+   },
+   "expected": 9.4,
+   "gain": 8.9,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 7.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Varka",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Xingqiu",
+     "Zhongli"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.15,
+    "second_team_gain": 8.2,
+    "support_contention": []
+   },
+   "expected": 30.1,
+   "gain": 8.2,
+   "kind": "new archetype",
+   "name": "Varka",
+   "sd": 37.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Skirk",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Xingqiu"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Zhongli"
+    ],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.15,
+    "second_team_gain": 7.9,
+    "support_contention": []
+   },
+   "expected": 10.2,
+   "gain": 7.9,
+   "kind": "new archetype",
+   "name": "Skirk",
+   "sd": 9.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "burgeon"
+    ],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.21,
+    "second_team_gain": 4.5,
+    "support_contention": []
+   },
+   "expected": 5.0,
+   "gain": 4.5,
+   "kind": "fills a gap",
+   "name": "Nahida",
+   "sd": 7.6,
+   "tier": "C"
+  }
+ ],
+ "viable_carries": [
+  "Flins"
+ ]
+}

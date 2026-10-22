@@ -1,0 +1,107 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Kinich:
+  schema: 3
+  element: Dendro
+  weapon: claymore
+  roles:
+  - on_field_carry
+  - applier
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Dendro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: high
+    - element: Dendro
+      mode: off_field
+      strength: low
+    - element: Pyro
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 70
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+      reactions:
+      - burning
+      - burgeon
+    amount: 7 Nightsoul points when a Desolation-marked opponent is affected by Burning or Burgeon DMG
+    duration: until Kinich's Nightsoul's Blessing ends
+    stacking: once every 0.8s
+    conditions:
+    - type: reaction_required
+      reactions:
+      - burning
+      - burgeon
+      text: opponents in Desolation affected by Burning or Burgeon reaction DMG
+    source: The Price of Desolation (Nightsoul points, not Energy)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - skill
+    amount: 320% of Kinich's ATK per Hunter's Experience stack on Scalespiker Cannon
+    duration: 15
+    stacking: max 2 stacks, consumed by Scalespiker Cannon
+    conditions:
+    - type: character_state
+      state: party member triggers Nightsoul Burst
+      text: after a nearby party member triggers a Nightsoul Burst
+    source: Flame Spirit Pact (Hunter's Experience)
+  conditions: []
+  reactions:
+    owns:
+    - burgeon
+    - burning
+    - spread
+    - bloom
+    enables: []
+    requires: []
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Canopy Hunter: Riding High, Hail to the Almighty Dragonlord, The Price
+      of Desolation, Flame Spirit Pact'
+    community: 'How the character is played and engine measurements: on-field Dendro carry, typically with Burning/Burgeon
+      support'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

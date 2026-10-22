@@ -1,0 +1,161 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Zibai:
+  schema: 3
+  element: Geo
+  weapon: sword
+  roles:
+  - on_field_carry
+  - enabler
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Geo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+      - reaction
+    application:
+    - element: Geo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+    - reaction
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - normal
+      - charged
+    amount: Geo DMG that cannot be overridden
+    duration: 15
+    stacking: Lunar Phase Shift duration at talent level 10
+    conditions:
+    - type: character_state
+      state: Lunar Phase Shift
+      text: in the Lunar Phase Shift mode
+    source: Heaven and Earth Made Manifest (Lunar Phase Shift)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - skill
+    amount: 60% of Zibai's DEF on the 2nd hit of Spirit Steed's Stride
+    duration: 4
+    stacking: none
+    conditions: []
+    source: The Selenic Adeptus Descends (Selenic Descent)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: DEF +15% per other Geo party member
+    duration: unknown
+    stacking: per other Geo member
+    conditions: []
+    source: Layered Peaks Pierce the Clouds (DEF)
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 60 per Hydro party member
+    duration: unknown
+    stacking: per Hydro member
+    conditions: []
+    source: Layered Peaks Pierce the Clouds (Elemental Mastery)
+  - kind: reaction_conversion
+    target: party
+    affects:
+      elements:
+      - Hydro
+      - Geo
+      reactions:
+      - crystallize
+      - lunarcrystallize
+    amount: Hydro Crystallize converted to Lunar-Crystallize
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - crystallize
+      text: a party member triggers Hydro Crystallize
+    source: 'Moonsign Benediction: The Coursing Sun and Moon'
+  - kind: reaction_base
+    target: party
+    affects:
+      elements:
+      - Geo
+      reactions:
+      - lunarcrystallize
+    amount: 0.7% per 100 of Zibai's DEF, max 14%
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: The Coursing Sun and Moon (Lunar-Crystallize Base DMG)'
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: party Moonsign +1 level
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: The Coursing Sun and Moon (Moonsign)'
+  conditions: []
+  reactions:
+    owns:
+    - lunarcrystallize
+    enables:
+    - crystallize
+    - lunarcrystallize
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - hydro
+  sources:
+    amber: 'Official kit text (Project Amber cache): Golden Blade''s Petaled Touch, Heaven and Earth Made Manifest, Tri-Sphere
+      Eminence, The Selenic Adeptus Descends, Layered Peaks Pierce the Clouds, Moonsign Benediction: The Coursing Sun and
+      Moon'
+    engine: 'Engine measurements: field share 62%, team damage share 57%, Geo 4.5 on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

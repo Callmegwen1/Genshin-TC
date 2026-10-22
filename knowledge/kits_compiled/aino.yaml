@@ -1,0 +1,112 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Aino:
+  schema: 3
+  element: Hydro
+  weapon: claymore
+  roles:
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Hydro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: low
+    - element: Hydro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 50
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: em
+    for: damage
+    source:
+    - burst
+  effects:
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - burst
+    amount: 50% of Aino's Elemental Mastery
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Structured Power Booster
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - burst
+    amount: Cool Your Jets Ducky fires water balls more frequently with a larger AoE
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Ascendant Gleam'
+      text: party's Moonsign is Ascendant Gleam
+    source: Modular Efficiency Protocol
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: party's Moonsign increased by 1 level
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Force Limit Analysis'
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - freeze
+    - electrocharged
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Musecatcher, Precision Hydronic Cooler, Modular Efficiency Protocol,
+      Structured Power Booster, Moonsign Benediction: Force Limit Analysis'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

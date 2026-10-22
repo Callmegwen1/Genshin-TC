@@ -1,0 +1,113 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Zhongli:
+  schema: 3
+  element: Geo
+  weapon: polearm
+  roles:
+  - shielder
+  - debuffer
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Geo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: low
+    - element: Geo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 40
+      dependency: low
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: hp
+    for: shield
+    source:
+    - skill
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+    - burst
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 2712 + 23.04% Max HP at talent level 10; 150% DMG Absorption against all Elemental and Physical DMG
+    duration: 20
+    stacking: none
+    conditions: []
+    source: Dominus Lapidis (Jade Shield)
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - all
+    amount: 0.2
+    duration: while characters are protected by the Jade Shield
+    stacking: cannot be stacked; Elemental and Physical RES, small AoE
+    conditions: []
+    source: Dominus Lapidis (Jade Shield)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 5% Shield Strength per stack (Fortify)
+    duration: until the Jade Shield disappears
+    stacking: up to 5 stacks, gained when the Jade Shield takes DMG
+    conditions: []
+    source: Resonant Waves
+  conditions: []
+  reactions:
+    owns:
+    - crystallize
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Rain of Stone, Dominus Lapidis, Planet Befall, Resonant Waves, Dominance
+      of Earth'
+    engine: 'Engine measurements from community simulations: field share 12%, team damage share 5%, 63% of own damage off
+      field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

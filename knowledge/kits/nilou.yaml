@@ -1,0 +1,35 @@
+Nilou:
+  schema: 3
+  element: Hydro
+  weapon: sword
+  roles: [enabler, buffer]
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage: {element: Hydro, types: [skill, burst]}
+    application: [{element: Hydro, mode: on_field, strength: medium}, {element: Hydro, mode: off_field, strength: medium}]
+    energy: {burst_cost: 70, dependency: low}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: hp, for: damage, source: [skill, burst]}, {stat: hp, for: buff, source: [skill]}]
+  effects:
+    - {kind: reaction_conversion, target: party, affects: {reactions: [bloom, lunarbloom]}, amount: "Bloom and Lunar-Bloom create Bountiful Cores",
+       duration: 30, stacking: none, conditions: [{type: party_elements_only, elements: [Hydro, Dendro], each_required: true, text: "all party members Hydro or Dendro, at least one of each"}],
+       source: "Court of Dancing Petals"}
+    - {kind: em, target: party, affects: {elements: [all]}, amount: 100, duration: 10, stacking: none,
+       conditions: [{type: party_elements_only, elements: [Hydro, Dendro], each_required: true, text: "all party members Hydro or Dendro, at least one of each"}],
+       source: "Court of Dancing Petals (Golden Chalice's Bounty, hit by Dendro attacks)"}
+    - {kind: reaction_bonus, target: party, affects: {reactions: [bloom]}, amount: "9% per 1,000 Max HP above 30,000, up to 400%",
+       duration: unknown, stacking: none, conditions: [], source: "Dreamy Dance of Aeons"}
+  conditions:
+    - {type: party_elements_only, elements: [Hydro, Dendro], each_required: true,
+       text: "Bountiful Cores need an all Hydro and Dendro party"}
+  reactions: {owns: [], enables: [bloom, lunarbloom], requires: [bloom], aura_supplied: [hydro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Dance of Haftkarsvar, Dance of Abzendegi, Court of Dancing Petals, Dreamy Dance of Aeons"
+    community: "How the character is played (KQM, Prydwen): Bloom enabler in Hydro/Dendro-only teams"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

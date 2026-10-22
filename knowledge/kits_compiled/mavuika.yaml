@@ -1,0 +1,140 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Mavuika:
+  schema: 3
+  element: Pyro
+  weapon: claymore
+  roles:
+  - on_field_carry
+  - buffer
+  behavior:
+    field_time: medium
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: medium
+    - element: Pyro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: unknown
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Nightsoul-aligned Pyro DMG that cannot be overridden
+    duration: while the Flamestrider form is active
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Nightsoul's Blessing (Flamestrider)
+      text: All-Fire Armaments in Flamestrider form
+    source: The Named Moment (Ancient Name Unbound)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - burst
+      - normal
+      - charged
+    amount: 'per Fighting Spirit consumed: Sunfell Slice 2.88% ATK, Flamestrider Normal Attack 0.51% ATK, Flamestrider Charged
+      Attack 1.02% ATK, at talent level 10'
+    duration: 7
+    stacking: Fighting Spirit up to 200
+    conditions:
+    - type: character_state
+      state: Crucible of Death and Life
+      text: in the Crucible of Death and Life state
+    source: Hour of Burning Skies (Crucible of Death and Life)
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.3
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Gift of Flaming Flowers (after a party member triggers a Nightsoul Burst)
+  - kind: dmg_bonus
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 0.2% per Fighting Spirit when the Burst is used, max 40%
+    duration: 20s, decaying to 0
+    stacking: none
+    conditions: []
+    source: '"Kiongozi"'
+  conditions: []
+  reactions:
+    owns:
+    - vaporize
+    - melt
+    enables:
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Flames Weave Life, The Named Moment, Hour of Burning Skies, Gift of Flaming
+      Flowers, "Kiongozi"'
+    engine: 'Engine measurements: field share 30%, team damage share 41%, off-field share of own damage 30%, Pyro 2.5 on /
+      2.8 off field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior.energy.burst_cost:
+      source: amber
+      span: 'Hour of Burning Skies: uses Fighting Spirit, no Energy Cost line'
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,104 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Kirara:
+  schema: 3
+  element: Dendro
+  weapon: sword
+  roles:
+  - shielder
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Dendro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: medium
+    - element: Dendro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: hp
+    for: shield
+    source:
+    - skill
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 18% Max HP + 2117, max 28.8% Max HP + 3391 when stacked; 250% effectiveness against Dendro DMG; at talent level
+      10
+    duration: 12
+    stacking: remaining absorption stacks onto a new shield and resets duration
+    conditions: []
+    source: Meow-teor Kick (Shield of Safe Transport, at talent level 10)
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 20% of a Meow-teor Kick shield per Reinforced Packaging stack (max 3)
+    duration: unknown
+    stacking: max 3 stacks; stacks with an existing Shield of Safe Transport
+    conditions:
+    - type: character_state
+      state: Urgent Neko Parcel
+      text: stacks gained from impacts during Urgent Neko Parcel
+    source: Bewitching, Betwitching Tails
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - quicken
+    - spread
+    - aggravate
+    - bloom
+    - burning
+    requires: []
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Boxcutter, Meow-teor Kick, Secret Art: Surprise Dispatch, Bewitching,
+      Betwitching Tails, Pupillary Variance'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,191 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Baizhu:
+  schema: 3
+  element: Dendro
+  weapon: catalyst
+  roles:
+  - healer
+  - shielder
+  - buffer
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Dendro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: medium
+    - element: Dendro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: medium
+    sustain:
+      heal: high
+      shield: weak
+  scaling:
+  - stat: hp
+    for: heal
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: shield
+    source:
+    - burst
+  - stat: hp
+    for: buff
+    source:
+    - All Things Are of the Earth
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 14.4% of Baizhu's Max HP + 1695
+    duration: unknown
+    stacking: at talent level 10
+    conditions: []
+    source: Universal Diagnosis (Gossamer Sprite return, at talent level 10)
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 1.44% of Baizhu's Max HP + 169; absorbs Dendro DMG with 250% effectiveness
+    duration: 2.5
+    stacking: new Seamless Shield every 2.5s during Pulsing Clarity (14s), at talent level 10
+    conditions: []
+    source: Holistic Revivification (Seamless Shield, at talent level 10)
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 9.36% of Baizhu's Max HP + 1102
+    duration: 14
+    stacking: on new shield generated while shielded, or shield expiry/shatter, at talent level 10
+    conditions: []
+    source: Holistic Revivification (Seamless Shield healing, at talent level 10)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 20% Healing Bonus
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: active character HP below 50%
+      text: when the active character's HP is less than 50%
+    source: Five Fortunes Forever (Healing Bonus)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Dendro
+    amount: 0.25
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: active character HP at or above 50%
+      text: when the active character's HP is equal to or more than 50%
+    source: Five Fortunes Forever (Dendro DMG Bonus)
+  - kind: reaction_bonus
+    target: active
+    affects:
+      elements:
+      - all
+      reactions:
+      - burning
+      - bloom
+      - hyperbloom
+      - burgeon
+    amount: 2% per 1,000 of Baizhu's Max HP, up to 50,000 HP (max 100%)
+    duration: 6
+    stacking: none
+    conditions:
+    - type: character_state
+      state: healed by a Seamless Shield
+      text: characters healed by Seamless Shields
+    source: All Things Are of the Earth (Year of Verdant Favor)
+  - kind: reaction_bonus
+    target: active
+    affects:
+      elements:
+      - all
+      reactions:
+      - lunarbloom
+    amount: 0.7% per 1,000 of Baizhu's Max HP, up to 50,000 HP (max 35%)
+    duration: 6
+    stacking: none
+    conditions:
+    - type: character_state
+      state: healed by a Seamless Shield
+      text: characters healed by Seamless Shields
+    source: All Things Are of the Earth (Year of Verdant Favor, Lunar-Bloom)
+  - kind: reaction_bonus
+    target: active
+    affects:
+      elements:
+      - all
+      reactions:
+      - aggravate
+      - spread
+    amount: DMG Bonus provided by Aggravate and Spread +0.8% per 1,000 of Baizhu's Max HP, up to 50,000 HP (max 40%)
+    duration: 6
+    stacking: none
+    conditions:
+    - type: character_state
+      state: healed by a Seamless Shield
+      text: characters healed by Seamless Shields
+    source: All Things Are of the Earth (Year of Verdant Favor, Aggravate/Spread)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - bloom
+    - quicken
+    - spread
+    - aggravate
+    - burning
+    requires: []
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Universal Diagnosis, Holistic Revivification, Five Fortunes Forever,
+      All Things Are of the Earth'
+    community: 'How the character is played and engine measurements: off-field Dendro healer, shielder and reaction buffer'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

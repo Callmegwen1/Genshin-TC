@@ -1,0 +1,149 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Lyney:
+  schema: 3
+  element: Pyro
+  weapon: bow
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    - element: Pyro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - skill
+  effects:
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - charged
+      - skill
+    amount: Prop Arrow (Charge Level 2) summons a Grin-Malkin Hat; above 60% HP it consumes HP to gain 1 Prop Surplus stack
+      (max 5)
+    duration: removed after 30s out of combat
+    stacking: max 5 Prop Surplus stacks; only 1 Hat at a time
+    conditions: []
+    source: Card Force Translocation (Prop Arrow, Prop Surplus)
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 20% of Lyney's Max HP per Prop Surplus stack cleared
+    duration: unknown
+    stacking: at talent level 10
+    conditions: []
+    source: Bewildering Lights (HP Regeneration, at talent level 10)
+  - kind: flat_dmg
+    target: self
+    affects:
+      damage_types:
+      - skill
+    amount: 95.76% ATK per Prop Surplus stack cleared
+    duration: unknown
+    stacking: at talent level 10
+    conditions: []
+    source: Bewildering Lights (Skill DMG Bonus, at talent level 10)
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 3
+    duration: unknown
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: Prop Arrow consumed HP
+      text: Hat summoned by an HP-consuming Prop Arrow hits an opponent
+    source: Perilous Performance
+  - kind: flat_dmg
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: 80% of Lyney's ATK on the Grin-Malkin Hat
+    duration: unknown
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: Prop Arrow consumed HP
+      text: Hat summoned by an HP-consuming Prop Arrow
+    source: Perilous Performance
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 60%, +20% per Pyro party member other than Lyney, max 100%
+    duration: unknown
+    stacking: max 100%
+    conditions:
+    - type: aura_required
+      auras:
+      - pyro
+      text: opponents affected by Pyro
+    source: Conclusive Ovation
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Card Force Translocation, Bewildering Lights, Wondrous Trick: Miracle
+      Parade, Perilous Performance, Conclusive Ovation'
+    engine: 'Engine measurements: field share 67%, team damage share 77%, 6% off-field damage, Pyro application 6.9 on / 0.5
+      off field per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

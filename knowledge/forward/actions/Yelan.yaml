@@ -1,0 +1,209 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Yelan:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 6p7tDbdG6c8j (house builds)
+    - gcsim community rotation 6thffzfBtTdR (house builds)
+    - gcsim community rotation BfcNpLHjnjqb (house builds)
+    - gcsim community rotation Hh7dw6Ccqjqh (house builds)
+    - gcsim community rotation JchNjPwTCmhb (house builds)
+    - gcsim community rotation PczKr79Jptjq (house builds)
+    - gcsim community rotation TBNBCntnn7m7 (house builds)
+    - gcsim community rotation p8Crm967dKBD (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 52 of 52 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    burst: &id001
+      duration: 1.55
+      hits:
+      - offset: 1.267
+        table:
+        - burst
+        - Skill DMG
+        element: Hydro
+        type: burst
+        scaling: hp
+        gauge: 2.0
+    skill:
+      duration: 0.7
+      particles: 4.0
+      hits:
+      - offset: 0.6
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Hydro
+        scaling: hp
+        gauge: 1.0
+    dash:
+      duration: 0.367
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.25
+      particles: 0.0
+      hits:
+      - offset: 0.383
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.633
+      particles: 0.0
+      hits:
+      - offset: 0.033
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+      - offset: 0.467
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#3:
+      duration: 0.483
+      particles: 0.0
+      hits:
+      - offset: 0.417
+        type: normal
+        table:
+        - normal
+        - 4-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+      - offset: 0.65
+        type: normal
+        table:
+        - normal
+        - 4-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+  follow:
+    burst: attack
+    skill: attack
+  first: burst
+  causal:
+    facts: &id004
+      known:
+      - 'Exquisite Throw: 3 arrows on the active character''s Normal Attack hits, 1 s ICD, for 15 s; scales with HP'
+      assumed:
+      - the first arrow of each throw applies Hydro
+      unknown: []
+    summons: &id002
+      lifeline:
+        start_on: burst
+        duration:
+          table:
+          - burst
+          - Duration
+        interval: 999
+        hits: []
+    procs: &id003
+      exquisite_throw:
+        'on':
+          event: action
+          delay: 0.0
+          sustained: true
+          by: active
+          actions:
+          - attack
+        requires:
+          summon: lifeline
+        icd: 1.0
+        hits:
+        - offset: 0.3
+          table:
+          - burst
+          - Exquisite Throw DMG
+          - 0
+          element: Hydro
+          type: burst
+          scaling: hp
+          gauge: 1.0
+        - offset: 0.4
+          table:
+          - burst
+          - Exquisite Throw DMG
+          - 1
+          element: Hydro
+          type: burst
+          scaling: hp
+          gauge: 0.0
+        - offset: 0.5
+          table:
+          - burst
+          - Exquisite Throw DMG
+          - 2
+          element: Hydro
+          type: burst
+          scaling: hp
+          gauge: 0.0
+    actions:
+      burst: *id001
+  summons: *id002
+  procs: *id003
+  facts: *id004

@@ -1,0 +1,643 @@
+{
+ "benchmark_cases": [
+  "mavuika_citlali"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 84.1,
+   "fit_source": "gcsim",
+   "label": "Mavuika on-field · Melt",
+   "lead": "Mavuika",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Mavuika",
+    "Xilonen"
+   ],
+   "ranking": 78.5,
+   "route": "exact_community",
+   "sd": 8.3,
+   "template": "auto_melt_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 74.0,
+   "fit_source": "gcsim",
+   "label": "Mavuika hypercarry · Melt",
+   "lead": "Mavuika",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika"
+   ],
+   "ranking": 69.1,
+   "route": "exact_community",
+   "sd": 7.3,
+   "template": "auto_melt_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 69.2,
+   "fit_source": "pairmodel",
+   "label": "Mavuika hypercarry · Melt + Vaporize",
+   "lead": "Mavuika",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Mavuika",
+    "Xingqiu"
+   ],
+   "ranking": 64.7,
+   "route": "pair_model",
+   "sd": 6.7,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 65.9,
+   "fit_source": "gcsim",
+   "label": "Mavuika on-field · Vaporize",
+   "lead": "Mavuika",
+   "lineup": [
+    "Bennett",
+    "Mavuika",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 61.5,
+   "route": "exact_community",
+   "sd": 6.5,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 64.2,
+   "fit_source": "pairmodel",
+   "label": "Mavuika hypercarry · Melt",
+   "lead": "Mavuika",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Xilonen"
+   ],
+   "ranking": 60.3,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 62.0,
+   "fit_source": "pairmodel",
+   "label": "Mavuika on-field · Melt",
+   "lead": "Mavuika",
+   "lineup": [
+    "Citlali",
+    "Mavuika",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 57.9,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 61.6,
+   "fit_source": "pairmodel",
+   "label": "Mavuika hypercarry · Melt",
+   "lead": "Mavuika",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Xingqiu"
+   ],
+   "ranking": 57.6,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 60.5,
+   "fit_source": "gcsim",
+   "label": "Mavuika on-field",
+   "lead": "Mavuika",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Xilonen"
+   ],
+   "ranking": 56.4,
+   "route": "exact_community",
+   "sd": 6.0,
+   "template": "auto_mono_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 55.3,
+   "fit_source": "pairmodel",
+   "label": "Mavuika hypercarry",
+   "lead": "Mavuika",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 52.0,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.3,
+   "fit_source": "pairmodel",
+   "label": "Mavuika hypercarry · Vaporize",
+   "lead": "Mavuika",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Xingqiu"
+   ],
+   "ranking": 47.9,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.5,
+   "fit_source": "pairmodel",
+   "label": "Bennett dual carry · Melt · incidental Vaporize",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 35.5,
+   "route": "pair_model",
+   "sd": 7.4,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.2,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · Melt + Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "ranking": 31.7,
+   "route": "pair_model",
+   "sd": 6.6,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.4,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 30.5,
+   "route": "pair_model",
+   "sd": 5.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.4,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 29.7,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.0,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha and Bennett dual carry · Melt",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Xilonen"
+   ],
+   "ranking": 29.0,
+   "route": "pair_model",
+   "sd": 8.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika"
+   ],
+   69.6
+  ],
+  [
+   "Gaming",
+   [
+    "Bennett",
+    "Citlali",
+    "Gaming",
+    "Mavuika"
+   ],
+   68.6
+  ],
+  [
+   "Kinich",
+   [
+    "Bennett",
+    "Citlali",
+    "Kinich",
+    "Mavuika"
+   ],
+   68.5
+  ],
+  [
+   "Mualani",
+   [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Mualani"
+   ],
+   64.7
+  ],
+  [
+   "Skirk",
+   [
+    "Citlali",
+    "Skirk",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   60.0
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Bennett",
+    "Citlali",
+    "Mavuika"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 5.9,
+   "teams": [
+    [
+     "Bennett",
+     "Citlali",
+     "Mavuika",
+     "Xilonen"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Bennett",
+    "Citlali",
+    "Mavuika"
+   ],
+   "note": "",
+   "score": 59.2,
+   "teams": [
+    [
+     "Bennett",
+     "Citlali",
+     "Mavuika",
+     "Xilonen"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Bennett",
+    "Citlali",
+    "Mavuika"
+   ],
+   "note": "",
+   "score": 58.5,
+   "teams": [
+    [
+     "Bennett",
+     "Citlali",
+     "Mavuika",
+     "Xilonen"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 61.2,
+   "teams": [
+    [
+     "Bennett",
+     "Citlali",
+     "Mavuika",
+     "Xilonen"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 84.1,
+   "fit_source": "gcsim",
+   "label": "Mavuika on-field · Melt",
+   "lead": "Mavuika",
+   "lineup": [
+    "Bennett",
+    "Citlali",
+    "Mavuika",
+    "Xilonen"
+   ],
+   "ranking": 78.5,
+   "route": "exact_community",
+   "sd": 8.3,
+   "template": "auto_melt_pyro_carry",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 58.5,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Escoffier",
+    "Mavuika"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.1,
+    "displaced": [
+     "Xilonen"
+    ],
+    "improved": [
+     "Bennett",
+     "Citlali",
+     "Mavuika"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.45,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 9.1,
+   "gain": 10.1,
+   "kind": "upgrade",
+   "name": "Escoffier",
+   "sd": 10.7,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Mavuika"
+   ],
+   "decomposition": {
+    "best_team_gain": 7.2,
+    "displaced": [
+     "Bennett",
+     "Xilonen"
+    ],
+    "improved": [
+     "Citlali",
+     "Mavuika"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.27,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 7.9,
+   "gain": 7.2,
+   "kind": "upgrade",
+   "name": "Columbina",
+   "sd": 12.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Furina",
+    "Mavuika",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.28,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Furina",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Mavuika",
+    "Nahida",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.16,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Nahida",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Neuvillette"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Neuvillette",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Skirk",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 5,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Skirk",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Mavuika",
+    "Varka"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.35,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Mavuika",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.38,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Yelan",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Mavuika"
+ ]
+}

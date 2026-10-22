@@ -1,0 +1,55 @@
+# ---- Secrets: never commit -------------------------------------------------
+.env
+.env.*
+!.env.example
+*.cookie
+*.pem
+*.key
+secrets/
+
+# ---- Local data: never commit -----------------------------------------------
+# Everything under data/ is local: HoYoLAB account snapshots, the 13 GB gcsim
+# simulation archive, validation sets (hidden predictions), backups, the gcsim
+# binary, and third-party caches (Prydwen, KQM, Project Amber) that are for
+# personal use. The Amber cache the API needs reaches the Docker build from a
+# private S3 bucket, not from git.
+data/
+*.pkl
+*.sample.json
+*.exe
+
+# ---- Generated output -------------------------------------------------------
+reports/
+web/data/
+
+# ---- Terraform: state holds resource IDs and can hold secrets ---------------
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/*.tfvars
+!infra/*.tfvars.example
+infra/.terraform.lock.hcl.bak
+crash.log
+
+# ---- Python / tooling --------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# ---- OS / editor ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+infra/tfplan
+infra/*.tfplan

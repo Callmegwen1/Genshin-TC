@@ -1,0 +1,143 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role grouping added (measured placement role or owned Swirl)
+Prune:
+  schema: 3
+  element: Anemo
+  weapon: catalyst
+  roles:
+  - off_field_sub_dps
+  - buffer
+  - swirl_support
+  - grouping
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: medium
+    - element: Anemo
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 70
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: atk
+    for: buff
+    source:
+    - Tolling Synchronicity
+  effects:
+  - kind: dmg_bonus
+    target: party_others
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    amount: 0.025% per point of Prune's ATK above 2,000, max 50%
+    duration: 5
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+      text: after Prune hits an opponent with an Elementally converted Banehunter Oathhammer (from Swirl or Stellar Swirl)
+    source: Tolling Synchronicity (Tolling Rally)
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.6
+    duration: 5
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: 'Hexerei: Secret Rite with at least 2 Hexerei characters (Prune must be a Hexerei character)'
+    - type: character_state
+      state: Hexerei member under Tolling Rally triggers a reaction
+      text: after a Hexerei character affected by Tolling Rally triggers an Elemental Reaction
+    source: 'Witch''s Eve Rite: Witchseeker''s Vow (Hexerei: Secret Rite)'
+  - kind: atk_pct
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 0.3
+    duration: 5
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: 'Hexerei: Secret Rite with at least 2 Hexerei characters'
+    - type: reaction_required
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+      text: the triggering Hexerei character under Tolling Rally triggers Swirl or Stellar Swirl
+    source: 'Witch''s Eve Rite: Witchseeker''s Vow (Hexerei: Secret Rite, triggering character)'
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Badaboom! Hexbuster Hammer, Ring-A-Ding-Ding! Hexhunter Chime, The Bell
+      Tolls! The Hunt Is On!, Verdict and Punishment, Tolling Synchronicity, Witch''s Eve Rite: Witchseeker''s Vow'
+    community: 'Engine measurements and general play pattern: off-field Anemo Swirl sub-DPS and ATK-scaling DMG buffer'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

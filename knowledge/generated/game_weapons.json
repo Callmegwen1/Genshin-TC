@@ -1,0 +1,1106 @@
+{
+ "\"The Catch\"": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "\"Ultimate Overlord's Mega Magic Sword\"": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "A Teaspoon of Transcendence": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "A Thousand Blazing Suns": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "A Thousand Floating Dreams": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "A Touch of Frost in Scorching Summer!": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Absolution": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Akuoumaru": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Alley Hunter": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Amenoma Kageuchi": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Amos' Bow": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Angelos' Heptades": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Apprentice's Notes": {
+  "rarity": 1,
+  "type": "catalyst"
+ },
+ "Aqua Simulacra": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Aquila Favonia": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Ardent Storm": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Ardent Storm - Sublimation": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Ash-Graven Drinking Horn": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Astral Vulture's Crimson Plumage": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Athame Artis": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Azurelight": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Ballad of the Boundless Blue": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Ballad of the Fjords": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Beacon of the Reed Sea": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Beginner's Protector": {
+  "rarity": 1,
+  "type": "pole"
+ },
+ "Beyond the Chrysalis": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Black Tassel": {
+  "rarity": 3,
+  "type": "pole"
+ },
+ "Blackcliff Agate": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Blackcliff Longsword": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Blackcliff Pole": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Blackcliff Slasher": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Blackcliff Warbow": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Blackmarrow Lantern": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Blade of Atonement": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Bloodsoaked Ruins": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Bloodtainted Greatsword": {
+  "rarity": 3,
+  "type": "claymore"
+ },
+ "Breezeborne Refrain": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Calamity Queller": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Calamity of Eshu": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Cashflow Supervision": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Chain Breaker": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Cinnabar Spindle": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Clash of Kings": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Cloudforged": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Compound Bow": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Cool Steel": {
+  "rarity": 3,
+  "type": "sword_one_hand"
+ },
+ "Covenant of Frost and Snow": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Crane's Echoing Call": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Crescent Pike": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Crimson Moon's Semblance": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Dark Iron Sword": {
+  "rarity": 3,
+  "type": "sword_one_hand"
+ },
+ "Dawning Frost": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Dawnstar of Shahar": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Dawnstar of Shahar - Sublimation": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Deathmatch": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Debate Club": {
+  "rarity": 3,
+  "type": "claymore"
+ },
+ "Dialogues of the Desert Sages": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Disaster and Remorse": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Dodoco Tales": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Dragon's Bane": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Dragonspine Spear": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Dull Blade": {
+  "rarity": 1,
+  "type": "sword_one_hand"
+ },
+ "Earth Shaker": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Echoes of the Heart": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Elegy for the End": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Emberwell": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Emerald Orb": {
+  "rarity": 3,
+  "type": "catalyst"
+ },
+ "End of the Line": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Engulfing Lightning": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Etherlight Spindlelute": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Everlasting Moonglow": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Exaiphanes Blade": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Eye of Perception": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Fading Twilight": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Fang of the Mountain King": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Favonius Codex": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Favonius Greatsword": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Favonius Lance": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Favonius Sword": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Favonius Warbow": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Ferrous Shadow": {
+  "rarity": 3,
+  "type": "claymore"
+ },
+ "Festering Desire": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Fillet Blade": {
+  "rarity": 3,
+  "type": "sword_one_hand"
+ },
+ "Finale of the Deep": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Flame-Forged Insight": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Fleuve Cendre Ferryman": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Flower-Wreathed Feathers": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Flowing Purity": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Flute of Ezpitzal": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Footprint of the Rainbow": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Forest Regalia": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Forged by the Golden Melody": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Fractured Halo": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Freedom-Sworn": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Frostbearer": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Frostbreath": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Fruit of Fulfillment": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Fruitful Hook": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Gest of the Mighty Wolf": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Golden Bough of Nemorensis": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Golden Bough of Nemorensis - Sublimation": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Golden Frostbound Oath": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Hakushin Ring": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Halberd": {
+  "rarity": 3,
+  "type": "pole"
+ },
+ "Hallowed Fetters": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Hallowed Fetters - Sublimation": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Hamayumi": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Haran Geppaku Futsu": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Harbinger of Dawn": {
+  "rarity": 3,
+  "type": "sword_one_hand"
+ },
+ "Heretic's Molten Blade": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Hunter's Bow": {
+  "rarity": 1,
+  "type": "bow"
+ },
+ "Hunter's Path": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Hymn of the Maelstrom": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Ibis Piercer": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Iron Point": {
+  "rarity": 2,
+  "type": "pole"
+ },
+ "Iron Sting": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Jade Vista": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Jadefall's Splendor": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Kagotsurube Isshin": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Kagura's Verity": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Katsuragikiri Nagamasa": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Key of Khaj-Nisut": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "King's Squire": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Kitain Cross Spear": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Light of Foliar Incision": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Lightbearing Moonshard": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Lion's Roar": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Lithic Blade": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Lithic Spear": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Lost Prayer to the Sacred Winds": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Lumidouce Elegy": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Luxurious Sea-Lord": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Magic Guide": {
+  "rarity": 3,
+  "type": "catalyst"
+ },
+ "Mailed Flower": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Makhaira Aquamarine": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Mappa Mare": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Master Key": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Memory of Dust": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Messenger": {
+  "rarity": 3,
+  "type": "bow"
+ },
+ "Missive Windspear": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Mistsplitter Reforged": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Mitternachts Waltz": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Moonpiercer": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Moonweaver's Dawn": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Mountain-Bracing Bolt": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Mouun's Moon": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "New Bough": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Nightweaver's Looking Glass": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Nocturne's Curtain Call": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Oathsworn Eye": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Old Merc's Pal": {
+  "rarity": 2,
+  "type": "claymore"
+ },
+ "Otherworldly Story": {
+  "rarity": 3,
+  "type": "catalyst"
+ },
+ "Peak Patrol Song": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Phantasmal Gift: Star Omen": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Pocket Grimoire": {
+  "rarity": 2,
+  "type": "catalyst"
+ },
+ "Polar Star": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Portable Power Saw": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Predator": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Primordial Jade Cutter": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Primordial Jade Winged-Spear": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Prospector's Drill": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Prospector's Shovel": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Prototype Amber": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Prototype Archaic": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Prototype Crescent": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Prototype Rancour": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Prototype Starglitter": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Rainbow Serpent's Rain Bow": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Rainslasher": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Range Gauge": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Raven Bow": {
+  "rarity": 3,
+  "type": "bow"
+ },
+ "Recurve Bow": {
+  "rarity": 3,
+  "type": "bow"
+ },
+ "Redhorn Stonethresher": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Reliquary of Truth": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Rightful Reward": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Ring of Yaxche": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Royal Bow": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Royal Greatsword": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Royal Grimoire": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Royal Longsword": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Royal Spear": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Rust": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Sacrificer's Staff": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Sacrificial Bow": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Sacrificial Fragments": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Sacrificial Greatsword": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Sacrificial Jade": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Sacrificial Sword": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Sapwood Blade": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Scion of the Blazing Sun": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Seasoned Hunter's Bow": {
+  "rarity": 2,
+  "type": "bow"
+ },
+ "Sequence of Solitude": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Serenity's Call": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Serpent Devourer": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Serpent Devourer - Sublimation": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Serpent Spine": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Sharpshooter's Oath": {
+  "rarity": 3,
+  "type": "bow"
+ },
+ "Shattered Moon": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Shattered Moon - Sublimation": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Silver Light": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Silver Radiance of Gradlon": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Silver Radiance of Gradlon - Sublimation": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Silver Sword": {
+  "rarity": 2,
+  "type": "sword_one_hand"
+ },
+ "Silvershower Heartstrings": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Skyrider Greatsword": {
+  "rarity": 3,
+  "type": "claymore"
+ },
+ "Skyrider Sword": {
+  "rarity": 3,
+  "type": "sword_one_hand"
+ },
+ "Skyward Atlas": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Skyward Blade": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Skyward Harp": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Skyward Pride": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Skyward Spine": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Slingshot": {
+  "rarity": 3,
+  "type": "bow"
+ },
+ "Snare Hook": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Snow-Tombed Starsilver": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Solar Pearl": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Song of Broken Pines": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Song of Stillness": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Song of the Vigil": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Splendor of Tranquil Waters": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Staff of Homa": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Staff of the Scarlet Sands": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Starcaller's Watch": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Starlight of Fylkir": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Starlight of Fylkir - Sublimation": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Starpiercer": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Starpiercer - Sublimation": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Sturdy Bone": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Summit Shaper": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Sunny Morning Sleep-In": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Super Awesome Magic Key": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Surf's Up": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Sword of Descension": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Sword of Narzissenkreuz": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Symphonist of Scents": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Talking Stick": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Tamayuratei no Ohanashi": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "The Alley Flash": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "The Bell": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "The Black Sword": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "The Daybreak Chronicles": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "The Dockhand's Assistant": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "The First Great Magic": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "The Flute": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "The Stringless": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "The Unforged": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "The Viridescent Hunt": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "The Widsith": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Thrilling Tales of Dragon Slayers": {
+  "rarity": 3,
+  "type": "catalyst"
+ },
+ "Thundering Pulse": {
+  "rarity": 5,
+  "type": "bow"
+ },
+ "Tidal Shadow": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Tome of the Eternal Flow": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Toukabou Shigure": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Traveler's Handy Sword": {
+  "rarity": 3,
+  "type": "sword_one_hand"
+ },
+ "Tulaytullah's Remembrance": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Twin Nephrite": {
+  "rarity": 3,
+  "type": "catalyst"
+ },
+ "Unbreakable: Durandarte": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Uraku Misugiri": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Verdict": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Vivid Notions": {
+  "rarity": 5,
+  "type": "catalyst"
+ },
+ "Vortex Vanquisher": {
+  "rarity": 5,
+  "type": "pole"
+ },
+ "Wandering Evenstar": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Waster Greatsword": {
+  "rarity": 1,
+  "type": "claymore"
+ },
+ "Wavebreaker's Fin": {
+  "rarity": 4,
+  "type": "pole"
+ },
+ "Waveriding Whirl": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "White Iron Greatsword": {
+  "rarity": 3,
+  "type": "claymore"
+ },
+ "White Tassel": {
+  "rarity": 3,
+  "type": "pole"
+ },
+ "Whiteblind": {
+  "rarity": 4,
+  "type": "claymore"
+ },
+ "Whitelake Frostfeather": {
+  "rarity": 5,
+  "type": "sword_one_hand"
+ },
+ "Windblume Ode": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Wine and Song": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Winter's Heavy Heart": {
+  "rarity": 4,
+  "type": "catalyst"
+ },
+ "Wolf's Gravestone": {
+  "rarity": 5,
+  "type": "claymore"
+ },
+ "Wolf-Fang": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Xiphos' Moonlight": {
+  "rarity": 4,
+  "type": "sword_one_hand"
+ },
+ "Yayu": {
+  "rarity": 4,
+  "type": "bow"
+ },
+ "Yayu - Sublimation": {
+  "rarity": 5,
+  "type": "bow"
+ }
+}

@@ -1,0 +1,237 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Flins:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 6h7dhCQQCNbc (house builds)
+    - gcsim community rotation DDG9TCNWWLMf (house builds)
+    - gcsim community rotation KqC8wDpkQHrH (house builds)
+    - gcsim community rotation rgrtwMCg7FF6 (house builds)
+    - gcsim community rotation z8zBgkCKjnpJ (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 7 of 7 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill: &id001
+      duration: 0.467
+      particles: 0.0
+      cd: 16
+      do:
+      - enter: manifest_flame
+      hits: []
+    burst: &id003
+      duration: 0.9
+      hits:
+      - offset: 0.8
+        table:
+        - burst
+        - Initial Skill DMG
+        element: Electro
+        type: lunar
+        ignore_def: true
+        gauge: 1.0
+      - offset: 1.5
+        table:
+        - burst
+        - Middle Phase Lunar-Charged DMG
+        element: Electro
+        type: lunar
+        ignore_def: true
+        gauge: 0.0
+      - offset: 1.8
+        table:
+        - burst
+        - Middle Phase Lunar-Charged DMG
+        element: Electro
+        type: lunar
+        ignore_def: true
+        gauge: 0.0
+      - offset: 2.5
+        table:
+        - burst
+        - Final Phase Lunar-Charged DMG
+        element: Electro
+        type: lunar
+        ignore_def: true
+        gauge: 0.0
+    dash:
+      duration: 0.317
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.317
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - skill
+        - 1-Hit DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.35
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - skill
+        - 2-Hit DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.483
+      particles: 0.0
+      hits:
+      - offset: 0.267
+        type: normal
+        table:
+        - skill
+        - 3-Hit DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+    attack#3:
+      duration: 0.483
+      particles: 0.0
+      hits:
+      - offset: 0.333
+        type: normal
+        table:
+        - skill
+        - 4-Hit DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+      - offset: 0.483
+        type: normal
+        table:
+        - skill
+        - 4-Hit DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+    skill@manifest_flame: &id002
+      duration: 0.467
+      particles: 2.0
+      cd: 6
+      do:
+      - enter: symphony
+      hits:
+      - offset: 0.383
+        table:
+        - skill
+        - Northland Spearstorm DMG
+        element: Electro
+        type: skill
+        gauge: 1.0
+    burst@symphony: &id004
+      duration: 0.883
+      energy_cost: 30
+      cd: 0.5
+      uses_per_state: 1
+      hits:
+      - offset: 0.733
+        table:
+        - burst
+        - Thunderous Symphony DMG
+        element: Electro
+        type: lunar
+        ignore_def: true
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+  follow:
+    skill: attack
+    burst: attack
+  first: skill
+  causal:
+    facts: &id007
+      known:
+      - 'Skill: Manifest Flame form (10 s), Electro attacks; the Skill becomes Northland Spearstorm (6 s CD)'
+      - after Spearstorm, the Burst becomes Thunderous Symphony for 6 s at 30 Energy (Lunar-Charged DMG)
+      - 'Burst Ancient Ritual: initial hit, 2 middle-phase and 1 final-phase Lunar-Charged hits'
+      assumed:
+      - Burst phase timings (0.8 / 1.5 / 1.8 / 2.5 s)
+      - Spearstorm particles as measured (2)
+      - 'Thunderous Symphony: once per Spearstorm window, lost when Flins leaves the field (gcsim: 383/383 casts
+        without a swap-out, 0 of 507 windows with two; not stated in the kit text)'
+      - 'Manifest Flame ends when Flins leaves the field (gcsim: after a swap-out the Skill was the base Skill in
+        641/641 casts inside the window)'
+      unknown: []
+    states: &id005
+      manifest_flame:
+        ends_on_swap: true
+        duration:
+          table:
+          - skill
+          - Manifest Flame Duration
+      symphony:
+        duration: 6
+        ends_on_swap: true
+    specials: &id006
+    - skill
+    - burst
+    actions:
+      skill: *id001
+      skill@manifest_flame: *id002
+      burst: *id003
+      burst@symphony: *id004
+  states: *id005
+  specials: *id006
+  facts: *id007

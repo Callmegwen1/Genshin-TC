@@ -1,0 +1,30 @@
+Razor:
+  schema: 3
+  element: Electro
+  weapon: claymore
+  roles: [on_field_carry]
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage: {element: Electro, types: [normal, skill, burst]}
+    application: [{element: Electro, mode: on_field, strength: medium}]
+    energy: {burst_cost: 80, dependency: medium}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: atk, for: damage, source: [normal, skill, burst]}]
+  effects:
+    - {kind: other, target: self, affects: {damage_types: [normal]}, amount: unknown, duration: "Lightning Fang",
+       stacking: none, conditions: [{type: character_state, state: "Razor on field", text: "The Wolf Within's effects end when Razor leaves the battlefield"}],
+       source: "Lightning Fang (The Wolf Within)"}
+    - {kind: flat_dmg, target: self, affects: {damage_types: [burst]}, amount: "70% of Razor's ATK", duration: "Lightning Fang",
+       stacking: none, conditions: [], source: "Witch's Eve Rite: Surge of Lightning"}
+  conditions: []
+  reactions: {owns: [], enables: [overloaded, electrocharged, superconduct, aggravate], requires: [], aura_supplied: [electro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Claw and Thunder, Lightning Fang, Awakening, Hunger, Witch's Eve Rite: Surge of Lightning"
+    community: "How the character is played (KQM, Prydwen): on-field carry whose Burst only works while he stays on field"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams; Lightning Fang ends when he leaves the field", confidence: high, method: manual, reviewed: claude}

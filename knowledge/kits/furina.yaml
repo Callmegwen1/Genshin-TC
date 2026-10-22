@@ -1,0 +1,30 @@
+Furina:
+  schema: 3
+  element: Hydro
+  weapon: sword
+  roles: [off_field_sub_dps, buffer]
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage: {element: Hydro, types: [skill, summon]}
+    application: [{element: Hydro, mode: off_field, strength: medium}]
+    energy: {burst_cost: 60, dependency: medium}
+    sustain: {heal: medium, shield: none}
+  scaling: [{stat: hp, for: damage, source: [skill, summon, burst]}]
+  effects:
+    - {kind: dmg_bonus, target: party, affects: {elements: [all]}, amount: "based on Fanfare (party HP changes)", duration: unknown,
+       stacking: "Fanfare points", conditions: [{type: character_state, state: "party HP changes", text: "Fanfare comes from party HP increasing or decreasing"}],
+       source: "Let the People Rejoice"}
+    - {kind: dmg_bonus, target: self, affects: {damage_types: [summon]}, amount: "0.7% per 1,000 Max HP, up to 28%", duration: permanent,
+       stacking: none, conditions: [], source: "Unheard Confession"}
+  conditions: []
+  reactions: {owns: [], enables: [vaporize, electrocharged, freeze, bloom, swirl-hydro], requires: [], aura_supplied: [hydro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Salon Solitaire, Let the People Rejoice, Endless Waltz, Unheard Confession"
+    community: "How the character is played (KQM, Prydwen): off-field Hydro sub-DPS and party DMG buffer that wants HP fluctuation (a healer)"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

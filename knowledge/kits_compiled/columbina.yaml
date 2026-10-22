@@ -1,0 +1,199 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Columbina:
+  schema: 3
+  element: Hydro
+  weapon: catalyst
+  roles:
+  - off_field_sub_dps
+  - buffer
+  - enabler
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Hydro
+      types:
+      - skill
+      - burst
+      - reaction
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: medium
+    - element: Hydro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: buff
+    source:
+    - 'Moonsign Benediction: Moonlight, Lent Unto You'
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - charged
+      reactions:
+      - lunarbloom
+    amount: 'Charged Attack replaced by Moondew Cleanse: consumes 1 Verdant Dew, no Stamina, 3 instances of AoE Dendro DMG
+      considered Lunar-Bloom DMG'
+    duration: unknown
+    stacking: 1 Verdant Dew per Moondew Cleanse
+    conditions:
+    - type: character_state
+      state: at least 1 Verdant Dew
+      text: requires at least 1 Verdant Dew
+    source: Moondew Cascade (Moondew Cleanse)
+  - kind: reaction_conversion
+    target: party
+    affects:
+      reactions:
+      - electrocharged
+      - bloom
+      - crystallize
+    amount: Electro-Charged, Bloom and Hydro-Crystallize converted to Lunar-Charged, Lunar-Bloom and Lunar-Crystallize
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Moonlight, Lent Unto You'
+  - kind: reaction_base
+    target: party
+    affects:
+      reactions:
+      - lunarcharged
+      - lunarbloom
+      - lunarcrystallize
+    amount: Lunar reaction Base DMG +0.2% per 1,000 Max HP of Columbina, max 7%
+    duration: unknown
+    stacking: max 7%
+    conditions: []
+    source: 'Moonsign Benediction: Moonlight, Lent Unto You'
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: party Moonsign +1 level
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Moonlight, Lent Unto You (Moonsign)'
+  - kind: reaction_bonus
+    target: party
+    affects:
+      reactions:
+      - lunarcharged
+      - lunarbloom
+      - lunarcrystallize
+    amount: 0.4
+    duration: 20
+    stacking: none; at talent level 10
+    conditions:
+    - type: character_state
+      state: within the Lunar Domain
+      text: Lunar Domain of Moonlit Melancholy
+    source: Moonlit Melancholy (Lunar Reaction DMG Bonus, at talent level 10)
+  - kind: other
+    target: enemy
+    affects:
+      reactions:
+      - lunarcharged
+      - lunarbloom
+      - lunarcrystallize
+    amount: Gravity accrues when party members trigger Lunar reactions near Gravity Ripple; at limit 60, Gravity Interference
+      deals DMG by the most-accumulated Lunar reaction type
+    duration: 25
+    stacking: Gravity limit 60; at talent level 10
+    conditions:
+    - type: reaction_required
+      reactions:
+      - lunarcharged
+      - lunarbloom
+      - lunarcrystallize
+      text: party Lunar reactions while Gravity Ripple is on the field
+    source: Eternal Tides (Gravity Ripple)
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.05
+    duration: 10
+    stacking: up to 3 stacks
+    conditions: []
+    source: Lunacy's Lure
+  - kind: other
+    target: party
+    affects:
+      reactions:
+      - lunarcharged
+      - lunarbloom
+      - lunarcrystallize
+    amount: 'Lunar-Charged: 33% chance of an extra lightning strike; Lunar-Bloom: party gains Moonridge Dew (up to 3 per 18s);
+      Lunar-Crystallize: each Moondrift 33% chance of an extra attack'
+    duration: unknown
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: within the Lunar Domain
+      text: characters within the Lunar Domain trigger Lunar reactions
+    source: Law of the New Moon
+  conditions: []
+  reactions:
+    owns:
+    - lunarbloom
+    enables:
+    - lunarcharged
+    - lunarbloom
+    - lunarcrystallize
+    - electrocharged
+    - bloom
+    - crystallize
+    - vaporize
+    - freeze
+    - swirl-hydro
+    requires:
+    - lunarcharged
+    - lunarbloom
+    - lunarcrystallize
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Moondew Cascade, Eternal Tides, Moonlit Melancholy, Lunacy''s Lure, Law
+      of the New Moon, Moonsign Benediction: Moonlight, Lent Unto You'
+    engine: 'Engine measurements: field share 18%, team damage share 28%, 71% off-field damage, Hydro application 2.3 on /
+      4.1 off field per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

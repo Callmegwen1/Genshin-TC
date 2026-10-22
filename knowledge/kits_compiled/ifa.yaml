@@ -1,0 +1,120 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Ifa:
+  schema: 3
+  element: Anemo
+  weapon: catalyst
+  roles:
+  - healer
+  - buffer
+  - swirl_support
+  - grouping
+  behavior:
+    field_time: medium
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: em
+    for: heal
+    source:
+    - skill
+  effects:
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 36.29% of Ifa's Elemental Mastery + 105.93 per Tonicshot hit
+    duration: during Nightsoul's Blessing
+    stacking: at talent level 10
+    conditions: []
+    source: Airborne Disease Prevention (Tonicshot healing, at talent level 10)
+  - kind: reaction_bonus
+    target: party
+    affects:
+      elements:
+      - all
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+      - electrocharged
+      - lunarcharged
+    amount: based on Rescue Essentials points (1 per Nightsoul point in the party); per-point value unknown
+    duration: while Ifa is in Nightsoul's Blessing
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: Nightsoul's Blessing
+      text: Ifa in the Nightsoul's Blessing state
+    source: Field Medic's Vision
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 80
+    duration: 10
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: party member triggers Nightsoul Burst
+      text: when nearby party members trigger Nightsoul Bursts
+    source: Mutual Aid Agreement
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Airborne Disease Prevention, Compound Sedation Field, Field Medic''s
+      Vision, Mutual Aid Agreement'
+    community: 'How the character is played and engine measurements: on-field Anemo healer and Swirl/Electro-Charged buffer'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

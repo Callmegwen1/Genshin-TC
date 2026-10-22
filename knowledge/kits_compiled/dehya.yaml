@@ -1,0 +1,138 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Dehya:
+  schema: 3
+  element: Pyro
+  weapon: claymore
+  roles:
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Pyro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: medium
+    - element: Pyro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 70
+      dependency: medium
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - Stalwart and True
+  effects:
+  - kind: interruption
+    target: active
+    affects:
+      elements:
+      - all
+    amount: increased resistance to interruption
+    duration: while in the Fiery Sanctum field
+    stacking: none
+    conditions: []
+    source: Molten Inferno (Fiery Sanctum)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 50% of DMG taken mitigated and transferred to Dehya (Redmane's Blood) at talent level 10, up to 200% of Dehya's
+      Max HP stored
+    duration: while in the Fiery Sanctum field (12s field)
+    stacking: none
+    conditions: []
+    source: Molten Inferno (Fiery Sanctum)
+  - kind: interruption
+    target: party
+    affects:
+      elements:
+      - all
+    amount: further increased resistance to interruption within the Fiery Sanctum (Gold-Forged Form)
+    duration: 9
+    stacking: once every 18s
+    conditions: []
+    source: Unstinting Succor (Gold-Forged Form)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 60% less DMG taken from Redmane's Blood
+    duration: 6
+    stacking: once every 2s
+    conditions:
+    - type: character_state
+      state: retrieved Fiery Sanctum via Ranging Flame or Leonine Bite
+      text: within 6s after retrieving the field
+    source: Unstinting Succor
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 20% of Max HP, then 6% of Max HP every 2s
+    duration: 10
+    stacking: once every 20s
+    conditions:
+    - type: character_state
+      state: HP below 40%
+      text: triggers when Dehya's HP is less than 40%
+    source: Stalwart and True
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Sandstorm Assault, Molten Inferno, Leonine Bite, Unstinting Succor, Stalwart
+      and True'
+    engine: 'Engine measurements from community simulations: field share 20%, team damage share 17%, 47% of own damage off
+      field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,145 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Gorou:
+  schema: 3
+  element: Geo
+  weapon: bow
+  roles:
+  - buffer
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Geo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: low
+    - element: Geo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 80
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: DEF +371 (Standing Firm, at talent level 10)
+    duration: 10s banner; lasts 2s after leaving
+    stacking: only 1 General's War Banner at a time
+    conditions:
+    - type: party_element_count
+      elements:
+      - Geo
+      full: 1
+      text: Standing Firm with at least 1 Geo character in the party
+    source: Inuzaka All-Round Defense (General's War Banner)
+  - kind: interruption
+    target: active
+    affects:
+      elements:
+      - all
+    amount: increased resistance to interruption (Impregnable)
+    duration: 10s banner
+    stacking: none
+    conditions:
+    - type: party_element_count
+      elements:
+      - Geo
+      full: 2
+      text: Impregnable with at least 2 Geo characters in the party
+    source: Inuzaka All-Round Defense (General's War Banner)
+  - kind: elemental_dmg_bonus
+    target: active
+    affects:
+      elements:
+      - Geo
+    amount: 0.15
+    duration: 10s banner
+    stacking: at talent level 10; only 1 General's War Banner at a time
+    conditions:
+    - type: party_element_count
+      elements:
+      - Geo
+      full: 3
+      text: Crunch with at least 3 Geo characters in the party
+    source: Inuzaka All-Round Defense (General's War Banner)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: same War Banner buffs (DEF, interruption resistance, Geo DMG Bonus) by Geo count; field moves with the active
+      character
+    duration: 9
+    stacking: replaces the War Banner
+    conditions:
+    - type: party_element_count
+      elements:
+      - Geo
+      full: 3
+      text: buffs depend on the number of Geo characters in the party
+    source: 'Juuga: Forward Unto Victory (General''s Glory)'
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: DEF +25%
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Heedless of the Wind and Weather
+  conditions:
+  - type: party_element_count
+    elements:
+    - Geo
+    full: 3
+    levels:
+    - 1
+    - 2
+    - 3
+    text: 'War Banner buffs: 1 Geo for DEF, 2 Geo for interruption resistance, 3 Geo for Geo DMG Bonus'
+  reactions:
+    owns: []
+    enables:
+    - crystallize
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Inuzaka All-Round Defense, Juuga: Forward Unto Victory, Heedless of the
+      Wind and Weather, A Favor Repaid'
+    community: Engine measurements and general knowledge of how the character is played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

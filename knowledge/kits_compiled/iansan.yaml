@@ -1,0 +1,105 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Iansan:
+  schema: 3
+  element: Electro
+  weapon: polearm
+  roles:
+  - buffer
+  - healer
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Electro
+      types:
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 70
+      dependency: high
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: buff
+    source:
+    - burst
+  - stat: atk
+    for: heal
+    source:
+    - Kinetic Energy Gradient Test
+  effects:
+  - kind: atk
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 27% of Iansan's ATK with at least 42 Nightsoul points, else 0.5% of her ATK per Nightsoul point; max 690 (at talent
+      level 10)
+    duration: 12
+    stacking: at talent level 10
+    conditions: []
+    source: The Three Principles of Power (Kinetic Energy Scale)
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.2
+    duration: 15
+    stacking: Precise Movement; expires when Nightsoul's Blessing ends
+    conditions:
+    - type: character_state
+      state: Swift Stormflight hit
+      text: after Swift Stormflight hits opponents
+    source: Enhanced Resistance Training
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 60% of Iansan's ATK
+    duration: 10
+    stacking: once every 2.8s, when Iansan restores Nightsoul points
+    conditions:
+    - type: character_state
+      state: Nightsoul Burst
+      text: a nearby party member triggers a Nightsoul Burst
+    source: Kinetic Energy Gradient Test
+  conditions: []
+  reactions:
+    owns: []
+    enables: []
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Weighted Spike, Thunderbolt Rush, The Three Principles of Power, Enhanced
+      Resistance Training, Kinetic Energy Gradient Test'
+    community: 'How the character is played and engine measurements: ATK buffer through her Burst (10% field share, 4% team
+      damage)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

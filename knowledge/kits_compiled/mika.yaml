@@ -1,0 +1,120 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Mika:
+  schema: 3
+  element: Cryo
+  weapon: polearm
+  roles:
+  - buffer
+  - healer
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Cryo
+      types:
+      - skill
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 70
+      dependency: medium
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: hp
+    for: heal
+    source:
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - skill
+  effects:
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 22% ATK SPD at talent level 10
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Starfrost Swirl (Soulwind, at talent level 10)
+  - kind: elemental_dmg_bonus
+    target: active
+    affects:
+      elements:
+      - Physical
+    amount: 10% Physical DMG per Detector stack
+    duration: with Soulwind (12s)
+    stacking: max 3 Detector stacks (4 with Topographical Mapping)
+    conditions: []
+    source: Suppressive Barrage (Detector)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: +1 Detector stack on CRIT Hit and max stacks +1
+    duration: with Soulwind
+    stacking: 1 stack per Soulwind instance
+    conditions:
+    - type: character_state
+      state: affected by both Eagleplume and Soulwind
+      text: active character has Eagleplume and Soulwind
+    source: Topographical Mapping
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 21.9% Max HP + 2579 at talent level 10
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Skyfeather Song (cast healing, at talent level 10)
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 4.38% Max HP + 515 on Normal Attack hit at talent level 10
+    duration: 15
+    stacking: once every 2.5s
+    conditions: []
+    source: Skyfeather Song (Eagleplume, at talent level 10)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (packet): Starfrost Swirl, Skyfeather Song, Suppressive Barrage, Topographical Mapping'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

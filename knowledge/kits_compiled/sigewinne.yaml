@@ -1,0 +1,144 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Sigewinne:
+  schema: 3
+  element: Hydro
+  weapon: bow
+  roles:
+  - healer
+  - buffer
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Hydro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: low
+    - element: Hydro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 70
+      dependency: medium
+    sustain:
+      heal: high
+      shield: none
+  scaling:
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - skill
+  - stat: hp
+    for: buff
+    source:
+    - Requires Appropriate Rest
+  effects:
+  - kind: heal
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 5.04% of Sigewinne's Max HP + 593 per bounce (at talent level 10)
+    duration: 5 bounces
+    stacking: +5% per Hold tier, up to 2 tiers
+    conditions: []
+    source: Rebound Hydrotherapy (Bolstering Bubblebalm)
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 50% of Sigewinne's Max HP after the final bounce (at talent level 10)
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Rebound Hydrotherapy (Final Bounce)
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 1 Energy per 2,000 HP of Bond of Life cleared, max 5
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Rebound Hydrotherapy (Sourcewater Droplets)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Hydro
+    amount: 0.08
+    duration: 18
+    stacking: none
+    conditions: []
+    source: Requires Appropriate Rest (Semi-Strict Bedrest)
+  - kind: flat_dmg
+    target: party_others
+    affects:
+      elements:
+      - all
+      damage_types:
+      - skill
+    amount: 80 per 1,000 of Sigewinne's Max HP above 30,000, max 2,800
+    duration: 18
+    stacking: 10 Convalescence stacks, 1 consumed per off-field Elemental Skill DMG instance
+    conditions:
+    - type: character_state
+      state: off-field
+      text: Elemental Skills of nearby off-field party members
+    source: Requires Appropriate Rest (Convalescence)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: outgoing healing +3% per 1,000 HP of party Bonds of Life, max 30%
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Detailed Diagnosis, Thorough Treatment
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - electrocharged
+    - freeze
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Rebound Hydrotherapy, Super Saturated Syringing, Requires Appropriate
+      Rest, Detailed Diagnosis, Thorough Treatment'
+    community: Engine measurements and general knowledge of how the character is played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

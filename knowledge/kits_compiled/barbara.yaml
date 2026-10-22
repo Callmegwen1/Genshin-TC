@@ -1,0 +1,129 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Barbara:
+  schema: 3
+  element: Hydro
+  weapon: catalyst
+  roles:
+  - healer
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Hydro
+      types:
+      - normal
+      - charged
+      - skill
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: medium
+    - element: Hydro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 80
+      dependency: unknown
+    sustain:
+      heal: high
+      shield: none
+  scaling:
+  - stat: hp
+    for: heal
+    source:
+    - skill
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+  effects:
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 1.35% Max HP + 159 per Normal Attack hit (4x on Charged Attack hit), at talent level 10
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Let the Show Begin♪ (Melody Loop)
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 7.2% Max HP + 847 periodically, at talent level 10
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Let the Show Begin♪ (Melody Loop continuous regeneration)
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 31.68% Max HP + 3728, at talent level 10
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Shining Miracle♪
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: Stamina Consumption reduced by 12% in the Melody Loop
+    duration: while Melody Loop lasts
+    stacking: none
+    conditions: []
+    source: Glorious Season
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Melody Loop extended by 1s when the active character gains an Elemental Orb/Particle
+    duration: max 5s extension
+    stacking: up to 5s
+    conditions: []
+    source: Encore
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - freeze
+    - electrocharged
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Whisper of Water, Let the Show Begin♪, Shining Miracle♪, Glorious Season,
+      Encore'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

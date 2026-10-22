@@ -1,0 +1,10 @@
+# Reviewed character kits, schema 3 (phase M3): the reference set for the mechanical reasoner.
+# Schema, vocabulary and validation: gtc/kits.py. One file per character; files starting with "_" are skipped.
+#
+# Facts come from the official kit text in the Project Amber cache (source "amber", with the talent as the span).
+# Behaviour fields (field time, damage ownership, how strongly they apply an element) are judgments from how the
+# character is played, cited as "community" (KQM and Prydwen guides) at medium confidence, and cross-checked
+# against the measured capability profiles by tests/test_mechanics.py. Talent-scaled amounts the text does not give
+# are "unknown" rather than guessed.
+#
+# reviewed: claude = checked against the source text by Claude; human review is pending for every kit here.

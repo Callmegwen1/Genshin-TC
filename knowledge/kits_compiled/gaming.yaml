@@ -1,0 +1,144 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role healer added (measured placement role or owned Swirl)
+Gaming:
+  schema: 3
+  element: Pyro
+  weapon: claymore
+  roles:
+  - on_field_carry
+  - healer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - plunge
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - plunge
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - burst
+    - Dance of Amity
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - plunge
+    amount: Charmed Cloudstrider Plunging DMG converted to Pyro, cannot be overridden
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Bestial Ascent (Charmed Cloudstrider)
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 30% Max HP, at talent level 10
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Suanni's Gilded Dance (Skill Healing)
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown
+    duration: 12s Wushou Stance, at talent level 10
+    stacking: none
+    conditions: []
+    source: Suanni's Gilded Dance (Wushou Stance)
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 1.5% Max HP every 0.2s for 0.8s
+    duration: 0.8
+    stacking: none
+    conditions: []
+    source: Dance of Amity (after Charmed Cloudstrider hits)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - plunge
+    amount: 0.2
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: HP at or above 50%
+      text: Gaming has 50% HP or more
+    source: Air of Prosperity (Charmed Cloudstrider DMG)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 20% Incoming Healing Bonus
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: HP below 50%
+      text: Gaming has less than 50% HP
+    source: Air of Prosperity (Incoming Healing Bonus)
+  conditions: []
+  reactions:
+    owns:
+    - vaporize
+    - melt
+    enables:
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Stellar Rend, Bestial Ascent, Suanni''s Gilded Dance, Dance of Amity,
+      Air of Prosperity'
+    engine: 'Engine measurements: field share 67%, team damage share 76%, Pyro 4.3 on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

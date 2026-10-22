@@ -1,0 +1,145 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Linnea:
+  schema: 3
+  element: Geo
+  weapon: bow
+  roles:
+  - off_field_sub_dps
+  - debuffer
+  - buffer
+  - healer
+  - enabler
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Geo
+      types:
+      - skill
+      - summon
+      - reaction
+    application:
+    - element: Geo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - skill
+    - summon
+  - stat: def
+    for: heal
+    source:
+    - burst
+  - stat: def
+    for: buff
+    source:
+    - Universal Naturalist Archive
+    - 'Moonsign Benediction: Habitat Survey'
+  effects:
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Geo
+    amount: '15%, further 15% with Moonsign: Ascendant Gleam'
+    duration: while Lumi is on the field
+    stacking: none
+    conditions: []
+    source: Field Observation Notes
+  - kind: em
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 5% of Linnea's DEF
+    duration: unknown
+    stacking: applies to the active character if it is a Moonsign character, otherwise to Linnea herself
+    conditions: []
+    source: Universal Naturalist Archive
+  - kind: reaction_conversion
+    target: party
+    affects:
+      reactions:
+      - crystallize
+      - lunarcrystallize
+    amount: Hydro Crystallize converted to Lunar-Crystallize
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - crystallize
+      text: a party member triggers a Hydro Crystallize reaction
+    source: 'Moonsign Benediction: Habitat Survey'
+  - kind: reaction_base
+    target: party
+    affects:
+      reactions:
+      - lunarcrystallize
+    amount: 0.7% per 100 DEF of Linnea, max 14%
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Habitat Survey'
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: initial 288% DEF + 1695 to nearby party members, then 57.6% DEF + 339 continuously (at talent level 10)
+    duration: 12
+    stacking: at talent level 10
+    conditions: []
+    source: 'Memo: Survival Guide in Extreme Conditions'
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown
+    duration: unknown
+    stacking: while tapping the Elemental Skill
+    conditions: []
+    source: 'Countermeasure: Lumi''s Battle Cry! (Continuous Tapping)'
+  conditions: []
+  reactions:
+    owns:
+    - lunarcrystallize
+    enables:
+    - crystallize
+    requires:
+    - crystallize
+    aura_supplied: []
+    aura_consumed:
+    - hydro
+  sources:
+    amber: 'Official kit text (Project Amber cache): Capture Protocol, Countermeasure: Lumi''s Battle Cry!, Memo: Survival
+      Guide in Extreme Conditions, Field Observation Notes, Universal Naturalist Archive, Moonsign Benediction: Habitat Survey'
+    community: 'How the character is played and engine measurements: Lumi off-field Geo damage and Lunar-Crystallize enabler
+      (18% field share, 25% team damage)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

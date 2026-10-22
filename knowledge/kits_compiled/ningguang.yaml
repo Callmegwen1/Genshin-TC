@@ -1,0 +1,83 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Ningguang:
+  schema: 3
+  element: Geo
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Geo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 40
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: elemental_dmg_bonus
+    target: active
+    affects:
+      elements:
+      - Geo
+    amount: 0.12
+    duration: 10
+    stacking: none
+    conditions:
+    - type: character_state
+      state: passed through the Jade Screen
+      text: character passes through the Jade Screen
+    source: Strategic Reserve
+  conditions: []
+  reactions:
+    owns:
+    - crystallize
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Sparkling Scatter, Jade Screen, Starshatter, Backup Plan, Strategic Reserve'
+    engine: 'Engine measurements from community simulations: field share 46%, team damage share 38%, nearly all own damage
+      on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

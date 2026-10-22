@@ -1,0 +1,895 @@
+{
+ "benchmark_cases": [
+  "navia_xilonen"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 55.0,
+   "fit_source": "gcsim",
+   "label": "Navia on-field",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Navia",
+    "Xilonen"
+   ],
+   "ranking": 52.4,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 52.8,
+   "fit_source": "pairmodel",
+   "label": "Navia dual carry",
+   "lead": "Navia",
+   "lineup": [
+    "Furina",
+    "Navia",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 49.5,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.5,
+   "fit_source": "pairmodel",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Navia",
+    "Xilonen"
+   ],
+   "ranking": 47.3,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.1,
+   "fit_source": "pairmodel",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Furina",
+    "Navia",
+    "Xilonen",
+    "Zhongli"
+   ],
+   "ranking": 46.6,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 49.4,
+   "fit_source": "pairmodel",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Navia",
+    "Xilonen"
+   ],
+   "ranking": 46.0,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 49.5,
+   "fit_source": "pairmodel",
+   "label": "Navia dual carry",
+   "lead": "Navia",
+   "lineup": [
+    "Chiori",
+    "Navia",
+    "Xilonen",
+    "Zhongli"
+   ],
+   "ranking": 45.8,
+   "route": "pair_model",
+   "sd": 5.4,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.7,
+   "fit_source": "pairmodel",
+   "label": "Furina and Xingqiu dual carry · Vaporize",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 44.6,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.9,
+   "fit_source": "pairmodel",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Navia",
+    "Xilonen",
+    "Zhongli"
+   ],
+   "ranking": 44.5,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 46.2,
+   "fit_source": "gcsim",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Navia",
+    "Zhongli"
+   ],
+   "ranking": 43.1,
+   "route": "exact_community",
+   "sd": 4.6,
+   "template": "mono_geo",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.1,
+   "fit_source": "pairmodel",
+   "label": "Furina and Xingqiu dual carry",
+   "lead": "Furina",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 42.2,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 44.9,
+   "fit_source": "gcsim",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Furina",
+    "Navia"
+   ],
+   "ranking": 41.9,
+   "route": "exact_community",
+   "sd": 4.5,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 44.4,
+   "fit_source": "gcsim",
+   "label": "Navia hypercarry · incidental Vaporize",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Navia",
+    "Zhongli"
+   ],
+   "ranking": 41.9,
+   "route": "exact_community",
+   "sd": 3.7,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.3,
+   "fit_source": "pairmodel",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Navia",
+    "Zhongli"
+   ],
+   "ranking": 41.3,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.2,
+   "fit_source": "pairmodel",
+   "label": "Navia hypercarry · incidental Vaporize",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Navia",
+    "Xingqiu"
+   ],
+   "ranking": 41.1,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.6,
+   "fit_source": "pairmodel",
+   "label": "Chiori hypercarry · incidental Vaporize",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "ranking": 40.7,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.7,
+   "fit_source": "pairmodel",
+   "label": "Furina and Chiori dual carry · incidental Vaporize",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Furina",
+    "Xilonen"
+   ],
+   "ranking": 38.1,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.1,
+   "fit_source": "pairmodel",
+   "label": "Navia hypercarry",
+   "lead": "Navia",
+   "lineup": [
+    "Furina",
+    "Navia",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 37.3,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.7,
+   "fit_source": "pairmodel",
+   "label": "Chiori and Furina dual carry",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Xilonen",
+    "Zhongli"
+   ],
+   "ranking": 37.2,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.8,
+   "fit_source": "pairmodel",
+   "label": "Chiori dual carry · Vaporize",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Furina",
+    "Xingqiu"
+   ],
+   "ranking": 36.2,
+   "route": "pair_model",
+   "sd": 8.2,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.1,
+   "fit_source": "pairmodel",
+   "label": "Furina and Xingqiu dual carry",
+   "lead": "Furina",
+   "lineup": [
+    "Furina",
+    "Xilonen",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 36.0,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.3,
+   "fit_source": "pairmodel",
+   "label": "Xilonen and Chiori dual carry",
+   "lead": "Xilonen",
+   "lineup": [
+    "Chiori",
+    "Xilonen",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 35.9,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.1,
+   "fit_source": "pairmodel",
+   "label": "Chiori and Furina dual carry",
+   "lead": "Chiori",
+   "lineup": [
+    "Chiori",
+    "Furina",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 35.2,
+   "route": "pair_model",
+   "sd": 4.4,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.7,
+   "fit_source": "pairmodel",
+   "label": "Chiori hypercarry",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Xilonen",
+    "Zhongli"
+   ],
+   "ranking": 32.9,
+   "route": "pair_model",
+   "sd": 7.1,
+   "template": "mono_geo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.4,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.6,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.8,
+   "fit_source": "pairmodel",
+   "label": "Furina hypercarry · incidental Vaporize",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Xilonen",
+    "Zhongli"
+   ],
+   "ranking": 32.5,
+   "route": "pair_model",
+   "sd": 6.3,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 34.7,
+   "fit_source": "pairmodel",
+   "label": "Chiori dual carry · Vaporize from Furina",
+   "lead": "Chiori",
+   "lineup": [
+    "Bennett",
+    "Chiori",
+    "Furina",
+    "Zhongli"
+   ],
+   "ranking": 32.4,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.8,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Xilonen",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 29.9,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Furina",
+    "Mavuika",
+    "Xilonen"
+   ],
+   69.3
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Furina",
+    "Lyney",
+    "Xilonen"
+   ],
+   63.2
+  ],
+  [
+   "Neuvillette",
+   [
+    "Furina",
+    "Neuvillette",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   62.5
+  ],
+  [
+   "Skirk",
+   [
+    "Chiori",
+    "Furina",
+    "Skirk",
+    "Xilonen"
+   ],
+   57.3
+  ],
+  [
+   "Gaming",
+   [
+    "Bennett",
+    "Furina",
+    "Gaming",
+    "Xilonen"
+   ],
+   57.2
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Xilonen"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 2.7,
+   "teams": [
+    [
+     "Bennett",
+     "Furina",
+     "Xilonen",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Furina",
+    "Xilonen"
+   ],
+   "note": "",
+   "score": 27.2,
+   "teams": [
+    [
+     "Furina",
+     "Navia",
+     "Xilonen",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Xilonen"
+   ],
+   "note": "",
+   "score": 32.4,
+   "teams": [
+    [
+     "Bennett",
+     "Furina",
+     "Navia",
+     "Xilonen"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 36.4,
+   "teams": [
+    [
+     "Bennett",
+     "Furina",
+     "Xilonen",
+     "Xingqiu"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 55.0,
+   "fit_source": "gcsim",
+   "label": "Navia on-field",
+   "lead": "Navia",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Navia",
+    "Xilonen"
+   ],
+   "ranking": 52.4,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "auto_geo_carry",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 32.4,
+ "pulls": [
+  {
+   "best_team": [
+    "Chiori",
+    "Columbina",
+    "Navia",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.5,
+    "displaced": [],
+    "improved": [
+     "Navia"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 24,
+    "redundancy_score": 0.12,
+    "second_team_gain": 44.6,
+    "support_contention": []
+   },
+   "expected": 40.9,
+   "gain": 35.1,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 9.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Neuvillette",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.1,
+    "displaced": [],
+    "improved": [
+     "Furina",
+     "Xilonen"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 27,
+    "redundancy_score": 0.15,
+    "second_team_gain": 43.1,
+    "support_contention": []
+   },
+   "expected": 38.1,
+   "gain": 33.2,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 8.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Mavuika",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.1,
+    "displaced": [],
+    "improved": [
+     "Furina",
+     "Xilonen"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 31,
+    "redundancy_score": 0.22,
+    "second_team_gain": 43.1,
+    "support_contention": []
+   },
+   "expected": 35.9,
+   "gain": 31.2,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 8.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Xilonen",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 6.7,
+    "displaced": [],
+    "improved": [
+     "Furina",
+     "Xilonen"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 29,
+    "redundancy_score": 0.27,
+    "second_team_gain": 43.1,
+    "support_contention": []
+   },
+   "expected": 34.5,
+   "gain": 29.8,
+   "kind": "new archetype",
+   "name": "Yelan",
+   "sd": 8.7,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Nahida",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -3.7,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 12,
+    "redundancy_score": 0.16,
+    "second_team_gain": 43.1,
+    "support_contention": []
+   },
+   "expected": 23.0,
+   "gain": 19.4,
+   "kind": "upgrade",
+   "name": "Nahida",
+   "sd": 7.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Chiori",
+    "Escoffier",
+    "Navia",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -5.8,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 31,
+    "redundancy_score": 0.15,
+    "second_team_gain": 44.6,
+    "support_contention": []
+   },
+   "expected": 22.6,
+   "gain": 18.8,
+   "kind": "upgrade",
+   "name": "Escoffier",
+   "sd": 7.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Navia",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -5.9,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 30,
+    "redundancy_score": 0.15,
+    "second_team_gain": 42.2,
+    "support_contention": []
+   },
+   "expected": 19.7,
+   "gain": 16.3,
+   "kind": "upgrade",
+   "name": "Citlali",
+   "sd": 7.4,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chiori",
+    "Skirk",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -2.9,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.05,
+    "second_team_gain": 38.1,
+    "support_contention": []
+   },
+   "expected": 20.8,
+   "gain": 15.2,
+   "kind": "new archetype",
+   "name": "Skirk",
+   "sd": 9.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Furina",
+    "Varka",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -6.6,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 10,
+    "redundancy_score": 0.1,
+    "second_team_gain": 37.5,
+    "support_contention": []
+   },
+   "expected": 43.1,
+   "gain": 10.9,
+   "kind": "new archetype",
+   "name": "Varka",
+   "sd": 46.6,
+   "tier": "C"
+  }
+ ],
+ "viable_carries": [
+  "Navia"
+ ]
+}

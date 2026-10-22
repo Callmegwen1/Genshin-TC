@@ -1,0 +1,112 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 3 note(s).
+#   role shielder added (measured placement role or owned Swirl)
+#   party_element_count over all elements read as party_element_types
+#   party_element_count over all elements read as party_element_types
+Yun Jin:
+  schema: 3
+  element: Geo
+  weapon: polearm
+  roles:
+  - buffer
+  - shielder
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Geo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: high
+    sustain:
+      heal: none
+      shield: weak
+  scaling:
+  - stat: def
+    for: buff
+    source:
+    - burst
+  - stat: def
+    for: damage
+    source:
+    - skill
+  - stat: hp
+    for: shield
+    source:
+    - skill
+  effects:
+  - kind: flat_dmg
+    target: party
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: 57.89% of Yun Jin's current DEF at talent level 10
+    duration: 12
+    stacking: trigger quota 30 per party member
+    conditions: []
+    source: Cliffbreaker's Banner (Flying Cloud Flag Formation, at talent level 10)
+  - kind: flat_dmg
+    target: party
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: additional 2.5% / 5% / 7.5% / 11.5% of Yun Jin's DEF with 1 / 2 / 3 / 4 Elemental Types
+    duration: 12
+    stacking: none
+    conditions:
+    - type: party_element_types
+      full: 4
+      text: bonus scales with the number of Elemental Types in the party (full with 4)
+    source: Breaking Conventions
+  - kind: shield
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 21.6% Max HP+2542 at talent level 10, 150% effectiveness against all DMG
+    duration: while holding the skill
+    stacking: none
+    conditions: []
+    source: Opening Flourish (Hold shield, at talent level 10)
+  conditions:
+  - type: party_element_types
+    full: 4
+    text: Normal Attack bonus grows with the number of Elemental Types in the party (full with four)
+  reactions:
+    owns:
+    - crystallize
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Opening Flourish, Cliffbreaker''s Banner, True to Oneself, Breaking Conventions'
+    engine: 'Engine measurements: field share 17%, share of team damage 3%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

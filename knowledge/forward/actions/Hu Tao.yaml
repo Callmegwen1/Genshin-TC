@@ -1,0 +1,274 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Hu Tao:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 8kwLdBB77Hd9 (house builds)
+    - gcsim community rotation HrcMB99pkDCq (house builds)
+    - gcsim community rotation QnczBzqDq8LD (house builds)
+    - gcsim community rotation T6qDJn7HQFW7 (house builds)
+    - gcsim community rotation jLbGkN9JNPBd (house builds)
+    - gcsim community rotation zmRgFTFHPDWz (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 10 of 11 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill: &id001
+      duration: 0.483
+      particles: 5.0
+      do:
+      - enter: paramita
+      hits: []
+    charge:
+      duration: 0.083
+      particles: 0.0
+      hits:
+      - offset: 0.05
+        type: charged
+        table:
+        - normal
+        - Charged Attack
+        - 0
+        element: Pyro
+        icd: standard
+        gauge: 1.0
+    jump:
+      duration: 0.517
+      particles: 0.0
+      hits: []
+    burst:
+      duration: 1.583
+      particles: 0.0
+      hits:
+      - offset: 1.1
+        type: burst
+        table:
+        - burst
+        - Low HP Skill DMG
+        - 0
+        element: Pyro
+        gauge: 2.0
+    dash:
+      duration: 0.333
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.317
+      particles: 0.0
+      hits:
+      - offset: 0.2
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Pyro
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.267
+      particles: 0.0
+      hits:
+      - offset: 0.15
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Pyro
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.467
+      particles: 0.0
+      hits:
+      - offset: 0.283
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Pyro
+        icd: standard
+        gauge: 1.0
+    low_plunge:
+      duration: 1.25
+      particles: 0.0
+      hits:
+      - offset: 0.75
+        type: plunge
+        table:
+        - normal
+        - Low/High Plunge DMG
+        - 0
+        element: Pyro
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+  - - attack
+    - charge
+    - jump
+    - attack
+    - charge
+    - jump
+    - attack
+    - charge
+    - jump
+    - attack
+    - charge
+    - jump
+    - attack
+    - charge
+    - jump
+    - attack
+    - charge
+    - jump
+    - attack
+    - charge
+    - jump
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+  - - attack
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - dash
+  - - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+  follow:
+    skill: attack
+  first: skill
+  causal:
+    facts: &id004
+      known:
+      - 'Paramita Papilio (Skill) 9 s: ATK + 5.96% of Max HP (max 400% Base ATK), Pyro attacks'
+      - Blood Blossom from Charged Attacks in Paramita, 4 s ICD
+      assumed:
+      - 'HP at or below 50% (Sanguine Rouge active): players keep her low'
+      - Blood Blossom damage lands 4 s after it is applied
+      unknown: []
+    states: &id002
+      paramita:
+        infuse: Pyro
+        duration:
+          table:
+          - skill
+          - Duration
+    procs: &id003
+      blood_blossom:
+        'on':
+          event: hit
+          by: self
+          types:
+          - charged
+        requires:
+          state: paramita
+        icd: 4.0
+        hits:
+        - offset: 4.0
+          table:
+          - skill
+          - Blood Blossom DMG
+          element: Pyro
+          type: skill
+          gauge: 1.0
+    actions:
+      skill: *id001
+  states: *id002
+  procs: *id003
+  facts: *id004

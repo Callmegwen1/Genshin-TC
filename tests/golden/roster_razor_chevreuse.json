@@ -1,0 +1,667 @@
+{
+ "benchmark_cases": [
+  "razor_chevreuse"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 64.8,
+   "fit_source": "gcsim",
+   "label": "Razor on-field · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "ranking": 60.5,
+   "route": "exact_community",
+   "sd": 6.4,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 50.0,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Razor",
+    "Sucrose"
+   ],
+   "ranking": 46.9,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.7,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · Overloaded · incidental Swirl",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Razor",
+    "Sucrose"
+   ],
+   "ranking": 43.8,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.2,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · Overloaded · incidental Swirl",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Razor"
+   ],
+   "ranking": 40.6,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.1,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Razor",
+    "Sucrose"
+   ],
+   "ranking": 39.6,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.1,
+   "fit_source": "pairmodel",
+   "label": "Razor dual carry · incidental Overloaded, Swirl",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Razor"
+   ],
+   "ranking": 38.5,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "electro_hypercarry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.7,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Razor"
+   ],
+   "ranking": 38.1,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.4,
+   "fit_source": "pairmodel",
+   "label": "Fischl hypercarry · Overloaded · incidental Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 36.9,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.8,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kaedehara Kazuha dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 36.3,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.1,
+   "fit_source": "pairmodel",
+   "label": "Fischl and Kaedehara Kazuha dual carry · incidental Overloaded, Swirl",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 36.0,
+   "route": "pair_model",
+   "sd": 4.6,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.9,
+   "fit_source": "pairmodel",
+   "label": "Fischl dual carry · incidental Overloaded",
+   "lead": "Fischl",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Sucrose"
+   ],
+   "ranking": 35.1,
+   "route": "pair_model",
+   "sd": 7.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.5,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Swirl",
+   "lead": "Razor",
+   "lineup": [
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Razor",
+    "Sucrose"
+   ],
+   "ranking": 30.7,
+   "route": "pair_model",
+   "sd": 5.6,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.9,
+   "fit_source": "pairmodel",
+   "label": "Razor on-field · incidental Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Razor",
+    "Sucrose"
+   ],
+   "ranking": 30.0,
+   "route": "pair_model",
+   "sd": 5.9,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.2,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha hypercarry",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "ranking": 24.0,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   65.9
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Lyney"
+   ],
+   64.5
+  ],
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Fischl",
+    "Mavuika",
+    "Sucrose"
+   ],
+   57.4
+  ],
+  [
+   "Varesa",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Varesa"
+   ],
+   56.5
+  ],
+  [
+   "Clorinde",
+   [
+    "Bennett",
+    "Chevreuse",
+    "Clorinde",
+    "Fischl"
+   ],
+   55.7
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 3.2,
+   "teams": [
+    [
+     "Bennett",
+     "Chevreuse",
+     "Fischl",
+     "Razor"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "note": "",
+   "score": 33.8,
+   "teams": [
+    [
+     "Bennett",
+     "Chevreuse",
+     "Fischl",
+     "Razor"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "note": "",
+   "score": 40.5,
+   "teams": [
+    [
+     "Bennett",
+     "Chevreuse",
+     "Fischl",
+     "Razor"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 2 of 7 elements",
+   "score": 37.2,
+   "teams": [
+    [
+     "Bennett",
+     "Chevreuse",
+     "Fischl",
+     "Razor"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 64.8,
+   "fit_source": "gcsim",
+   "label": "Razor on-field · Overloaded",
+   "lead": "Razor",
+   "lineup": [
+    "Bennett",
+    "Chevreuse",
+    "Fischl",
+    "Razor"
+   ],
+   "ranking": 60.5,
+   "route": "exact_community",
+   "sd": 6.4,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 40.5,
+ "pulls": [
+  {
+   "best_team": [
+    "Columbina",
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.4,
+    "displaced": [
+     "Bennett",
+     "Chevreuse",
+     "Razor"
+    ],
+    "improved": [
+     "Fischl"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.4,
+   "gain": 1.4,
+   "kind": "new archetype",
+   "name": "Columbina",
+   "sd": 9.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Citlali",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.18,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Citlali",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Escoffier",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.22,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Escoffier",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Fischl",
+    "Furina",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Furina",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Mavuika",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.27,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Mavuika",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Fischl",
+    "Nahida",
+    "Razor"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 14,
+    "redundancy_score": 0.24,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Nahida",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Fischl",
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Sucrose"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.06,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Neuvillette",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Kaedehara Kazuha",
+    "Varka"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 8,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Chevreuse",
+    "Razor",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.29,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Xilonen",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Fischl",
+    "Razor",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 18,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Yelan",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Razor"
+ ]
+}

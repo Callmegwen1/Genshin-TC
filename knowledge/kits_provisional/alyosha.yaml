@@ -1,0 +1,33 @@
+Alyosha:
+  schema: 2
+  provisional: true
+  role: support
+  element: Electro
+  weapon: polearm
+  analogue: Fischl           # simulated off-field Electro summoner; Alyosha also heals
+  field: {behaviour: off_field, share: [0.05, 0.2]}
+  personal_damage: {tier: low, share: [0.05, 0.2]}         # Prydwen: his damage is not important
+  application: {Electro.off: [1.5, 3.5]}
+  buffs:
+    - {kind: dmg_bonus, target: active, condition: "Radiance: Stellar-Conduct inside a Polestar Field, Hunter's Mark activated (Into the Fray)",
+       text: "Hunter's Precision also increases Stellar-Conduct DMG dealt by the on-field character by 20%"}
+    - {kind: dmg_bonus, target: self, condition: "always (Suffer the Winter Wheat Will)", text: "Skill and Burst DMG +0.35% per 1% Energy Recharge, max 70%"}
+  sustain: {heal: medium, shield: none}
+  reactions: {owns: [], enables: [superconduct]}
+  preferred_systems: [superconduct]
+  restrictions: []
+  synergies:
+    - {with: Sandrone, why: "Prydwen: an excellent support for her, especially without Yae Miko"}
+    - {with: Odette, why: "Stellar-Conduct needs her (or Sandrone's) conversion"}
+  roles: {healer: 3, offfield_app: 4, support_superconduct_cryo_carry: 4, support_superconduct_electro_carry: 3}
+  sources:
+    amber: "Official kit text (Project Amber cache): Thunderbolt Strike, Hunter's Advance, Awakened by the Baying Hounds, Suffer the Winter Wheat Will, Into the Fray"
+    prydwen: "Prydwen guide: Support tier T1.5; teams Sandrone / Yae Miko / Odette / Alyosha (100), Cyno / Yae Miko / Odette / Alyosha"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: prydwen, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

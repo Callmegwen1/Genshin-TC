@@ -1,0 +1,31 @@
+Kachina:
+  schema: 2
+  provisional: true
+  role: support
+  element: Geo
+  weapon: polearm
+  analogue: Albedo           # simulated off-field DEF-scaling Geo construct; Kachina's Turbo Twirly is weaker (Prydwen T2)
+  field: {behaviour: off_field, share: [0.05, 0.2]}
+  personal_damage: {tier: low, share: [0.08, 0.2]}
+  application: {Geo.off: [1.0, 2.5]}
+  buffs:
+    - {kind: dmg_bonus, target: self, condition: "12 s after a party Nightsoul Burst (Mountain Echoes)", text: "Kachina's Geo DMG Bonus +20%"}
+    - {kind: damage_scaling, target: self, condition: "always (The Weight of Stone)", text: "Turbo Twirly's DMG increased by 20% of Kachina's DEF"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [], enables: [crystallize]}
+  preferred_systems: []
+  restrictions: []
+  synergies:
+    - {with: element:Geo, why: "Geo resonance and Geo carries"}
+  roles: {offfield_dps: 3, offfield_app: 2, support_geo_carry: 3}
+  sources:
+    amber: "Official kit text (Project Amber cache): Go, Go Turbo Twirly!, Time to Get Serious!, Mountain Echoes, The Weight of Stone"
+    prydwen: "Prydwen guide: Support tier T2; no teams listed"
+    judgment: "Hand estimate from the kit text; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: judgment, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: judgment, confidence: low, method: manual}

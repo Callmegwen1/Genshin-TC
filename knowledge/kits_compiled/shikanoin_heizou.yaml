@@ -1,0 +1,84 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Shikanoin Heizou:
+  schema: 3
+  element: Anemo
+  weapon: catalyst
+  roles:
+  - swirl_support
+  - buffer
+  - driver
+  behavior:
+    field_time: medium
+    on_field_damage: false
+    off_field: none
+    driver: true
+    damage_ownership: sub_dps
+    damage:
+      element: Anemo
+      types:
+      - normal
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 40
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - skill
+    - burst
+  effects:
+  - kind: em
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 80
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Penetrative Reasoning
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-cryo
+    - swirl-electro
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - cryo
+    - electro
+  sources:
+    amber: 'Official kit text (packet): Fudou Style Martial Arts, Heartstopper Strike, Windmuster Kick, Paradoxical Practice,
+      Penetrative Reasoning'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,381 @@
+{
+ "benchmark_cases": [
+  "pull_trigger_for_hyperbloom"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · Burgeon · incidental Burning, Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "ranking": 26.1,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.1,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · incidental Bloom, Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 23.1,
+   "route": "pair_model",
+   "sd": 4.5,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · incidental Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 21.6,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 22.2,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha and Nahida dual carry · Burning · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Zhongli"
+   ],
+   "ranking": 18.0,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Mavuika",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   48.4
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   48.2
+  ],
+  [
+   "Neuvillette",
+   [
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Neuvillette",
+    "Xingqiu"
+   ],
+   46.7
+  ],
+  [
+   "Raiden Shogun",
+   [
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   44.3
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Lyney",
+    "Xingqiu"
+   ],
+   43.8
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 0.9,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Nahida",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 8.8,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Nahida",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 6.1,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Nahida",
+     "Xingqiu"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "0 competent teams over 0 characters, 0 of 7 elements",
+   "score": 0.0,
+   "teams": []
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · Burgeon · incidental Burning, Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "ranking": 26.1,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 6.1,
+ "pulls": [
+  {
+   "best_team": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 18.2,
+    "displaced": [
+     "Bennett",
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Nahida",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "hyperbloom",
+     "quicken"
+    ],
+    "new_viable_teams": 10,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 18.0,
+   "gain": 18.2,
+   "kind": "new archetype",
+   "name": "Raiden Shogun",
+   "sd": 8.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Nahida",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.8,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Nahida",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.49,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 11.6,
+   "gain": 10.8,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 9.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.6,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Nahida",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "hyperbloom",
+     "quicken"
+    ],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.27,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 9.4,
+   "gain": 10.6,
+   "kind": "new archetype",
+   "name": "Kuki Shinobu",
+   "sd": 7.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.4,
+    "displaced": [
+     "Kaedehara Kazuha",
+     "Nahida"
+    ],
+    "improved": [
+     "Bennett",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "freeze",
+     "melt"
+    ],
+    "new_viable_teams": 8,
+    "redundancy_score": 0.18,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 7.2,
+   "gain": 8.4,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 7.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 5.6,
+    "displaced": [
+     "Nahida"
+    ],
+    "improved": [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Xingqiu"
+    ],
+    "new_mechanics": [
+     "melt",
+     "vaporize"
+    ],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.19,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 6.2,
+   "gain": 5.6,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 8.8,
+   "tier": "C"
+  }
+ ],
+ "viable_carries": []
+}

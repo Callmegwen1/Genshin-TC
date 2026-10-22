@@ -1,0 +1,151 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Tartaglia:
+  schema: 3
+  element: Hydro
+  weapon: bow
+  roles:
+  - on_field_carry
+  - driver
+  - applier
+  behavior:
+    field_time: medium
+    on_field_damage: false
+    off_field: some
+    driver: true
+    damage_ownership: carry
+    damage:
+      element: Hydro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - normal
+      - charged
+    amount: Normal and Charged Attacks converted to Hydro DMG that cannot be overridden (Melee Stance)
+    duration: up to 30s
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Melee Stance
+      text: 'Tartaglia in Foul Legacy: Raging Tide''s Melee Stance'
+    source: 'Foul Legacy: Raging Tide (Melee Stance)'
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - normal
+      - skill
+      - burst
+    amount: 'Riptide: Riptide Flash (Normal Attack DMG, once per 0.7s), Riptide Slash (119% Skill DMG at talent level 10,
+      once per 1.5s), Riptide Blast (216% Burst DMG at talent level 10)'
+    duration: unknown base duration, extended by 8s
+    stacking: none
+    conditions: []
+    source: Cutting Torrent (Riptide)
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - Hydro
+    amount: Melee Stance Normal and Charged Attack CRIT hits apply Riptide
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Melee Stance
+      text: in Melee Stance
+    source: Sword of Torrents
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - Hydro
+    amount: Riptide duration +8s
+    duration: 8
+    stacking: none
+    conditions: []
+    source: Never Ending
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - Hydro
+    amount: 20
+    duration: unknown
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Ranged Stance
+      text: Burst cast in Ranged Stance
+    source: 'Havoc: Obliteration (Flash of Havoc energy return)'
+  - kind: other
+    target: party
+    affects:
+      damage_types:
+      - normal
+    amount: Normal Attack talent level +1
+    duration: permanent
+    stacking: none
+    conditions: []
+    source: Master of Weaponry
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - electrocharged
+    - freeze
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Cutting Torrent, Foul Legacy: Raging Tide, Havoc: Obliteration, Never
+      Ending, Sword of Torrents, Master of Weaponry'
+    engine: 'Engine measurements: field share 41%, team damage share 28%, Hydro on 6.9 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

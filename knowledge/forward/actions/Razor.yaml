@@ -1,0 +1,169 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Razor:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation JtgLDQ97CCtD (house builds)
+    - gcsim community rotation LRdNhpBhBtwf (house builds)
+    - gcsim community rotation Mffc6KtjWWjd (house builds)
+    - gcsim community rotation QjmdtjhwdwJB (house builds)
+    - gcsim community rotation f7bwCrWTJPwN (house builds)
+    - gcsim community rotation jt9wfNmDn7DK (house builds)
+    - gcsim community rotation nw7kRT6CJgNz (house builds)
+    - gcsim community rotation tRr6Ptw7pgpq (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 5 of 23 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.533
+      particles: 0.0
+      hits:
+      - offset: 0.533
+        type: skill
+        table:
+        - skill
+        - Press Skill DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+    dash:
+      duration: 0.517
+      particles: 0.0
+      hits: []
+    burst: &id001
+      duration: 1.217
+      do:
+      - enter: lightning_fang
+      hits:
+      - offset: 0.533
+        table:
+        - burst
+        - Burst DMG
+        element: Electro
+        type: burst
+        gauge: 2.0
+    attack#0:
+      duration: 0.633
+      particles: 0.0
+      hits:
+      - offset: 0.417
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.483
+      particles: 0.0
+      hits:
+      - offset: 0.267
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.283
+      particles: 0.0
+      hits:
+      - offset: 0.217
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - dash
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+  - - dash
+    - attack
+  - - dash
+    - attack
+    - attack
+    - attack
+  - - dash
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+  follow:
+    skill: dash
+    burst: attack
+  first: skill
+  causal:
+    facts: &id004
+      known:
+      - Lightning Fang 15 s, ends when he leaves the field; Soul Companion adds 40.8% of each Normal Attack hit as Electro
+      assumed:
+      - 'Normal Attack speed bonus in Lightning Fang not modelled (his attacks keep their normal timings: an underestimate)'
+      unknown: []
+    states: &id002
+      lightning_fang:
+        duration:
+          table:
+          - burst
+          - Duration
+        ends_on_swap: true
+    procs: &id003
+      soul_companion:
+        'on':
+          event: hit
+          by: self
+          types:
+          - normal
+        requires:
+          state: lightning_fang
+        icd: 0
+        hits:
+        - offset: 0.05
+          table:
+          - burst
+          - Soul Companion DMG
+          scale_trigger: true
+          element: Electro
+          type: burst
+          icd: standard
+          gauge: 1.0
+    actions:
+      burst: *id001
+  states: *id002
+  procs: *id003
+  facts: *id004

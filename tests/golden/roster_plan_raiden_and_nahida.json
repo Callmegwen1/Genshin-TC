@@ -1,0 +1,1706 @@
+{
+ "benchmark_cases": [
+  "plan_raiden_and_nahida"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 54.3,
+   "fit_source": "gcsim",
+   "label": "Kuki Shinobu hypercarry · Hyperbloom + Quicken · incidental Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 51.7,
+   "route": "exact_community",
+   "sd": 3.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 50.3,
+   "fit_source": "gcsim",
+   "label": "Raiden Shogun hypercarry · Hyperbloom + Quicken · incidental Spread, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 46.9,
+   "route": "exact_community",
+   "sd": 5.0,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "mixed",
+   "evidence_state": "simulation",
+   "expected": 54.0,
+   "fit_source": "gcsim",
+   "label": "Raiden Shogun hypercarry · Hyperbloom + Quicken · incidental Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 46.1,
+   "route": "exact_community",
+   "sd": 11.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 48.1,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Yelan dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 45.3,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 46.9,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Yelan"
+   ],
+   "ranking": 44.6,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 48.0,
+   "fit_source": "gcsim",
+   "label": "Raiden Shogun hypercarry · Hyperbloom + Quicken · incidental Spread",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 44.3,
+   "route": "exact_community",
+   "sd": 5.5,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.4,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · incidental Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 44.2,
+   "route": "pair_model",
+   "sd": 4.8,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "mixed",
+   "evidence_state": "simulation",
+   "expected": 47.7,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 43.1,
+   "route": "exact_community",
+   "sd": 6.9,
+   "template": "national",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.6,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Kuki Shinobu dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 40.0,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.7,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Quicken + Hyperbloom · incidental Spread, Aggravate",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Raiden Shogun",
+    "Yelan"
+   ],
+   "ranking": 39.8,
+   "route": "pair_model",
+   "sd": 4.3,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 42.2,
+   "fit_source": "pairmodel",
+   "label": "Yelan dual carry · Vaporize from Xiangling · incidental Overloaded, Electro-Charged",
+   "lead": "Yelan",
+   "lineup": [
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 39.4,
+   "route": "exact_community",
+   "sd": 4.2,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 40.9,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Xiangling",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 38.9,
+   "route": "exact_community",
+   "sd": 2.9,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.4,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 38.6,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.3,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu spread damage · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 37.7,
+   "route": "pair_model",
+   "sd": 8.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.0,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Quicken + Hyperbloom + Burgeon + Vaporize · incidental Overloaded, Burning",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Raiden Shogun",
+    "Yelan"
+   ],
+   "ranking": 37.5,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.8,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Xiangling dual carry · Quicken + Vaporize + Hyperbloom · incidental Burning, Spread",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xiangling",
+    "Yelan"
+   ],
+   "ranking": 37.2,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_hyperbloom_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.6,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Quicken + Vaporize + Hyperbloom + Burgeon · incidental Overloaded, Burning",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan"
+   ],
+   "ranking": 37.0,
+   "route": "pair_model",
+   "sd": 3.9,
+   "template": "auto_hyperbloom_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.3,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun and Yelan dual carry · incidental Electro-Charged",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Raiden Shogun",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 37.0,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 38.6,
+   "fit_source": "pairmodel",
+   "label": "Bennett dual carry · Vaporize + Burgeon",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 36.8,
+   "route": "exact_community",
+   "sd": 2.7,
+   "template": "auto_bloom_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 39.3,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu hypercarry · Quicken + Hyperbloom + Burgeon · incidental Overloaded, Vaporize",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "ranking": 36.7,
+   "route": "exact_community",
+   "sd": 3.9,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.4,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Vaporize · incidental Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Xiangling",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 36.5,
+   "route": "pair_model",
+   "sd": 7.3,
+   "template": "auto_electro_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.7,
+   "fit_source": "pairmodel",
+   "label": "Yelan dual carry",
+   "lead": "Yelan",
+   "lineup": [
+    "Nahida",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 36.2,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_bloom_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 38.5,
+   "fit_source": "pairmodel",
+   "label": "Bennett dual carry · Quicken + Burgeon + Vaporize + Hyperbloom from Raiden Shogun · incidental Burning",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "ranking": 35.9,
+   "route": "exact_community",
+   "sd": 3.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.1,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Vaporize · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 34.9,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.8,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · incidental Overloaded, Vaporize",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Yelan"
+   ],
+   "ranking": 34.4,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Burgeon · incidental Bloom, Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Nahida",
+    "Xiangling",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 34.4,
+   "route": "exact_community",
+   "sd": 3.7,
+   "template": "auto_bloom_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.4,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Xiangling dual carry · Vaporize · incidental Overloaded",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Xiangling",
+    "Xingqiu"
+   ],
+   "ranking": 34.3,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.8,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Kuki Shinobu dual carry · Vaporize · incidental Overloaded",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Xiangling",
+    "Yelan"
+   ],
+   "ranking": 34.3,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.0,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xingqiu dual carry · incidental Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 34.2,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.2,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Quicken + Hyperbloom · incidental Spread, Aggravate",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Nahida",
+    "Raiden Shogun",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 33.9,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 36.0,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Vaporize from Yelan + Quicken + Burning from Nahida and Xiangling · incidental Overloaded, Aggravate",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xiangling",
+    "Yelan"
+   ],
+   "ranking": 33.6,
+   "route": "exact_community",
+   "sd": 3.6,
+   "template": "auto_hyperbloom_hydro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.7,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · Vaporize · incidental Overloaded, Electro-Charged",
+   "lead": "Xiangling",
+   "lineup": [
+    "Raiden Shogun",
+    "Xiangling",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 33.5,
+   "route": "pair_model",
+   "sd": 3.3,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.6,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize + Burning + Burgeon",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Xiangling",
+    "Yelan"
+   ],
+   "ranking": 33.2,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.6,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu hypercarry · Hyperbloom + Quicken",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 33.2,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.6,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize · incidental Overloaded",
+   "lead": "Xiangling",
+   "lineup": [
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xiangling",
+    "Yelan"
+   ],
+   "ranking": 33.2,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_overloaded_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.1,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Quicken + Hyperbloom · incidental Spread",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 32.8,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_hyperbloom_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.6,
+   "fit_source": "pairmodel",
+   "label": "No single carry spread damage · Quicken + Burning · incidental Aggravate, Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 32.2,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.7,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xiangling dual carry · Vaporize",
+   "lead": "Yelan",
+   "lineup": [
+    "Xiangling",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 32.2,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.4,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · incidental Overloaded, Vaporize",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 32.1,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 34.3,
+   "fit_source": "gcsim",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Xiangling",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 32.0,
+   "route": "exact_community",
+   "sd": 3.4,
+   "template": "vaporize_pyro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.3,
+   "fit_source": "pairmodel",
+   "label": "Xiangling dual carry · Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Xiangling",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.9,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.7,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Raiden Shogun",
+    "Xiangling",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.9,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.5,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Yelan dual carry · incidental Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Xingqiu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 31.5,
+   "route": "pair_model",
+   "sd": 5.9,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 33.6,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Burning from Nahida and Xiangling + Quicken · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 31.4,
+   "route": "exact_community",
+   "sd": 3.3,
+   "template": "auto_burning_pyro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.6,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 31.4,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.5,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Quicken · incidental Aggravate, Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Raiden Shogun"
+   ],
+   "ranking": 31.2,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.1,
+   "fit_source": "pairmodel",
+   "label": "Yelan and Xiangling dual carry · Vaporize · incidental Burning",
+   "lead": "Yelan",
+   "lineup": [
+    "Nahida",
+    "Xiangling",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 30.0,
+   "route": "pair_model",
+   "sd": 6.1,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.4,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 29.4,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.5,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "ranking": 29.3,
+   "route": "pair_model",
+   "sd": 3.2,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.5,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · Quicken + Burning · incidental Overloaded, Spread",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 29.2,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_quicken_dendro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.0,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu hypercarry · incidental Overloaded, Vaporize",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 28.7,
+   "route": "pair_model",
+   "sd": 6.3,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.2,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Quicken + Burning · incidental Overloaded",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Xiangling"
+   ],
+   "ranking": 28.3,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.5,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu hypercarry · incidental Overloaded, Vaporize",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 28.3,
+   "route": "pair_model",
+   "sd": 6.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.7,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Quicken + Burning · incidental Aggravate, Spread",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Raiden Shogun",
+    "Zhongli"
+   ],
+   "ranking": 27.8,
+   "route": "pair_model",
+   "sd": 2.8,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.5,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Vaporize",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Xiangling",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 27.5,
+   "route": "pair_model",
+   "sd": 5.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 33.6,
+   "fit_source": "pairmodel",
+   "label": "Yelan dual carry · Vaporize + Burgeon · incidental Burning",
+   "lead": "Yelan",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 27.3,
+   "route": "pair_model",
+   "sd": 9.3,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.3,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu dual carry · Vaporize",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Xiangling",
+    "Xingqiu",
+    "Zhongli"
+   ],
+   "ranking": 27.3,
+   "route": "pair_model",
+   "sd": 5.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.2,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · Quicken · incidental Aggravate, Spread",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Raiden Shogun",
+    "Zhongli"
+   ],
+   "ranking": 27.2,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "aggravate",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.8,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Raiden Shogun dual carry",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Yelan",
+    "Zhongli"
+   ],
+   "ranking": 26.2,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.0,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu hypercarry · Quicken + Burning",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 25.4,
+   "route": "pair_model",
+   "sd": 5.4,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.5,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu and Xiangling dual carry · incidental Overloaded",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 24.7,
+   "route": "pair_model",
+   "sd": 5.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.0,
+   "fit_source": "pairmodel",
+   "label": "Kuki Shinobu hypercarry · Quicken + Burning · incidental Overloaded",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Nahida",
+    "Zhongli"
+   ],
+   "ranking": 24.5,
+   "route": "pair_model",
+   "sd": 5.1,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.9,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · Burning",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Nahida",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 24.3,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "auto_burning_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.7,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 24.0,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_geo_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.5,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Bennett",
+    "Kuki Shinobu",
+    "Raiden Shogun",
+    "Zhongli"
+   ],
+   "ranking": 23.1,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_geo_carry",
+   "tier": "D"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Mavuika",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   52.5
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Xingqiu",
+    "Yelan"
+   ],
+   51.4
+  ],
+  [
+   "Alhaitham",
+   [
+    "Alhaitham",
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan"
+   ],
+   50.7
+  ],
+  [
+   "Sethos",
+   [
+    "Nahida",
+    "Raiden Shogun",
+    "Sethos",
+    "Xingqiu"
+   ],
+   50.4
+  ],
+  [
+   "Neuvillette",
+   [
+    "Kuki Shinobu",
+    "Nahida",
+    "Neuvillette",
+    "Yelan"
+   ],
+   50.1
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Nahida",
+    "Raiden Shogun",
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 22.1,
+   "teams": [
+    [
+     "Nahida",
+     "Raiden Shogun",
+     "Xingqiu",
+     "Zhongli"
+    ],
+    [
+     "Bennett",
+     "Kuki Shinobu",
+     "Xiangling",
+     "Yelan"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Nahida",
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 47.3,
+   "teams": [
+    [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu",
+     "Yelan"
+    ],
+    [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling",
+     "Zhongli"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Xingqiu"
+   ],
+   "note": "",
+   "score": 31.7,
+   "teams": [
+    [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu",
+     "Yelan"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "2 competent teams over 8 characters, 5 of 7 elements",
+   "score": 78.7,
+   "teams": [
+    [
+     "Kuki Shinobu",
+     "Nahida",
+     "Xingqiu",
+     "Yelan"
+    ],
+    [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling",
+     "Zhongli"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 54.3,
+   "fit_source": "gcsim",
+   "label": "Kuki Shinobu hypercarry · Hyperbloom + Quicken · incidental Electro-Charged",
+   "lead": "Kuki Shinobu",
+   "lineup": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "ranking": 51.7,
+   "route": "exact_community",
+   "sd": 3.8,
+   "template": "auto_hyperbloom_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.4,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Raiden Shogun dual carry · incidental Overloaded",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Raiden Shogun",
+    "Xiangling",
+    "Zhongli"
+   ],
+   "ranking": 29.4,
+   "route": "pair_model",
+   "sd": 3.0,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 41.1,
+ "pulls": [
+  {
+   "best_team": [
+    "Columbina",
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 3.1,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kuki Shinobu",
+     "Nahida",
+     "Raiden Shogun",
+     "Xiangling",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 38,
+    "redundancy_score": 0.42,
+    "second_team_gain": 15.2,
+    "support_contention": []
+   },
+   "expected": 20.2,
+   "gain": 18.3,
+   "kind": "sidegrade",
+   "name": "Columbina",
+   "sd": 8.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Neuvillette",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 2.4,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kuki Shinobu",
+     "Nahida",
+     "Raiden Shogun",
+     "Xiangling",
+     "Xingqiu"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 53,
+    "redundancy_score": 0.39,
+    "second_team_gain": 15.2,
+    "support_contention": []
+   },
+   "expected": 18.9,
+   "gain": 17.6,
+   "kind": "upgrade",
+   "name": "Neuvillette",
+   "sd": 7.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Mavuika",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": -1.3,
+    "displaced": [
+     "Xiangling"
+    ],
+    "improved": [
+     "Bennett",
+     "Raiden Shogun",
+     "Zhongli"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 51,
+    "redundancy_score": 0.48,
+    "second_team_gain": 17.5,
+    "support_contention": [
+     "Yelan"
+    ]
+   },
+   "expected": 18.5,
+   "gain": 16.2,
+   "kind": "sidegrade",
+   "name": "Mavuika",
+   "sd": 8.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Kuki Shinobu",
+    "Nahida",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.5,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Kuki Shinobu",
+     "Nahida",
+     "Raiden Shogun",
+     "Xiangling",
+     "Yelan"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 55,
+    "redundancy_score": 0.52,
+    "second_team_gain": 13.7,
+    "support_contention": []
+   },
+   "expected": 17.9,
+   "gain": 15.2,
+   "kind": "upgrade",
+   "name": "Furina",
+   "sd": 9.3,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Kuki Shinobu",
+    "Nahida",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -4.6,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 56,
+    "redundancy_score": 0.46,
+    "second_team_gain": 15.2,
+    "support_contention": []
+   },
+   "expected": 11.8,
+   "gain": 10.6,
+   "kind": "upgrade",
+   "name": "Xilonen",
+   "sd": 7.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Raiden Shogun",
+    "Skirk",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling"
+    ],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 2,
+    "redundancy_score": 0.15,
+    "second_team_gain": 8.0,
+    "support_contention": []
+   },
+   "expected": 16.0,
+   "gain": 8.0,
+   "kind": "new archetype",
+   "name": "Skirk",
+   "sd": 15.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Raiden Shogun",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling"
+    ],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 50,
+    "redundancy_score": 0.19,
+    "second_team_gain": 7.7,
+    "support_contention": []
+   },
+   "expected": 8.5,
+   "gain": 7.7,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 5.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Kuki Shinobu",
+    "Nahida",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -7.1,
+    "displaced": [
+     "Zhongli"
+    ],
+    "improved": [
+     "Bennett",
+     "Raiden Shogun",
+     "Xiangling"
+    ],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 51,
+    "redundancy_score": 0.36,
+    "second_team_gain": 12.5,
+    "support_contention": []
+   },
+   "expected": 6.0,
+   "gain": 5.4,
+   "kind": "upgrade",
+   "name": "Escoffier",
+   "sd": 7.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Varka",
+    "Yelan",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": [
+     "Yelan"
+    ]
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Raiden Shogun"
+ ]
+}

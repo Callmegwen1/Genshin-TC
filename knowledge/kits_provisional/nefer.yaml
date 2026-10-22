@@ -1,0 +1,37 @@
+Nefer:
+  schema: 2
+  provisional: true
+  role: carry
+  element: Dendro
+  weapon: catalyst
+  analogue: Nahida           # simulated Dendro catalyst with Bloom-family teams; Lunar-Bloom itself has no simulated carry
+  field: {behaviour: on_field, share: [0.5, 0.75]}
+  personal_damage: {tier: high, share: [0.4, 0.65]}        # Prydwen: Lauma's quills "can almost double Nefer's Lunar-Bloom DMG"
+  application: {Dendro.on: [3.0, 6.0]}
+  buffs:
+    - {kind: reaction_conversion, target: party, condition: "always (Moonsign Benediction)",
+       text: "Bloom becomes Lunar-Bloom; Lunar-Bloom Base DMG +0.0175% per EM, max 14%; party Moonsign +1 level"}
+    - {kind: em, target: self, condition: "Moonsign Ascendant Gleam, 3 Veil of Falsehood stacks from absorbed Seeds of Deceit",
+       text: "EM +100 for 8 s"}
+    - {kind: dmg_bonus, target: self, condition: "Burst consumes Veils of Falsehood", text: "Burst DMG increased per Veil consumed"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [lunarbloom], enables: [bloom], converts: {bloom: Lunar-Bloom}}
+  preferred_systems: [lunarbloom, bloom]
+  restrictions:
+    - {rule: needs_element, any_of: [Hydro], why: "Lunar-Bloom comes from Bloom, which needs Hydro"}
+  synergies:
+    - {with: Lauma, why: "Prydwen: her quills can almost double Nefer's Lunar-Bloom DMG"}
+    - {with: Columbina, why: "Hydro and Lunar buffs in her best team"}
+  expected_archetypes:
+    auto_bloom_dendro_carry: {as: carry, quality: 4}
+  sources:
+    amber: "Official kit text (Project Amber cache): Senet Strategy, Sacred Vow, A Wager of Moonlight, Daughter of the Dust and Sand, Moonsign Benediction"
+    prydwen: "Prydwen guide: DPS tier T0; teams Nefer / Lauma / Columbina / Sucrose (100), Nahida variant (92), budget with Aino (64)"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: prydwen, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

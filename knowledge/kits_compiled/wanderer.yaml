@@ -1,0 +1,131 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role swirl_support added (measured placement role or owned Swirl)
+Wanderer:
+  schema: 3
+  element: Anemo
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  - swirl_support
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Anemo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.3
+    duration: this instance of Windfavored
+    stacking: up to 2 different Jade-Claimed Flower buffs at once
+    conditions:
+    - type: character_state
+      state: Hanega contacts Pyro
+      text: 'Hanega: Song of the Wind comes into contact with Pyro when unleashed'
+    source: Jade-Claimed Flower (Pyro)
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.2
+    duration: this instance of Windfavored
+    stacking: up to 2 different Jade-Claimed Flower buffs at once
+    conditions:
+    - type: character_state
+      state: Hanega contacts Cryo
+      text: 'Hanega: Song of the Wind comes into contact with Cryo when unleashed'
+    source: Jade-Claimed Flower (Cryo)
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.8 per Normal or Charged Attack hit
+    duration: this instance of Windfavored
+    stacking: once every 0.2s
+    conditions:
+    - type: character_state
+      state: Hanega contacts Electro
+      text: 'Hanega: Song of the Wind comes into contact with Electro when unleashed'
+    source: Jade-Claimed Flower (Electro)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Kuugoryoku Point cap +20
+    duration: this instance of Windfavored
+    stacking: up to 2 different Jade-Claimed Flower buffs at once
+    conditions:
+    - type: character_state
+      state: Hanega contacts Hydro
+      text: 'Hanega: Song of the Wind comes into contact with Hydro when unleashed'
+    source: Jade-Claimed Flower (Hydro)
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Yuuban Meigen, Hanega: Song of the Wind, Kyougen: Five Ceremonial Plays,
+      Jade-Claimed Flower, Gales of Reverie'
+    community: 'Engine measurements and general play pattern: on-field Anemo Normal and Charged Attack carry'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

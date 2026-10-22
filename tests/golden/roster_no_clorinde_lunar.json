@@ -1,0 +1,667 @@
+{
+ "benchmark_cases": [
+  "no_clorinde_lunar"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 78.1,
+   "fit_source": "gcsim",
+   "label": "Clorinde dual carry · Lunar-Charged from Columbina and Ineffa · incidental Swirl",
+   "lead": "Clorinde",
+   "lineup": [
+    "Clorinde",
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 72.9,
+   "route": "exact_community",
+   "sd": 7.8,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 77.2,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Nicole"
+   ],
+   "ranking": 71.8,
+   "route": "pair_model",
+   "sd": 8.0,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 69.9,
+   "fit_source": "pairmodel",
+   "label": "Clorinde dual carry · incidental Swirl",
+   "lead": "Clorinde",
+   "lineup": [
+    "Clorinde",
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Nicole"
+   ],
+   "ranking": 65.0,
+   "route": "pair_model",
+   "sd": 7.4,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 67.1,
+   "fit_source": "gcsim",
+   "label": "Clorinde dual carry · Lunar-Charged from Columbina and Ineffa",
+   "lead": "Clorinde",
+   "lineup": [
+    "Clorinde",
+    "Columbina",
+    "Ineffa",
+    "Nicole"
+   ],
+   "ranking": 62.6,
+   "route": "exact_community",
+   "sd": 6.7,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 67.4,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Columbina dual carry · Lunar-Charged · incidental Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 61.9,
+   "route": "pair_model",
+   "sd": 8.2,
+   "template": "auto_lunar_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 66.9,
+   "fit_source": "pairmodel",
+   "label": "Ineffa dual carry · Lunar-Charged",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Ineffa",
+    "Nicole"
+   ],
+   "ranking": 60.8,
+   "route": "pair_model",
+   "sd": 9.1,
+   "template": "auto_lunar_charged_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 62.1,
+   "fit_source": "pairmodel",
+   "label": "Clorinde and Ineffa dual carry · incidental Swirl",
+   "lead": "Clorinde",
+   "lineup": [
+    "Clorinde",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Nicole"
+   ],
+   "ranking": 57.8,
+   "route": "pair_model",
+   "sd": 6.4,
+   "template": "auto_overloaded_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 62.4,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Lunar-Charged",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Clorinde",
+    "Columbina",
+    "Ineffa"
+   ],
+   "ranking": 56.1,
+   "route": "pair_model",
+   "sd": 9.3,
+   "template": "lunar_charged_offfield",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 59.1,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Clorinde dual carry · Lunar-Charged",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Clorinde",
+    "Ineffa",
+    "Nicole"
+   ],
+   "ranking": 54.2,
+   "route": "pair_model",
+   "sd": 7.4,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 56.5,
+   "fit_source": "pairmodel",
+   "label": "Ineffa and Clorinde dual carry · Lunar-Charged · incidental Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Clorinde",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 51.7,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 55.5,
+   "fit_source": "pairmodel",
+   "label": "Clorinde dual carry · incidental Lunar-Charged",
+   "lead": "Clorinde",
+   "lineup": [
+    "Aino",
+    "Clorinde",
+    "Columbina",
+    "Nicole"
+   ],
+   "ranking": 50.4,
+   "route": "pair_model",
+   "sd": 7.5,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 53.8,
+   "fit_source": "pairmodel",
+   "label": "Ineffa hypercarry · incidental Lunar-Charged, Swirl",
+   "lead": "Ineffa",
+   "lineup": [
+    "Aino",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Nicole"
+   ],
+   "ranking": 48.3,
+   "route": "pair_model",
+   "sd": 8.1,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 52.7,
+   "fit_source": "pairmodel",
+   "label": "Clorinde dual carry · incidental Lunar-Charged, Swirl",
+   "lead": "Clorinde",
+   "lineup": [
+    "Aino",
+    "Clorinde",
+    "Columbina",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 47.9,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 53.0,
+   "fit_source": "pairmodel",
+   "label": "Clorinde on-field · incidental Swirl",
+   "lead": "Clorinde",
+   "lineup": [
+    "Aino",
+    "Clorinde",
+    "Kaedehara Kazuha",
+    "Nicole"
+   ],
+   "ranking": 44.6,
+   "route": "pair_model",
+   "sd": 12.5,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.9,
+   "fit_source": "pairmodel",
+   "label": "Columbina hypercarry · incidental Swirl",
+   "lead": "Columbina",
+   "lineup": [
+    "Aino",
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Nicole"
+   ],
+   "ranking": 38.7,
+   "route": "pair_model",
+   "sd": 24.1,
+   "template": "auto_anemo_carry",
+   "tier": "D"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Flins",
+   [
+    "Columbina",
+    "Flins",
+    "Ineffa",
+    "Nicole"
+   ],
+   84.7
+  ],
+  [
+   "Neuvillette",
+   [
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Neuvillette"
+   ],
+   80.3
+  ],
+  [
+   "Lyney",
+   [
+    "Columbina",
+    "Ineffa",
+    "Lyney",
+    "Nicole"
+   ],
+   77.0
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Nicole"
+   ],
+   76.9
+  ],
+  [
+   "Gaming",
+   [
+    "Columbina",
+    "Gaming",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   75.1
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Columbina"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 5.4,
+   "teams": [
+    [
+     "Columbina",
+     "Ineffa",
+     "Kaedehara Kazuha",
+     "Nicole"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Columbina"
+   ],
+   "note": "",
+   "score": 53.3,
+   "teams": [
+    [
+     "Clorinde",
+     "Columbina",
+     "Ineffa",
+     "Kaedehara Kazuha"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Columbina"
+   ],
+   "note": "",
+   "score": 52.9,
+   "teams": [
+    [
+     "Clorinde",
+     "Columbina",
+     "Ineffa",
+     "Kaedehara Kazuha"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 4 of 7 elements",
+   "score": 61.0,
+   "teams": [
+    [
+     "Columbina",
+     "Ineffa",
+     "Kaedehara Kazuha",
+     "Nicole"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 78.1,
+   "fit_source": "gcsim",
+   "label": "Clorinde dual carry · Lunar-Charged from Columbina and Ineffa · incidental Swirl",
+   "lead": "Clorinde",
+   "lineup": [
+    "Clorinde",
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 72.9,
+   "route": "exact_community",
+   "sd": 7.8,
+   "template": "auto_electro_charged_electro_carry",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 52.9,
+ "pulls": [
+  {
+   "best_team": [
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Mavuika"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.4,
+    "displaced": [
+     "Clorinde"
+    ],
+    "improved": [
+     "Columbina",
+     "Ineffa",
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.19,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 9.3,
+   "gain": 8.4,
+   "kind": "upgrade",
+   "name": "Mavuika",
+   "sd": 12.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Neuvillette"
+   ],
+   "decomposition": {
+    "best_team_gain": 7.4,
+    "displaced": [
+     "Clorinde"
+    ],
+    "improved": [
+     "Columbina",
+     "Ineffa",
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 18,
+    "redundancy_score": 0.37,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 6.2,
+   "gain": 7.4,
+   "kind": "sidegrade",
+   "name": "Neuvillette",
+   "sd": 9.8,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "decomposition": {
+    "best_team_gain": 2.4,
+    "displaced": [
+     "Clorinde"
+    ],
+    "improved": [
+     "Columbina",
+     "Ineffa",
+     "Kaedehara Kazuha"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.42,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 4.0,
+   "gain": 2.4,
+   "kind": "upgrade",
+   "name": "Citlali",
+   "sd": 12.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Escoffier",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.31,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Escoffier",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Furina",
+    "Ineffa",
+    "Kaedehara Kazuha"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Furina",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Nahida"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.2,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Nahida",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Clorinde",
+    "Columbina",
+    "Nicole",
+    "Varka"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 12,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Ineffa",
+    "Kaedehara Kazuha",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.49,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Xilonen",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Ineffa",
+    "Nicole",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.17,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Yelan",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Clorinde"
+ ]
+}

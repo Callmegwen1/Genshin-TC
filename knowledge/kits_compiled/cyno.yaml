@@ -1,0 +1,154 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Cyno:
+  schema: 3
+  element: Electro
+  weapon: polearm
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Electro
+      types:
+      - normal
+      - skill
+    application:
+    - element: Electro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+  - stat: em
+    for: damage
+    source:
+    - normal
+    - skill
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Electro, cannot be overridden
+    duration: up to 18s (10s basic) in Pactsworn Pathclearer
+    stacking: none
+    conditions: []
+    source: 'Sacred Rite: Wolf''s Swiftness (Pactsworn Pathclearer)'
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 100
+    duration: in Pactsworn Pathclearer
+    stacking: at talent level 10
+    conditions: []
+    source: 'Sacred Rite: Wolf''s Swiftness (Pactsworn Pathclearer, at talent level 10)'
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown
+    duration: in Pactsworn Pathclearer
+    stacking: none
+    conditions: []
+    source: 'Sacred Rite: Wolf''s Swiftness (Pactsworn Pathclearer)'
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+    amount: 0.35
+    duration: 'that Secret Rite: Chasmic Soulfarer'
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Endseer stance in Pactsworn Pathclearer
+      text: Skill used while in Endseer stance
+    source: Featherfall Judgment (Judication)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - normal
+    amount: 150% of Cyno's Elemental Mastery
+    duration: in Pactsworn Pathclearer
+    stacking: none
+    conditions: []
+    source: Authority Over the Nine Bows (Normal Attack)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+    amount: 250% of Cyno's Elemental Mastery on Duststalker Bolts
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Authority Over the Nine Bows (Duststalker Bolt)
+  conditions: []
+  reactions:
+    owns:
+    - aggravate
+    - quicken
+    - electrocharged
+    - overloaded
+    - superconduct
+    - hyperbloom
+    enables: []
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Invoker''s Spear, Secret Rite: Chasmic Soulfarer, Sacred Rite: Wolf''s
+      Swiftness, Featherfall Judgment, Authority Over the Nine Bows'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    reactions:
+      source: engine
+      span: reactions in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

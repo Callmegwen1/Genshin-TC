@@ -1,0 +1,125 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Kuki Shinobu:
+  schema: 3
+  element: Electro
+  weapon: sword
+  roles:
+  - healer
+  - applier
+  - off_field_sub_dps
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: low
+    - element: Electro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+  - stat: hp
+    for: damage
+    source:
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - skill
+  - stat: em
+    for: heal
+    source:
+    - skill
+  - stat: em
+    for: damage
+    source:
+    - skill
+  effects:
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 5.4% Max HP + 636 every 1.5s, plus 75% of Elemental Mastery, at talent level 10
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Sanctifying Ring (Grass Ring of Sanctification)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 15% Healing Bonus
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: HP at or below 50%
+      text: Shinobu's HP is not higher than 50%
+    source: Breaking Free
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+    amount: 25% of Elemental Mastery
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Heart's Repose (Sanctifying Ring DMG)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - hyperbloom
+    - aggravate
+    - quicken
+    - electrocharged
+    - overloaded
+    - superconduct
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Shinobu''s Shadowsword, Sanctifying Ring, Gyoei Narukami Kariyama Rite,
+      Breaking Free, Heart''s Repose'
+    engine: 'Engine measurements: field share 12%, team damage share 32%, off-field share of own damage 81%, Electro 3.7 off
+      / 1.1 on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

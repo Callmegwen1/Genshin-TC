@@ -1,0 +1,135 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role healer added (measured placement role or owned Swirl)
+Wriothesley:
+  schema: 3
+  element: Cryo
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  - healer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Cryo
+      types:
+      - normal
+      - charged
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - There Shall Be a Plea for Justice
+  effects:
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 6% per Prosecution Edict stack, max 5 stacks
+    duration: while in Chilling Penalty
+    stacking: 1 stack per HP change, max 5
+    conditions:
+    - type: character_state
+      state: Chilling Penalty
+      text: in the Chilling Penalty state
+    source: There Shall Be a Reckoning for Sin
+  - kind: dmg_bonus
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: 0.5
+    duration: next Charged Attack
+    stacking: Gracious Rebuke once every 5s
+    conditions:
+    - type: character_state
+      state: HP below 60%
+      text: HP less than 60%
+    source: There Shall Be a Plea for Justice
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 30% of Max HP
+    duration: unknown
+    stacking: once every 5s
+    conditions:
+    - type: character_state
+      state: HP below 60%
+      text: HP less than 60%
+    source: There Shall Be a Plea for Justice
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Icefang Rush (Chilling Penalty)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      reactions:
+      - superconduct
+    amount: 30% increased Stellar-Conduct DMG
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: 'Radiance: Stellar-Conduct'
+      text: 'Radiance: Stellar-Conduct state (inside a Polestar Field)'
+    source: There Shall Be an Unveiling for Injustice
+  conditions: []
+  reactions:
+    owns:
+    - freeze
+    - melt
+    - superconduct
+    enables: []
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Forceful Fists of Frost, Icefang Rush, Darkgold Wolfbite, There Shall
+      Be a Plea for Justice, There Shall Be a Reckoning for Sin, There Shall Be an Unveiling for Injustice'
+    community: 'How the character is played and engine measurements: on-field Cryo carry (59% field share, 59% team damage)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

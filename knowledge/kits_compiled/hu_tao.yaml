@@ -1,0 +1,150 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Hu Tao:
+  schema: 3
+  element: Pyro
+  weapon: polearm
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    - element: Pyro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: hp
+    for: buff
+    source:
+    - skill
+  - stat: hp
+    for: heal
+    source:
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: attack DMG converted to Pyro, cannot be overridden
+    duration: 9
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Paramita Papilio
+      text: while in the Paramita Papilio state
+    source: Guide to Afterlife (Paramita Papilio)
+  - kind: atk
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 6.26% of Hu Tao's Max HP, max 400% of her Base ATK
+    duration: 9
+    stacking: none; at talent level 10
+    conditions:
+    - type: character_state
+      state: Paramita Papilio
+      text: while in the Paramita Papilio state
+    source: Guide to Afterlife (ATK Increase at talent level 10)
+  - kind: crit_rate
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 0.12
+    duration: 8
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Paramita Papilio ended
+      text: when Paramita Papilio ends
+    source: Flutter By
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+    amount: 0.33
+    duration: while HP is 50% or less
+    stacking: none
+    conditions:
+    - type: character_state
+      state: HP at or below 50%
+      text: when Hu Tao's HP is equal to or less than 50%
+    source: Sanguine Rouge
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 10.2% of Max HP per enemy hit (13.6% at or below 50% HP), up to 5 times
+    duration: instant
+    stacking: at talent level 10
+    conditions: []
+    source: Spirit Soother (HP Regeneration at talent level 10)
+  conditions: []
+  reactions:
+    owns:
+    - vaporize
+    - melt
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Secret Spear of Wangsheng, Guide to Afterlife, Spirit Soother, Flutter
+      By, Sanguine Rouge'
+    community: 'Engine measurements and general play pattern: on-field HP-scaling Pyro carry'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

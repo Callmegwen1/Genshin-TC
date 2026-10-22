@@ -1,0 +1,185 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Aino:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation D8RCGKJR8tM6 (house builds)
+    - gcsim community rotation bdrThKdpJrBc (house builds)
+    - gcsim community rotation br8B8DNjhhgB (house builds)
+    - gcsim community rotation whFr6N8QBPjp (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 17 of 17 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    burst:
+      duration: 0.917
+      particles: 0.0
+      hits:
+      - offset: 2.217
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 1.0
+      - offset: 2.917
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 3.617
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 5.017
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 1.0
+      - offset: 5.717
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 6.417
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 7.117
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 1.0
+      - offset: 7.817
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 9.217
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 1.0
+      - offset: 9.917
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 10.617
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 11.317
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 1.0
+      - offset: 12.017
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+      - offset: 13.417
+        type: burst
+        table:
+        - burst
+        - Water Ball DMG
+        - 0
+        element: Hydro
+        gauge: 1.0
+    skill:
+      duration: 0.817
+      particles: 3.0
+      hits:
+      - offset: 0.25
+        type: skill
+        table:
+        - skill
+        - Stage 1 DMG
+        - 0
+        element: Hydro
+        gauge: 1.0
+      - offset: 0.55
+        type: skill
+        table:
+        - skill
+        - Stage 2 DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+    attack#0:
+      duration: 1.0
+      particles: 0.0
+      hits:
+      - offset: 0.383
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - attack
+  follow:
+    burst: skill
+  first: burst
+  causal: {}

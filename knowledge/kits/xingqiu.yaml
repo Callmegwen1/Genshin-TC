@@ -1,0 +1,29 @@
+Xingqiu:
+  schema: 3
+  element: Hydro
+  weapon: sword
+  roles: [off_field_sub_dps, applier]
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage: {element: Hydro, types: [burst, skill]}
+    application: [{element: Hydro, mode: off_field, strength: high}]
+    energy: {burst_cost: 80, dependency: high}
+    sustain: {heal: low, shield: none}
+  scaling: [{stat: atk, for: damage, source: [burst, skill]}]
+  effects:
+    - {kind: elemental_dmg_bonus, target: self, affects: {elements: [Hydro]}, amount: 0.20, duration: permanent, stacking: none,
+       conditions: [], source: "Blades Amidst Raindrops"}
+    - {kind: interruption, target: active, affects: {elements: [all]}, amount: "Rain Swords: DMG reduction and interruption resistance",
+       duration: unknown, stacking: none, conditions: [], source: "Guhua Sword: Fatal Rainscreen"}
+  conditions: []
+  reactions: {owns: [], enables: [vaporize, electrocharged, freeze, bloom, swirl-hydro], requires: [], aura_supplied: [hydro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Guhua Sword: Fatal Rainscreen, Guhua Sword: Raincutter, Hydropathic, Blades Amidst Raindrops"
+    community: "How the character is played (KQM, Prydwen): off-field Hydro applier and sub-DPS triggered by the active character's Normal Attacks"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

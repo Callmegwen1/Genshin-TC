@@ -1,0 +1,30 @@
+Kaedehara Kazuha:
+  schema: 3
+  element: Anemo
+  weapon: sword
+  roles: [swirl_support, grouping, buffer]
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage: {element: Anemo, types: [skill, plunge, burst]}
+    application: [{element: Anemo, mode: on_field, strength: medium}]
+    energy: {burst_cost: 60, dependency: low}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: em, for: buff, source: [skill, burst]}, {stat: atk, for: damage, source: [skill, plunge, burst]}]
+  effects:
+    - {kind: elemental_dmg_bonus, target: party, affects: {elements: [Pyro, Hydro, Electro, Cryo]},
+       amount: "0.04% per point of Kazuha's EM, for the swirled element", duration: 8, stacking: "per element",
+       conditions: [{type: reaction_required, reactions: [swirl-pyro, swirl-hydro, swirl-electro, swirl-cryo], text: "upon triggering Swirl"}],
+       source: "Poetics of Fuubutsu"}
+  conditions: []
+  reactions: {owns: [swirl-pyro, swirl-hydro, swirl-electro, swirl-cryo], enables: [], requires: [], aura_supplied: [], aura_consumed: [pyro, hydro, electro, cryo]}
+  sources:
+    amber: "Official kit text (Project Amber cache): Chihayaburu, Kazuha Slash, Soumon Swordsmanship, Poetics of Fuubutsu"
+    community: "How the character is played (KQM, Prydwen): Swirl support, grouping, elemental DMG buffer (usually with Viridescent Venerer, an artifact, not part of the kit)"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}
+    roles: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

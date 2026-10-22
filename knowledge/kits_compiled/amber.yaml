@@ -1,0 +1,98 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Amber:
+  schema: 3
+  element: Pyro
+  weapon: bow
+  roles:
+  - applier
+  - off_field_sub_dps
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Pyro
+      types:
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: low
+    - element: Pyro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 40
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - burst
+    amount: 0.1
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Every Arrow Finds Its Target (Fiery Rain CRIT Rate)
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.15
+    duration: 10
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: Aimed Shot hits a weak point
+      text: Aimed Shot hits on weak points
+    source: Precise Shot
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Sharpshooter, Explosive Puppet, Fiery Rain, Every Arrow Finds Its Target,
+      Precise Shot'
+    community: Engine measurements and general knowledge of how the character is played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,237 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Xiangling:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 6tnzBwbH7pmg (house builds)
+    - gcsim community rotation B9t7fnM6zkfn (house builds)
+    - gcsim community rotation QLLD7wGPJJ6R (house builds)
+    - gcsim community rotation gBrwtFHcm7f8 (house builds)
+    - gcsim community rotation jfMmbNPpdGDr (house builds)
+    - gcsim community rotation kWTCBKJTLnFf (house builds)
+    - gcsim community rotation mJJRf9GbCkMJ (house builds)
+    - gcsim community rotation nmKhpFF6hhJH (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 20 of 20 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    burst:
+      duration: 1.633
+      particles: 0.0
+      hits:
+      - offset: 0.3
+        type: burst
+        table:
+        - burst
+        - 1-Hit Swing DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 0.65
+        type: burst
+        table:
+        - burst
+        - 2-Hit Swing DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+      - offset: 1.133
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 1.15
+        type: burst
+        table:
+        - burst
+        - 3-Hit Swing DMG
+        - 0
+        element: Pyro
+        gauge: 0.0
+      - offset: 2.35
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 3.567
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 4.783
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 6.0
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 7.217
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 8.433
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 9.65
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 10.867
+        type: burst
+        table:
+        - burst
+        - Pyronado DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+    skill:
+      duration: 0.633
+      particles: 4.0
+      hits:
+      - offset: 2.1
+        type: skill
+        table:
+        - skill
+        - Flame DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 3.767
+        type: skill
+        table:
+        - skill
+        - Flame DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 5.433
+        type: skill
+        table:
+        - skill
+        - Flame DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+      - offset: 7.1
+        type: skill
+        table:
+        - skill
+        - Flame DMG
+        - 0
+        element: Pyro
+        gauge: 1.0
+    dash:
+      duration: 0.333
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.3
+      particles: 0.0
+      hits:
+      - offset: 0.2
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.317
+      particles: 0.0
+      hits:
+      - offset: 0.133
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.467
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+      - offset: 0.4
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - dash
+  - - dash
+    - attack
+  - - dash
+    - attack
+    - attack
+  follow:
+    burst: attack
+    skill: dash
+  first: burst
+  causal: {}

@@ -1,0 +1,128 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role swirl_support added (measured placement role or owned Swirl)
+Faruzan:
+  schema: 3
+  element: Anemo
+  weapon: bow
+  roles:
+  - buffer
+  - debuffer
+  - grouping
+  - swirl_support
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Anemo
+      types:
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: medium
+    - element: Anemo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: buff
+    source:
+    - Lost Wisdom of the Seven Caverns
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: elemental_dmg_bonus
+    target: party
+    affects:
+      elements:
+      - Anemo
+    amount: 0.324
+    duration: 4
+    stacking: at talent level 10; reapplied by each Whirlwind Pulse during the 12s burst
+    conditions: []
+    source: The Wind's Secret Ways (Prayerful Wind's Benefit, at talent level 10)
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Anemo
+    amount: 0.3
+    duration: 4
+    stacking: at talent level 10
+    conditions: []
+    source: The Wind's Secret Ways (Perfidious Wind's Bale, at talent level 10)
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Anemo
+    amount: Perfidious Wind's Bale applied by the Pressurized Collapse vortex
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Impetuous Flow
+  - kind: flat_dmg
+    target: party
+    affects:
+      elements:
+      - Anemo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    amount: 32% of Faruzan's Base ATK
+    duration: while Prayerful Wind's Benefit lasts
+    stacking: once every 0.8s per character; consumed on trigger
+    conditions: []
+    source: Lost Wisdom of the Seven Caverns (Hurricane Guard)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Parthian Shot, Wind Realm of Nasamjnin, The Wind''s Secret Ways, Impetuous
+      Flow, Lost Wisdom of the Seven Caverns'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

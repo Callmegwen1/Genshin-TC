@@ -1,0 +1,98 @@
+# Prerelease-style kit primitives for the forward model (rotation step 6). NO community gcsim input of any kind:
+# no rotation, hit timing, reaction ownership, particles or damage shares. Multipliers are references to the Amber
+# talent tables (resolved at the build's talent level), so updated kit numbers change every projection.
+#
+# Every fact is tagged:  K = known (official kit text or Amber tables)   A = assumed (stated, widens uncertainty)
+#                        U = unknown (no credit; listed)
+# Author: Claude, from the Amber kit text (Lohen has 0 community simulations). Human review pending.
+Lohen:
+  status: {release_status: released, kit_version: amber-current, community_simulations: 0}
+  facts:
+    known:
+      - "Base stats and ascension stat (CRIT DMG) by level (Amber)"
+      - "Unforeseen Strike (Skill) switches to Masterstroke mode for 13 s; its CD is 18 s"
+      - "Masterstroke attacks use the Skill table: N1 148.8%, N2 155.5%, N3 70.1% x3, N4 207.3%, N5 101.6% + 152.4%, CA 181.5% x2 (level 9)"
+      - "Etched Into Bone and Soul (special Skill in Masterstroke): 102% x4 (level 9), at most 3 per Masterstroke"
+      - "Manifest Judgment (Burst): 202% x6 Cryo (level 9), 60 Energy, CD 15 s; extends Masterstroke by 1.65 s"
+      - "Will to Win raises Etched and Burst DMG by 0.4% per point"
+      - "When the Mood Strikes: +1 Skill level for 9 s after the Skill (the +6 s extension needs a teammate talent at or above Lohen's boosted level; house teammates are at 9, so it does not apply)"
+      - "Flippant Masterpiece (A4): +15% ATK to Lohen and to the teammate for 8 s after a teammate triggers a Cryo reaction in Masterstroke"
+      - "Hexerei: Secret Rite: +40% Normal/Charged DMG for 6 s, needs 2+ Hexerei members AND Will to Win at 50%+ of its cap"
+    assumed:
+      - "Masterstroke attacks deal Cryo DMG: the text does not say; assumed because they are listed in the Elemental Skill table (as Flins's Manifest Flame attacks are). If Physical, his on-field damage changes completely"
+      - "Etched Into Bone and Soul and the Burst deal Cryo DMG (the Burst text says Cryo; Etched assumed)"
+      - "Etched is used 3 times per Masterstroke (the maximum): Joy accrual is not described"
+      - "Action timings: a typical 5-hit polearm chain (N1 0.40 s, N2 0.42 s, N3 0.55 s, N4 0.50 s, N5 0.65 s), CA 0.75 s, Skill 0.5 s, Etched 0.9 s, Burst 1.8 s"
+      - "Elemental application: 1U Cryo under standard ICD (3 hits / 2.5 s) for attacks and Etched; 1U on Burst hits 1 and 4"
+      - "Particles: 4 Cryo particles per Skill (typical 18 s cooldown 5-star)"
+    unknown:
+      - "Joy accrual rate (how many Etched casts a real rotation affords)"
+      - "Will to Win accrual (per teammate DMG) and its maximum: the Etched / Burst bonus and the Hexerei condition cannot be computed; no credit"
+      - "Moratorium on Questioning (A1) extra Will to Win: depends on the unknown cap"
+  level_bonus: {table: skill, amount: 1, trigger: skill, duration: 9}
+  states:
+    masterstroke: {start: skill, duration: {table: [skill, "Masterstroke"]}, extend_on: {burst: 1.65}}
+  actions:
+    skill:
+      duration: 0.5
+      particles: 4
+      state: masterstroke
+      hits: []
+    etched:
+      requires_state: masterstroke
+      uses_per_state: 3
+      duration: 0.9
+      hits:
+        - {offset: 0.2, table: [skill, "Etched Into Bone and Soul DMG", 0], element: Cryo, type: skill, icd: standard}
+        - {offset: 0.4, table: [skill, "Etched Into Bone and Soul DMG", 1], element: Cryo, type: skill, icd: standard}
+        - {offset: 0.6, table: [skill, "Etched Into Bone and Soul DMG", 2], element: Cryo, type: skill, icd: standard}
+        - {offset: 0.8, table: [skill, "Etched Into Bone and Soul DMG", 3], element: Cryo, type: skill, icd: standard}
+    burst:
+      duration: 1.8
+      hits:
+        - {offset: 1.0, table: [burst, "Skill DMG", 0], element: Cryo, type: burst, gauge: 1}
+        - {offset: 1.15, table: [burst, "Skill DMG", 1], element: Cryo, type: burst}
+        - {offset: 1.3, table: [burst, "Skill DMG", 2], element: Cryo, type: burst}
+        - {offset: 1.45, table: [burst, "Skill DMG", 3], element: Cryo, type: burst, gauge: 1}
+        - {offset: 1.6, table: [burst, "Skill DMG", 4], element: Cryo, type: burst}
+        - {offset: 1.75, table: [burst, "Skill DMG", 5], element: Cryo, type: burst}
+    attack#0@masterstroke: {duration: 0.40, hits: [{offset: 0.2, table: [skill, "1-Hit DMG", 0], element: Cryo, type: normal, icd: standard}]}
+    attack#1@masterstroke: {duration: 0.42, hits: [{offset: 0.2, table: [skill, "2-Hit DMG", 0], element: Cryo, type: normal, icd: standard}]}
+    attack#2@masterstroke:
+      duration: 0.55
+      hits:
+        - {offset: 0.15, table: [skill, "3-Hit DMG", 0], element: Cryo, type: normal, icd: standard}
+        - {offset: 0.30, table: [skill, "3-Hit DMG", 1], element: Cryo, type: normal, icd: standard}
+        - {offset: 0.45, table: [skill, "3-Hit DMG", 2], element: Cryo, type: normal, icd: standard}
+    attack#3@masterstroke: {duration: 0.50, hits: [{offset: 0.3, table: [skill, "4-Hit DMG", 0], element: Cryo, type: normal, icd: standard}]}
+    attack#4@masterstroke:
+      duration: 0.65
+      hits:
+        - {offset: 0.25, table: [skill, "5-Hit DMG", 0], element: Cryo, type: normal, icd: standard}
+        - {offset: 0.50, table: [skill, "5-Hit DMG", 1], element: Cryo, type: normal, icd: standard}
+    charge@masterstroke:
+      duration: 0.75
+      hits:
+        - {offset: 0.35, table: [skill, "Charged Attack DMG", 0], element: Cryo, type: charged, icd: standard}
+        - {offset: 0.55, table: [skill, "Charged Attack DMG", 1], element: Cryo, type: charged, icd: standard}
+    # outside Masterstroke: his plain Physical attacks (Normal Attack table)
+    attack#0: {duration: 0.40, hits: [{offset: 0.2, table: [normal, "1-Hit DMG", 0], element: Physical, type: normal}]}
+    attack#1: {duration: 0.42, hits: [{offset: 0.2, table: [normal, "2-Hit DMG", 0], element: Physical, type: normal}]}
+    attack#2:
+      duration: 0.55
+      hits:
+        - {offset: 0.15, table: [normal, "3-Hit DMG", 0], element: Physical, type: normal}
+        - {offset: 0.30, table: [normal, "3-Hit DMG", 1], element: Physical, type: normal}
+        - {offset: 0.45, table: [normal, "3-Hit DMG", 2], element: Physical, type: normal}
+    attack#3: {duration: 0.50, hits: [{offset: 0.3, table: [normal, "4-Hit DMG", 0], element: Physical, type: normal}]}
+    attack#4:
+      duration: 0.65
+      hits:
+        - {offset: 0.25, table: [normal, "5-Hit DMG", 0], element: Physical, type: normal}
+        - {offset: 0.50, table: [normal, "5-Hit DMG", 1], element: Physical, type: normal}
+  fillers:
+    - [attack, attack, attack, attack, attack]
+    - [attack, attack, attack, attack, attack, charge]
+    - [attack, attack, charge]
+  specials: [etched]   # used whenever available inside the carry's window
+  first: skill

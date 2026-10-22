@@ -1,0 +1,32 @@
+Escoffier:
+  schema: 3
+  element: Cryo
+  weapon: polearm
+  roles: [off_field_sub_dps, healer, debuffer]
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage: {element: Cryo, types: [skill, summon, burst]}
+    application: [{element: Cryo, mode: off_field, strength: high}]
+    energy: {burst_cost: 60, dependency: low}
+    sustain: {heal: high, shield: none}
+  scaling: [{stat: atk, for: damage, source: [skill, summon, burst]}, {stat: atk, for: heal, source: [burst]}]
+  effects:
+    - {kind: res_shred, target: enemy, affects: {elements: [Hydro, Cryo]}, amount: "5% / 10% / 15% / 55% with 1 / 2 / 3 / 4 Hydro or Cryo members",
+       duration: 12, stacking: none, conditions: [{type: party_element_count, elements: [Hydro, Cryo], full: 4,
+       text: "decrease scales with the number of Hydro and Cryo party members"}], source: "Inspiration-Immersed Seasoning"}
+    - {kind: heal, target: active, affects: {elements: [all]}, amount: "138.24% of Escoffier's ATK per second", duration: 9,
+       stacking: none, conditions: [], source: "Better to Salivate Than Medicate"}
+  conditions:
+    - {type: party_element_count, elements: [Hydro, Cryo], full: 4,
+       text: "Hydro and Cryo RES shred scales with the number of Hydro and Cryo party members (full with all four)"}
+  reactions: {owns: [], enables: [freeze, melt, superconduct], requires: [], aura_supplied: [cryo], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Low-Temperature Cooking, Scoring Cuts, Better to Salivate Than Medicate, Inspiration-Immersed Seasoning"
+    community: "How the character is played (KQM, Prydwen): off-field Cryo sub-DPS, healer and Hydro/Cryo shredder"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

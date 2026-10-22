@@ -1,0 +1,300 @@
+# Character knowledge base. YOU own this file: edit freely, it is the core of the engine.
+#
+# roles: capability -> quality on a 1-5 scale (5 = best in role, 1 = barely works).
+#   Element comes from your roster, so "offfield_app" on Xingqiu already means Hydro.
+# key_talents: which talents drive the character's value (normal / skill / burst).
+#   Used to rate investment. Defaults to [skill, burst].
+# constellation_roles: roles that change at a constellation, e.g. {6: {buffer_lunar: 3}}.
+#   Your owned constellation is used for your roster. Ideal teams assume C0.
+# notes: caveats shown next to a team but never added to the score.
+#   Each note can be limited to some archetypes with templates: [freeze].
+# review: true marks entries I was unsure about. Check and remove the flag.
+#
+# Role vocabulary
+#   carry_<archetype>     on-field damage dealer for that archetype
+#                         (freeze, melt, vape, lunar_charged, aggravate, hypercarry, international, geo, national_driver)
+#   offfield_app          applies their element while off-field
+#   offfield_dps          meaningful off-field damage
+#   buffer_atk            flat ATK buff (Bennett)
+#   buffer_anemo          Viridescent shred and/or elemental DMG buff
+#   em_share              shares Elemental Mastery
+#   buffer_cryo           Cryo-specific buffs (Shenhe)
+#   buffer_general        other team buffs (crit share, NA speed, ATK%)
+#   buffer_overloaded     Overloaded-team buffer (Chevreuse)
+#   healer, shield, battery, cc (grouping), def_shred
+#   buffer_lunar          buffs Lunar reaction damage
+#   moonsign              Nod-Krai Moonsign character (counts toward Ascendant Gleam)
+#   enables_lunar_charged converts Electro-Charged into Lunar-Charged
+#   enables_bloom         Nilou-style bloom conversion
+
+# ---------- 5 stars ----------
+Flins:
+  roles: {carry_lunar_charged: 5, moonsign: 5, enables_lunar_charged: 5}
+  key_talents: [skill, burst]
+Ineffa:
+  roles: {offfield_app: 4, offfield_dps: 4, shield: 3, buffer_lunar: 4, moonsign: 5, enables_lunar_charged: 5}
+  key_talents: [skill, burst]
+Raiden Shogun:
+  roles: {carry_hypercarry: 4, carry_national_driver: 5, battery: 5, offfield_app: 3, buffer_general: 2}
+  key_talents: [skill, burst]
+Keqing:
+  roles: {carry_aggravate: 4, carry_hypercarry: 2}
+  key_talents: [normal, skill, burst]
+Ganyu:
+  roles: {carry_melt: 4, carry_freeze: 4, offfield_app: 4, offfield_dps: 3}
+  key_talents: [normal, burst]
+Zhongli:
+  roles: {shield: 5, def_shred: 3}
+  key_talents: [skill, burst]
+Kamisato Ayaka:
+  roles: {carry_freeze: 5}
+  key_talents: [normal, skill, burst]
+Kamisato Ayato:
+  roles: {carry_international: 4, carry_hypercarry: 3, offfield_app: 2}
+  key_talents: [skill, burst]
+Shenhe:
+  roles: {buffer_cryo: 5, offfield_app: 2}
+  key_talents: [skill]
+Kaedehara Kazuha:
+  roles: {buffer_anemo: 5, cc: 5}
+  key_talents: [skill, burst]
+Yoimiya:
+  roles: {carry_vape: 4, carry_hypercarry: 2}
+  key_talents: [normal, skill]
+Tartaglia:
+  roles: {carry_international: 5, carry_vape: 3}
+  key_talents: [normal, skill, burst]
+Diluc:
+  roles: {carry_vape: 3}
+  key_talents: [skill, burst]
+Chiori:
+  roles: {offfield_dps: 4, offfield_app: 3, carry_geo: 2}
+  key_talents: [skill]
+Yae Miko:
+  roles: {offfield_app: 4, offfield_dps: 4}
+  key_talents: [skill, burst]
+Nilou:
+  roles: {enables_bloom: 5, offfield_app: 2}
+  key_talents: [skill]
+Qiqi:
+  roles: {healer: 3, offfield_app: 1}
+  key_talents: [skill, burst]
+Mona:
+  roles: {offfield_app: 2, buffer_general: 4, offfield_dps: 1}
+  key_talents: [burst]
+  notes:
+    - templates: [freeze]
+      text: Weak Hydro application. Kazuha's plunge often finds no Hydro to swirl, so freeze uptime is less reliable than with Xingqiu. Her damage buff still raises the team's total damage.
+Citlali:
+  roles: {offfield_app: 4, shield: 4, buffer_general: 4}
+  key_talents: [skill, burst]
+Aloy:
+  roles: {offfield_app: 1}
+Yumemizuki Mizuki:
+  roles: {healer: 3, offfield_dps: 3, cc: 2}
+  key_talents: [skill]
+Manekin:
+  review: true
+  roles: {offfield_app: 2}
+  notes:
+    - Manekin has no fixed element in the game data. HoYoLAB reports your copy as Cryo.
+Traveler (Cryo):
+  review: true
+  roles: {offfield_app: 2}
+
+# ---------- 4 stars ----------
+Sucrose:
+  roles: {buffer_anemo: 4, em_share: 5, cc: 4}
+  key_talents: [skill, burst]
+  notes:
+    - Her main buff is Elemental Mastery, which only helps reactions. C6 adds 20% DMG of the swirled element, less than Kazuha's bonus, so in Freeze or other direct-damage teams Kazuha is the stronger Anemo pick.
+Bennett:
+  roles: {buffer_atk: 5, healer: 4, offfield_app: 1}
+  key_talents: [burst]
+  notes:
+    - templates: [freeze, melt, lunar_charged, aggravate, hyperbloom]
+      text: At C6 his Burst infuses sword, claymore and polearm attacks with Pyro, which can break Freeze or steal reactions.
+Fischl:
+  roles: {offfield_app: 5, offfield_dps: 4}
+  constellation_roles: {6: {offfield_dps: 5}}
+  key_talents: [skill, burst]
+Xingqiu:
+  roles: {offfield_app: 5, offfield_dps: 3}
+  key_talents: [burst]
+  notes:
+    - templates: [freeze]
+      text: Strong, steady Hydro application and damage reduction make freeze reliable, but he brings no damage buff.
+Xiangling:
+  roles: {offfield_app: 5, offfield_dps: 5}
+  constellation_roles: {6: {buffer_general: 3}}
+  key_talents: [burst]
+Beidou:
+  roles: {offfield_app: 3, offfield_dps: 3, shield: 1}
+  key_talents: [burst]
+Sayu:
+  roles: {healer: 2, buffer_anemo: 2}
+  key_talents: [burst]
+Chongyun:
+  roles: {offfield_app: 2, buffer_general: 2}
+  key_talents: [skill]
+Barbara:
+  roles: {healer: 3, offfield_app: 2}
+  key_talents: [skill]
+Noelle:
+  roles: {carry_geo: 3, shield: 2, healer: 2}
+  constellation_roles: {6: {carry_geo: 4}}
+  key_talents: [normal, burst]
+Razor:
+  roles: {carry_hypercarry: 1}
+  key_talents: [normal, burst]
+Chevreuse:
+  roles: {buffer_overloaded: 5, healer: 3}
+  key_talents: [skill]
+Collei:
+  roles: {offfield_app: 2}
+  key_talents: [burst]
+Kujou Sara:
+  roles: {buffer_general: 3, battery: 2}
+  constellation_roles: {6: {buffer_general: 4}}
+  key_talents: [skill, burst]
+Kaeya:
+  roles: {offfield_app: 2}
+  key_talents: [burst]
+Lisa:
+  roles: {offfield_app: 2, def_shred: 2}
+  key_talents: [burst]
+Amber:
+  roles: {offfield_app: 1}
+Lynette:
+  roles: {buffer_anemo: 2}
+  key_talents: [skill]
+Aino:
+  roles: {offfield_app: 4, offfield_dps: 2, moonsign: 5}
+  constellation_roles: {1: {em_share: 3}, 6: {buffer_lunar: 3}}
+  key_talents: [burst]
+  notes:
+    - templates: [lunar_charged, lunar_charged_offfield]
+      text: C1 gives the active character 80 EM and C6 gives the team 35% Lunar-Charged DMG. Below C6 she is mostly a Hydro applier.
+Dahlia:
+  review: true
+  roles: {shield: 3, buffer_general: 2}
+Iansan:
+  roles: {buffer_general: 3, healer: 2}
+  key_talents: [burst]
+Lan Yan:
+  roles: {shield: 3, buffer_anemo: 2}
+  key_talents: [skill]
+Kachina:
+  roles: {offfield_app: 3, offfield_dps: 2}
+  key_talents: [skill]
+Sethos:
+  roles: {carry_aggravate: 2}
+  key_talents: [normal, burst]
+Mika:
+  roles: {buffer_general: 3, healer: 3}
+  key_talents: [skill]
+Yaoyao:
+  roles: {offfield_app: 3, healer: 3}
+  key_talents: [skill]
+Layla:
+  roles: {shield: 4, offfield_app: 2}
+  key_talents: [skill]
+Candace:
+  roles: {buffer_general: 2}
+  key_talents: [burst]
+Yun Jin:
+  roles: {buffer_general: 3}
+  constellation_roles: {6: {buffer_general: 4}}
+  key_talents: [burst]
+Shikanoin Heizou:
+  roles: {cc: 2, buffer_anemo: 1}
+  key_talents: [normal, skill]
+Thoma:
+  roles: {shield: 3}
+  constellation_roles: {6: {buffer_general: 3}}
+  key_talents: [burst]
+Yanfei:
+  roles: {carry_vape: 2}
+  key_talents: [normal, burst]
+Rosaria:
+  roles: {offfield_app: 3, buffer_general: 3}
+  key_talents: [burst]
+Xinyan:
+  roles: {shield: 2}
+Diona:
+  roles: {shield: 4, healer: 3, offfield_app: 2}
+  constellation_roles: {6: {em_share: 3}}
+  key_talents: [skill, burst]
+Ningguang:
+  roles: {carry_geo: 3}
+  key_talents: [normal, burst]
+Alyosha:
+  review: true
+  roles: {offfield_app: 2}
+
+# ---------- Not owned: used for ideal teams and, later, pull value ----------
+# Only kits I could rate with confidence. Newer characters need your tags to appear in ideal teams.
+Furina:
+  roles: {offfield_app: 3, offfield_dps: 5, buffer_general: 5, healer: 3}
+  key_talents: [skill, burst]
+Yelan:
+  roles: {offfield_app: 5, offfield_dps: 5, buffer_general: 2}
+  key_talents: [skill, burst]
+Escoffier:
+  roles: {offfield_app: 4, offfield_dps: 4, buffer_general: 5, healer: 4}
+  key_talents: [skill, burst]
+Sangonomiya Kokomi:
+  roles: {healer: 5, offfield_app: 4}
+Nahida:
+  roles: {offfield_app: 5, offfield_dps: 4, em_share: 3}
+Kuki Shinobu:
+  roles: {offfield_app: 4, healer: 4}
+  key_talents: [skill]
+Baizhu:
+  roles: {healer: 5, shield: 3, buffer_general: 3, offfield_app: 3}
+Cyno:
+  roles: {carry_aggravate: 4}
+  key_talents: [normal, burst]
+Clorinde:
+  roles: {carry_aggravate: 5}
+  key_talents: [normal, skill]
+Hu Tao:
+  roles: {carry_vape: 5}
+  key_talents: [normal, skill]
+Arlecchino:
+  roles: {carry_vape: 5}
+  key_talents: [normal, skill]
+Mavuika:
+  roles: {carry_vape: 4, buffer_general: 4}
+Xilonen:
+  roles: {buffer_general: 5, healer: 3}
+Venti:
+  roles: {buffer_anemo: 4, cc: 5}
+Jean:
+  roles: {healer: 4, buffer_anemo: 3}
+Gorou:
+  roles: {buffer_general: 4}
+Albedo:
+  roles: {offfield_dps: 4, offfield_app: 3}
+  key_talents: [skill]
+Arataki Itto:
+  roles: {carry_geo: 5}
+  key_talents: [normal, burst]
+Navia:
+  roles: {carry_geo: 4}
+Dori:
+  roles: {battery: 4, healer: 3}
+Charlotte:
+  roles: {healer: 4}
+Kirara:
+  roles: {shield: 4}
+Columbina:
+  review: true
+  roles: {offfield_app: 4, offfield_dps: 4, buffer_lunar: 5, moonsign: 5, enables_lunar_charged: 5}
+Ifa:
+  # Simulated in 6 standard lineups (with Durin / Nicole, Xiao / Faruzan, Columbina / Ineffa / Ororon) but too few for
+  # derive to place him, so he was reported as "cannot evaluate". His kit is a healer and party reaction buffer
+  # (Swirl, Electro-Charged and Lunar-Charged DMG via Rescue Essentials). Placement only: his values come from his
+  # own simulations and the pair model. (phase 6.5)
+  roles: {buffer_anemo: 3, healer: 3, support_anemo_carry: 3, support_electro_charged_electro_carry: 3}
+  key_talents: [skill, burst]

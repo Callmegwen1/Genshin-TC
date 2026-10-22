@@ -1,0 +1,118 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Collei:
+  schema: 3
+  element: Dendro
+  weapon: bow
+  roles:
+  - off_field_sub_dps
+  - applier
+  - enabler
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Dendro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: medium
+    - element: Dendro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: other
+    target: active
+    affects:
+      damage_types:
+      - skill
+    amount: 'Sprout: Dendro DMG equal to 40% of Collei''s ATK continuously for 3s'
+    duration: 3
+    stacking: a new Sprout removes the previous one
+    conditions:
+    - type: reaction_required
+      reactions:
+      - burning
+      - quicken
+      - aggravate
+      - spread
+      - bloom
+      - hyperbloom
+      - burgeon
+      - lunarbloom
+      text: a party member triggered one of these reactions before the Floral Ring returns
+    source: Floral Sidewinder
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - burst
+    amount: Cuilein-Anbar Zone duration +1s per reaction, up to +3s
+    duration: unknown
+    stacking: up to 3s per Trump-Card Kitty
+    conditions:
+    - type: reaction_required
+      reactions:
+      - burning
+      - quicken
+      - aggravate
+      - spread
+      - bloom
+      - hyperbloom
+      - burgeon
+      - lunarbloom
+      text: a character in the Zone triggers one of these reactions
+    source: The Languid Wood
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - burning
+    - quicken
+    - aggravate
+    - spread
+    - bloom
+    - hyperbloom
+    - burgeon
+    - lunarbloom
+    requires: []
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Supplicant''s Bowmanship, Floral Brush, Trump-Card Kitty, Floral Sidewinder,
+      The Languid Wood, Gliding Champion of Sumeru'
+    community: 'How the character is played and engine measurements: Dendro applier (15% field share, 54% of her damage off
+      field)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

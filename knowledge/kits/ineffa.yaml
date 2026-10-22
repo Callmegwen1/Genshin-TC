@@ -1,0 +1,35 @@
+Ineffa:
+  schema: 3
+  element: Electro
+  weapon: polearm
+  roles: [off_field_sub_dps, shielder, buffer, enabler]
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage: {element: Electro, types: [summon, burst, reaction]}
+    application: [{element: Electro, mode: off_field, strength: high}]
+    energy: {burst_cost: 60, dependency: medium}
+    sustain: {heal: none, shield: strong}
+  scaling: [{stat: atk, for: damage, source: [summon, burst, reaction]}, {stat: atk, for: buff, source: [burst]}]
+  effects:
+    - {kind: em, target: active, affects: {elements: [all]}, amount: "6% of Ineffa's ATK (also Ineffa)", duration: 20, stacking: none,
+       conditions: [], source: "Panoramic Permutation Protocol"}
+    - {kind: reaction_conversion, target: party, affects: {reactions: [electrocharged, lunarcharged]}, amount: "Electro-Charged becomes Lunar-Charged",
+       duration: permanent, stacking: none, conditions: [], source: "Moonsign Benediction: Assemblage Hub"}
+    - {kind: reaction_base, target: party, affects: {reactions: [lunarcharged]}, amount: "0.7% per 100 of Ineffa's ATK, up to 14%",
+       duration: permanent, stacking: none, conditions: [], source: "Moonsign Benediction: Assemblage Hub"}
+    - {kind: other, target: self, affects: {reactions: [lunarcharged]}, amount: "65% of Ineffa's ATK as Lunar-Charged DMG",
+       duration: unknown, stacking: none, conditions: [{type: reaction_required, reactions: [lunarcharged], text: "thunderclouds from Lunar-Charged nearby"}],
+       source: "Overclocking Circuit"}
+  conditions: []
+  reactions: {owns: [lunarcharged], enables: [electrocharged, lunarcharged, overloaded, superconduct, aggravate, hyperbloom], requires: [],
+              aura_supplied: [electro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Cleaning Mode: Carrier Frequency, Supreme Instruction: Cyclonic Exterminator, Overclocking Circuit, Panoramic Permutation Protocol, Moonsign Benediction: Assemblage Hub"
+    community: "How the character is played (KQM, Prydwen): off-field Electro Lunar-Charged sub-DPS and shielder; needs Hydro for Lunar-Charged"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

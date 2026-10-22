@@ -1,0 +1,98 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Rosaria:
+  schema: 3
+  element: Cryo
+  weapon: polearm
+  roles:
+  - off_field_sub_dps
+  - buffer
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: high
+    - element: Cryo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: crit
+    for: buff
+    source:
+    - Shadow Samaritan
+  effects:
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.12
+    duration: 5
+    stacking: none
+    conditions:
+    - type: character_state
+      state: strikes opponent from behind with Ravaging Confession
+      text: Ravaging Confession hits from behind
+    source: Regina Probationum
+  - kind: crit_rate
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 15% of Rosaria's CRIT Rate, max 15%
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Shadow Samaritan
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    - swirl-cryo
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Ravaging Confession, Rites of Termination, Regina Probationum, Shadow
+      Samaritan'
+    community: 'How the character is played and engine measurements: off-field Cryo sub-DPS and CRIT Rate buffer'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

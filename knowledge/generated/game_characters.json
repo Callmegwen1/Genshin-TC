@@ -1,0 +1,722 @@
+{
+ "Aino": {
+  "id": 10000121,
+  "element": "Hydro",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Albedo": {
+  "id": 10000038,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Alhaitham": {
+  "id": 10000078,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Aloy": {
+  "id": 10000062,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Alyosha": {
+  "id": 10000148,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Amber": {
+  "id": 10000021,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Arataki Itto": {
+  "id": 10000057,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Arlecchino": {
+  "id": 10000096,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Baizhu": {
+  "id": 10000082,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Barbara": {
+  "id": 10000014,
+  "element": "Hydro",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Beidou": {
+  "id": 10000024,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Bennett": {
+  "id": 10000032,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Candace": {
+  "id": 10000072,
+  "element": "Hydro",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Charlotte": {
+  "id": 10000088,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Chasca": {
+  "id": 10000104,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Chevreuse": {
+  "id": 10000090,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Chiori": {
+  "id": 10000094,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Chongyun": {
+  "id": 10000036,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Citlali": {
+  "id": 10000107,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Clorinde": {
+  "id": 10000098,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Collei": {
+  "id": 10000067,
+  "element": "Dendro",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Columbina": {
+  "id": 10000125,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Cyno": {
+  "id": 10000071,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Dahlia": {
+  "id": 10000115,
+  "element": "Hydro",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Dehya": {
+  "id": 10000079,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Diluc": {
+  "id": 10000016,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Diona": {
+  "id": 10000039,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Dori": {
+  "id": 10000068,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Durin": {
+  "id": 10000123,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Emilie": {
+  "id": 10000099,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Escoffier": {
+  "id": 10000112,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Eula": {
+  "id": 10000051,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Faruzan": {
+  "id": 10000076,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Fischl": {
+  "id": 10000031,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Flins": {
+  "id": 10000120,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Freminet": {
+  "id": 10000085,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Furina": {
+  "id": 10000089,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Gaming": {
+  "id": 10000092,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Ganyu": {
+  "id": 10000037,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Gorou": {
+  "id": 10000055,
+  "element": "Geo",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Hu Tao": {
+  "id": 10000046,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Iansan": {
+  "id": 10000110,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Ifa": {
+  "id": 10000113,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Illuga": {
+  "id": 10000127,
+  "element": "Geo",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Ineffa": {
+  "id": 10000116,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Jahoda": {
+  "id": 10000124,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Jean": {
+  "id": 10000003,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Kachina": {
+  "id": 10000100,
+  "element": "Geo",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Kaedehara Kazuha": {
+  "id": 10000047,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Kaeya": {
+  "id": 10000015,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Kamisato Ayaka": {
+  "id": 10000002,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Kamisato Ayato": {
+  "id": 10000066,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Kaveh": {
+  "id": 10000081,
+  "element": "Dendro",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Keqing": {
+  "id": 10000042,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Kinich": {
+  "id": 10000101,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Kirara": {
+  "id": 10000061,
+  "element": "Dendro",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Klee": {
+  "id": 10000029,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Kujou Sara": {
+  "id": 10000056,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Kuki Shinobu": {
+  "id": 10000065,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Lan Yan": {
+  "id": 10000108,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Lauma": {
+  "id": 10000119,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Layla": {
+  "id": 10000074,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Linnea": {
+  "id": 10000130,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Lisa": {
+  "id": 10000006,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Lohen": {
+  "id": 10000129,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Lynette": {
+  "id": 10000083,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Lyney": {
+  "id": 10000084,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Mavuika": {
+  "id": 10000106,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Mika": {
+  "id": 10000080,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Mona": {
+  "id": 10000041,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Mualani": {
+  "id": 10000102,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Nahida": {
+  "id": 10000073,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Navia": {
+  "id": 10000091,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Nefer": {
+  "id": 10000122,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Neuvillette": {
+  "id": 10000087,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Nicole": {
+  "id": 10000131,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Nilou": {
+  "id": 10000070,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Ningguang": {
+  "id": 10000027,
+  "element": "Geo",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Noelle": {
+  "id": 10000034,
+  "element": "Geo",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Odette": {
+  "id": 10000150,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Ororon": {
+  "id": 10000105,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Prune": {
+  "id": 10000132,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Qiqi": {
+  "id": 10000035,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Raiden Shogun": {
+  "id": 10000052,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Razor": {
+  "id": 10000020,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Rosaria": {
+  "id": 10000045,
+  "element": "Cryo",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Sandrone": {
+  "id": 10000133,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Sangonomiya Kokomi": {
+  "id": 10000054,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Sayu": {
+  "id": 10000053,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Sethos": {
+  "id": 10000097,
+  "element": "Electro",
+  "rarity": 4,
+  "weapon": "bow"
+ },
+ "Shenhe": {
+  "id": 10000063,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Shikanoin Heizou": {
+  "id": 10000059,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Sigewinne": {
+  "id": 10000095,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Skirk": {
+  "id": 10000114,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Sucrose": {
+  "id": 10000043,
+  "element": "Anemo",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Tartaglia": {
+  "id": 10000033,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Thoma": {
+  "id": 10000050,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Tighnari": {
+  "id": 10000069,
+  "element": "Dendro",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Varesa": {
+  "id": 10000111,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Varka": {
+  "id": 10000128,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "claymore"
+ },
+ "Venti": {
+  "id": 10000022,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Vesna": {
+  "id": 10000143,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Vodyanitsa": {
+  "id": 10000140,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Wanderer": {
+  "id": 10000075,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Wriothesley": {
+  "id": 10000086,
+  "element": "Cryo",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Xiangling": {
+  "id": 10000023,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Xianyun": {
+  "id": 10000093,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Xiao": {
+  "id": 10000026,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Xilonen": {
+  "id": 10000103,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ },
+ "Xingqiu": {
+  "id": 10000025,
+  "element": "Hydro",
+  "rarity": 4,
+  "weapon": "sword_one_hand"
+ },
+ "Xinyan": {
+  "id": 10000044,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "claymore"
+ },
+ "Yae Miko": {
+  "id": 10000058,
+  "element": "Electro",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Yanfei": {
+  "id": 10000048,
+  "element": "Pyro",
+  "rarity": 4,
+  "weapon": "catalyst"
+ },
+ "Yaoyao": {
+  "id": 10000077,
+  "element": "Dendro",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Yelan": {
+  "id": 10000060,
+  "element": "Hydro",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Yoimiya": {
+  "id": 10000049,
+  "element": "Pyro",
+  "rarity": 5,
+  "weapon": "bow"
+ },
+ "Yumemizuki Mizuki": {
+  "id": 10000109,
+  "element": "Anemo",
+  "rarity": 5,
+  "weapon": "catalyst"
+ },
+ "Yun Jin": {
+  "id": 10000064,
+  "element": "Geo",
+  "rarity": 4,
+  "weapon": "pole"
+ },
+ "Zhongli": {
+  "id": 10000030,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "pole"
+ },
+ "Zibai": {
+  "id": 10000126,
+  "element": "Geo",
+  "rarity": 5,
+  "weapon": "sword_one_hand"
+ }
+}

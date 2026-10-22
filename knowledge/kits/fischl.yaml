@@ -1,0 +1,35 @@
+Fischl:
+  schema: 3
+  element: Electro
+  weapon: bow
+  roles: [off_field_sub_dps, applier]
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage: {element: Electro, types: [skill, summon, burst]}
+    application: [{element: Electro, mode: off_field, strength: high}]
+    energy: {burst_cost: 60, dependency: low}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: atk, for: damage, source: [skill, summon]}]
+  effects:
+    - {kind: other, target: self, affects: {elements: [Electro]}, amount: "80% of Fischl's ATK as Electro DMG",
+       duration: unknown, stacking: none,
+       conditions: [{type: reaction_required, reactions: [overloaded, electrocharged, superconduct, aggravate, hyperbloom, swirl-electro, lunarcharged], text: "when the active character triggers an Electro-related reaction while Oz is on the field"}],
+       source: "Undone Be Thy Sinful Hex"}
+    - {kind: atk_pct, target: active, affects: {elements: [all]}, amount: 0.225, duration: 10, stacking: none,
+       conditions: [{type: hexerei_count, min: 2, text: "Hexerei: Secret Rite (2+ Hexerei members)"}, {type: reaction_required, reactions: [overloaded], text: "after a party member triggers Overloaded"}],
+       source: "Witch's Eve Rite: Phantasmal Nocturne"}
+    - {kind: em, target: active, affects: {elements: [all]}, amount: 90, duration: 10, stacking: none,
+       conditions: [{type: hexerei_count, min: 2, text: "Hexerei: Secret Rite (2+ Hexerei members)"}, {type: reaction_required, reactions: [electrocharged, lunarcharged], text: "after a party member triggers Electro-Charged or Lunar-Charged"}],
+       source: "Witch's Eve Rite: Phantasmal Nocturne"}
+  conditions: []
+  reactions: {owns: [], enables: [overloaded, electrocharged, superconduct, aggravate, hyperbloom, lunarcharged], requires: [], aura_supplied: [electro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Nightrider, Midnight Phantasmagoria, Stellar Predator, Undone Be Thy Sinful Hex, Witch's Eve Rite: Phantasmal Nocturne"
+    community: "How the character is played (KQM, Prydwen): off-field Electro sub-DPS through Oz"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

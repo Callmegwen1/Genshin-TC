@@ -1,0 +1,36 @@
+Shenhe:
+  schema: 3
+  element: Cryo
+  weapon: polearm
+  roles: [buffer, debuffer]
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage: {element: Cryo, types: [skill, burst]}
+    application: [{element: Cryo, mode: off_field, strength: low}]
+    energy: {burst_cost: 80, dependency: medium}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: atk, for: buff, source: [skill]}]
+  effects:
+    - {kind: flat_dmg, target: party, affects: {elements: [Cryo], damage_types: [normal, charged, plunge, skill, burst]},
+       amount: "based on Shenhe's ATK, a limited number of hits", duration: unknown, stacking: "trigger count",
+       conditions: [], source: "Spring Spirit Summoning (Icy Quill)"}
+    - {kind: res_shred, target: enemy, affects: {elements: [Cryo, Physical]}, amount: unknown, duration: unknown,
+       stacking: none, conditions: [], source: "Divine Maiden's Deliverance (field)"}
+    - {kind: elemental_dmg_bonus, target: active, affects: {elements: [Cryo]}, amount: 0.15, duration: "while in the field",
+       stacking: none, conditions: [], source: "Deific Embrace"}
+    - {kind: dmg_bonus, target: party, affects: {damage_types: [skill, burst]}, amount: 0.15, duration: 10, stacking: none,
+       conditions: [], source: "Spirit Communion Seal (press)"}
+    - {kind: dmg_bonus, target: party, affects: {damage_types: [normal, charged, plunge]}, amount: 0.15, duration: 15,
+       stacking: none, conditions: [], source: "Spirit Communion Seal (hold)"}
+  conditions: []
+  reactions: {owns: [], enables: [freeze, melt, superconduct], requires: [], aura_supplied: [cryo], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Spring Spirit Summoning, Divine Maiden's Deliverance, Deific Embrace, Spirit Communion Seal"
+    community: "How the character is played (KQM, Prydwen): Cryo buffer for Cryo damage dealers"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

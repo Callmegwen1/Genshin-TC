@@ -1,0 +1,34 @@
+Linnea:
+  schema: 2
+  provisional: true
+  role: sub_dps
+  element: Geo
+  weapon: bow
+  analogue: Zhongli          # simulated off-field Geo support with RES shred; Linnea also heals and deals Lunar-Crystallize damage
+  field: {behaviour: off_field, share: [0.1, 0.25]}
+  personal_damage: {tier: medium, share: [0.15, 0.35]}     # Prydwen ranks her Sub-DPS: Lumi's strikes are Lunar-Crystallize DMG
+  application: {Geo.off: [1.5, 3.5]}
+  buffs:
+    - {kind: res_shred, target: party, condition: "while Lumi is on the field (Field Observation Notes)", text: "Geo RES of nearby opponents -15%, a further -15% under Ascendant Gleam"}
+    - {kind: em, target: active, condition: "the active character is a Moonsign character (Universal Naturalist Archive)", text: "EM + 5% of Linnea's DEF"}
+    - {kind: reaction_conversion, target: party, condition: "always (Moonsign Benediction: Habitat Survey)",
+       text: "Hydro Crystallize becomes Lunar-Crystallize; its Base DMG +0.7% per 100 DEF, max 14%; party Moonsign +1 level"}
+  sustain: {heal: medium, shield: none}
+  reactions: {owns: [lunarcrystallize], enables: [crystallize], converts: {crystallize: Lunar-Crystallize}}
+  preferred_systems: [lunarcrystallize]
+  restrictions: []
+  synergies:
+    - {with: Zibai, why: "Prydwen: a fantastic Lunar-Crystallize carry with her buffs"}
+    - {with: element:Hydro, why: "Lunar-Crystallize comes from Hydro Crystallize"}
+  roles: {offfield_app: 4, offfield_dps: 4, healer: 3, res_shred: 3, moonsign: 3, support_geo_carry: 4, support_mono_hydro: 3}
+  sources:
+    amber: "Official kit text (Project Amber cache): Countermeasure: Lumi's Battle Cry!, Memo: Survival Guide in Extreme Conditions, Field Observation Notes, Universal Naturalist Archive, Moonsign Benediction: Habitat Survey"
+    prydwen: "Prydwen guide: Sub-DPS tier T0; teams Zibai / Linnea / Columbina / Illuga (100), Aino variant (80)"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: prydwen, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

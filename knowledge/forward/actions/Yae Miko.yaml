@@ -1,0 +1,206 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Yae Miko:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation DwdMc7Cj9zMc (house builds)
+    - gcsim community rotation cL6hpFFgdBwh (house builds)
+    - gcsim community rotation j9cnwhbhgCKK (house builds)
+    - gcsim community rotation jCMWwg6FgqBK (house builds)
+    - gcsim community rotation jRLPrWtfMrnC (house builds)
+    - gcsim community rotation rntLqPHQ8Wg6 (house builds)
+    - gcsim community rotation tJTN9LJLpWfg (house builds)
+    - gcsim community rotation tzzpwtfpQwtK (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 9 of 11 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.617
+      particles: 0.0
+      hits: []
+    wait:
+      duration: 0.2
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: other
+        mult: 0.4
+        abil: Yae A1
+        source: gcsim
+        element: Electro
+        gauge: 0.0
+      - offset: 1.3
+        type: other
+        mult: 0.4
+        abil: Yae A1
+        source: gcsim
+        element: Electro
+        gauge: 0.0
+    charge:
+      duration: 0.533
+      particles: 0.0
+      hits:
+      - offset: 0.05
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+      - offset: 1.267
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+    dash:
+      duration: 0.367
+      particles: 0.0
+      hits: []
+    burst:
+      duration: 1.867
+      particles: 0.0
+      hits:
+      - offset: 1.667
+        type: burst
+        table:
+        - burst
+        - Skill DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 2.567
+        type: burst
+        table:
+        - burst
+        - Tenko Thunderbolt DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 2.967
+        type: burst
+        table:
+        - burst
+        - Tenko Thunderbolt DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 3.367
+        type: burst
+        table:
+        - burst
+        - Tenko Thunderbolt DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+    jump:
+      duration: 0.533
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.367
+      particles: 0.0
+      hits:
+      - offset: 0.4
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.55
+      particles: 0.0
+      hits:
+      - offset: 0.717
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Electro
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - charge
+    - dash
+    - attack
+    - charge
+    - dash
+    - attack
+    - charge
+    - dash
+  - - attack
+    - attack
+    - charge
+    - jump
+  - - attack
+    - attack
+    - charge
+    - jump
+    - attack
+    - attack
+    - charge
+    - jump
+  - - attack
+    - attack
+    - attack
+  follow:
+    burst: attack
+  first: skill
+  causal:
+    summons: &id001
+      sakura:
+        start_on: skill
+        first: 2.0
+        interval: 2.933
+        count: 6
+        max_instances: 3
+        level_table:
+        - skill
+        - 'Sesshou Sakura DMG: Level {n}'
+        hits:
+        - offset: 0.0
+          type: skill
+          table:
+          - skill
+          - 'Sesshou Sakura DMG: Level 1'
+          - 0
+          element: Electro
+          gauge: 1.0
+          icd: sakura
+    drop_hits:
+      skill:
+      - Sesshou Sakura
+    facts: &id002
+      known:
+      - 'Sesshou Sakura: up to 3, strike level = number present (Amber Level 1-4 rows)'
+      assumed:
+      - 'schedule measured in gcsim: first strike 2.0 s, every 2.93 s, 6 strikes'
+      unknown: []
+  summons: *id001
+  facts: *id002

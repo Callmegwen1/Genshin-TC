@@ -1,0 +1,113 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Kujou Sara:
+  schema: 3
+  element: Electro
+  weapon: bow
+  roles:
+  - buffer
+  - battery
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: low
+    - element: Electro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: buff
+    source:
+    - skill
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: er
+    for: buff
+    source:
+    - Decorum
+  effects:
+  - kind: atk
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 77.33% of Kujou Sara's Base ATK at talent level 10
+    duration: 6
+    stacking: does not stack between Tengu Juurai; last one determines effect and duration
+    conditions: []
+    source: 'Tengu Stormcall (Tengu Juurai: Ambush)'
+  - kind: atk
+    target: active
+    affects:
+      elements:
+      - all
+    amount: same ATK Bonus as Tengu Stormcall (77.33% of Kujou Sara's Base ATK at talent level 10)
+    duration: 6
+    stacking: does not stack between Tengu Juurai; last one determines effect and duration
+    conditions: []
+    source: 'Subjugation: Koukou Sendou (Titanbreaker and Stormcluster)'
+  - kind: energy
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 1.2 Energy per 100% of Kujou Sara's Energy Recharge
+    duration: instant
+    stacking: once every 3s
+    conditions: []
+    source: Decorum
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - overloaded
+    - electrocharged
+    - superconduct
+    - aggravate
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Tengu Bowmanship, Tengu Stormcall, Subjugation: Koukou Sendou, Immovable
+      Will, Decorum'
+    engine: 'Engine measurements from community simulations: field share 18%, team damage share 12%, 53% of own damage off
+      field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

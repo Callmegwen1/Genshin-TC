@@ -1,0 +1,83 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Lisa:
+  schema: 3
+  element: Electro
+  weapon: catalyst
+  roles:
+  - debuffer
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: medium
+    - element: Electro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: def_shred
+    target: enemy
+    affects:
+      elements:
+      - all
+    amount: 0.15
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Static Electricity Field
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - electrocharged
+    - overloaded
+    - superconduct
+    - aggravate
+    - quicken
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Violet Arc, Lightning Rose, Induced Aftershock, Static Electricity Field'
+    community: 'How the character is played and engine measurements: Electro sub-DPS with DEF shred from her Burst'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

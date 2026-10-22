@@ -1,0 +1,140 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 2 note(s).
+#   role grouping added (measured placement role or owned Swirl)
+#   role swirl_support added (measured placement role or owned Swirl)
+Xianyun:
+  schema: 3
+  element: Anemo
+  weapon: catalyst
+  roles:
+  - buffer
+  - healer
+  - grouping
+  - swirl_support
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - plunge
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: low
+    - element: Anemo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 70
+      dependency: unknown
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: atk
+    for: buff
+    source:
+    - Consider, the Adeptus in Her Realm
+  - stat: atk
+    for: heal
+    source:
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: flat_dmg
+    target: active
+    affects:
+      elements:
+      - all
+      damage_types:
+      - plunge
+    amount: 200% of Xianyun's ATK on Plunging Attack shockwave DMG, max 9000
+    duration: while Starwicker has Adeptal Assistance stacks (8 stacks, 1 consumed per Plunging Attack)
+    stacking: once every 0.4s per character; one opponent per shockwave
+    conditions: []
+    source: Consider, the Adeptus in Her Realm
+  - kind: crit_rate
+    target: party
+    affects:
+      elements:
+      - all
+      damage_types:
+      - plunge
+    amount: 4% / 6% / 8% / 10% at 1 / 2 / 3 / 4 Storm Pinion stacks
+    duration: 20
+    stacking: max 4 stacks, one per opponent hit by Driftcloud Wave, independent durations
+    conditions: []
+    source: Galefeather Pursuit (Storm Pinion)
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 165.89% ATK + 1271 on cast, at talent level 10
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Stars Gather at Dusk (initial healing, at talent level 10)
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 77.41% ATK + 593 periodically, at talent level 10
+    duration: 16
+    stacking: none
+    conditions: []
+    source: Stars Gather at Dusk (Starwicker continuous healing, at talent level 10)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: jump height increased while Adeptal Assistance is active
+    duration: 16
+    stacking: none
+    conditions: []
+    source: Stars Gather at Dusk (Adeptal Assistance)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Word of Wind and Flower, White Clouds at Dawn, Stars Gather at Dusk,
+      Galefeather Pursuit, Consider, the Adeptus in Her Realm'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

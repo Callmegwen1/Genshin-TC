@@ -1,0 +1,818 @@
+{
+ "benchmark_cases": [
+  "ayaka_freeze_core"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 43.5,
+   "fit_source": "gcsim",
+   "label": "Kamisato Ayaka hypercarry · Freeze · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 40.1,
+   "route": "exact_community",
+   "sd": 5.0,
+   "template": "freeze",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 42.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe",
+    "Sucrose"
+   ],
+   "ranking": 39.7,
+   "route": "pair_model",
+   "sd": 4.1,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 40.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl, Melt",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "ranking": 37.7,
+   "route": "exact_community",
+   "sd": 4.0,
+   "template": "auto_mono_cryo",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.6,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe",
+    "Sucrose"
+   ],
+   "ranking": 37.1,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Shenhe",
+    "Xingqiu"
+   ],
+   "ranking": 33.1,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.4,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Shenhe",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 33.1,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 34.5,
+   "fit_source": "pairmodel",
+   "label": "Kamisato Ayaka hypercarry · Freeze",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe",
+    "Xingqiu"
+   ],
+   "ranking": 32.0,
+   "route": "pair_model",
+   "sd": 3.7,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.7,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu spread damage · Melt + Vaporize · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Xingqiu"
+   ],
+   "ranking": 27.3,
+   "route": "pair_model",
+   "sd": 6.6,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.5,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Melt + Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Shenhe",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 26.8,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 30.3,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 26.7,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 29.3,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 26.0,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.7,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu hypercarry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Mona",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 24.1,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.5,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha dual carry · Melt · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Sucrose"
+   ],
+   "ranking": 23.8,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.3,
+   "fit_source": "pairmodel",
+   "label": "Mona and Kaedehara Kazuha dual carry · Vaporize · incidental Swirl",
+   "lead": "Mona",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mona",
+    "Sucrose"
+   ],
+   "ranking": 21.4,
+   "route": "pair_model",
+   "sd": 5.7,
+   "template": "auto_mono_pyro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 25.0,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Mona",
+    "Shenhe",
+    "Xingqiu"
+   ],
+   "ranking": 21.4,
+   "route": "pair_model",
+   "sd": 5.3,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 26.5,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Vaporize + Melt",
+   "lead": "Bennett",
+   "lineup": [
+    "Bennett",
+    "Mona",
+    "Shenhe",
+    "Sucrose"
+   ],
+   "ranking": 21.0,
+   "route": "pair_model",
+   "sd": 8.1,
+   "template": "auto_melt_pyro_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.5,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha and Mona dual carry · Vaporize + Melt · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 20.8,
+   "route": "pair_model",
+   "sd": 5.5,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 28.8,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu spread damage · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Mona",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 20.8,
+   "route": "pair_model",
+   "sd": 11.8,
+   "template": "auto_anemo_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 27.5,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · incidental Swirl",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Mona",
+    "Shenhe",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "ranking": 19.8,
+   "route": "pair_model",
+   "sd": 11.3,
+   "template": "auto_anemo_carry",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 23.1,
+   "fit_source": "pairmodel",
+   "label": "Xingqiu dual carry · Vaporize",
+   "lead": "Xingqiu",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mona",
+    "Xingqiu"
+   ],
+   "ranking": 19.6,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "vaporize_pyro",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Mavuika",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   54.4
+  ],
+  [
+   "Skirk",
+   [
+    "Mona",
+    "Shenhe",
+    "Skirk",
+    "Xingqiu"
+   ],
+   50.9
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Sucrose"
+   ],
+   47.4
+  ],
+  [
+   "Lohen",
+   [
+    "Lohen",
+    "Mona",
+    "Shenhe",
+    "Sucrose"
+   ],
+   47.3
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Lyney",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   46.9
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 1.9,
+   "teams": [
+    [
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "note": "",
+   "score": 19.4,
+   "teams": [
+    [
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   "note": "",
+   "score": 20.1,
+   "teams": [
+    [
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 30.3,
+   "teams": [
+    [
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 43.5,
+   "fit_source": "gcsim",
+   "label": "Kamisato Ayaka hypercarry · Freeze · incidental Swirl",
+   "lead": "Kamisato Ayaka",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "ranking": 40.1,
+   "route": "exact_community",
+   "sd": 5.0,
+   "template": "freeze",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 20.1,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Mavuika",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 14.3,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.12,
+    "second_team_gain": 40.1,
+    "support_contention": []
+   },
+   "expected": 38.5,
+   "gain": 34.4,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 6.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Columbina",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 6.8,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 16,
+    "redundancy_score": 0.07,
+    "second_team_gain": 40.1,
+    "support_contention": []
+   },
+   "expected": 30.2,
+   "gain": 26.9,
+   "kind": "new archetype",
+   "name": "Columbina",
+   "sd": 4.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Neuvillette",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.2,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.01,
+    "second_team_gain": 40.1,
+    "support_contention": []
+   },
+   "expected": 24.5,
+   "gain": 21.3,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 4.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Sucrose",
+    "Xingqiu",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 21,
+    "redundancy_score": 0.13,
+    "second_team_gain": 38.9,
+    "support_contention": []
+   },
+   "expected": 22.3,
+   "gain": 18.9,
+   "kind": "new archetype",
+   "name": "Yelan",
+   "sd": 5.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Escoffier",
+    "Kamisato Ayaka",
+    "Mona",
+    "Shenhe"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.3,
+    "displaced": [],
+    "improved": [
+     "Kamisato Ayaka",
+     "Mona",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 31,
+    "redundancy_score": 0.43,
+    "second_team_gain": 26.7,
+    "support_contention": []
+   },
+   "expected": 20.8,
+   "gain": 17.0,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 9.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Furina",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.13,
+    "second_team_gain": 35.7,
+    "support_contention": []
+   },
+   "expected": 19.0,
+   "gain": 15.7,
+   "kind": "fills a gap",
+   "name": "Furina",
+   "sd": 4.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt",
+     "vaporize"
+    ],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.06,
+    "second_team_gain": 34.4,
+    "support_contention": []
+   },
+   "expected": 19.3,
+   "gain": 14.4,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 7.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Sucrose",
+    "Xilonen",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.14,
+    "second_team_gain": 33.9,
+    "support_contention": []
+   },
+   "expected": 18.8,
+   "gain": 13.9,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 7.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Mona",
+    "Shenhe",
+    "Skirk",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.8,
+    "displaced": [
+     "Kaedehara Kazuha",
+     "Kamisato Ayaka"
+    ],
+    "improved": [
+     "Mona",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.43,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 11.2,
+   "gain": 10.8,
+   "kind": "new archetype",
+   "name": "Skirk",
+   "sd": 7.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Nahida",
+    "Sucrose",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "burgeon"
+    ],
+    "new_viable_teams": 11,
+    "redundancy_score": 0.06,
+    "second_team_gain": 29.9,
+    "support_contention": []
+   },
+   "expected": 13.9,
+   "gain": 9.9,
+   "kind": "fills a gap",
+   "name": "Nahida",
+   "sd": 5.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Varka",
+    "Xingqiu"
+   ],
+   "decomposition": {
+    "best_team_gain": -0.4,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.05,
+    "second_team_gain": 29.8,
+    "support_contention": []
+   },
+   "expected": 33.4,
+   "gain": 9.4,
+   "kind": "new archetype",
+   "name": "Varka",
+   "sd": 37.2,
+   "tier": "C"
+  }
+ ],
+ "viable_carries": []
+}

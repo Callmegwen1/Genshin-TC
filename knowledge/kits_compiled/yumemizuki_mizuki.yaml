@@ -1,0 +1,160 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Yumemizuki Mizuki:
+  schema: 3
+  element: Anemo
+  weapon: catalyst
+  roles:
+  - driver
+  - swirl_support
+  - buffer
+  - healer
+  behavior:
+    field_time: high
+    on_field_damage: false
+    off_field: none
+    driver: true
+    damage_ownership: sub_dps
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+      - reaction
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: em
+    for: buff
+    source:
+    - skill
+  - stat: em
+    for: heal
+    source:
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: reaction_bonus
+    target: party
+    affects:
+      elements:
+      - all
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+    amount: 45% per 100 of Mizuki's Elemental Mastery, at talent level 10
+    duration: while Dreamdrifter lasts (5s, extendable)
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Dreamdrifter
+      text: Mizuki is in the Dreamdrifter state
+    source: Aisa Utamakura Pilgrimage (Dreamdrifter Swirl DMG increase, at talent level 10)
+  - kind: reaction_bonus
+    target: party
+    affects:
+      elements:
+      - all
+    amount: Stellar Swirl DMG +4.5% per 100 of Mizuki's Elemental Mastery, at talent level 10
+    duration: while Dreamdrifter lasts
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Dreamdrifter
+      text: Mizuki is in the Dreamdrifter state
+    source: Aisa Utamakura Pilgrimage (Dreamdrifter Stellar Swirl DMG increase, at talent level 10)
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 100
+    duration: 4
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Dreamdrifter
+      text: other party members hit opponents with Pyro, Hydro, Cryo or Electro attacks during Dreamdrifter
+    source: Thoughts by Day Bring Dreams by Night
+  - kind: em
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 10% of Mizuki's Elemental Mastery
+    duration: while Dreamdrifter lasts
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Dreamdrifter
+      text: Mizuki is in the Dreamdrifter state
+    source: Vast Be the Dream
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Dreamdrifter duration +2.5s per Swirl or Stellar Swirl
+    duration: unknown
+    stacking: once every 0.3s, max 2 times per Dreamdrifter
+    conditions: []
+    source: Bright Moon's Restless Voice
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 235.01% of Mizuki's Elemental Mastery + 692 per Snack picked up below 70% HP (doubled for Mizuki), at talent level
+      10
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Anraku Secret Spring Therapy (Yumemi Style Special Snack, at talent level 10)
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Pure Heart, Pure Dreams, Aisa Utamakura Pilgrimage, Anraku Secret Spring
+      Therapy, Bright Moon''s Restless Voice, Thoughts by Day Bring Dreams by Night, Vast Be the Dream'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,31 @@
+Raiden Shogun:
+  schema: 3
+  element: Electro
+  weapon: polearm
+  roles: [on_field_carry, battery, buffer]
+  behavior:
+    field_time: medium
+    on_field_damage: true
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage: {element: Electro, types: [burst, skill]}
+    application: [{element: Electro, mode: on_field, strength: high}, {element: Electro, mode: off_field, strength: medium}]
+    energy: {burst_cost: 90, dependency: low}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: atk, for: damage, source: [burst, skill]}, {stat: er, for: damage, source: [burst]}]
+  effects:
+    - {kind: dmg_bonus, target: party, affects: {damage_types: [burst]}, amount: "based on each character's Burst Energy Cost",
+       duration: unknown, stacking: none, conditions: [], source: "Transcendence: Baleful Omen (Eye of Stormy Judgment)"}
+    - {kind: energy, target: party, affects: {elements: [all]}, amount: unknown, duration: "Musou Isshin", stacking: none,
+       conditions: [], source: "Secret Art: Musou Shinsetsu"}
+    - {kind: elemental_dmg_bonus, target: self, affects: {elements: [Electro]}, amount: "0.4% per 1% Energy Recharge above 100%",
+       duration: permanent, stacking: none, conditions: [], source: "Enlightened One"}
+  conditions: []
+  reactions: {owns: [], enables: [electrocharged, overloaded, superconduct, aggravate, hyperbloom, swirl-electro], requires: [], aura_supplied: [electro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Transcendence: Baleful Omen, Secret Art: Musou Shinsetsu, Wishes Unnumbered, Enlightened One"
+    community: "How the character is played (KQM, Prydwen): on-field Burst carry and battery (Raiden national, hypercarry)"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

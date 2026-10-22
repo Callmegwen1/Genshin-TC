@@ -1,0 +1,98 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role healer added (measured placement role or owned Swirl)
+Kaeya:
+  schema: 3
+  element: Cryo
+  weapon: sword
+  roles:
+  - off_field_sub_dps
+  - applier
+  - healer
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: medium
+    - element: Cryo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: high
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: atk
+    for: heal
+    source:
+    - skill
+  effects:
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 15% of Kaeya's ATK per Frostgnaw hit
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Cold-Blooded Strike
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - all
+    amount: additional Elemental Particles, max 2 per use
+    duration: unknown
+    stacking: max 2 per Frostgnaw use
+    conditions:
+    - type: reaction_required
+      reactions:
+      - freeze
+      text: opponents Frozen by Frostgnaw
+    source: Glacial Heart
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (packet): Ceremonial Bladework, Frostgnaw, Glacial Waltz, Cold-Blooded Strike, Glacial Heart'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

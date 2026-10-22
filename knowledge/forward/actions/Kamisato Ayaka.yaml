@@ -1,0 +1,341 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Kamisato Ayaka:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 8hqTtTK6fgr9 (house builds)
+    - gcsim community rotation BQMzFRgR98Tm (house builds)
+    - gcsim community rotation H7g6nHJHkwgL (house builds)
+    - gcsim community rotation cTtk9CM9cj9p (house builds)
+    - gcsim community rotation gWtCTLDqgg9w (house builds)
+    - gcsim community rotation pm9btttDtpPK (house builds)
+    - gcsim community rotation rQd7KWdgmBdB (house builds)
+    - gcsim community rotation rmfFbcLhfdbn (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 27 of 32 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.5
+      particles: 5.0
+      hits:
+      - offset: 0.55
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Cryo
+        gauge: 2.0
+      - offset: 0.833
+        type: other
+        mult: 0.0
+        abil: Dash
+        source: gcsim
+        element: Cryo
+        gauge: 1.0
+    dash:
+      duration: 0.583
+      particles: 0.0
+      hits: []
+    burst:
+      duration: 2.067
+      particles: 0.0
+      hits:
+      - offset: 0.933
+        type: other
+        mult: 0.0
+        abil: Freeze Broken
+        source: gcsim
+        element: Physical
+        gauge: 0.0
+      - offset: 1.733
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 1.983
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 2.233
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 2.483
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 2.733
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 2.983
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 3.233
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 3.483
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 3.733
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 3.983
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 4.233
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 4.367
+        type: other
+        mult: 0.0
+        abil: Dash
+        source: gcsim
+        element: Cryo
+        gauge: 1.0
+      - offset: 4.483
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 4.733
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 4.983
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 5.233
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 5.483
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 5.733
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 5.983
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 6.233
+        type: burst
+        table:
+        - burst
+        - Cutting DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 6.733
+        type: burst
+        table:
+        - burst
+        - Bloom DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+    charge:
+      duration: 0.65
+      particles: 0.0
+      hits:
+      - offset: 0.45
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Cryo
+        icd: standard
+        gauge: 1.0
+      - offset: 0.55
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Cryo
+        icd: standard
+        gauge: 1.0
+      - offset: 0.65
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Cryo
+        icd: standard
+        gauge: 1.0
+    wait:
+      duration: 0.2
+      particles: 0.0
+      hits:
+      - offset: 0.383
+        type: other
+        mult: 0.0
+        abil: Freeze Broken
+        source: gcsim
+        element: Physical
+        gauge: 0.0
+      - offset: 1.25
+        type: other
+        mult: 0.0
+        abil: Freeze Broken
+        source: gcsim
+        element: Physical
+        gauge: 0.0
+    attack#0:
+      duration: 0.25
+      particles: 0.0
+      hits:
+      - offset: 0.133
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Cryo
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.433
+      particles: 0.0
+      hits:
+      - offset: 0.167
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Cryo
+        icd: standard
+        gauge: 1.0
+    attack#2:
+      duration: 0.65
+      particles: 0.0
+      hits:
+      - offset: 0.267
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Cryo
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - dash
+    - attack
+  - - dash
+    - attack
+    - charge
+  - - attack
+    - charge
+    - dash
+    - attack
+    - attack
+    - charge
+    - attack
+    - attack
+    - charge
+  follow:
+    skill: dash
+    burst: attack
+  first: skill
+  causal: {}

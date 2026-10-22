@@ -1,0 +1,39 @@
+Sandrone:
+  schema: 2
+  provisional: true
+  role: carry
+  element: Cryo
+  weapon: claymore
+  analogue: Eula             # simulated Cryo claymore carry in Superconduct teams; Stellar-Conduct replaces Superconduct
+  field: {behaviour: on_field, share: [0.35, 0.65]}       # Fagio keeps attacking while she is off-field
+  personal_damage: {tier: high, share: [0.4, 0.65]}
+  application: {Cryo.on: [2.0, 5.0], Cryo.off: [1.0, 3.0]}
+  buffs:
+    - {kind: reaction_conversion, target: party, condition: "always (Stellar Jubilee)",
+       text: "Superconduct becomes Stellar-Conduct and Cryo Swirl becomes Stellar Swirl; their Base DMG +0.7% per 100 ATK, max 14%"}
+    - {kind: em, target: self, condition: "always (A Lady's Code of Conduct)", text: "EM +8 per 100 ATK, max +160"}
+    - {kind: damage_scaling, target: self, condition: "Radiance: Stellar Glimmer, Decoding Power above 50",
+       text: "second Prism Shot deals 400%; Burst ray +10% per Refined Tactics stack"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [superconduct], enables: [superconduct, swirl-cryo], converts: {superconduct: Stellar-Conduct, swirl-cryo: Stellar Swirl}}
+  preferred_systems: [superconduct, swirl-cryo]
+  restrictions:
+    - {rule: needs_element, any_of: [Electro, Anemo], why: "her damage rides on Stellar-Conduct (needs Electro) or Stellar Swirl (needs Anemo)"}
+  synergies:
+    - {with: Odette, why: "Prydwen's best teammate: Cryo application, buffs, and the same Stellar conversion"}
+    - {with: Yae Miko, why: "off-field Electro for Stellar-Conduct"}
+    - {with: Alyosha, why: "Electro healer whose Radiance buffs Stellar-Conduct"}
+  expected_archetypes:
+    auto_superconduct_cryo_carry: {as: carry, quality: 4}
+    auto_mono_cryo: {as: carry, quality: 3}
+  sources:
+    amber: "Official kit text (Project Amber cache): Self-Evident Proposition, Differential Analysis, Q.E.D., Eternal Speculation Engine, A Lady's Code of Conduct, Stellar Jubilee"
+    prydwen: "Prydwen guide: DPS tier T0; teams Sandrone / Yae Miko / Odette / Escoffier (100), C6 Alyosha (100.2), Qiqi variant (78.7), Stellar Swirl (64.9)"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: judgment, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

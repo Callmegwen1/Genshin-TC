@@ -1,0 +1,143 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Navia:
+  schema: 3
+  element: Geo
+  weapon: claymore
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Geo
+      types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: high
+    - element: Geo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Geo, cannot be overridden by other infusions
+    duration: 4
+    stacking: none
+    conditions: []
+    source: Undisclosed Distribution Channels
+  - kind: dmg_bonus
+    target: self
+    affects:
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: 0.4
+    duration: 4
+    stacking: none
+    conditions: []
+    source: Undisclosed Distribution Channels
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 20% per Pyro/Electro/Cryo/Hydro party member, max 40%
+    duration: unknown
+    stacking: up to 2 times
+    conditions:
+    - type: party_element_count
+      elements:
+      - Pyro
+      - Electro
+      - Cryo
+      - Hydro
+      full: 2
+      text: 20% ATK per Pyro/Electro/Cryo/Hydro party member, up to 2 stacks
+    source: Mutual Assistance Network
+  - kind: dmg_bonus
+    target: self
+    affects:
+      damage_types:
+      - skill
+    amount: 15% per Crystal Shrapnel stack consumed beyond 3
+    duration: unknown
+    stacking: up to 6 stacks of Crystal Shrapnel
+    conditions:
+    - type: reaction_required
+      reactions:
+      - crystallize
+      - lunarcrystallize
+      text: stacks come from party Crystallize shards or Lunar-Crystallize reactions
+    source: Ceremonial Crystalshot
+  conditions:
+  - type: party_element_count
+    elements:
+    - Pyro
+    - Electro
+    - Cryo
+    - Hydro
+    full: 2
+    text: ATK bonus and Crystal Shrapnel generation depend on Pyro/Electro/Cryo/Hydro party members (full with two)
+  reactions:
+    owns: []
+    enables: []
+    requires:
+    - crystallize
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - electro
+    - cryo
+    - hydro
+  sources:
+    amber: 'Official kit text (Project Amber cache): Blunt Refusal, Ceremonial Crystalshot, As the Sunlit Sky''s Singing Salute,
+      Undisclosed Distribution Channels, Mutual Assistance Network'
+    community: 'How the character is played and engine measurements: on-field Geo carry fed by Crystallize shards (52% field
+      share, 58% team damage)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

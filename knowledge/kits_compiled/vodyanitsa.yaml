@@ -1,0 +1,157 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Vodyanitsa:
+  schema: 3
+  element: Hydro
+  weapon: catalyst
+  roles:
+  - debuffer
+  - healer
+  - applier
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Hydro
+      types:
+      - skill
+      - summon
+      - burst
+    application:
+    - element: Hydro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - summon
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - skill
+  effects:
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Hydro
+      - Cryo
+    amount: 0.3
+    duration: 6
+    stacking: at talent level 10
+    conditions: []
+    source: 'Rechitativ: Sonorous Dawn (Skill DMG and Horn of Spring''s Call hits)'
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 593 + 5.04% of Vodyanitsa's Max HP every 1.5s (at talent level 10)
+    duration: 16
+    stacking: none
+    conditions: []
+    source: 'Rechitativ: Sonorous Dawn (Song of Ages Past)'
+  - kind: interruption
+    target: active
+    affects:
+      elements:
+      - all
+    amount: increased resistance to interruption
+    duration: 16
+    stacking: none
+    conditions: []
+    source: 'Rechitativ: Sonorous Dawn (Song of Ages Past)'
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - burst
+    amount: 0.864
+    duration: unknown
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Song of Ages Past
+      text: when in the Song of Ages Past state
+    source: 'Koda: Sink With Thee'
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Anemo
+    amount: 0.35
+    duration: 6
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Wandering Vortex generated or detonated
+      text: Stellar Vortex / Stellar Swirl turned into Wandering Vortex while Song of Ages Past is active
+    source: The Last Djeguako Songstress
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 'Radiance: Stellar Swirl state extended by 4s'
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Song of Ages Past
+      text: 'party members entering Radiance: Stellar Swirl while Song of Ages Past is active'
+    source: The Last Djeguako Songstress
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 25 stacks of Lead Vocal and 10 stacks of Chorus (effects not described)
+    duration: 30
+    stacking: refreshed when the Elemental Skill is used
+    conditions: []
+    source: Dirge of the Fandyr
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - electrocharged
+    - freeze
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Rechitativ: Sonorous Dawn, Koda: Sink With Thee, The Last Djeguako Songstress,
+      Dirge of the Fandyr'
+    community: Engine measurements and general knowledge of how the character is played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,96 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 2 note(s).
+#   role grouping added (measured placement role or owned Swirl)
+#   role swirl_support added (measured placement role or owned Swirl)
+Lan Yan:
+  schema: 3
+  element: Anemo
+  weapon: catalyst
+  roles:
+  - shielder
+  - applier
+  - grouping
+  - swirl_support
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: medium
+    - element: Hydro
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: atk
+    for: shield
+    source:
+    - skill
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: em
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 497.66% ATK + 2542 at talent level 10; 250% efficiency vs Anemo or the absorbed element
+    duration: 12.5
+    stacking: none
+    conditions: []
+    source: Swallow-Wisp Pinion Dance (Swallow-Wisp Shield, at talent level 10)
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-cryo
+    - swirl-electro
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - cryo
+    - electro
+  sources:
+    amber: 'Official kit text (packet): Black Pheasant Strides on Water, Swallow-Wisp Pinion Dance, Lustrous Moonrise, Four
+      Sealing Divination Charms, Skyfeather Evil-Subduing Charm'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,116 @@
+# CI/CD: on every push to main, run the fast test subset, build the API image, push it to ECR and roll it out on ECS.
+# AWS access is OIDC: GitHub signs a token for this workflow run and AWS exchanges it for 1-hour credentials of the
+# gtc-github-deploy role (infra/main.tf). No AWS keys are stored in GitHub.
+#
+# Repository variables (Settings > Secrets and variables > Actions > Variables):
+#   AWS_DEPLOY_ROLE_ARN   terraform output github_deploy_role_arn
+#   CACHE_BUCKET          terraform output cache_bucket
+name: deploy
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["**.md", "docs/**"]
+  workflow_dispatch:
+
+permissions:
+  id-token: write # request the OIDC token
+  contents: read
+
+concurrency: # one deployment at a time; a newer push waits instead of racing
+  group: deploy-main
+  cancel-in-progress: false
+
+env:
+  AWS_REGION: us-east-2
+  ECR_REPOSITORY: gtc-api
+  ECS_CLUSTER: gtc-cluster
+  ECS_SERVICE: gtc-api
+  TASK_FAMILY: gtc-api
+  CONTAINER_NAME: api
+  GTC_CACHE_OFFLINE: "1" # tests and image use the cache from S3, never the network
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download the game-data cache from S3
+        run: aws s3 sync "s3://${{ vars.CACHE_BUCKET }}/amber" data/sources/cache/amber --only-show-errors
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+          cache: pip
+
+      - name: Install
+        run: pip install -e . -r api/requirements-dev.txt
+
+      - name: Fast test subset (API + forward model + regression)
+        # the full 415-test suite needs local-only data (account snapshots, community sims): run it locally
+        run: python -m pytest -q $(grep -v '^#' tests/ci_fast.txt)
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download the game-data cache from S3 (baked into the image)
+        run: aws s3 sync "s3://${{ vars.CACHE_BUCKET }}/amber" data/sources/cache/amber --only-show-errors
+
+      - name: Log in to ECR
+        id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push the image (tag = commit SHA)
+        id: image
+        env:
+          IMAGE: ${{ steps.ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+        run: |
+          # tags are immutable in ECR: a re-run of the same commit reuses the image it already pushed
+          if aws ecr describe-images --repository-name "$ECR_REPOSITORY" --image-ids imageTag="${{ github.sha }}" >/dev/null 2>&1; then
+            echo "image for this commit already in ECR"
+          else
+            docker build --platform linux/amd64 --provenance=false -t "$IMAGE" .
+            docker push "$IMAGE"
+          fi
+          echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
+
+      - name: Current task definition
+        run: aws ecs describe-task-definition --task-definition "$TASK_FAMILY" --query taskDefinition > task-definition.json
+
+      - name: New task definition revision with this image
+        id: render
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: task-definition.json
+          container-name: ${{ env.CONTAINER_NAME }}
+          image: ${{ steps.image.outputs.image }}
+
+      - name: Deploy to ECS and wait until stable
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.render.outputs.task-definition }}
+          cluster: ${{ env.ECS_CLUSTER }}
+          service: ${{ env.ECS_SERVICE }}
+          wait-for-service-stability: true
+
+      - name: Report the new public IP
+        # the security group admits only the owner's IP, so the runner cannot smoke-test; it reports where to look
+        run: |
+          IP=$(bash scripts/ecs_ip.sh "$ECS_CLUSTER" "$ECS_SERVICE")
+          echo "Deployed ${{ github.sha }} at http://$IP:8000" | tee -a "$GITHUB_STEP_SUMMARY"

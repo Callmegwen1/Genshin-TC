@@ -1,0 +1,127 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role swirl_support added (measured placement role or owned Swirl)
+Xiao:
+  schema: 3
+  element: Anemo
+  weapon: polearm
+  roles:
+  - on_field_carry
+  - swirl_support
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Anemo
+      types:
+      - plunge
+      - normal
+      - skill
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 70
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Anemo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Anemo, cannot be overridden
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Bane of All Evil (Yaksha's Mask)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: 95.2% at talent level 10
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Bane of All Evil (Yaksha's Mask, at talent level 10)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 5%, +5% every 3s, max 25%
+    duration: while Bane of All Evil lasts
+    stacking: grows every 3s up to 25%
+    conditions:
+    - type: character_state
+      state: Bane of All Evil active
+      text: under Bane of All Evil
+    source: 'Conqueror of Evil: Tamer of Demons'
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - skill
+    amount: 0.15
+    duration: 7
+    stacking: max 3 stacks, new stack refreshes duration
+    conditions: []
+    source: 'Dissolution Eon: Heaven Fall'
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Lemniscatic Wind Cycling, Bane of All Evil, Conqueror of Evil: Tamer
+      of Demons, Dissolution Eon: Heaven Fall'
+    engine: 'Engine measurements: field share 65%, share of team damage 61%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

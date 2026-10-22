@@ -1,0 +1,402 @@
+{
+ "benchmark_cases": [
+  "pull_enabler_for_skirk"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.9,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 43.5,
+   "route": "pair_model",
+   "sd": 12.4,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.1,
+   "fit_source": "pairmodel",
+   "label": "Skirk on-field · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk",
+    "Zhongli"
+   ],
+   "ranking": 32.8,
+   "route": "pair_model",
+   "sd": 9.4,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.2,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Shenhe",
+    "Skirk",
+    "Zhongli"
+   ],
+   "ranking": 32.6,
+   "route": "pair_model",
+   "sd": 12.8,
+   "template": "auto_mono_cryo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.2,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Skirk",
+    "Zhongli"
+   ],
+   "ranking": 29.5,
+   "route": "pair_model",
+   "sd": 8.4,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 24.2,
+   "fit_source": "pairmodel",
+   "label": "Kaedehara Kazuha and Shenhe dual carry · Melt · incidental Swirl",
+   "lead": "Kaedehara Kazuha",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Zhongli"
+   ],
+   "ranking": 19.3,
+   "route": "pair_model",
+   "sd": 7.2,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Shenhe"
+   ],
+   49.2
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Zhongli"
+   ],
+   48.2
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Lyney",
+    "Shenhe"
+   ],
+   44.1
+  ],
+  [
+   "Gaming",
+   [
+    "Bennett",
+    "Gaming",
+    "Kaedehara Kazuha",
+    "Shenhe"
+   ],
+   41.4
+  ],
+  [
+   "Clorinde",
+   [
+    "Bennett",
+    "Clorinde",
+    "Kaedehara Kazuha",
+    "Shenhe"
+   ],
+   40.0
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 2.5,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "note": "",
+   "score": 24.5,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "note": "",
+   "score": 23.5,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 34.5,
+   "teams": [
+    [
+     "Bennett",
+     "Kaedehara Kazuha",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.9,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 43.5,
+   "route": "pair_model",
+   "sd": 12.4,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  }
+ ],
+ "plan_value": 23.5,
+ "pulls": [
+  {
+   "best_team": [
+    "Furina",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 17.2,
+    "displaced": [
+     "Bennett"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Shenhe",
+     "Skirk"
+    ],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 16.7,
+   "gain": 17.2,
+   "kind": "fills a gap",
+   "name": "Furina",
+   "sd": 17.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Shenhe",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 10.0,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Shenhe",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 10,
+    "redundancy_score": 0.43,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 8.7,
+   "gain": 10.0,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 16.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 9.9,
+    "displaced": [
+     "Bennett"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Shenhe",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 12.1,
+   "gain": 9.9,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 20.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 8.6,
+    "displaced": [
+     "Bennett"
+    ],
+    "improved": [
+     "Kaedehara Kazuha",
+     "Shenhe",
+     "Skirk"
+    ],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 7,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 6.9,
+   "gain": 8.6,
+   "kind": "fills a gap",
+   "name": "Yelan",
+   "sd": 15.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Shenhe",
+    "Skirk",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 7.6,
+    "displaced": [
+     "Kaedehara Kazuha"
+    ],
+    "improved": [
+     "Bennett",
+     "Shenhe",
+     "Skirk"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 10,
+    "redundancy_score": 0.49,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 7.2,
+   "gain": 7.6,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 17.1,
+   "tier": "C"
+  }
+ ],
+ "viable_carries": []
+}

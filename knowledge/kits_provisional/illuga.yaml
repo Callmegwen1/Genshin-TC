@@ -1,0 +1,36 @@
+Illuga:
+  schema: 2
+  provisional: true
+  role: support
+  element: Geo
+  weapon: polearm
+  analogue: Gorou            # simulated Geo buffer; Illuga's buff is Geo DMG scaled by his EM, larger for Lunar-Crystallize
+  field: {behaviour: off_field, share: [0.05, 0.15]}
+  personal_damage: {tier: minimal, share: [0.0, 0.1]}
+  application: {Geo.off: [0.5, 1.5]}
+  buffs:
+    - {kind: dmg_bonus, target: element:Geo, condition: "Haunted Night's Oriole-Song (Burst), consumes Nightingale's Song stacks",
+       text: "Geo DMG of nearby active party members increased based on Illuga's EM; more for Lunar-Crystallize; more with 1/2/3 Hydro or Geo members"}
+    - {kind: crit, target: element:Geo, condition: "20 s after his Skill or Burst (Torchforger's Covenant)", text: "Geo DMG CRIT Rate +5%, CRIT DMG +10%; EM +50 under Ascendant Gleam"}
+    - {kind: moonsign, target: party, condition: "always", text: "party Moonsign +1 level"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [], enables: [crystallize]}
+  preferred_systems: [lunarcrystallize, crystallize]
+  restrictions:
+    - {rule: needs_count, element: Geo, min: 2, why: "his buffs apply to Geo DMG, so another Geo member must deal it"}
+  synergies:
+    - {with: Zibai, why: "Prydwen: makes the most of all his buffs"}
+    - {with: Linnea, why: "Lunar-Crystallize"}
+    - {with: Columbina, why: "Hydro for Lunar-Crystallize and Moonsign"}
+  roles: {buffer_general: 4, moonsign: 3, support_geo_carry: 4}
+  sources:
+    amber: "Official kit text (Project Amber cache): Dawnbearing Songbird, Shadowless Reflection, Torchforger's Covenant, Demonhunter's Dusk, Moonsign Benediction: Unwithering in Winter"
+    prydwen: "Prydwen guide: Support tier T1.5; teams Zibai / Linnea / Columbina / Illuga (100), Gorou variant (85)"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: judgment, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

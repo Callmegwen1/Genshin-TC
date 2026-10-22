@@ -1,0 +1,470 @@
+{
+ "benchmark_cases": [
+  "no_raiden_damage_anemo_carry"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.2,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Swirl, Superconduct",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Shenhe"
+   ],
+   "ranking": 36.1,
+   "route": "pair_model",
+   "sd": 6.0,
+   "template": "auto_anemo_carry",
+   "tier": "D"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Shenhe"
+   ],
+   60.3
+  ],
+  [
+   "Skirk",
+   [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   53.4
+  ],
+  [
+   "Neuvillette",
+   [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Raiden Shogun"
+   ],
+   51.2
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   50.0
+  ],
+  [
+   "Gaming",
+   [
+    "Citlali",
+    "Gaming",
+    "Kaedehara Kazuha",
+    "Shenhe"
+   ],
+   48.5
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Shenhe"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 1.9,
+   "teams": [
+    [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun",
+     "Shenhe"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Shenhe"
+   ],
+   "note": "",
+   "score": 18.6,
+   "teams": [
+    [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun",
+     "Shenhe"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Shenhe"
+   ],
+   "note": "",
+   "score": 16.1,
+   "teams": [
+    [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun",
+     "Shenhe"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 30.3,
+   "teams": [
+    [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun",
+     "Shenhe"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.2,
+   "fit_source": "pairmodel",
+   "label": "Raiden Shogun hypercarry · incidental Swirl, Superconduct",
+   "lead": "Raiden Shogun",
+   "lineup": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Shenhe"
+   ],
+   "ranking": 36.1,
+   "route": "pair_model",
+   "sd": 6.0,
+   "template": "auto_anemo_carry",
+   "tier": "D"
+  }
+ ],
+ "plan_value": 16.1,
+ "pulls": [
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Shenhe"
+   ],
+   "decomposition": {
+    "best_team_gain": 24.2,
+    "displaced": [
+     "Raiden Shogun"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Shenhe"
+    ],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 4,
+    "redundancy_score": 0.19,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 23.8,
+   "gain": 24.2,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 8.2,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "decomposition": {
+    "best_team_gain": 17.3,
+    "displaced": [
+     "Raiden Shogun"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Shenhe"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 2,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 23.8,
+   "gain": 17.3,
+   "kind": "new archetype",
+   "name": "Skirk",
+   "sd": 16.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   "decomposition": {
+    "best_team_gain": 17.1,
+    "displaced": [
+     "Shenhe"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.19,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 21.1,
+   "gain": 17.1,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 13.4,
+   "tier": "D"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Raiden Shogun"
+   ],
+   "decomposition": {
+    "best_team_gain": 15.1,
+    "displaced": [
+     "Shenhe"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun"
+    ],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 4,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 14.7,
+   "gain": 15.1,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 8.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   "decomposition": {
+    "best_team_gain": 7.4,
+    "displaced": [
+     "Shenhe"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun"
+    ],
+    "new_mechanics": [
+     "freeze"
+    ],
+    "new_viable_teams": 4,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 6.5,
+   "gain": 7.4,
+   "kind": "fills a gap",
+   "name": "Furina",
+   "sd": 7.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Raiden Shogun"
+   ],
+   "decomposition": {
+    "best_team_gain": 7.0,
+    "displaced": [
+     "Shenhe"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.22,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 7.8,
+   "gain": 7.0,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 9.5,
+   "tier": "D"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 4.7,
+    "displaced": [
+     "Shenhe"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 4,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 5.8,
+   "gain": 4.7,
+   "kind": "new archetype",
+   "name": "Yelan",
+   "sd": 9.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Raiden Shogun"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.6,
+    "displaced": [
+     "Shenhe"
+    ],
+    "improved": [
+     "Citlali",
+     "Kaedehara Kazuha",
+     "Raiden Shogun"
+    ],
+    "new_mechanics": [
+     "quicken"
+    ],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.2,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": -0.4,
+   "gain": 0.6,
+   "kind": "upgrade",
+   "name": "Nahida",
+   "sd": 7.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Raiden Shogun",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.4,
+    "displaced": [
+     "Shenhe"
+    ],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 4,
+    "redundancy_score": 0.29,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": -1.1,
+   "gain": 0.4,
+   "kind": "no change",
+   "name": "Xilonen",
+   "sd": 7.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Varka"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 0,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": []
+}

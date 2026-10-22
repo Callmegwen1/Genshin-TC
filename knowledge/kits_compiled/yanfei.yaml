@@ -1,0 +1,116 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Yanfei:
+  schema: 3
+  element: Pyro
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: medium
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 80
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - charged
+    amount: 0.544
+    duration: 15
+    stacking: at talent level 10; ends if Yanfei leaves the field
+    conditions: []
+    source: Done Deal (Brilliance)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+    amount: 5% per Scarlet Seal consumed by a Charged Attack (max 3 Seals)
+    duration: 6
+    stacking: a new Charged Attack replaces the previous effect
+    conditions: []
+    source: Proviso
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - normal
+      - charged
+    amount: Normal Attack hits grant Scarlet Seals (max 3); Charged Attack consumes all Seals for larger AoE and DMG; Skill
+      and Burst grant max Seals, Brilliance grants 1 Seal per 1s
+    duration: unknown
+    stacking: max 3 Scarlet Seals; lost on leaving field
+    conditions: []
+    source: Seal of Approval (Scarlet Seals)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - charged
+    amount: additional AoE Pyro DMG equal to 80% of ATK on Charged Attack CRIT
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Blazing Eye
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Seal of Approval, Signed Edict, Done Deal, Proviso, Blazing Eye'
+    engine: 'Engine measurements: field share 48%, team damage share 38%, Pyro on 6.2 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

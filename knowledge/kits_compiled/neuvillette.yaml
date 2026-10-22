@@ -1,0 +1,140 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role healer added (measured placement role or owned Swirl)
+Neuvillette:
+  schema: 3
+  element: Hydro
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  - applier
+  - healer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Hydro
+      types:
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 70
+      dependency: low
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: hp
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: 'absorbing Sourcewater Droplets speeds up the Seal of Arbitration; a formed Seal unleashes Charged Attack: Equitable
+      Judgment (no Stamina, 3s continuous AoE Hydro DMG; drains HP while above 50%)'
+    duration: 3
+    stacking: unknown
+    conditions: []
+    source: As Water Seeks Equilibrium (Equitable Judgment)
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown per Sourcewater Droplet absorbed
+    duration: unknown
+    stacking: unknown
+    conditions: []
+    source: As Water Seeks Equilibrium (Sourcewater Droplets)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: Equitable Judgment deals 110%/125%/160% of its original DMG at 1/2/3 Past Draconic Glories stacks
+    duration: 30
+    stacking: max 3 stacks; each reaction kind gives an independent stack
+    conditions:
+    - type: reaction_required
+      reactions:
+      - vaporize
+      - freeze
+      - electrocharged
+      - lunarcharged
+      - bloom
+      - lunarbloom
+      - swirl-hydro
+      - crystallize
+      - lunarcrystallize
+      text: a party member triggers Vaporize, Frozen, Electro-Charged, Lunar-Charged, Bloom, Lunar-Bloom, Hydro Swirl, Hydro
+        Crystallize or Lunar-Crystallize
+    source: Heir to the Ancient Sea's Authority (Past Draconic Glories)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Hydro
+    amount: 0.6% per 1% of current HP above 30% of Max HP, max 30%
+    duration: unknown
+    stacking: max 30%
+    conditions:
+    - type: character_state
+      state: HP above 30%
+      text: current HP greater than 30% of Max HP
+    source: Discipline of the Supreme Arbitration
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - freeze
+    - electrocharged
+    - bloom
+    - swirl-hydro
+    - crystallize
+    requires:
+    - vaporize
+    - freeze
+    - electrocharged
+    - lunarcharged
+    - bloom
+    - lunarbloom
+    - swirl-hydro
+    - crystallize
+    - lunarcrystallize
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): As Water Seeks Equilibrium, O Tears, I Shall Repay, O Tides, I Have Returned,
+      Heir to the Ancient Sea''s Authority, Discipline of the Supreme Arbitration'
+    engine: 'Engine measurements: field share 62%, team damage share 62%, 2% off-field damage, Hydro on-field application
+      6.1 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

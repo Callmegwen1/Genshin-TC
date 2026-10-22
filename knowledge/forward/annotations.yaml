@@ -1,0 +1,157 @@
+# Forward-model annotations (FM-3): what the forward model needs that a kit's effect text does not state as numbers.
+# Read by gtc/forward/effects.py. Each entry patches the kit effect whose `source` starts with `match` (and has `kind`
+# when given). Facts stay in the kits (knowledge/kits, knowledge/kits_compiled); this file adds how to resolve them:
+#
+#   trigger    actions that start the effect: skill | skill_hold | burst | normal | charged | plunge | dash | swirl |
+#              always | "hit:<ability>" (a hit of the caster with that ability name prefix, e.g. Mona's bubble popping).
+#              A trace action "skill" counts as a press.
+#   _snapshot  per character: damage types whose hits use the buffs active when the owner cast the action that
+#              produced them (snapshotting), not those active at the hit. Sourced from gcsim's implementation.
+#   delay      seconds from the trigger to the start (Mona's Omen starts when the bubble pops)
+#   duration   seconds, or {table: [skill|burst|normal, label], index}
+#   amount     number; {table: [kind, label], index, of: atk|hp|def|em|er|base_atk} (table value x the caster's stat);
+#              {of: stat, rate, per, cap, above} (rate x (stat - above) / per, capped)
+#   by_count   {elements, values}: amount by the number of party members of these elements (Escoffier: 5/10/15/55%)
+#   quota      hits that consume the effect, per receiver: number or {table: [...], index} (Shenhe's Icy Quill)
+#   element_from: swirl   the effect is for the swirled element (Kazuha A4, Sucrose A1)
+#   conditions replaces the effect's conditions (faction_count: {faction, min})
+#   special    fanfare (Furina): the amount comes from the party-HP model in gtc/forward/effects.py
+#
+# Talent tables are read at the build's talent level. reviewed: claude (human review pending).
+_factions:
+  # Moonsign (Nod-Krai): kits with a "Moonsign Benediction" passive. Hexerei: kits with a "Witch's Eve Rite" passive.
+  # Derived automatically from Amber talent names in gtc/forward/effects.py; listed here only as overrides.
+  {}
+
+_snapshot:   # gcsim otherwise keeps buffs on a character as statuses (see model.py "active" targets)
+  Kaedehara Kazuha: [burst]   # Kazuha Slash's DoT and absorbed damage snapshot at cast (game and gcsim)
+
+Kamisato Ayaka:
+  - {match: "Amatsumi Kunitsumi Sanctification", trigger: [skill]}
+  - {match: "Kanten Senmyou Blessing", trigger: [dash]}
+
+Shenhe:
+  - {match: "Spring Spirit Summoning (Icy Quill)", trigger: [skill], duration: {table: [skill, "Press/Hold Duration"], index: 0},
+     amount: {table: [skill, "DMG Bonus"], of: atk}, quota: {table: [skill, "Press/Hold Trigger Quota"], index: 0}}
+  - {match: "Divine Maiden's Deliverance", trigger: [burst], duration: {table: [burst, "Duration"]},
+     amount: {table: [burst, "RES Decrease"]}}
+  - {match: "Deific Embrace", trigger: [burst], duration: {table: [burst, "Duration"]}}
+  - {match: "Spirit Communion Seal (press)", trigger: [skill]}
+  - {match: "Spirit Communion Seal (hold)", trigger: [skill_hold]}
+
+Kaedehara Kazuha:
+  - {match: "Poetics of Fuubutsu", trigger: [swirl], element_from: swirl, amount: {of: em, rate: 0.0004}}
+
+Mona:
+  # Omen: applied from the bubble's first hit for the bubble's life (Illusory Bubble Duration); in Freeze the frozen
+  # enemy keeps the bubble, so this is the window gcsim shows (approximation; Omen's own 4-5 s after a pop is shorter).
+  # Omen is an additive DMG% (as gcsim).
+  - {match: "Stellaris Phantasm (Omen)", trigger: ["hit:Illusory Bubble (Initial)"], duration: {table: [burst, "Illusory Bubble Duration"]},
+     amount: {table: [burst, "DMG Bonus"], index: 0}}
+  - {match: "Waterborne Destiny", trigger: [always], amount: {of: er, rate: 0.2}}
+
+Furina:
+  - {match: "Let the People Rejoice", trigger: [burst], duration: {table: [burst, "Duration"]}, special: fanfare, conditions: []}
+  - {match: "Unheard Confession", trigger: [always], amount: {of: hp, rate: 0.007, per: 1000, cap: 0.28}}
+
+Escoffier:
+  - {match: "Inspiration-Immersed Seasoning", trigger: [skill, burst],
+     by_count: {elements: [Hydro, Cryo], values: [0.05, 0.10, 0.15, 0.55]}}
+
+Chiori:
+  - {match: "The Finishing Touch", trigger: [always]}
+
+Raiden Shogun:
+  - {match: "Transcendence: Baleful Omen", trigger: [skill], duration: {table: [skill, "Duration"]},
+     amount: {table: [skill, "Elemental Burst DMG Bonus"], per_burst_cost: true}}
+  - {match: "Enlightened One", trigger: [always], amount: {of: er, rate: 0.4, above: 1.0}}
+
+Razor:
+  - {match: "Witch's Eve Rite: Surge of Lightning", trigger: [burst], duration: {table: [burst, "Duration"]},
+     amount: {of: atk, rate: 0.70}, conditions: [{type: faction_count, faction: hexerei, min: 2, text: "Hexerei: Secret Rite (2+ Hexerei members)"}]}
+
+Bennett:
+  - {match: "Fantastic Voyage (Inspiration Field)", kind: atk, trigger: [burst], duration: {table: [burst, "Duration"]},
+     amount: {table: [burst, "ATK Bonus Ratio"], of: base_atk}}
+
+Xingqiu:
+  - {match: "Blades Amidst Raindrops", trigger: [always]}
+
+Chevreuse:
+  - {match: "Vanguard's Coordinated Tactics", trigger: [skill, burst]}
+  - {match: "Vertical Force Coordination", trigger: ["reaction:overload"], duration: 30,
+     amount: {of: hp, rate: 0.01, per: 1000, cap: 0.40}, conditions: []}   # after an Overcharged Ball (needs Overloaded)
+
+Ineffa:
+  - {match: "Panoramic Permutation Protocol", trigger: [burst], amount: {of: atk, rate: 0.06}}
+  - {match: "Moonsign Benediction: Assemblage Hub", kind: reaction_base, trigger: [always],
+     amount: {of: atk, rate: 0.007, per: 100, cap: 0.14}}
+
+Sucrose:
+  - {match: "Catalyst Conversion", trigger: [swirl], element_from: swirl}
+  - {match: "Mollis Favonius", trigger: [skill, burst], amount: {of: em, rate: 0.2}}
+
+Flins:
+  - {match: "Whispering Flame", trigger: [always], amount: {of: atk, rate: 0.08, cap: 160}}
+  - {match: "Symphony of Winter", trigger: [always],
+     conditions: [{type: faction_count, faction: moonsign, min: 2, text: "Moonsign: Ascendant Gleam (2+ Moonsign members)"}]}
+  - {match: "Moonsign Benediction: Old World Secrets", kind: reaction_base, trigger: [always],
+     amount: {of: atk, rate: 0.007, per: 100, cap: 0.14}}
+
+Aino:
+  - {match: "Structured Power Booster", trigger: [always], amount: {of: em, rate: 0.5}}
+
+Lohen:
+  # Flippant Masterpiece: +15% ATK for 8 s after a teammate's Cryo reaction while in Masterstroke. Approximated as
+  # the whole Masterstroke window when the team can trigger a Cryo reaction (the 8 s windows are not tracked).
+  - {match: "Flippant Masterpiece (triggering party member)", trigger: [skill], duration: {table: [skill, "Masterstroke"]},
+     conditions: [{type: reaction_required, reactions: [melt, freeze, superconduct, swirl-cryo], text: "a teammate triggers a Cryo reaction"}]}
+  - {match: "Flippant Masterpiece (Lohen)", trigger: [skill], duration: {table: [skill, "Masterstroke"]},
+     conditions: [{type: reaction_required, reactions: [melt, freeze, superconduct, swirl-cryo], text: "a teammate triggers a Cryo reaction"}]}
+  # Hexerei: Secret Rite also needs Will to Win at 50% of an unknown cap: left unknown (no credit)
+
+Hu Tao:
+  - {match: "Guide to Afterlife (ATK Increase", trigger: [skill], duration: {table: [skill, "Duration"]},
+     amount: {table: [skill, "ATK Increase"], of: hp, cap_of: {of: base_atk, rate: 4.0}}, conditions: []}
+  - {match: "Sanguine Rouge", trigger: [always], conditions: []}   # assumed: HP kept at or below 50%
+
+Neuvillette:
+  - {match: "Heir to the Ancient Sea's Authority", kind: base_multiplier, trigger: [always],
+     amount: {resource: glories, steps: [1.1, 1.25, 1.6]}, conditions: []}
+  - {match: "Discipline of the Supreme Arbitration", trigger: [always], amount: 0.30, conditions: []}   # assumed HP >= 80%
+
+Nahida:
+  - {match: "Compassion Illuminated", trigger: [burst], duration: {table: [burst, "Base Duration"]},
+     amount: {of: em, rate: 0.25, cap: 250}, conditions: []}
+  - {match: "Illusory Heart (Pyro", trigger: [burst], duration: {table: [burst, "Base Duration"]},
+     by_count: {elements: [Pyro], values: [0.2678, 0.4018]}}
+  - {match: "Awakening Elucidated", kind: dmg_bonus, trigger: [always], amount: {of: em, rate: 0.001, above: 200, cap: 0.8}}
+
+Kuki Shinobu:
+  - {match: "Heart's Repose", trigger: [always], amount: {of: em, rate: 0.25}}
+
+Zhongli:
+  - {match: "Dominus Lapidis (Jade Shield)", kind: res_shred, trigger: [skill], duration: {table: [skill, "Shield Duration"]}, amount: 0.2}
+
+Yelan:
+  # Adapt With Ease ramps 1% -> 50% over the Burst; the average over 15 s is used (assumed)
+  - {match: "Adapt With Ease", trigger: [burst], duration: {table: [burst, "Duration"]}, amount: 0.255}
+
+Baizhu:
+  - {match: "All Things Are of the Earth (Year of Verdant Favor)", trigger: [burst], duration: 14,
+     amount: {of: hp, rate: 0.02, per: 1000, cap: 1.0}, conditions: []}
+  - {match: "All Things Are of the Earth (Year of Verdant Favor, Aggravate", trigger: [burst], duration: 14,
+     amount: {of: hp, rate: 0.008, per: 1000, cap: 0.4}, conditions: []}
+
+Yae Miko:
+  - {match: "Enlightened Blessing", trigger: [always], amount: {of: em, rate: 0.0015}}
+
+Xiangling:
+  # A4 chili: picked up when Guoba leaves (assumed 7 s after the Skill)
+  - {match: "Beware, It's Super Hot!", trigger: [skill], delay: 7.0, duration: 10, conditions: []}
+
+Fischl:
+  - {match: "Witch's Eve Rite: Phantasmal Nocturne", kind: atk_pct, trigger: ["reaction:overload"], duration: 10,
+     conditions: [{type: hexerei_count, min: 2, text: "Hexerei: Secret Rite (2+ Hexerei members)"}]}
+  - {match: "Witch's Eve Rite: Phantasmal Nocturne", kind: em, trigger: ["reaction:electrocharged|lunarcharged"], duration: 10,
+     conditions: [{type: hexerei_count, min: 2, text: "Hexerei: Secret Rite (2+ Hexerei members)"}]}

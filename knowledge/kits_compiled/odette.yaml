@@ -1,0 +1,135 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Odette:
+  schema: 3
+  element: Cryo
+  weapon: sword
+  roles:
+  - off_field_sub_dps
+  - enabler
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - summon
+      - burst
+      - reaction
+    application:
+    - element: Cryo
+      mode: off_field
+      strength: medium
+    - element: Cryo
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - summon
+    - burst
+    - reaction
+  - stat: atk
+    for: buff
+    source:
+    - 'Stellar Jubilee: Dance of Aurore'
+  effects:
+  - kind: reaction_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      reactions: []
+    amount: 0.5
+    duration: 20
+    stacking: Stellar Glimmer reaction DMG, at talent level 10
+    conditions: []
+    source: 'Presto: Bluebird Finale (Snow Swan''s Dream, at talent level 10)'
+  - kind: reaction_conversion
+    target: party
+    affects:
+      elements:
+      - all
+      reactions:
+      - superconduct
+      - swirl-cryo
+    amount: Superconduct becomes Stellar-Conduct; Cryo Swirl becomes Stellar Swirl
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - superconduct
+      - swirl-cryo
+      text: a party member triggers Superconduct or Cryo Swirl
+    source: 'Stellar Jubilee: Dance of Aurore'
+  - kind: reaction_base
+    target: party
+    affects:
+      elements:
+      - all
+      reactions: []
+    amount: 0.7% Base DMG per 100 Odette ATK, max 14%
+    duration: unknown
+    stacking: max 14%; Stellar-Conduct / Stellar Swirl
+    conditions:
+    - type: reaction_required
+      reactions:
+      - superconduct
+      - swirl-cryo
+      text: converted Superconduct or Cryo Swirl
+    source: 'Stellar Jubilee: Dance of Aurore'
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 4 stacks of Marvelous Splendor (effect not stated)
+    duration: unknown
+    stacking: unknown
+    conditions: []
+    source: Spring Rite of the Chosen One
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - superconduct
+    - swirl-cryo
+    - freeze
+    - melt
+    requires:
+    - superconduct
+    - swirl-cryo
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (packet): Adagio: Phantom Night Dancers, Presto: Bluebird Finale, Spring Rite of the Chosen
+      One, Pathetique of Pateticheskaya, Stellar Jubilee: Dance of Aurore'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

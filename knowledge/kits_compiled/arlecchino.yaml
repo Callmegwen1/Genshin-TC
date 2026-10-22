@@ -1,0 +1,185 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role healer added (measured placement role or owned Swirl)
+Arlecchino:
+  schema: 3
+  element: Pyro
+  weapon: polearm
+  roles:
+  - on_field_carry
+  - healer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+    - burst
+  - stat: atk
+    for: heal
+    source:
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Normal, Charged and Plunging Attacks converted to Pyro DMG; cannot be overridden
+    duration: while in Masque of the Red Death
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Bond of Life >= 30% of Max HP
+      text: Masque of the Red Death state requires a Bond of Life of at least 30% of her Max HP
+    source: Invitation to a Beheading (Masque of the Red Death)
+  - kind: flat_dmg
+    target: self
+    affects:
+      damage_types:
+      - normal
+    amount: ATK multiplied by a ratio of her current Bond of Life percentage; consumes 7.5% of current Bond of Life per hit
+    duration: while in Masque of the Red Death
+    stacking: Bond of Life consumed at most every 0.03s
+    conditions:
+    - type: character_state
+      state: Masque of the Red Death
+      text: Normal Attacks while in the Masque of the Red Death state
+    source: Invitation to a Beheading (Masque of the Red Death)
+  - kind: cooldown
+    target: self
+    affects:
+      damage_types:
+      - skill
+    amount: All Is Ash CD -0.8s each time Bond of Life is consumed by a Normal Attack
+    duration: unknown
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: Masque of the Red Death
+      text: Bond of Life consumed by Normal Attacks
+    source: Invitation to a Beheading (Masque of the Red Death)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Bond of Life worth 65% of Max HP per absorbed Blood-Debt Directive, max 145% of Max HP within 35s after the Skill
+    duration: 35
+    stacking: limit 145% of Max HP per Skill use
+    conditions: []
+    source: All Is Ash (Blood-Debt Directive)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Bond of Life worth 130% when absorbing a Blood-Debt Due or when a Directed opponent is defeated
+    duration: unknown
+    stacking: cannot exceed the All Is Ash limit
+    conditions: []
+    source: Agony Alone May Be Repaid
+  - kind: cooldown
+    target: self
+    affects:
+      damage_types:
+      - skill
+    amount: clears the CD of All Is Ash
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Balemoon Rising
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 150% Bond of Life + 150% ATK
+    duration: unknown
+    stacking: at talent level 10
+    conditions: []
+    source: Balemoon Rising (at talent level 10)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+    amount: 0.4
+    duration: while in combat
+    stacking: none
+    conditions: []
+    source: The Balemoon Alone May Know
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 1% All Elemental and Physical RES per 100 ATK above 1,000, max 20%
+    duration: unknown
+    stacking: max 20%
+    conditions: []
+    source: Strength Alone Can Defend
+  conditions: []
+  reactions:
+    owns:
+    - vaporize
+    - melt
+    - overloaded
+    enables: []
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Invitation to a Beheading, All Is Ash, Balemoon Rising, Agony Alone May
+      Be Repaid, Strength Alone Can Defend, The Balemoon Alone May Know'
+    engine: 'Engine measurements: field share 61%, team damage share 71%, 0% off-field damage, Pyro on-field application 5.9
+      per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    reactions:
+      source: engine
+      span: reactions she triggers
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

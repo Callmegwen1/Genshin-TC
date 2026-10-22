@@ -1,0 +1,129 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Candace:
+  schema: 3
+  element: Hydro
+  weapon: polearm
+  roles:
+  - buffer
+  - applier
+  - shielder
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Hydro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: medium
+    - element: Hydro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: weak
+  scaling:
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: shield
+    source:
+    - skill
+  - stat: hp
+    for: buff
+    source:
+    - Celestial Dome of Sand
+  effects:
+  - kind: shield
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 21.6% Max HP + 2542 at talent level 10; absorbs Hydro DMG 250% more effectively
+    duration: until the Elemental Skill is unleashed (Hold)
+    stacking: none
+    conditions: []
+    source: 'Sacred Rite: Heron''s Sanctum (Hold barrier)'
+  - kind: dmg_bonus
+    target: active
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: 0.2
+    duration: 9
+    stacking: none; Elemental DMG with Normal Attacks only, at talent level 10
+    conditions: []
+    source: 'Sacred Rite: Wagtail''s Tide (Prayer of the Crimson Crown)'
+  - kind: infusion
+    target: active
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Hydro Infusion for Sword, Claymore and Polearm wielders
+    duration: 9
+    stacking: none
+    conditions: []
+    source: 'Sacred Rite: Wagtail''s Tide (Prayer of the Crimson Crown)'
+  - kind: dmg_bonus
+    target: active
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: 0.5% per 1,000 points of Candace's Max HP
+    duration: while Prayer of the Crimson Crown is active
+    stacking: Elemental DMG with Normal Attacks only
+    conditions: []
+    source: Celestial Dome of Sand
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - electrocharged
+    - freeze
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Gleaming Spear - Guardian Stance, Sacred Rite: Heron''s Sanctum, Sacred
+      Rite: Wagtail''s Tide, Aegis of Crossed Arrows, Celestial Dome of Sand'
+    engine: 'Engine measurements from community simulations: field share 15%, team damage share 6%, 54% of own damage off
+      field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

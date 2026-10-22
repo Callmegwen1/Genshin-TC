@@ -1,0 +1,222 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Lauma:
+  schema: 3
+  element: Dendro
+  weapon: catalyst
+  roles:
+  - buffer
+  - debuffer
+  - enabler
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Dendro
+      types:
+      - skill
+      - reaction
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: medium
+    - element: Dendro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: em
+    for: damage
+    source:
+    - skill
+  - stat: atk
+    for: damage
+    source:
+    - skill
+  - stat: em
+    for: buff
+    source:
+    - burst
+    - 'Moonsign Benediction: Nature''s Chorus'
+  effects:
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Dendro
+      - Hydro
+    amount: 0.25
+    duration: 10
+    stacking: none; at talent level 10
+    conditions: []
+    source: 'Runo: Dawnless Rest of Karsikko (Elemental RES Decrease, at talent level 10)'
+  - kind: flat_dmg
+    target: party
+    affects:
+      reactions:
+      - bloom
+      - hyperbloom
+      - burgeon
+    amount: 499.97% of Lauma's Elemental Mastery per Pale Hymn stack consumed
+    duration: 15
+    stacking: 18 Pale Hymn stacks from Burst + 6 per Moon Song consumed; 1 stack consumed per opponent hit; at talent level
+      10
+    conditions: []
+    source: 'Runo: All Hearts Become the Beating Moon (Pale Hymn, at talent level 10)'
+  - kind: flat_dmg
+    target: party
+    affects:
+      reactions:
+      - lunarbloom
+    amount: 400.03% of Lauma's Elemental Mastery per Pale Hymn stack consumed
+    duration: 15
+    stacking: 18 Pale Hymn stacks from Burst + 6 per Moon Song consumed; 1 stack consumed per opponent hit; at talent level
+      10
+    conditions: []
+    source: 'Runo: All Hearts Become the Beating Moon (Pale Hymn, at talent level 10)'
+  - kind: crit_rate
+    target: party
+    affects:
+      reactions:
+      - bloom
+      - hyperbloom
+      - burgeon
+    amount: Bloom, Hyperbloom and Burgeon can CRIT, CRIT Rate fixed at 15%
+    duration: 20
+    stacking: stacks with similar reaction CRIT Rate effects
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Nascent Gleam'
+      text: party Moonsign Nascent Gleam, for 20s after Lauma's Elemental Skill
+    source: Light for the Frosty Night (Nascent Gleam)
+  - kind: crit_dmg
+    target: party
+    affects:
+      reactions:
+      - bloom
+      - hyperbloom
+      - burgeon
+    amount: CRIT DMG fixed at 100%
+    duration: 20
+    stacking: none
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Nascent Gleam'
+      text: party Moonsign Nascent Gleam, for 20s after Lauma's Elemental Skill
+    source: Light for the Frosty Night (Nascent Gleam)
+  - kind: crit_rate
+    target: party
+    affects:
+      reactions:
+      - lunarbloom
+    amount: 0.1
+    duration: 20
+    stacking: does not stack with the Nascent Gleam buff
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Ascendant Gleam'
+      text: party Moonsign Ascendant Gleam, for 20s after Lauma's Elemental Skill
+    source: Light for the Frosty Night (Ascendant Gleam)
+  - kind: crit_dmg
+    target: party
+    affects:
+      reactions:
+      - lunarbloom
+    amount: 0.2
+    duration: 20
+    stacking: does not stack with the Nascent Gleam buff
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Ascendant Gleam'
+      text: party Moonsign Ascendant Gleam, for 20s after Lauma's Elemental Skill
+    source: Light for the Frosty Night (Ascendant Gleam)
+  - kind: reaction_conversion
+    target: party
+    affects:
+      reactions:
+      - bloom
+    amount: Bloom converted to Lunar-Bloom
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Nature''s Chorus'
+  - kind: reaction_base
+    target: party
+    affects:
+      reactions:
+      - lunarbloom
+    amount: Lunar-Bloom Base DMG +0.0175% per point of Lauma's Elemental Mastery, max 14%
+    duration: unknown
+    stacking: max 14%
+    conditions: []
+    source: 'Moonsign Benediction: Nature''s Chorus'
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: party Moonsign +1 level
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Nature''s Chorus (Moonsign)'
+  - kind: dmg_bonus
+    target: self
+    affects:
+      damage_types:
+      - skill
+    amount: 0.04% per point of Elemental Mastery, max 32%
+    duration: unknown
+    stacking: max 32%
+    conditions: []
+    source: Cleansing for the Spring
+  conditions: []
+  reactions:
+    owns:
+    - lunarbloom
+    enables:
+    - bloom
+    - lunarbloom
+    - hyperbloom
+    - burgeon
+    - quicken
+    - spread
+    - burning
+    requires:
+    - bloom
+    - hyperbloom
+    - burgeon
+    - lunarbloom
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Peregrination of Linnunrata, Runo: Dawnless Rest of Karsikko, Runo: All
+      Hearts Become the Beating Moon, Light for the Frosty Night, Cleansing for the Spring, Moonsign Benediction: Nature''s
+      Chorus'
+    engine: 'Engine measurements: field share 14%, team damage share 11%, 52% off-field damage, Dendro application 1.8 on
+      / 3.7 off field per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

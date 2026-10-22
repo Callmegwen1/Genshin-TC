@@ -1,0 +1,195 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Nefer:
+  schema: 3
+  element: Dendro
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  - enabler
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Dendro
+      types:
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: em
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - skill
+    - burst
+  - stat: em
+    for: buff
+    source:
+    - 'Moonsign Benediction: Dusklit Eaves'
+  effects:
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - charged
+    amount: Charged Attack replaced by Phantasm Performance (no Stamina; Nefer and Shades hits scaling on ATK and Elemental
+      Mastery)
+    duration: 9
+    stacking: 3 Phantasm Performance charges; at talent level 10
+    conditions:
+    - type: character_state
+      state: Shadow Dance with at least 1 Verdant Dew
+      text: in the Shadow Dance state with at least 1 Verdant Dew
+    source: 'Senet Strategy: Dance of a Thousand Nights (Phantasm Performance)'
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown
+    duration: 9
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Shadow Dance
+      text: in the Shadow Dance state
+    source: 'Senet Strategy: Dance of a Thousand Nights (Shadow Dance)'
+  - kind: dmg_bonus
+    target: self
+    affects:
+      damage_types:
+      - burst
+    amount: 40% per Veil of Falsehood stack consumed
+    duration: unknown
+    stacking: at talent level 10
+    conditions: []
+    source: 'Sacred Vow: True Eye''s Phantasm (DMG Bonus, at talent level 10)'
+  - kind: other
+    target: self
+    affects:
+      reactions:
+      - lunarbloom
+    amount: Dendro Cores and Lunar-Bloom cores for 15s after her Skill become Seeds of Deceit; absorbing a seed with a Charged
+      Attack or Phantasm Performance grants 1 Veil of Falsehood stack
+    duration: 15
+    stacking: unknown
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Ascendant Gleam'
+      text: party Moonsign Ascendant Gleam
+    source: A Wager of Moonlight (Seeds of Deceit)
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 100
+    duration: 8
+    stacking: none
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Ascendant Gleam, 3 Veil of Falsehood stacks'
+      text: when Veil of Falsehood reaches 3 stacks or the third stack is refreshed
+    source: A Wager of Moonlight (Veil of Falsehood)
+  - kind: other
+    target: self
+    affects:
+      reactions:
+      - lunarbloom
+    amount: Slither state provides additional Verdant Dew; +10% per 100 Elemental Mastery beyond 500, max 50%
+    duration: 5
+    stacking: max 50%
+    conditions:
+    - type: character_state
+      state: Shadow Dance
+      text: in the Shadow Dance state
+    - type: reaction_required
+      reactions:
+      - lunarbloom
+      text: for 5s after a party member triggers Lunar-Bloom
+    source: Daughter of the Dust and Sand
+  - kind: reaction_conversion
+    target: party
+    affects:
+      reactions:
+      - bloom
+    amount: Bloom converted to Lunar-Bloom
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Dusklit Eaves'
+  - kind: reaction_base
+    target: party
+    affects:
+      reactions:
+      - lunarbloom
+    amount: Lunar-Bloom Base DMG +0.0175% per point of Nefer's Elemental Mastery, max 14%
+    duration: unknown
+    stacking: max 14%
+    conditions: []
+    source: 'Moonsign Benediction: Dusklit Eaves'
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: party Moonsign +1 level
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Dusklit Eaves (Moonsign)'
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - bloom
+    - lunarbloom
+    - quicken
+    - spread
+    - burning
+    requires:
+    - lunarbloom
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Striking Serpent, Senet Strategy: Dance of a Thousand Nights, Sacred
+      Vow: True Eye''s Phantasm, A Wager of Moonlight, Daughter of the Dust and Sand, Moonsign Benediction: Dusklit Eaves'
+    engine: 'Engine measurements: field share 62%, team damage share 52%, 0% off-field damage, Dendro on-field application
+      4.5 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

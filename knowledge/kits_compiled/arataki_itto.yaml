@@ -1,0 +1,170 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Arataki Itto:
+  schema: 3
+  element: Geo
+  weapon: claymore
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Geo
+      types:
+      - normal
+      - charged
+      - skill
+    application:
+    - element: Geo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 70
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+  - stat: def
+    for: buff
+    source:
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - skill
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Normal, Charged and Plunging Attacks converted to Geo DMG; cannot be overridden
+    duration: 11
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Raging Oni King
+      text: while in the Raging Oni King state; cleared when Itto leaves the field
+    source: 'Royal Descent: Behold, Itto the Evil! (Raging Oni King)'
+  - kind: atk
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 103.68% of Itto's DEF
+    duration: 11
+    stacking: none; at talent level 10
+    conditions:
+    - type: character_state
+      state: Raging Oni King
+      text: while in the Raging Oni King state
+    source: 'Royal Descent: Behold, Itto the Evil! (ATK Bonus, at talent level 10)'
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - normal
+    amount: Normal Attack SPD +10%
+    duration: 11
+    stacking: none; at talent level 10
+    conditions:
+    - type: character_state
+      state: Raging Oni King
+      text: while in the Raging Oni King state
+    source: 'Royal Descent: Behold, Itto the Evil! (ATK SPD Bonus, at talent level 10)'
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Itto's Elemental and Physical RES -20%
+    duration: 11
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Raging Oni King
+      text: while in the Raging Oni King state
+    source: 'Royal Descent: Behold, Itto the Evil! (RES decrease)'
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: Superlative Superstrength stacks (max 5) from 2nd/4th Normal Attack hits (1/2 stacks), 1st/3rd hits in Raging
+      Oni King, Ushi; each Arataki Kesagiri slash consumes 1 stack
+    duration: unknown
+    stacking: max 5 stacks; gaining refreshes duration
+    conditions: []
+    source: Fight Club Legend (Superlative Superstrength)
+  - kind: flat_dmg
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: 35% of Itto's DEF
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Bloodline of the Crimson Oni (Arataki Kesagiri DMG)
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: +10% ATK SPD per consecutive Arataki Kesagiri slash, max 30%
+    duration: while performing consecutive slashes
+    stacking: max 30%
+    conditions: []
+    source: Arataki Ichiban
+  - kind: interruption
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: unknown
+    duration: while performing consecutive slashes
+    stacking: none
+    conditions: []
+    source: Arataki Ichiban
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - crystallize
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Fight Club Legend, Masatsu Zetsugi: Akaushi Burst!, Royal Descent: Behold,
+      Itto the Evil!, Arataki Ichiban, Bloodline of the Crimson Oni'
+    engine: 'Engine measurements: field share 69%, team damage share 59%, 0% off-field damage, Geo on-field application 4.4
+      per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

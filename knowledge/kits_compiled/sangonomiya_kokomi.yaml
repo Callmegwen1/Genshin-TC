@@ -1,0 +1,149 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Sangonomiya Kokomi:
+  schema: 3
+  element: Hydro
+  weapon: catalyst
+  roles:
+  - healer
+  - applier
+  - off_field_sub_dps
+  behavior:
+    field_time: medium
+    on_field_damage: false
+    off_field: some
+    driver: true
+    damage_ownership: sub_dps
+    damage:
+      element: Hydro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: high
+    - element: Hydro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 70
+      dependency: low
+    sustain:
+      heal: high
+      shield: none
+  scaling:
+  - stat: hp
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  - stat: hp
+    for: heal
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 7.92% Max HP+932 per interval at talent level 10
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Kurage's Oath (Bake-Kurage, at talent level 10)
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 1.45% Max HP+169 per Normal/Charged Attack hit at talent level 10
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Nereid's Ascension (Ceremonial Garment, at talent level 10)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - normal
+      - charged
+      - skill
+    amount: Normal 8.71% / Charged 12.2% / Bake-Kurage 12.77% of Max HP at talent level 10
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Nereid's Ascension (Ceremonial Garment, at talent level 10)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - normal
+      - charged
+    amount: further increase based on 15% of her Healing Bonus
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Song of Pearls
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Nereid's Ascension (Ceremonial Garment)
+  - kind: crit_rate
+    target: self
+    affects:
+      elements:
+      - all
+    amount: -1.0
+    duration: permanent
+    stacking: none
+    conditions: []
+    source: Flawless Strategy (also grants 25% Healing Bonus)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - electrocharged
+    - bloom
+    - freeze
+    - vaporize
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Kurage''s Oath, Nereid''s Ascension, Tamakushi Casket, Song of Pearls,
+      Flawless Strategy'
+    engine: 'Engine measurements: field share 33%, off-field share of own damage 44%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

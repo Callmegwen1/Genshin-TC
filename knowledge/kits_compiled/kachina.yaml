@@ -1,0 +1,88 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Kachina:
+  schema: 3
+  element: Geo
+  weapon: polearm
+  roles:
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Geo
+      types:
+      - skill
+      - summon
+      - burst
+    application:
+    - element: Geo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 70
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - skill
+    - summon
+    - burst
+  effects:
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Geo
+    amount: 0.2
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Mountain Echoes (after a party member triggers a Nightsoul Burst)
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - skill
+      - summon
+    amount: 20% of Kachina's DEF
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: The Weight of Stone (Turbo Twirly DMG)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - crystallize
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Cragbiter, Go, Go Turbo Twirly!, Time to Get Serious!, Mountain Echoes,
+      The Weight of Stone'
+    engine: 'Engine measurements: field share 12%, team damage share 14%, Geo 1.8 off field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,155 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Aloy:
+  schema: 3
+  element: Cryo
+  weapon: bow
+  roles:
+  - buffer
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Cryo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 40
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - skill
+    - burst
+  effects:
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - all
+    amount: 0.15
+    duration: 6
+    stacking: ATK decrease of hit opponents, at talent level 10
+    conditions: []
+    source: Frozen Wilds (ATK Decrease)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: 9.52% / 19.04% / 28.56% at 1 / 2 / 3 Coil stacks
+    duration: cleared 30s after leaving combat
+    stacking: Coil stacks, up to 1 every 0.1s, at talent level 10
+    conditions: []
+    source: Frozen Wilds (Coil)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: 0.476
+    duration: 10
+    stacking: Rushing Ice, entered at 4 Coil stacks, at talent level 10
+    conditions:
+    - type: character_state
+      state: Rushing Ice
+      text: in the Rushing Ice state
+    source: Frozen Wilds (Rushing Ice)
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Cryo
+      damage_types:
+      - normal
+    amount: Normal Attack DMG converted to Cryo
+    duration: 10
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Rushing Ice
+      text: in the Rushing Ice state
+    source: Frozen Wilds (Rushing Ice)
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.16
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Combat Override (on receiving Coil)
+  - kind: atk_pct
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 0.08
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Combat Override (on Aloy receiving Coil)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Cryo
+    amount: 3.5% every 1s, up to 35%
+    duration: while in Rushing Ice
+    stacking: +3.5% per second, max 35%
+    conditions:
+    - type: character_state
+      state: Rushing Ice
+      text: in the Rushing Ice state
+    source: Strong Strike
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    - swirl-cryo
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Rapid Fire, Frozen Wilds, Prophecies of Dawn, Combat Override, Strong
+      Strike'
+    engine: 'Engine measurements: field share 15%, team damage share 9%, Cryo on-field application 1.5 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

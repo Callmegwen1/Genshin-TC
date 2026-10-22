@@ -1,0 +1,28 @@
+Citlali:
+  schema: 3
+  element: Cryo
+  weapon: catalyst
+  roles: [shielder, debuffer, applier]
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: incidental
+    damage: {element: Cryo, types: [skill, burst]}
+    application: [{element: Cryo, mode: off_field, strength: medium}]
+    energy: {burst_cost: 60, dependency: low}
+    sustain: {heal: none, shield: strong}
+  scaling: [{stat: em, for: damage, source: [skill, burst]}, {stat: em, for: shield, source: [skill]}]
+  effects:
+    - {kind: res_shred, target: enemy, affects: {elements: [Pyro, Hydro]}, amount: 0.20, duration: 12, stacking: none,
+       conditions: [{type: reaction_required, reactions: [freeze, melt], text: "after party members trigger Frozen or Melt while Itzpapa is on the field"}],
+       source: "Mamaloaco's Frigid Rain"}
+  conditions: []
+  reactions: {owns: [], enables: [freeze, melt, superconduct], requires: [], aura_supplied: [cryo], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Dawnfrost Darkstar, Edict of Entwined Splendor, Mamaloaco's Frigid Rain, Itzpapalotl's Star Garments"
+    community: "How the character is played (KQM, Prydwen): off-field Cryo shielder and Pyro/Hydro shredder for Melt and Freeze"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

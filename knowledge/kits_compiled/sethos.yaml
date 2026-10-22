@@ -1,0 +1,142 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Sethos:
+  schema: 3
+  element: Electro
+  weapon: bow
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Electro
+      types:
+      - charged
+      - skill
+    application:
+    - element: Electro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - charged
+    - skill
+  - stat: em
+    for: damage
+    source:
+    - charged
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - normal
+    amount: Normal Attacks become piercing Dusk Bolts dealing Electro DMG, considered Charged Attack DMG
+    duration: 8
+    stacking: at talent level 10; canceled when Sethos leaves the field
+    conditions: []
+    source: 'Secret Rite: Twilight Shadowpiercer (Twilight Meditation)'
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - charged
+    amount: 353.09% of Sethos's Elemental Mastery
+    duration: 8
+    stacking: at talent level 10
+    conditions: []
+    source: 'Secret Rite: Twilight Shadowpiercer (Dusk Bolt DMG Increase)'
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - charged
+    amount: 700% of Sethos's Elemental Mastery on Shadowpiercing Shots
+    duration: until 5s after first hit or 4 Shadowpiercing Shots hit; regained 15s after first hit
+    stacking: none
+    conditions: []
+    source: The Sand King's Boon (Scorching Sandshade)
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - Electro
+    amount: 12
+    duration: unknown
+    stacking: at talent level 10
+    conditions:
+    - type: reaction_required
+      reactions:
+      - electrocharged
+      - lunarcharged
+      - superconduct
+      - overloaded
+      - quicken
+      - aggravate
+      - hyperbloom
+      - swirl-electro
+      text: the skill hit triggers an Electro-related reaction
+    source: 'Ancient Rite: The Thundering Sands'
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - charged
+    amount: Aimed Shot charge time -0.285s per point of current Energy (max 20 Energy tallied, min 0.3s); Shadowpiercing Shot
+      consumes the tallied Energy, Charge Level 1 consumes 50%
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Black Kite's Enigma
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - electrocharged
+    - lunarcharged
+    - superconduct
+    - overloaded
+    - quicken
+    - aggravate
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Royal Reed Archery, Ancient Rite: The Thundering Sands, Secret Rite:
+      Twilight Shadowpiercer, Black Kite''s Enigma, The Sand King''s Boon'
+    engine: 'Engine measurements: field share 59%, team damage share 44%, Electro on 6.5 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

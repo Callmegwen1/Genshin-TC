@@ -1,0 +1,139 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Kaveh:
+  schema: 3
+  element: Dendro
+  weapon: claymore
+  roles:
+  - driver
+  - enabler
+  - applier
+  - buffer
+  behavior:
+    field_time: high
+    on_field_damage: false
+    off_field: none
+    driver: true
+    damage_ownership: sub_dps
+    damage:
+      element: Dendro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: low
+      shield: none
+  scaling:
+  - stat: em
+    for: heal
+    source:
+    - An Architect's Undertaking
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Dendro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: attack DMG converted to Dendro, cannot be overridden
+    duration: 12
+    stacking: at talent level 10
+    conditions:
+    - type: character_state
+      state: Painted Dome
+      text: during Painted Dome; canceled when Kaveh leaves the field
+    source: Painted Dome
+  - kind: reaction_bonus
+    target: party
+    affects:
+      reactions:
+      - bloom
+      - lunarbloom
+    amount: 0.4948
+    duration: 12
+    stacking: none; at talent level 10
+    conditions:
+    - type: character_state
+      state: Painted Dome
+      text: Dendro Cores created by own party members through Bloom and Lunar-Bloom deal additional DMG when they burst; canceled
+        when Kaveh leaves the field
+    source: Painted Dome (Dendro Core Burst DMG Bonus at talent level 10)
+  - kind: heal
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 300% of Kaveh's Elemental Mastery
+    duration: instant
+    stacking: once every 0.5s
+    conditions:
+    - type: character_state
+      state: hit by Dendro Core DMG
+      text: when Dendro Core DMG (including Burgeon and Hyperbloom) hits Kaveh
+    source: An Architect's Undertaking
+  - kind: em
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 25
+    duration: until Painted Dome ends
+    stacking: max 4 stacks, once every 0.1s
+    conditions:
+    - type: character_state
+      state: Painted Dome
+      text: after Normal, Charged or Plunging Attacks hit during Painted Dome
+    source: A Craftsman's Curious Conceptions
+  conditions: []
+  reactions:
+    owns:
+    - bloom
+    enables:
+    - bloom
+    - lunarbloom
+    - quicken
+    - spread
+    - burning
+    requires:
+    - bloom
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Schematic Setup, Artistic Ingenuity, Painted Dome, An Architect''s Undertaking,
+      A Craftsman''s Curious Conceptions'
+    community: 'Engine measurements and general play pattern: on-field Dendro Bloom driver'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

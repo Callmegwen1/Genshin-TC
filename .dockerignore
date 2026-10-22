@@ -1,0 +1,16 @@
+# Allowlist: exclude everything, then re-include only what the API image needs.
+# This is what keeps the 13 GB simulation archive, HoYoLAB snapshots, .env cookies, validation sets and the
+# Windows gcsim binary out of the build context. A new top-level folder is excluded until it is listed here.
+*
+
+!api/
+!gtc/
+!knowledge/
+!data/sources/cache/amber/
+
+# never, even inside an allowed folder
+**/__pycache__
+**/*.pyc
+**/.env
+**/*.pkl
+knowledge/my_teams.yaml

@@ -1,0 +1,100 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Eula:
+  schema: 3
+  element: Cryo
+  weapon: claymore
+  roles:
+  - on_field_carry
+  - debuffer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Physical
+      types:
+      - normal
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - skill
+    - burst
+  effects:
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Physical
+      - Cryo
+    amount: 25% Physical RES and 25% Cryo RES
+    duration: 7
+    stacking: at talent level 10; requires consuming Grimheart stacks with Hold
+    conditions: []
+    source: Icetide Vortex (Hold, Grimheart consumed, at talent level 10)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 30% DEF per Grimheart stack, increased interruption resistance
+    duration: 18
+    stacking: up to 2 stacks, at talent level 10
+    conditions: []
+    source: Icetide Vortex (Grimheart, at talent level 10)
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - skill
+    amount: Icetide Vortex CD reset and +1 Grimheart stack
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Wellspring of War-Lust
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - superconduct
+    - freeze
+    - melt
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Icetide Vortex, Glacial Illumination, Roiling Rime, Wellspring of War-Lust'
+    community: 'How the character is played and engine measurements: on-field Physical carry with Physical/Cryo RES shred'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,119 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role swirl_support added (measured placement role or owned Swirl)
+Chasca:
+  schema: 3
+  element: Anemo
+  weapon: bow
+  roles:
+  - on_field_carry
+  - swirl_support
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Anemo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    - element: Pyro
+      mode: on_field
+      strength: medium
+    - element: Hydro
+      mode: on_field
+      strength: low
+    - element: Electro
+      mode: on_field
+      strength: low
+    - element: Cryo
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+      - Hydro
+      - Cryo
+      - Electro
+      damage_types:
+      - charged
+    amount: 15% / 35% / 65% Shining Shadowhunt Shell DMG with 1 / 2 / 3 eligible Elemental Types
+    duration: until the current Multitarget Fire ends
+    stacking: 1 stack of Spirit of the Radiant Shadow per eligible Elemental Type, max 3
+    conditions:
+    - type: party_element_count
+      elements:
+      - Pyro
+      - Hydro
+      - Cryo
+      - Electro
+      full: 3
+      text: one stack per different Pyro/Hydro/Cryo/Electro type in the party, max 3
+    source: Bullet Trick (Spirit of the Radiant Shadow)
+  conditions:
+  - type: party_element_count
+    elements:
+    - Pyro
+    - Hydro
+    - Cryo
+    - Electro
+    full: 3
+    text: Shining Shadowhunt Shell conversions and Bullet Trick stacks scale with the number of Pyro, Hydro, Cryo or Electro
+      party members (up to 3)
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-cryo
+    - swirl-electro
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - cryo
+    - electro
+  sources:
+    amber: 'Official kit text (packet): Phantom Feather Flurry, Spirit Reins, Shadow Hunt, Soul Reaper''s Fatal Round, Bullet
+      Trick, Intent to Cover'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

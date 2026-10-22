@@ -1,0 +1,25 @@
+# Party-composition conditions in kits (game facts from the official kit text). Read by gtc/kit_conditions.py.
+# A lineup that does not meet a support's condition gets that support's partial value: the pair model fits one
+# effect per condition ("present, condition unmet"), measured on simulated lineups (model 6.5), and explanations
+# and recommendability name the unmet condition.
+#
+#   count  the effect scales with the number of party members of these elements; full at `full`
+#   only   the effect needs every party member to be one of these elements
+Escoffier:
+  rule: count
+  elements: [Hydro, Cryo]
+  full: 4
+  text: "Hydro and Cryo RES shred scales with the number of Hydro and Cryo party members (full with all four)"
+Chevreuse:
+  rule: only
+  elements: [Pyro, Electro]
+  text: "party ATK and Pyro/Electro RES shred after Overloaded need an all Pyro and Electro party"
+Nilou:
+  rule: only
+  elements: [Hydro, Dendro]
+  text: "Bountiful Cores need an all Hydro and Dendro party"
+Gorou:
+  rule: count
+  elements: [Geo]
+  full: 3
+  text: "buffs scale with the number of Geo party members (full with three)"

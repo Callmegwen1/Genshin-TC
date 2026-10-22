@@ -1,0 +1,108 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Yelan:
+  schema: 3
+  element: Hydro
+  weapon: bow
+  roles:
+  - off_field_sub_dps
+  - buffer
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Hydro
+      types:
+      - skill
+      - burst
+      - charged
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: medium
+    - element: Hydro
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 70
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - burst
+    - charged
+  effects:
+  - kind: dmg_bonus
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 1% rising by 3.5% per second, max 50%
+    duration: while Exquisite Throw is in play (15s at talent level 10)
+    stacking: recasting the Burst resets it
+    conditions: []
+    source: Adapt With Ease
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Max HP +6%/12%/18%/30% with 1/2/3/4 Elemental Types in the party
+    duration: permanent
+    stacking: none
+    conditions: []
+    source: Turn Control
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - Hydro
+      damage_types:
+      - burst
+    amount: Exquisite Throw coordinated attack 8.77% Max HP x3 at talent level 10, once per second on the active character's
+      Normal Attacks and on each Lifeline explosion
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Depth-Clarion Dice (Exquisite Throw)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - electrocharged
+    - freeze
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Stealthy Bowshot, Lingering Lifeline, Depth-Clarion Dice, Turn Control,
+      Adapt With Ease'
+    engine: 'Engine measurements: field share 20%, team damage share 25%, 70% of own damage off-field, Hydro off 5.1 / on
+      2.2 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

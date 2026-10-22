@@ -1,0 +1,385 @@
+# Benchmark v2: CALIBRATION set. Tuning may read this file and only this file.
+# Scored by `python -m gtc bench` (gtc/bench.py). The old pass/fail suite (knowledge/benchmark.yaml) stays as a
+# regression suite.
+#
+# Case fields:
+#   id, question, account {roster, cons}, confidence (high 3 | medium 2 | low 1, the case's weight),
+#   reason_tags, sensitive_to (parameters the case is built to react to), source (scenario = the user's own
+#   correction; consensus = Claude's reading of community theorycrafting, to be reviewed; data = measured).
+#
+# Questions and their expectations:
+#   pull_ranking   candidates (unowned characters); expected_ranking (ties as inner lists); pairs [{better, worse,
+#                  gap: small|medium|large}]; magnitude {name: [low, high]} for expected gain where trusted
+#   team_ranking   lineups {key: [four names]}; expected_ranking of keys; pairs on keys
+#   plan           expect: team_with + includes/excludes, members_in_plan, max_teams, no_secondary
+#   validity       lineup + expect: legal (a legal four-character team at all, model 6.3), support (well_supported |
+#                  unusual: how well its number is supported), forms_team (it can be evaluated), invalid_as (mechanics
+#                  it cannot perform),
+#                  not_identity (mechanics it must not be labelled as); classification: invalid | valid_misclassified
+#                  | valid_weak | valid
+#   identity       lineup + expect: primary_actor, not_primary, structure, central, incidental, label_excludes
+#   carries        account + expect: viable_includes / viable_excludes (who counts as a real main damage dealer)
+#   mode           two accounts compared on a content mode
+#
+# Gap classes come from the engine's probability that one option beats the other (gtc/estimate.prob_greater):
+# small = under 80% (a tie), medium = 80 to 95%, large = above 95%. An expected small gap is a close call that
+# must stay close. Expectations the engine cannot express yet (requires: planner_v2, identity_v2, structure_v2)
+# are reported as pending, not scored.
+
+cases:
+  # ---------- pull ordering, gaps and magnitudes ----------
+  - id: flins_hydro_support
+    question: pull_ranking
+    account: {roster: [Flins, Ineffa, Sucrose, Barbara, Bennett, Kaedehara Kazuha, Zhongli, Xiangling, Fischl, Diona]}
+    candidates: [Columbina, Furina, Yelan, Escoffier]
+    pairs:
+      - {better: Columbina, worse: Furina, gap: large}
+      - {better: Columbina, worse: Escoffier, gap: large}
+      - {better: Furina, worse: Escoffier, gap: medium}
+    confidence: high
+    reason_tags: [fills-gap, lunar-ecosystem]
+    source: scenario
+  - id: hutao_hydro_support
+    question: pull_ranking
+    account: {roster: [Hu Tao, Zhongli, Bennett, Kaedehara Kazuha, Fischl, Sucrose, Xiangling, Kamisato Ayaka, Shenhe, Mona, Diona]}
+    candidates: [Yelan, Furina, Xilonen, Escoffier]
+    pairs:
+      - {better: Yelan, worse: Escoffier, gap: large}
+      - {better: Furina, worse: Escoffier, gap: medium}
+      - {better: Yelan, worse: Furina, gap: small}
+    confidence: medium
+    reason_tags: [fills-gap, vaporize-enabler]
+    source: consensus
+  - id: neuvillette_support
+    question: pull_ranking
+    account: {roster: [Neuvillette, Kaedehara Kazuha, Zhongli, Xiangling, Bennett, Fischl, Kamisato Ayaka, Shenhe, Mona]}
+    candidates: [Furina, Xilonen, Citlali, Nahida]
+    pairs:
+      - {better: Furina, worse: Nahida, gap: medium}
+      - {better: Furina, worse: Xilonen, gap: small}
+    confidence: medium
+    reason_tags: [fills-gap]
+    source: consensus
+  - id: ayaka_support
+    question: pull_ranking
+    account: {roster: [Kamisato Ayaka, Mona, Kaedehara Kazuha, Diona, Bennett, Xiangling, Raiden Shogun, Xingqiu, Sucrose, Zhongli]}
+    candidates: [Shenhe, Escoffier, Furina, Nahida]
+    pairs:
+      - {better: Shenhe, worse: Nahida, gap: medium}
+      - {better: Shenhe, worse: Escoffier, gap: small}
+    confidence: medium
+    reason_tags: [fills-gap, freeze-buffer]
+    source: consensus
+  - id: mavuika_support
+    question: pull_ranking
+    account: {roster: [Mavuika, Bennett, Xiangling, Kaedehara Kazuha, Zhongli, Xingqiu, Fischl, Sucrose]}
+    candidates: [Citlali, Xilonen, Furina, Escoffier]
+    pairs:
+      - {better: Citlali, worse: Escoffier, gap: medium}
+      - {better: Citlali, worse: Xilonen, gap: small}
+    confidence: medium
+    reason_tags: [fills-gap, nightsoul]
+    source: consensus
+  - id: arlecchino_redundant_pyro_carry
+    question: pull_ranking
+    account: {roster: [Arlecchino, Bennett, Xingqiu, Kaedehara Kazuha, Zhongli, Xiangling, Fischl, Sucrose, Chevreuse]}
+    candidates: [Mavuika, Neuvillette, Furina]
+    pairs:
+      - {better: Neuvillette, worse: Mavuika, gap: medium}
+    confidence: medium
+    reason_tags: [role-redundancy, support-contention]
+    sensitive_to: [account.duplicate_element_factor]
+    source: scenario
+  - id: supports_only_needs_a_carry
+    question: pull_ranking
+    account: {roster: [Bennett, Xingqiu, Xiangling, Kaedehara Kazuha, Sucrose, Zhongli, Fischl, Furina]}
+    candidates: [Arlecchino, Escoffier, Citlali]
+    pairs:
+      - {better: Arlecchino, worse: Escoffier, gap: large}
+      - {better: Arlecchino, worse: Citlali, gap: large}
+    confidence: high
+    reason_tags: [new-team-enabled, carry-gap]
+    source: scenario
+
+  # ---------- team value ordering and close calls ----------
+  - id: hutao_vape_vs_mono
+    question: team_ranking
+    lineups:
+      vape: [Hu Tao, Xingqiu, Yelan, Zhongli]
+      mono: [Hu Tao, Bennett, Xiangling, Zhongli]
+    pairs: [{better: vape, worse: mono, gap: medium}]
+    confidence: medium
+    source: consensus
+  - id: ayaka_freeze_supports
+    question: team_ranking
+    lineups:
+      meta: [Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona]
+      budget: [Kamisato Ayaka, Diona, Sucrose, Mona]
+    pairs: [{better: meta, worse: budget, gap: large}]
+    confidence: high
+    source: consensus
+  - id: nahida_hyperbloom_vs_mixed
+    question: team_ranking
+    lineups:
+      hyperbloom: [Nahida, Kuki Shinobu, Xingqiu, Yelan]
+      mixed: [Nahida, Fischl, Xingqiu, Bennett]
+    pairs: [{better: hyperbloom, worse: mixed, gap: large}]
+    confidence: medium
+    source: consensus
+  - id: raiden_national_vs_lone
+    question: team_ranking
+    lineups:
+      national: [Raiden Shogun, Bennett, Xiangling, Xingqiu]
+      lone: [Raiden Shogun, Diona, Sucrose, Zhongli]
+    pairs: [{better: national, worse: lone, gap: large}]
+    confidence: high
+    source: consensus
+  - id: neuvillette_furina_vs_filler
+    question: team_ranking
+    lineups:
+      furina: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli]
+      filler: [Neuvillette, Bennett, Fischl, Zhongli]
+    pairs: [{better: furina, worse: filler, gap: large}]
+    confidence: high
+    source: consensus
+  - id: mavuika_core_vs_filler
+    question: team_ranking
+    lineups:
+      core: [Mavuika, Citlali, Xilonen, Bennett]
+      filler: [Mavuika, Xiangling, Bennett, Zhongli]
+    pairs: [{better: core, worse: filler, gap: large}]
+    confidence: high
+    source: consensus
+  - id: flins_hydro_close_call
+    question: team_ranking
+    lineups:
+      aino: [Flins, Ineffa, Aino, Sucrose]
+      furina: [Flins, Ineffa, Furina, Sucrose]
+    pairs: [{better: aino, worse: furina, gap: small}]
+    confidence: low
+    source: consensus
+  - id: ayaka_flex_close_call
+    question: team_ranking
+    lineups:
+      kazuha: [Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Furina]
+      sucrose: [Kamisato Ayaka, Shenhe, Sucrose, Furina]
+    pairs: [{better: kazuha, worse: sucrose, gap: small}]
+    confidence: low
+    source: consensus
+
+  # ---------- account plans ----------
+  - id: small_account_keeps_flins_core
+    question: plan
+    account: {roster: [Flins, Ineffa, Aino, Xingqiu, Sucrose, Kaedehara Kazuha, Bennett, Zhongli]}
+    expect: {team_with: Flins, includes: [Aino, Ineffa]}
+    confidence: high
+    reason_tags: [small-account, protect-best-team]
+    sensitive_to: [account.plan_weights, estimate.risk]
+    source: scenario
+  - id: two_independent_teams_both_kept
+    question: plan
+    account: {roster: [Hu Tao, Xingqiu, Yelan, Zhongli, Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona]}
+    expect: {members_in_plan: [Hu Tao, Kamisato Ayaka], team_with: Kamisato Ayaka, includes: [Shenhe, Mona]}
+    confidence: high
+    reason_tags: [two-teams]
+    sensitive_to: [account.plan_weights]
+    source: consensus
+  - id: one_excellent_team_and_leftovers
+    question: plan
+    account: {roster: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli, Amber, Kaeya, Lisa, Noelle]}
+    expect: {team_with: Neuvillette, includes: [Furina, Kaedehara Kazuha], no_secondary: true}
+    confidence: medium
+    reason_tags: [small-account, no-second-team]
+    requires: [planner_v2]
+    source: consensus
+  - id: six_character_account
+    question: plan
+    account: {roster: [Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona, Bennett, Xiangling]}
+    expect: {team_with: Kamisato Ayaka, includes: [Shenhe, Kaedehara Kazuha, Mona], max_teams: 1}
+    confidence: high
+    reason_tags: [small-account]
+    source: consensus
+  - id: shared_premium_support
+    question: plan
+    account: {roster: [Raiden Shogun, Bennett, Xiangling, Xingqiu, Arlecchino, Chevreuse, Fischl, Kaedehara Kazuha, Zhongli]}
+    expect: {members_in_plan: [Raiden Shogun, Arlecchino]}
+    confidence: low
+    reason_tags: [support-contention]
+    source: consensus
+
+  # ---------- validity: what is mechanically possible ----------
+  - id: hyperbloom_needs_electro
+    question: validity
+    lineup: [Nahida, Xingqiu, Yelan, Kaedehara Kazuha]
+    classification: invalid
+    expect: {invalid_as: [hyperbloom]}
+    confidence: high
+    source: consensus
+  - id: freeze_needs_hydro
+    question: validity
+    lineup: [Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Bennett]
+    classification: invalid
+    expect: {invalid_as: [freeze]}
+    confidence: high
+    source: consensus
+  - id: vaporize_needs_hydro
+    question: validity
+    lineup: [Hu Tao, Bennett, Xiangling, Zhongli]
+    classification: invalid
+    expect: {invalid_as: [vaporize]}
+    confidence: high
+    source: consensus
+  - id: neuvillette_with_pyro_is_vaporize
+    question: validity
+    lineup: [Neuvillette, Diluc, Bennett, Xiangling]
+    classification: valid_misclassified
+    expect: {forms_team: true, not_identity: [mono_pyro]}
+    confidence: medium
+    reason_tags: [old-known-invalid]
+    source: scenario
+  - id: raiden_with_cryo_supports
+    question: validity
+    lineup: [Kaedehara Kazuha, Raiden Shogun, Shenhe, Citlali]
+    classification: valid_misclassified
+    expect: {forms_team: true, not_identity: [anemo_carry]}
+    confidence: medium
+    reason_tags: [old-known-invalid]
+    source: scenario
+  - id: skirk_with_geo_and_anemo_is_weak
+    question: validity
+    lineup: [Skirk, Chiori, Lan Yan, Zhongli]
+    classification: valid_weak
+    expect: {forms_team: true, weaker_than: [Skirk, Escoffier, Furina, Citlali]}
+    confidence: medium
+    reason_tags: [old-known-invalid]
+    source: scenario
+
+  # ---------- identity: who and what the team is ----------
+  - id: raiden_dendro_is_raiden_team
+    question: identity
+    lineup: [Raiden Shogun, Kaedehara Kazuha, Xingqiu, Yaoyao]
+    expect: {primary_actor: Raiden Shogun, label_excludes: [Hyperbloom], incidental: [hyperbloom]}
+    confidence: high
+    reason_tags: [misleading-label]
+    source: scenario
+  - id: chevreuse_is_not_the_lead
+    question: identity
+    lineup: [Chevreuse, Xiangling, Raiden Shogun, Yae Miko]
+    expect: {not_primary: [Chevreuse], central: [overloaded]}
+    confidence: high
+    reason_tags: [misleading-label]
+    source: scenario
+  - id: flins_lunar_identity
+    question: identity
+    lineup: [Flins, Columbina, Ineffa, Sucrose]
+    expect: {primary_actor: Flins, central: [lunar_charged]}
+    confidence: high
+    source: consensus
+  - id: ayaka_freeze_identity
+    question: identity
+    lineup: [Kamisato Ayaka, Shenhe, Kaedehara Kazuha, Mona]
+    expect: {primary_actor: Kamisato Ayaka, central: [freeze]}
+    confidence: high
+    source: consensus
+  - id: hutao_vaporize_identity
+    question: identity
+    lineup: [Hu Tao, Xingqiu, Yelan, Zhongli]
+    expect: {primary_actor: Hu Tao, central: [vaporize]}
+    confidence: high
+    source: consensus
+  - id: mizuki_drives
+    question: identity
+    lineup: [Columbina, Ineffa, Ororon, Yumemizuki Mizuki]
+    expect: {not_primary: [Yumemizuki Mizuki], structure: driver}
+    confidence: medium
+    source: data
+
+  # ---------- carries ----------
+  - id: viable_carries_on_a_mixed_account
+    question: carries
+    account: {roster: [Diluc, Bennett, Xingqiu, Kaedehara Kazuha, Zhongli, Amber, Kaeya, Lisa, Noelle, Fischl]}
+    expect: {viable_includes: [Diluc], viable_excludes: [Amber, Kaeya, Lisa]}
+    confidence: medium
+    reason_tags: [carry-gap]
+    sensitive_to: [account.viable_carry_potential]
+    source: consensus
+
+  # ---------- content modes ----------
+  - id: narrow_vs_broad_modes
+    question: mode
+    accounts:
+      narrow: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli, Amber, Kaeya, Lisa, Noelle]
+      broad: [Xiangling, Bennett, Xingqiu, Fischl, Beidou, Sucrose, Chongyun, Diona, Barbara, Noelle, Ningguang, Kaeya, Lisa, Razor, Kujou Sara, Yanfei, Thoma, Collei, Dori, Layla, Kuki Shinobu, Rosaria]
+    expect: {stygian: [narrow, broad], theater: [broad, narrow]}
+    confidence: medium
+    source: consensus
+
+  # ---------- model 6.3: focused reliability batch (Claude's reading of consensus, to be reviewed) ----------
+  - id: close_national_xingqiu_vs_yelan
+    question: team_ranking
+    lineups:
+      xingqiu: [Raiden Shogun, Xiangling, Xingqiu, Bennett]
+      yelan: [Raiden Shogun, Xiangling, Yelan, Bennett]
+    pairs: [{better: yelan, worse: xingqiu, gap: small}]
+    confidence: medium
+    reason_tags: [close-call, roughly-equal]
+    source: consensus
+  - id: support_allocation_two_hydro_carries
+    question: plan
+    account: {roster: [Hu Tao, Neuvillette, Furina, Xingqiu, Yelan, Zhongli, Kaedehara Kazuha, Layla]}
+    expect: {members_in_plan: [Hu Tao, Neuvillette], team_with: Neuvillette, includes: [Furina]}
+    confidence: medium
+    reason_tags: [support-allocation, two-teams, overlap]
+    source: consensus
+  - id: completing_support_beats_redundant_carry
+    question: pull_ranking
+    account: {roster: [Neuvillette, Furina, Kaedehara Kazuha, Zhongli, Hu Tao, Xingqiu, Bennett, Xiangling, Sucrose, Fischl]}
+    candidates: [Yelan, Mualani]
+    # Reviewed in model 6.4: ambiguous. The direction (Yelan completes Hu Tao's double Hydro; Mualani is a third
+    # carry) is a consensus lean, but the size depends on this roster: Hu Tao already has Xingqiu, so Yelan's
+    # increment is modest, and Mualani can form a third team. Encoded as a small-gap lean at low confidence.
+    pairs: [{better: Yelan, worse: Mualani, gap: small}]
+    confidence: low
+    reason_tags: [strong-generic-low-account-value, moderate-generic-high-account-value, ambiguous]
+    source: consensus
+  - id: four_carries_is_a_legal_team
+    question: validity
+    lineup: [Hu Tao, Kamisato Ayaka, Raiden Shogun, Neuvillette]
+    classification: valid_weak
+    expect: {legal: true, support: unusual}
+    confidence: high
+    reason_tags: [manual-team-builder, weird-but-valid]
+    source: consensus
+  - id: off_meta_template_free_team_is_legal
+    question: validity
+    lineup: [Noelle, Xiangling, Fischl, Barbara]
+    classification: valid_weak
+    expect: {legal: true}
+    confidence: high
+    reason_tags: [manual-team-builder, weird-but-valid]
+    source: consensus
+  - id: two_travelers_is_illegal
+    question: validity
+    lineup: [Traveler (Anemo), Traveler (Cryo), Bennett, Xiangling]
+    classification: invalid
+    expect: {legal: false}
+    confidence: high
+    reason_tags: [manual-team-builder]
+    source: consensus
+  - id: support_only_lineup_is_flagged
+    question: validity
+    lineup: [Citlali, Xilonen, Furina, Bennett]
+    classification: valid_weak
+    expect: {legal: true, support: unusual, weaker_than: [Mavuika, Citlali, Xilonen, Bennett]}
+    confidence: high
+    reason_tags: [false-positive-leftover, support-only]
+    source: consensus
+  - id: provisional_team_is_kit_model
+    question: validity
+    lineup: [Sandrone, Yae Miko, Odette, Alyosha]
+    classification: valid
+    expect: {legal: true, support: unusual}
+    confidence: high
+    reason_tags: [provisional-kit, low-data]
+    source: consensus
+

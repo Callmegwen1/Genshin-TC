@@ -1,0 +1,31 @@
+# Tunable scoring weights. Every number the engine uses lives here or in the other knowledge files.
+
+# Investment factor = weighted sum of components, each 0-1.
+investment_weights: {level: 0.30, talents: 0.20, weapon: 0.20, artifacts: 0.30}
+
+# Character level mapped to a 0-1 value, linear between points.
+level_curve: {1: 0.0, 20: 0.1, 40: 0.25, 50: 0.4, 60: 0.55, 70: 0.72, 80: 0.9, 90: 1.0}
+
+# Effective talent level that counts as fully invested.
+talent_target: 9
+
+# Weapon value multiplier by rarity, applied on top of the level curve.
+weapon_rarity: {1: 0.3, 2: 0.4, 3: 0.65, 4: 0.85, 5: 1.0}
+
+# A slot's contribution = quality/5 * (floor + (1 - floor) * investment).
+# floor is how much an unbuilt character still contributes through their kit alone.
+investment_floor: 0.3
+
+# Team-level rules applied to every template.
+sustain_roles: [healer, shield]
+no_sustain_penalty: 5
+
+# Team rating penalty per level of Prydwen's 'expert (-N)' tag on the carry.
+# expert (-2) means Prydwen drops the character two tiers for non-expert play.
+execution_penalty_per_level: 0.03
+
+# Faction passives that activate with enough members of the faction, in any archetype.
+# Factions come from Prydwen's synergy tags and become roles named faction_<tag>.
+faction_bonuses:
+  # Keqing Mains notes the Hexerei buffs matter in Flins's Lunar teams; elsewhere they are minor.
+  - {role: faction_hexerei, at_least: 2, bonus: 4, reason: "Hexerei passives with 2+ Hexerei members", templates: [lunar_charged, lunar_charged_offfield]}

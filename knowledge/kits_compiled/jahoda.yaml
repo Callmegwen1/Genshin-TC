@@ -1,0 +1,146 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 2 note(s).
+#   role grouping added (measured placement role or owned Swirl)
+#   role swirl_support added (measured placement role or owned Swirl)
+Jahoda:
+  schema: 3
+  element: Anemo
+  weapon: bow
+  roles:
+  - healer
+  - buffer
+  - battery
+  - grouping
+  - swirl_support
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+      - summon
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: low
+    - element: Hydro
+      mode: off_field
+      strength: high
+    - element: Hydro
+      mode: on_field
+      strength: medium
+    energy:
+      burst_cost: 70
+      dependency: unknown
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: atk
+    for: heal
+    source:
+    - burst
+  effects:
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 143.77% ATK+1102 at talent level 10; lowest HP character additional 55.3% ATK+424
+    duration: 12
+    stacking: none
+    conditions: []
+    source: 'Hidden Aces: Seven Tools of the Hunter (Purrsonal Coordinated Assistance Robots, at talent level 10)'
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 2 Energy per Fluffy Meowball hit
+    duration: unknown
+    stacking: once every 3.5s
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Ascendant Gleam'
+      text: party Moonsign is Ascendant Gleam
+    source: 'Savvy Strategy: Splitting the Spoils (Fluffy Meowball)'
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - Pyro
+      - Hydro
+      - Electro
+      - Cryo
+    amount: 'Robots enhanced by the most common party element: Pyro 130% DMG, Hydro 120% healing, Electro +1 Robot, Cryo -10%
+      attack interval'
+    duration: 12
+    stacking: only one element; tie priority Pyro, Hydro, Electro, Cryo
+    conditions: []
+    source: Plan to Get Paid
+  - kind: em
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 100
+    duration: 6
+    stacking: none
+    conditions:
+    - type: character_state
+      state: healed by a Robot while above 70% HP
+      text: active member's HP above 70% when healed by a Robot
+    source: Sweet Berry Bounty
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: party Moonsign +1 level
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Rooftop Dash'
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Savvy Strategy: Splitting the Spoils, Hidden Aces: Seven Tools of the
+      Hunter, Plan to Get Paid, Sweet Berry Bounty, Moonsign Benediction: Rooftop Dash'
+    engine: 'Engine measurements: field share 27%, off-field share of own damage 66%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

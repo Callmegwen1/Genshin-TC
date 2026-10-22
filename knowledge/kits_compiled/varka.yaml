@@ -1,0 +1,199 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   role swirl_support added (measured placement role or owned Swirl)
+Varka:
+  schema: 3
+  element: Anemo
+  weapon: claymore
+  roles:
+  - on_field_carry
+  - swirl_support
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Anemo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: high
+    - element: Pyro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  - stat: atk
+    for: buff
+    source:
+    - Dawn Wind's March
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Anemo
+      - Pyro
+      - Hydro
+      - Electro
+      - Cryo
+      damage_types:
+      - normal
+      - charged
+    amount: dual claymores deal Elemental DMG matching the party members' Elemental Types; cannot be overridden by infusions
+    duration: 12
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Sturm und Drang
+      text: only in Sturm und Drang mode
+    source: Windbound Execution (Sturm und Drang)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Anemo
+      - Pyro
+      - Hydro
+      - Electro
+      - Cryo
+    amount: 10% Anemo DMG Bonus and corresponding Elemental DMG Bonus per 1,000 ATK, max 25%; only one of Pyro/Hydro/Electro/Cryo
+      by priority order
+    duration: unknown
+    stacking: max 25%
+    conditions:
+    - type: party_element_count
+      elements:
+      - Pyro
+      - Hydro
+      - Electro
+      - Cryo
+      full: 1
+      text: requires a Pyro, Hydro, Electro or Cryo character in the party
+    source: Dawn Wind's March
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+      - skill
+    amount: 140% of original DMG with at least 2 Anemo or 2 same-element Pyro/Hydro/Electro/Cryo characters; 220% with both
+      at once
+    duration: while in Sturm und Drang
+    stacking: none
+    conditions:
+    - type: party_element_count
+      elements:
+      - Anemo
+      - Pyro
+      - Hydro
+      - Electro
+      - Cryo
+      full: 4
+      text: 140% with 2 Anemo or 2 of the same element among Pyro/Hydro/Electro/Cryo; 220% with 2 Anemo and 2 others of the
+        same element
+    - type: character_state
+      state: Sturm und Drang
+      text: Normal and Charged Attacks, Azure Devour and Four Winds' Ascension in Sturm und Drang
+    source: Dawn Wind's March
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+      - skill
+    amount: 7.5% per stack (Azure Fang's Oath)
+    duration: 8
+    stacking: max 4 stacks; each character grants 1 stack per second
+    conditions:
+    - type: reaction_required
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+      text: nearby party members trigger Swirl
+    source: Wind's Vanguard
+  - kind: cooldown
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - skill
+    amount: Four Winds' Ascension CD reduced by 1s per Normal Attack hit in Sturm und Drang
+    duration: unknown
+    stacking: unknown
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: 'Hexerei: Secret Rite needs at least 2 Hexerei characters'
+    source: 'Witch''s Eve Rite: Dawn''s Return (Hexerei: Secret Rite)'
+  conditions:
+  - type: party_element_count
+    elements:
+    - Anemo
+    - Pyro
+    - Hydro
+    - Electro
+    - Cryo
+    full: 4
+    text: Sturm und Drang DMG is 140% with 2 Anemo or 2 same-element Pyro/Hydro/Electro/Cryo members, 220% with 2 Anemo plus
+      2 of one such element
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Favonius Bladework: Dancing Radiance, Windbound Execution, Northwind
+      Avatar, Dawn Wind''s March, Wind''s Vanguard, Witch''s Eve Rite: Dawn''s Return'
+    engine: 'Engine measurements from community simulations: field share 64%, team damage share 74%, all own damage on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

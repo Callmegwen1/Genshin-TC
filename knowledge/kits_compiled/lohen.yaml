@@ -1,0 +1,149 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Lohen:
+  schema: 3
+  element: Cryo
+  weapon: polearm
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Cryo
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: atk_pct
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 0.15
+    duration: 8
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - melt
+      - freeze
+      - superconduct
+      - swirl-cryo
+      - crystallize
+      text: another nearby party member triggers a Cryo reaction
+    - type: character_state
+      state: Masterstroke mode
+      text: Lohen is in Masterstroke mode
+    source: Flippant Masterpiece (triggering party member)
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.15
+    duration: 8
+    stacking: none
+    conditions:
+    - type: reaction_required
+      reactions:
+      - melt
+      - freeze
+      - superconduct
+      - swirl-cryo
+      - crystallize
+      text: another nearby party member triggers a Cryo reaction
+    - type: character_state
+      state: Masterstroke mode
+      text: Lohen is in Masterstroke mode
+    source: Flippant Masterpiece (Lohen)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Skill Level of Unforeseen Strike +1 (High Spirits)
+    duration: 9s, +6s if a teammate's talent level is not lower
+    stacking: once every 18s
+    conditions: []
+    source: When the Mood Strikes
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+    amount: 0.4
+    duration: 6
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: party includes at least 2 Hexerei characters
+    - type: character_state
+      state: Will to Win at 50% or more of max
+      text: Lohen's Will to Win at 50% or more when Etched Into Bone and Soul hits or Manifest Judgment is unleashed
+    source: 'Witch''s Eve Rite: Unhealing Thorn (Hexerei: Secret Rite)'
+  conditions:
+  - type: hexerei_count
+    min: 2
+    text: 'Hexerei: Secret Rite (Normal and Charged Attack DMG +40%) needs at least 2 Hexerei characters in the party'
+  reactions:
+    owns:
+    - melt
+    - freeze
+    - superconduct
+    enables: []
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Spear of Favonius — Broken Oath, Unforeseen Strike, Manifest Judgment,
+      Moratorium on Questioning, Flippant Masterpiece, When the Mood Strikes, Witch''s Eve Rite: Unhealing Thorn'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    reactions:
+      source: engine
+      span: reactions in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

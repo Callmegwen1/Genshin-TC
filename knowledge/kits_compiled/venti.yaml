@@ -1,0 +1,144 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Venti:
+  schema: 3
+  element: Anemo
+  weapon: bow
+  roles:
+  - swirl_support
+  - grouping
+  - off_field_sub_dps
+  - battery
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Anemo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Anemo
+      mode: on_field
+      strength: low
+    - element: Anemo
+      mode: off_field
+      strength: high
+    - element: Cryo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: energy
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 15
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Stormeye (after Wind's Grand Ode ends)
+  - kind: energy
+    target: matching_element_members
+    affects:
+      elements:
+      - Hydro
+      - Pyro
+      - Cryo
+      - Electro
+    amount: 15
+    duration: unknown
+    stacking: members of the absorbed element
+    conditions: []
+    source: Stormeye (after an Elemental Absorption)
+  - kind: dmg_bonus
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 0.5
+    duration: 4
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: party includes at least 2 Hexerei characters
+    - type: reaction_required
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+      text: the active character triggers Swirl or Stellar Swirl while the Stormeye is active
+    source: 'Witch''s Eve Rite: Temporal Wind''s Eulogy (Hexerei: Secret Rite)'
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - burst
+    amount: Stormeye deals 135% of its original DMG
+    duration: 4
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: party includes at least 2 Hexerei characters
+    - type: reaction_required
+      reactions:
+      - swirl-pyro
+      - swirl-hydro
+      - swirl-electro
+      - swirl-cryo
+      text: the active character triggers Swirl or Stellar Swirl
+    source: 'Witch''s Eve Rite: Temporal Wind''s Eulogy (Hexerei: Secret Rite)'
+  conditions: []
+  reactions:
+    owns:
+    - swirl-pyro
+    - swirl-hydro
+    - swirl-electro
+    - swirl-cryo
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed:
+    - pyro
+    - hydro
+    - electro
+    - cryo
+  sources:
+    amber: 'Official kit text (Project Amber cache): Divine Marksmanship, Skyward Sonnet, Wind''s Grand Ode, Stormeye, Witch''s
+      Eve Rite: Temporal Wind''s Eulogy'
+    engine: 'Engine measurements: field share 18%, team damage share 15%, off-field share of own damage 64%, Anemo 1.4 on
+      / 3.1 off field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

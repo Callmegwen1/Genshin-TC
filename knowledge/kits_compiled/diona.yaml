@@ -1,0 +1,103 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Diona:
+  schema: 3
+  element: Cryo
+  weapon: bow
+  roles:
+  - shielder
+  - healer
+  - applier
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: low
+    - element: Cryo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 80
+      dependency: medium
+    sustain:
+      heal: medium
+      shield: strong
+  scaling:
+  - stat: hp
+    for: shield
+    source:
+    - skill
+  - stat: hp
+    for: heal
+    source:
+    - burst
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 12.96% Max HP + 1524 at talent level 10 (Hold +75%), 250% Cryo absorption
+    duration: 2.4s per Paw hit at talent level 10
+    stacking: none
+    conditions: []
+    source: Icy Paws (shield, at talent level 10)
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 9.6% Max HP + 1129 over time at talent level 10
+    duration: 12
+    stacking: none
+    conditions: []
+    source: Signature Mix (Drunken Mist, at talent level 10)
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - all
+    amount: 10% decreased ATK
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Drunkards' Farce
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    - swirl-cryo
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (packet): Icy Paws, Signature Mix, Cat''s Tail Secret Menu, Drunkards'' Farce, Choice Treasures'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

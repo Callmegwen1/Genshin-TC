@@ -1,0 +1,156 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Qiqi:
+  schema: 3
+  element: Cryo
+  weapon: sword
+  roles:
+  - healer
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - summon
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: low
+    - element: Cryo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 80
+      dependency: medium
+    sustain:
+      heal: high
+      shield: none
+  scaling:
+  - stat: atk
+    for: heal
+    source:
+    - skill
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - summon
+    - burst
+  effects:
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 125.28% ATK + 991 periodically (at talent level 10)
+    duration: 15
+    stacking: at talent level 10
+    conditions: []
+    source: 'Adeptus Art: Herald of Frost (Continuous Regeneration)'
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 19.01% ATK + 148 when Qiqi's Normal and Charged Attacks hit (at talent level 10)
+    duration: 15
+    stacking: at talent level 10
+    conditions: []
+    source: 'Adeptus Art: Herald of Frost (Regeneration on Hit)'
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 162% ATK + 1270 to the character dealing DMG to a marked opponent (at talent level 10)
+    duration: 15
+    stacking: at talent level 10
+    conditions: []
+    source: 'Adeptus Art: Preserver of Fortune (Fortune-Preserving Talisman)'
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: Incoming Healing Bonus +20%
+    duration: 8
+    stacking: none
+    conditions:
+    - type: character_state
+      state: triggered an Elemental Reaction under Herald of Frost
+      text: a character under Herald of Frost triggers an Elemental Reaction
+    source: Life-Prolonging Methods
+  - kind: cooldown
+    target: self
+    affects:
+      damage_types:
+      - skill
+    amount: Herald of Frost CD reduced to 15s
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Seven Sacred Treasures
+  - kind: reaction_bonus
+    target: party
+    affects:
+      reactions:
+      - superconduct
+    amount: 0.5
+    duration: while the Herald of Frost is on the field
+    stacking: 'also Stellar-Conduct; requires Radiance: Stellar-Conduct'
+    conditions:
+    - type: character_state
+      state: 'Radiance: Stellar-Conduct'
+      text: 'Radiance: Stellar-Conduct state (inside a Polestar Field)'
+    source: Seven Sacred Treasures
+  - kind: reaction_bonus
+    target: party
+    affects:
+      reactions:
+      - swirl-cryo
+    amount: 0.5
+    duration: while the Herald of Frost is on the field
+    stacking: 'also Stellar Swirl; requires Radiance: Stellar Swirl'
+    conditions:
+    - type: character_state
+      state: 'Radiance: Stellar Swirl'
+      text: 'Radiance: Stellar Swirl state for 8s after a nearby party character triggers Stellar Swirl'
+    source: Seven Sacred Treasures
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    - swirl-cryo
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Ancient Sword Art, Adeptus Art: Herald of Frost, Adeptus Art: Preserver
+      of Fortune, Life-Prolonging Methods, A Glimpse Into Arcanum, Seven Sacred Treasures'
+    community: 'How the character is played and engine measurements: healer with light Cryo application (27% field share)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

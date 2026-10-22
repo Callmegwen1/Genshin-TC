@@ -1,0 +1,272 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Neuvillette:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation GpHzc9phdjpq (house builds)
+    - gcsim community rotation WbgzKTrtBMpF (house builds)
+    - gcsim community rotation ckLPRtbHPhC8 (house builds)
+    - gcsim community rotation djprtcCPkdtP (house builds)
+    - gcsim community rotation gtwPHjHhCzGM (house builds)
+    - gcsim community rotation jTHJhwMKKcRd (house builds)
+    - gcsim community rotation wKmBWLDwQFNq (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 15 of 15 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.417
+      particles: 4.0
+      hits:
+      - offset: 0.383
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Hydro
+        scaling: hp
+        gauge: 1.0
+      - offset: 1.0
+        type: skill
+        table:
+        - skill
+        - Spiritbreath Thorn DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+    charge: &id001
+      duration: 3.167
+      particles: 0.0
+      hits:
+      - offset: 0.15
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      - offset: 0.517
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      - offset: 0.933
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      - offset: 1.35
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      - offset: 1.767
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      - offset: 2.183
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      - offset: 2.6
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      - offset: 2.933
+        type: charged
+        table:
+        - normal
+        - 'Charged Attack: Equitable Judgment'
+        - 0
+        element: Hydro
+        scaling: hp
+        icd: standard
+        gauge: 1.0
+      duration_by_resource:
+        resource: droplets
+        consume: 3
+        durations:
+          0: 7.15
+          1: 5.29
+          2: 3.43
+          3: 3.43
+    burst:
+      duration: 2.117
+      particles: 0.0
+      hits:
+      - offset: 1.583
+        type: burst
+        table:
+        - burst
+        - Skill DMG
+        - 0
+        element: Hydro
+        scaling: hp
+        gauge: 1.0
+      - offset: 2.25
+        type: burst
+        table:
+        - burst
+        - Waterfall DMG
+        - 0
+        element: Hydro
+        scaling: hp
+        gauge: 0.0
+      - offset: 2.567
+        type: burst
+        table:
+        - burst
+        - Waterfall DMG
+        - 0
+        element: Hydro
+        scaling: hp
+        gauge: 0.0
+    attack#0:
+      duration: 0.333
+      particles: 0.0
+      hits:
+      - offset: 0.317
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Hydro
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.267
+      particles: 0.0
+      hits:
+      - offset: 0.267
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Hydro
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - charge
+    - charge
+  - - attack
+    - charge
+  - - attack
+    - charge
+    - charge
+  - - attack
+    - attack
+  follow:
+    burst: skill
+    skill: attack
+  first: skill
+  causal:
+    facts: &id004
+      known:
+      - 'Past Draconic Glories: one stack per distinct Hydro reaction type triggered by the party in 30 s, max 3: Equitable Judgment deals 110%
+        / 125% / 160%'
+      - 'Sourcewater Droplets: the Skill spawns 3, the Burst 3 + 2; a Charged Attack absorbs up to 3 (gcsim logs, minimal cases)'
+      - 'Charged Attack cycle: 3.43 s with 2-3 droplets absorbed, 7.15 s with none (gcsim minimal cases)'
+      assumed:
+      - Discipline of the Supreme Arbitration at its 30% cap (HP kept above 80% by the team)
+      - 'Charged Attack cycle with exactly 1 droplet: 5.29 s, interpolated (not measured)'
+      unknown: []
+    resources: &id002
+      glories:
+        max: 3
+        start: 0
+      droplets:
+        max: 8
+        start: 0
+    rules: &id003
+    - 'on':
+        event: reaction
+        by: party
+        reactions:
+        - vaporize
+        - freeze
+        - electrocharged
+        - lunarcharged
+        - swirl-hydro
+        - bloom
+        - hyperbloom
+        - burgeon
+        - crystallize
+      do:
+      - distinct:
+          resource: glories
+          window: 30
+    - 'on':
+        event: action
+        action: skill
+        by: self
+      do:
+      - gain:
+          resource: droplets
+          amount: 3
+    - 'on':
+        event: action
+        action: burst
+        by: self
+      do:
+      - gain:
+          resource: droplets
+          amount: 5
+    actions:
+      charge: *id001
+  resources: *id002
+  rules: *id003
+  facts: *id004

@@ -1,0 +1,124 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Charlotte:
+  schema: 3
+  element: Cryo
+  weapon: catalyst
+  roles:
+  - healer
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: medium
+    - element: Cryo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: high
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: atk
+    for: heal
+    source:
+    - burst
+  effects:
+  - kind: heal
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 461.83% ATK + 3539 on cast
+    duration: unknown
+    stacking: at talent level 10
+    conditions: []
+    source: 'Still Photo: Comprehensive Confirmation (cast healing, at talent level 10)'
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 16.59% ATK + 126 continuously
+    duration: 4
+    stacking: at talent level 10
+    conditions: []
+    source: 'Still Photo: Comprehensive Confirmation (Newsflash Field, at talent level 10)'
+  - kind: cooldown
+    target: self
+    affects:
+      damage_types:
+      - skill
+    amount: 'Framing: Freezing Point Composition CD -2s when an opponent marked by Focused Impression is defeated'
+    duration: unknown
+    stacking: 4 times every 12s
+    conditions: []
+    source: Moment of Impact
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: Healing Bonus 5%/10%/15% with 1/2/3 Fontainians other than herself
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Diversified Investigation (Fontainians)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Cryo
+    amount: 5%/10%/15% with 1/2/3 non-Fontainians
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Diversified Investigation (non-Fontainians)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Cool-Color Capture, Framing: Freezing Point Composition, Still Photo:
+      Comprehensive Confirmation, Moment of Impact, Diversified Investigation'
+    engine: 'Engine measurements: field share 16%, team damage share 7%, 52% off-field damage, Cryo application 2.2 on / 1.8
+      off field per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

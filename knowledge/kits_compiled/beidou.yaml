@@ -1,0 +1,123 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Beidou:
+  schema: 3
+  element: Electro
+  weapon: claymore
+  roles:
+  - off_field_sub_dps
+  - shielder
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: medium
+    - element: Electro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: weak
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: shield
+    source:
+    - skill
+  effects:
+  - kind: shield
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 25.92% Max HP+3050 at talent level 10, 250% Electro absorption
+    duration: while holding the skill
+    stacking: none
+    conditions: []
+    source: Tidecaller (Hold shield, at talent level 10)
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 34% DMG Reduction at talent level 10
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Stormbreaker (Thunderbeast's Targe, at talent level 10)
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: unknown
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Stormbreaker (Thunderbeast's Targe)
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+    amount: 0.15
+    duration: 10
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Tidecaller unleashed with its maximum DMG Bonus
+      text: after unleashing Tidecaller with its maximum DMG Bonus
+    source: Lightning Storm
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - electrocharged
+    - overloaded
+    - superconduct
+    - quicken
+    - aggravate
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Tidecaller, Stormbreaker, Retribution, Lightning Storm'
+    engine: 'Engine measurements: field share 20%, off-field share of own damage 54%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,39 @@
+Lohen:
+  schema: 2
+  provisional: true
+  role: carry
+  element: Cryo
+  weapon: polearm
+  analogue: Ganyu            # simulated Cryo carry played in both Melt and Freeze, the two team types Prydwen lists
+  field: {behaviour: on_field, share: [0.45, 0.7]}
+  personal_damage: {tier: medium, share: [0.4, 0.6]}       # Prydwen: "most of Lohen's best teams have their damage split between multiple units"
+  application: {Cryo.on: [3.0, 6.0]}
+  buffs:
+    - {kind: atk, target: reaction_trigger, condition: "in Masterstroke mode, 8 s after another member triggers a Cryo reaction",
+       text: "Flippant Masterpiece: that character's ATK +15%, Lohen's ATK +15%"}
+    - {kind: damage_scaling, target: self, condition: "party members deal DMG while he is in Masterstroke",
+       text: "Will to Win accumulated by the party increases Etched Into Bone and Soul and the Burst"}
+    - {kind: dmg_bonus, target: self, condition: "Hexerei: Secret Rite (2+ Hexerei members) and Will to Win at 50%+",
+       text: "Normal and Charged Attack DMG +40% for 6 s"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [melt, freeze], enables: [melt, freeze]}
+  preferred_systems: [melt, freeze]
+  restrictions: []
+  synergies:
+    - {with: element:Pyro, why: "Melt, his strongest listed team type"}
+    - {with: Citlali, why: "listed in his best team"}
+  expected_archetypes:
+    melt: {as: carry, quality: 4}
+    freeze: {as: carry, quality: 4}
+  sources:
+    amber: "Official kit text (Project Amber cache): Unforeseen Strike, Manifest Judgment, Moratorium on Questioning, Flippant Masterpiece, Witch's Eve Rite"
+    prydwen: "Prydwen guide: DPS tier T1; teams Lohen / Durin / Citlali / Nicole (100), Freeze with Escoffier / Furina / Mona (88.7), Burning Melt (94.8)"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: prydwen, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}
+    preferred_systems: {source: prydwen, confidence: medium, method: manual}

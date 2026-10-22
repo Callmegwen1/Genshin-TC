@@ -1,0 +1,117 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Mona:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation JtRCnhJTwGqh (house builds)
+    - gcsim community rotation fjkPnbnQPLBc (house builds)
+    - gcsim community rotation gfQp9zRG6bMq (house builds)
+    - gcsim community rotation nqJBpqKFzjnC (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 2 of 9 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.817
+      particles: 4.0
+      hits:
+      - offset: 1.433
+        type: skill
+        mult: 0.576
+        abil: Mirror Reflection of Doom (Tick)
+        source: gcsim
+        element: Hydro
+        gauge: 1.0
+      - offset: 2.417
+        type: skill
+        mult: 0.576
+        abil: Mirror Reflection of Doom (Tick)
+        source: gcsim
+        element: Hydro
+        gauge: 0.0
+      - offset: 3.4
+        type: skill
+        mult: 0.576
+        abil: Mirror Reflection of Doom (Tick)
+        source: gcsim
+        element: Hydro
+        gauge: 0.0
+      - offset: 4.383
+        type: skill
+        mult: 0.576
+        abil: Mirror Reflection of Doom (Tick)
+        source: gcsim
+        element: Hydro
+        gauge: 1.0
+      - offset: 5.483
+        type: skill
+        mult: 2.3904
+        abil: Mirror Reflection of Doom (Explode)
+        source: gcsim
+        element: Hydro
+        gauge: 1.0
+    burst:
+      duration: 2.117
+      particles: 0.0
+      hits:
+      - offset: 1.783
+        type: other
+        mult: 0.0
+        abil: Illusory Bubble (Initial)
+        source: gcsim
+        element: Hydro
+        gauge: 1.0
+      - offset: 2.017
+        type: burst
+        table:
+        - burst
+        - Illusory Bubble Explosion DMG
+        - 0
+        element: Hydro
+        gauge: 0.0
+    wait:
+      duration: 0.2
+      particles: 0.0
+      hits:
+      - offset: 7.667
+        type: other
+        mult: 0.0
+        abil: Illusory Bubble (Break)
+        source: gcsim
+        element: Physical
+        gauge: 0.0
+    attack#0:
+      duration: 0.183
+      particles: 0.0
+      hits:
+      - offset: 0.183
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Hydro
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - attack
+  follow: {}
+  first: skill
+  causal: {}

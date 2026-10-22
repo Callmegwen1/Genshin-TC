@@ -1,0 +1,851 @@
+{
+ "benchmark_cases": [
+  "skirk_hydro_cryo"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 90.7,
+   "fit_source": "gcsim",
+   "label": "Skirk on-field · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 84.6,
+   "route": "exact_community",
+   "sd": 9.0,
+   "template": "freeze",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 73.4,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Freeze · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Skirk"
+   ],
+   "ranking": 65.1,
+   "route": "pair_model",
+   "sd": 12.3,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 68.6,
+   "fit_source": "pairmodel",
+   "label": "Skirk on-field · Freeze · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Furina",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 60.7,
+   "route": "pair_model",
+   "sd": 11.6,
+   "template": "freeze",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 60.7,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Shenhe",
+    "Skirk",
+    "Xiangling"
+   ],
+   "ranking": 53.8,
+   "route": "pair_model",
+   "sd": 10.3,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 60.5,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 53.5,
+   "route": "pair_model",
+   "sd": 10.4,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 63.8,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 53.3,
+   "route": "pair_model",
+   "sd": 15.7,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.7,
+   "fit_source": "pairmodel",
+   "label": "Skirk dual carry · Melt",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Skirk",
+    "Xiangling"
+   ],
+   "ranking": 48.8,
+   "route": "pair_model",
+   "sd": 8.8,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 48.8,
+   "fit_source": "pairmodel",
+   "label": "Escoffier dual carry · Freeze · incidental Swirl",
+   "lead": "Escoffier",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Shenhe"
+   ],
+   "ranking": 44.8,
+   "route": "pair_model",
+   "sd": 5.8,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.8,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Freeze + Vaporize · incidental Swirl",
+   "lead": "Furina",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 44.5,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 47.6,
+   "fit_source": "pairmodel",
+   "label": "Escoffier and Xiangling dual carry · Freeze + Melt + Vaporize",
+   "lead": "Escoffier",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Shenhe",
+    "Xiangling"
+   ],
+   "ranking": 43.9,
+   "route": "pair_model",
+   "sd": 5.4,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 51.9,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 43.5,
+   "route": "pair_model",
+   "sd": 12.4,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 45.2,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Escoffier dual carry · Freeze + Melt + Vaporize",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Furina",
+    "Xiangling"
+   ],
+   "ranking": 41.8,
+   "route": "pair_model",
+   "sd": 5.0,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 43.8,
+   "fit_source": "gcsim",
+   "label": "Furina dual carry · Vaporize · incidental Swirl",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 40.9,
+   "route": "exact_community",
+   "sd": 4.4,
+   "template": "international",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 44.0,
+   "fit_source": "pairmodel",
+   "label": "Escoffier dual carry · Freeze + Melt + Vaporize",
+   "lead": "Escoffier",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Furina",
+    "Shenhe"
+   ],
+   "ranking": 40.5,
+   "route": "pair_model",
+   "sd": 5.2,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 43.1,
+   "fit_source": "pairmodel",
+   "label": "No single carry dual carry · Freeze + Melt + Vaporize · incidental Swirl",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Furina",
+    "Kaedehara Kazuha"
+   ],
+   "ranking": 39.9,
+   "route": "pair_model",
+   "sd": 4.8,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 55.5,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Skirk",
+    "Xiangling"
+   ],
+   "ranking": 39.6,
+   "route": "pair_model",
+   "sd": 23.5,
+   "template": "auto_mono_cryo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 46.6,
+   "fit_source": "pairmodel",
+   "label": "Skirk and Xiangling dual carry · Melt · incidental Swirl",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Skirk",
+    "Xiangling"
+   ],
+   "ranking": 39.0,
+   "route": "pair_model",
+   "sd": 11.2,
+   "template": "melt",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 41.2,
+   "fit_source": "pairmodel",
+   "label": "Furina and Xiangling dual carry · Melt + Vaporize + Freeze · incidental Swirl",
+   "lead": "Furina",
+   "lineup": [
+    "Furina",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Xiangling"
+   ],
+   "ranking": 38.0,
+   "route": "pair_model",
+   "sd": 4.7,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 54.2,
+   "fit_source": "pairmodel",
+   "label": "Skirk hypercarry · Melt",
+   "lead": "Skirk",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Skirk"
+   ],
+   "ranking": 37.3,
+   "route": "pair_model",
+   "sd": 25.2,
+   "template": "auto_mono_cryo",
+   "tier": "D"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 40.2,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Furina dual carry · Vaporize + Freeze + Melt",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Shenhe",
+    "Xiangling"
+   ],
+   "ranking": 36.9,
+   "route": "pair_model",
+   "sd": 4.9,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 39.6,
+   "fit_source": "pairmodel",
+   "label": "Escoffier and Xiangling dual carry · Melt · incidental Swirl",
+   "lead": "Escoffier",
+   "lineup": [
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Xiangling"
+   ],
+   "ranking": 36.7,
+   "route": "pair_model",
+   "sd": 4.2,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.1,
+   "fit_source": "pairmodel",
+   "label": "Escoffier and Xiangling dual carry · Melt",
+   "lead": "Escoffier",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Shenhe",
+    "Xiangling"
+   ],
+   "ranking": 35.5,
+   "route": "pair_model",
+   "sd": 3.8,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.1,
+   "fit_source": "pairmodel",
+   "label": "Xiangling and Escoffier dual carry · Melt · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "ranking": 33.4,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.1,
+   "fit_source": "pairmodel",
+   "label": "Escoffier hypercarry · Melt · incidental Swirl",
+   "lead": "Escoffier",
+   "lineup": [
+    "Bennett",
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Shenhe"
+   ],
+   "ranking": 32.7,
+   "route": "pair_model",
+   "sd": 6.5,
+   "template": "auto_mono_cryo",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.7,
+   "fit_source": "pairmodel",
+   "label": "Furina dual carry · Freeze + Vaporize + Melt · incidental Swirl",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Shenhe"
+   ],
+   "ranking": 31.4,
+   "route": "pair_model",
+   "sd": 7.9,
+   "template": "auto_freeze_hydro_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 32.8,
+   "fit_source": "pairmodel",
+   "label": "Xiangling hypercarry · Melt · incidental Swirl",
+   "lead": "Xiangling",
+   "lineup": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Shenhe",
+    "Xiangling"
+   ],
+   "ranking": 28.1,
+   "route": "pair_model",
+   "sd": 7.0,
+   "template": "auto_melt_pyro_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Kamisato Ayaka",
+   [
+    "Escoffier",
+    "Furina",
+    "Kamisato Ayaka",
+    "Shenhe"
+   ],
+   64.0
+  ],
+  [
+   "Mavuika",
+   [
+    "Escoffier",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Mavuika"
+   ],
+   62.3
+  ],
+  [
+   "Sandrone",
+   [
+    "Bennett",
+    "Escoffier",
+    "Kaedehara Kazuha",
+    "Sandrone"
+   ],
+   62.2
+  ],
+  [
+   "Neuvillette",
+   [
+    "Escoffier",
+    "Furina",
+    "Neuvillette",
+    "Shenhe"
+   ],
+   59.1
+  ],
+  [
+   "Lohen",
+   [
+    "Escoffier",
+    "Furina",
+    "Kaedehara Kazuha",
+    "Lohen"
+   ],
+   58.5
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Escoffier",
+    "Furina",
+    "Shenhe",
+    "Skirk"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 6.5,
+   "teams": [
+    [
+     "Escoffier",
+     "Furina",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Escoffier",
+    "Furina",
+    "Shenhe",
+    "Skirk"
+   ],
+   "note": "",
+   "score": 64.8,
+   "teams": [
+    [
+     "Escoffier",
+     "Furina",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Escoffier",
+    "Furina",
+    "Shenhe",
+    "Skirk"
+   ],
+   "note": "",
+   "score": 64.6,
+   "teams": [
+    [
+     "Escoffier",
+     "Furina",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 2 of 7 elements",
+   "score": 60.6,
+   "teams": [
+    [
+     "Escoffier",
+     "Furina",
+     "Shenhe",
+     "Skirk"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 90.7,
+   "fit_source": "gcsim",
+   "label": "Skirk on-field · Freeze",
+   "lead": "Skirk",
+   "lineup": [
+    "Escoffier",
+    "Furina",
+    "Shenhe",
+    "Skirk"
+   ],
+   "ranking": 84.6,
+   "route": "exact_community",
+   "sd": 9.0,
+   "template": "freeze",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 64.6,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Mavuika",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 21,
+    "redundancy_score": 0.12,
+    "second_team_gain": 43.3,
+    "support_contention": []
+   },
+   "expected": 26.4,
+   "gain": 23.3,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 4.6,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Columbina",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.06,
+    "second_team_gain": 41.0,
+    "support_contention": []
+   },
+   "expected": 24.6,
+   "gain": 21.0,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 5.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Neuvillette",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 24,
+    "redundancy_score": 0.05,
+    "second_team_gain": 40.1,
+    "support_contention": []
+   },
+   "expected": 22.9,
+   "gain": 20.1,
+   "kind": "new archetype",
+   "name": "Neuvillette",
+   "sd": 4.3,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Varka",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 10,
+    "redundancy_score": 0.0,
+    "second_team_gain": 38.4,
+    "support_contention": []
+   },
+   "expected": 32.3,
+   "gain": 18.4,
+   "kind": "new archetype",
+   "name": "Varka",
+   "sd": 20.5,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Kaedehara Kazuha",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.06,
+    "second_team_gain": 33.9,
+    "support_contention": []
+   },
+   "expected": 18.0,
+   "gain": 13.9,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 6.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 24,
+    "redundancy_score": 0.17,
+    "second_team_gain": 33.5,
+    "support_contention": []
+   },
+   "expected": 16.0,
+   "gain": 13.5,
+   "kind": "fills a gap",
+   "name": "Yelan",
+   "sd": 3.7,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Xiangling",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 26,
+    "redundancy_score": 0.14,
+    "second_team_gain": 32.7,
+    "support_contention": []
+   },
+   "expected": 17.4,
+   "gain": 12.7,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 7.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kaedehara Kazuha",
+    "Nahida",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "burning"
+    ],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.06,
+    "second_team_gain": 24.0,
+    "support_contention": []
+   },
+   "expected": 5.7,
+   "gain": 4.0,
+   "kind": "fills a gap",
+   "name": "Nahida",
+   "sd": 2.6,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Skirk"
+ ]
+}

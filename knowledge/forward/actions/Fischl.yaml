@@ -1,0 +1,150 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Fischl:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation GDBtbw9wL9kN (house builds)
+    - gcsim community rotation hbrM87WTW78p (house builds)
+    - gcsim community rotation pNDpHrW9JWQd (house builds)
+    - gcsim community rotation pcRdWKzK6Rrb (house builds)
+    - gcsim community rotation rgrtwMCg7FF6 (house builds)
+    - gcsim community rotation z8zBgkCKjnpJ (house builds)
+    - gcsim community rotation zNTLKdDb9tGC (house builds)
+    - gcsim community rotation zdcQGdJtPckG (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 22 of 30 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    burst:
+      duration: 0.4
+      particles: 0.0
+      hits:
+      - offset: 0.3
+        type: burst
+        table:
+        - burst
+        - Falling Thunder DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+    skill:
+      duration: 0.733
+      particles: 13.0
+      hits:
+      - offset: 0.633
+        type: skill
+        table:
+        - skill
+        - Summoning DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+    attack#0:
+      duration: 0.25
+      particles: 0.0
+      hits:
+      - offset: 0.0
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+  follow: {}
+  first: skill
+  action_rules: &id001
+    skill:
+      unavailable_after:
+        burst: 10.62
+  causal:
+    action_rules: *id001
+    drop_hits:
+      skill:
+      - Thundering Retribution (A4)
+      - Oz's ATK DMG
+    reaction_procs: &id003
+      thundering_retribution:
+        kinds:
+        - overload
+        - superconduct
+        - electrocharged
+        - lunarcharged
+        - aggravate
+        - hyperbloom
+        - swirl-electro
+        - quicken
+        by: active
+        window:
+          after:
+          - skill
+          - burst
+          duration:
+            table:
+            - skill
+            - Oz's Duration
+        hits:
+        - offset: 0.0
+          mult: 0.8
+          abil: Thundering Retribution (A4)
+          element: Electro
+          type: skill
+          gauge: 1.0
+          source: 'kit text: 80% of Fischl''s ATK'
+    facts: &id004
+      known:
+      - 'Undone Be Thy Sinful Hex (A4): when the ACTIVE character triggers an Electro-related reaction while Oz is on the field, Electro DMG equal
+        to 80% of Fischl''s ATK (Amber text)'
+      assumed:
+      - 'A4: 1U Electro, no cooldown (the text gives none); Electro-related reactions as listed'
+      - 'Oz as one summon: Skill Oz 10.3 s / Burst Oz 10.62 s, attacks every 0.983 s, first at 1.53 s / 2.03 s after the cast (gcsim logs of other
+        teams; the Burst''s first attack varies 2.0-3.2 s)'
+      unknown: []
+    summons: &id005
+      oz_skill:
+        start_on: skill
+        group: oz
+        first: 1.533
+        interval: 0.983
+        duration: 10.3
+        hits:
+        - &id002
+          offset: 0.0
+          type: skill
+          table:
+          - skill
+          - Oz's ATK DMG
+          - 0
+          element: Electro
+          gauge: 1.0
+          icd: oz
+      oz_burst:
+        start_on: burst
+        group: oz
+        first: 2.033
+        interval: 0.983
+        duration: 10.62
+        hits:
+        - *id002
+  reaction_procs: *id003
+  facts: *id004
+  summons: *id005

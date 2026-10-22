@@ -1,0 +1,185 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Sucrose:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 6h7dhCQQCNbc (house builds)
+    - gcsim community rotation 9zWMHGPjfbdB (house builds)
+    - gcsim community rotation WbKHzML7PmpH (house builds)
+    - gcsim community rotation hTTdH8TRQRRw (house builds)
+    - gcsim community rotation pNDpHrW9JWQd (house builds)
+    - gcsim community rotation pNtcGpCLW9LG (house builds)
+    - gcsim community rotation rNDtmJ6LwhNR (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 11 of 11 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.183
+      particles: 4.0
+      hits:
+      - offset: 0.7
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Anemo
+        gauge: 1.0
+    dash:
+      duration: 0.4
+      particles: 0.0
+      hits: []
+    burst:
+      duration: 0.783
+      particles: 0.0
+      hits:
+      - offset: 2.283
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+      - offset: 2.283
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+      - offset: 4.167
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+      - offset: 4.167
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+      - offset: 6.05
+        type: burst
+        table:
+        - burst
+        - DoT
+        - 0
+        element: Anemo
+        gauge: 1.0
+      - offset: 6.05
+        type: burst
+        table:
+        - burst
+        - Additional Elemental DMG
+        - 0
+        element: absorb
+        gauge: 1.0
+    wait:
+      duration: 0.2
+      particles: 0.0
+      hits: []
+    jump:
+      duration: 0.133
+      particles: 0.0
+      hits: []
+    high_plunge:
+      duration: 0.767
+      particles: 0.0
+      hits:
+      - offset: 0.767
+        type: plunge
+        table:
+        - normal
+        - Low/High Plunge DMG
+        - 1
+        element: Anemo
+        icd: standard
+        gauge: 1.0
+    attack#0:
+      duration: 0.292
+      particles: 0.0
+      hits: []
+    attack#2:
+      duration: 0.467
+      particles: 0.0
+      hits:
+      - offset: 0.467
+        type: normal
+        table:
+        - normal
+        - 3-Hit DMG
+        - 0
+        element: Anemo
+        icd: standard
+        gauge: 1.0
+    attack#3:
+      duration: 0.85
+      particles: 0.0
+      hits:
+      - offset: 0.467
+        type: normal
+        table:
+        - normal
+        - 4-Hit DMG
+        - 0
+        element: Anemo
+        icd: standard
+        gauge: 1.0
+    charge:
+      duration: 0.667
+      particles: 0.0
+      hits:
+      - offset: 0.65
+        type: charged
+        table:
+        - normal
+        - Charged Attack DMG
+        - 0
+        element: Anemo
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+  - - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+  - - dash
+    - attack
+  follow:
+    skill: dash
+  first: burst
+  causal: {}

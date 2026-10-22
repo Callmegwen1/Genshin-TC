@@ -1,0 +1,141 @@
+# Curated gear effects (phase H): entries the text compiler cannot read alone, because the value depends on the party,
+# a resource, stack levels, swaps or a house assumption. Numbers are the Amber text's (lists are by refinement R1..R5;
+# tests/test_gear.py checks each number appears in that refinement's text). Everything else is compiled from the text.
+#
+# Schema: as gtc/forward/gear.py. Extra amount specs: {of, rate, minus, cap} (wearer stat), {per_same_element},
+# {per_other_element}, {party_energy_rate, cap}. Stack specs: stack_max/stack_mode, stack_sources (each active source
+# is one level), stack_steps (value per level), stack_threshold (all-or-nothing at N stacks).
+
+weapons:
+  Mailed Flower:
+    - {kind: atk_pct, amount: [0.12, 0.15, 0.18, 0.21, 0.24], trigger: [skill, "reaction_own:any"], duration: 8, state: met}
+    - {kind: em, amount: [48, 60, 72, 84, 96], trigger: [skill, "reaction_own:any"], duration: 8, state: met}
+  Akuoumaru: &energy_cap_weapon
+    - {kind: dmg_bonus, affects: {damage_types: [burst]}, trigger: [always], state: met,
+       amount: {party_energy_rate: [0.0012, 0.0015, 0.0018, 0.0021, 0.0024], cap: [0.40, 0.50, 0.60, 0.70, 0.80]}}
+  Wavebreaker's Fin: *energy_cap_weapon
+  Mouun's Moon: *energy_cap_weapon
+  The Widsith:
+    # a random theme song on taking the field (10 s, once per 30 s): expected value, one third each (assumed)
+    - {kind: atk_pct, amount: [0.20, 0.25, 0.30, 0.35, 0.40], trigger: [swap_in], duration: 10, icd: 30, state: met,
+       why: "random theme: expected value (1/3 of 60/75/90/105/120% ATK)", text_values: [0.60, 0.75, 0.90, 1.05, 1.20]}
+    - {kind: dmg_bonus, affects: {elements: [Pyro, Hydro, Electro, Cryo, Anemo, Geo, Dendro]}, amount: [0.16, 0.20, 0.24, 0.28, 0.32],
+       trigger: [swap_in], duration: 10, icd: 30, state: met, why: "random theme: expected value (1/3)",
+       text_values: [0.48, 0.60, 0.72, 0.84, 0.96]}
+    - {kind: em, amount: [80, 100, 120, 140, 160], trigger: [swap_in], duration: 10, icd: 30, state: met,
+       why: "random theme: expected value (1/3)", text_values: [240, 300, 360, 420, 480]}
+  Thrilling Tales of Dragon Slayers:
+    - {kind: atk_pct, target: active, amount: [0.24, 0.30, 0.36, 0.42, 0.48], trigger: [swap_out], duration: 10, icd: 20, state: met}
+  Deathmatch:
+    - {kind: atk_pct, amount: [0.24, 0.30, 0.36, 0.42, 0.48], trigger: [always], state: met,
+       why: "fewer than 2 opponents: single target (house assumption)"}
+  Makhaira Aquamarine: &em_to_atk
+    - {kind: atk, amount: {of: em, rate: [0.24, 0.30, 0.36, 0.42, 0.48]}, trigger: [periodic], state: met}
+    - {kind: atk, target: party_others, amount: {of: em, rate: [0.072, 0.09, 0.108, 0.126, 0.144]}, trigger: [periodic], state: met,
+       why: "30% of the wearer's buff", text_values: [0.24, 0.30, 0.36, 0.42, 0.48]}
+  Wandering Evenstar: *em_to_atk
+  Forest Regalia: &leaf_em
+    - {kind: em, amount: [60, 75, 90, 105, 120], duration: 12, icd: 20, state: met, why: "the Leaf is picked up (assumed)",
+       trigger: ["reaction_own:burning|quicken|aggravate|spread|bloom|hyperbloom|burgeon"]}
+  Sapwood Blade: *leaf_em
+  Moonpiercer:
+    - {kind: atk_pct, amount: [0.16, 0.20, 0.24, 0.28, 0.32], duration: 12, icd: 20, state: met, why: "the Leaf is picked up (assumed)",
+       trigger: ["reaction_own:burning|quicken|aggravate|spread|bloom|hyperbloom|burgeon"]}
+  Fading Twilight:
+    - {kind: dmg_bonus, amount: [0.10, 0.125, 0.15, 0.175, 0.20], trigger: [always], state: met,
+       why: "cycles three states (6/10/14% at R1): average (assumed)", text_values: [0.06, 0.075, 0.09, 0.105, 0.12]}
+  Wolf-Fang:
+    - {kind: dmg_bonus, affects: {damage_types: [skill, burst]}, amount: [0.16, 0.20, 0.24, 0.28, 0.32], trigger: [always], state: met}
+    - {kind: crit_rate, affects: {damage_types: [skill]}, amount: [0.02, 0.025, 0.03, 0.035, 0.04], trigger: ["hittype:skill"],
+       duration: 10, stack_max: 4, icd: 0.1, state: met}
+    - {kind: crit_rate, affects: {damage_types: [burst]}, amount: [0.02, 0.025, 0.03, 0.035, 0.04], trigger: ["hittype:burst"],
+       duration: 10, stack_max: 4, icd: 0.1, state: met}
+  Mistsplitter Reforged:
+    - {kind: dmg_bonus, affects: {elements: [Pyro, Hydro, Electro, Cryo, Anemo, Geo, Dendro]}, amount: [0.12, 0.15, 0.18, 0.21, 0.24],
+       trigger: [always], state: met}
+    - {kind: own_element_dmg_bonus, amount: 0.0, trigger: [always], state: met,
+       stack_steps: [[0.08, 0.10, 0.12, 0.14, 0.16], [0.16, 0.20, 0.24, 0.28, 0.32], [0.28, 0.35, 0.42, 0.49, 0.56]],
+       stack_sources: [{always: true}, {trigger: ["hittype:normal"], duration: 5}, {trigger: [burst], duration: 10}],
+       why: "the Energy-below-full stack is assumed always on"}
+  Primordial Jade Cutter:
+    - {kind: hp_pct, amount: [0.20, 0.25, 0.30, 0.35, 0.40], trigger: [always], state: met}
+    - {kind: atk, amount: {of: hp, rate: [0.012, 0.015, 0.018, 0.021, 0.024]}, trigger: [always], state: met}
+  Staff of Homa:
+    - {kind: hp_pct, amount: [0.20, 0.25, 0.30, 0.35, 0.40], trigger: [always], state: met}
+    - {kind: atk, amount: {of: hp, rate: [0.008, 0.010, 0.012, 0.014, 0.016]}, trigger: [always], state: met}
+    - {kind: atk, amount: {of: hp, rate: [0.010, 0.012, 0.014, 0.016, 0.018]}, trigger: [always], state: unknown,
+       why: "below 50% HP: the HP model does not track it"}
+  Engulfing Lightning:
+    - {kind: atk_pct, amount: {of: er, minus: 1.0, rate: [0.28, 0.35, 0.42, 0.49, 0.56], cap: [0.80, 0.90, 1.00, 1.10, 1.20]},
+       trigger: [always], state: met}
+    - {kind: er, amount: [0.30, 0.35, 0.40, 0.45, 0.50], trigger: [burst], duration: 12, state: met}
+  Kagura's Verity:
+    - {kind: dmg_bonus, affects: {damage_types: [skill]}, amount: [0.12, 0.15, 0.18, 0.21, 0.24], trigger: [skill], duration: 24,
+       stack_max: 3, state: met}
+    - {kind: dmg_bonus, affects: {elements: [Pyro, Hydro, Electro, Cryo, Anemo, Geo, Dendro]}, amount: [0.12, 0.15, 0.18, 0.21, 0.24],
+       trigger: [skill], duration: 24, stack_max: 3, stack_threshold: 3, state: met}
+
+sets:
+  Gilded Dreams:
+    2pc: [{kind: em, amount: 80, trigger: [always], state: met}]
+    4pc:
+      - {kind: atk_pct, amount: {per_same_element: 0.14}, trigger: ["reaction_own:any"], duration: 8, icd: 8, state: met}
+      - {kind: em, amount: {per_other_element: 50}, trigger: ["reaction_own:any"], duration: 8, icd: 8, state: met}
+  Blizzard Strayer:
+    2pc: [{kind: elemental_dmg_bonus, affects: {elements: [Cryo]}, amount: 0.15, trigger: [always], state: met}]
+    4pc:
+      - {kind: crit_rate, amount: 0.20, trigger: [always], state: met, conditions: [{type: enemy_aura, any: [Cryo, Frozen]}]}
+      - {kind: crit_rate, amount: 0.20, trigger: [always], state: met, conditions: [{type: enemy_aura, any: [Frozen]}]}
+  Flower of Paradise Lost:
+    2pc: [{kind: em, amount: 80, trigger: [always], state: met}]
+    4pc:
+      - {kind: reaction_bonus, affects: {reactions: [bloom, hyperbloom, burgeon]}, amount: 0.40, trigger: [always], state: met}
+      - {kind: reaction_bonus, affects: {reactions: [bloom, hyperbloom, burgeon]}, amount: 0.10, trigger: ["reaction_own:bloom|hyperbloom|burgeon"],
+         duration: 10, icd: 1, stack_max: 4, stack_mode: independent, state: met, why: "25% of the 40% per stack",
+         text_values: [0.25]}
+  Nymph's Dream:
+    2pc: [{kind: elemental_dmg_bonus, affects: {elements: [Hydro]}, amount: 0.15, trigger: [always], state: met}]
+    4pc:
+      - {kind: atk_pct, amount: 0.0, trigger: [always], state: met, stack_steps: [0.07, 0.16, 0.25],
+         stack_sources: [{trigger: ["hittype:normal|charged|plunge"], duration: 8}, {trigger: ["hittype:skill"], duration: 8},
+                         {trigger: ["hittype:burst"], duration: 8}]}
+      - {kind: elemental_dmg_bonus, affects: {elements: [Hydro]}, amount: 0.0, trigger: [always], state: met, stack_steps: [0.04, 0.09, 0.15],
+         stack_sources: [{trigger: ["hittype:normal|charged|plunge"], duration: 8}, {trigger: ["hittype:skill"], duration: 8},
+                         {trigger: ["hittype:burst"], duration: 8}]}
+  Crimson Witch of Flames:
+    2pc: [{kind: elemental_dmg_bonus, affects: {elements: [Pyro]}, amount: 0.15, trigger: [always], state: met}]
+    4pc:
+      - {kind: reaction_bonus, affects: {reactions: [overloaded, burning, burgeon]}, amount: 0.40, trigger: [always], state: met}
+      - {kind: reaction_bonus, affects: {reactions: [vaporize, melt]}, amount: 0.15, trigger: [always], state: met}
+      - {kind: elemental_dmg_bonus, affects: {elements: [Pyro]}, amount: 0.075, trigger: [skill], duration: 10, stack_max: 3, state: met,
+         why: "50% of the 2-piece 15% per stack", text_values: [0.50]}
+  Golden Troupe:
+    2pc: [{kind: dmg_bonus, affects: {damage_types: [skill]}, amount: 0.20, trigger: [always], state: met}]
+    4pc:
+      - {kind: dmg_bonus, affects: {damage_types: [skill]}, amount: 0.25, trigger: [always], state: met}
+      - {kind: dmg_bonus, affects: {damage_types: [skill]}, amount: 0.25, trigger: [always], state: met,
+         conditions: [{type: on_field, value: false}], why: "off field (the 2 s after taking the field are not modelled)"}
+  Aubade of Morningstar and Moon:
+    2pc: [{kind: em, amount: 80, trigger: [always], state: met}]
+    4pc:
+      - {kind: reaction_bonus, affects: {reactions: [lunarcharged, lunarbloom, lunarcrystallize]}, amount: 0.20, trigger: [always],
+         state: met, conditions: [{type: on_field, value: false}]}
+      - {kind: reaction_bonus, affects: {reactions: [lunarcharged, lunarbloom, lunarcrystallize]}, amount: 0.40, trigger: [always],
+         state: met, conditions: [{type: on_field, value: false}, {type: faction_count, faction: moonsign, min: 2}],
+         why: "Ascendant Gleam: 2+ Moonsign members"}
+  Silken Moon's Serenade:
+    2pc: [{kind: er, amount: 0.20, trigger: [always], state: met}]
+    4pc:
+      - {kind: em, target: party, amount: 120, trigger: ["hittype:elemental"], duration: 8, state: met,
+         conditions: [{type: faction_count, faction: moonsign, min: 2}], why: "Ascendant Gleam: 2+ Moonsign members"}
+      - {kind: reaction_bonus, target: party, affects: {reactions: [lunarcharged, lunarbloom, lunarcrystallize]}, amount: 0.10,
+         trigger: ["hittype:elemental"], duration: 8, state: met, why: "one Gleaming Moon effect in the party"}
+  Night of the Sky's Unveiling:
+    2pc: [{kind: em, amount: 80, trigger: [always], state: met}]
+    4pc:
+      - {kind: crit_rate, amount: 0.30, trigger: ["reaction:lunarcharged|lunarbloom|lunarcrystallize"], duration: 4, state: met,
+         conditions: [{type: on_field, value: true}, {type: faction_count, faction: moonsign, min: 2}],
+         why: "Ascendant Gleam: 2+ Moonsign members"}
+      - {kind: reaction_bonus, target: party, affects: {reactions: [lunarcharged, lunarbloom, lunarcrystallize]}, amount: 0.10,
+         trigger: ["reaction:lunarcharged|lunarbloom|lunarcrystallize"], duration: 4, state: met,
+         conditions: [{type: on_field, value: true}], why: "one Gleaming Moon effect in the party"}

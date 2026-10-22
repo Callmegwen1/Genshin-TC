@@ -1,0 +1,192 @@
+# Team archetype templates. YOU own this file.
+#
+# A slot is filled by a character who has ANY of the slot's roles (quality >= min_quality,
+# default 1) and, if given, one of the slot's elements.
+# core: true marks slots that define the archetype. A team missing a core slot is "incomplete".
+# weight: how much the slot matters to the team score (default 1).
+# ceiling: how strong the archetype is at its best, 0-1. This is the one generic judgment here.
+# requires: hard team-level conditions. bonuses: soft ones, added to the score.
+# allowed_elements: every member must have one of these elements.
+# pair_bonuses: specific character pairs with extra synergy.
+# prefers: roles the slot really wants. Other listed roles still fit, at 80% quality.
+# value: credits everything a character brings to the slot, not just the role that got them in.
+#   quality = base + sum(weight x role quality), capped at 5. roles: still decides who is eligible.
+#   With base 2 and weights summing to 0.6, a character perfect at every listed role scores 5.
+# compare: lead (default) compares composition with the best team for the same first-slot character.
+#   archetype compares with the best team overall. Use it when the first slot is not a carry.
+# signature: element pattern that recognises this archetype in gcsim simulations (require, forbid, only).
+# sustain_penalty: overrides the global no-healer-or-shield penalty for this archetype.
+
+lunar_charged:
+  label: Lunar-Charged (Flins hypercarry)
+  signature: {require: [Electro, Hydro]}
+  ceiling: 1.0
+  slots:
+    - {name: Lunar carry, roles: [carry_lunar_charged], elements: [Electro], core: true, weight: 2}
+    - name: Hydro applicator
+      roles: [offfield_app]
+      elements: [Hydro]
+      core: true
+      min_quality: 3
+      weight: 1.5
+      value: {base: 2, offfield_app: 0.15, buffer_lunar: 0.4, offfield_dps: 0.1}  # tuned on gcsim: Columbina > C6 Aino > Furina
+    - name: Electro enabler
+      roles: [enables_lunar_charged, offfield_app]
+      elements: [Electro]
+      weight: 1.5
+      value: {base: 2, offfield_app: 0.2, offfield_dps: 0.2, buffer_lunar: 0.2, shield: 0.1}
+    - name: Flex support
+      roles: [buffer_anemo, em_share, shield, healer, buffer_atk, offfield_app, moonsign, buffer_lunar]
+      value: {base: 2, em_share: 0.3, buffer_lunar: 0.3, buffer_anemo: 0.2, cc: 0.1, shield: 0.1}
+  requires:
+    - {role: enables_lunar_charged, at_least: 1, reason: needs a Lunar-Charged enabler}
+  bonuses:
+    - {role: moonsign, at_least: 2, bonus: 8, reason: "Ascendant Gleam with 2+ Moonsign characters"}
+
+lunar_charged_offfield:
+  label: Lunar-Charged off-field (taser style)
+  signature: {require: [Electro, Hydro]}
+  ceiling: 0.85
+  slots:
+    - {name: Lunar enabler, roles: [enables_lunar_charged], elements: [Electro], core: true, weight: 2}
+    - name: Hydro applicator
+      roles: [offfield_app]
+      elements: [Hydro]
+      core: true
+      min_quality: 3
+      weight: 1.5
+      value: {base: 2, offfield_app: 0.15, buffer_lunar: 0.4, offfield_dps: 0.1}  # tuned on gcsim: Columbina > C6 Aino > Furina
+    - {name: Second Electro or Hydro, roles: [offfield_app, offfield_dps], elements: [Electro, Hydro], min_quality: 3}
+    - name: Flex support
+      roles: [buffer_anemo, em_share, shield, healer, moonsign, buffer_lunar]
+      value: {base: 2, em_share: 0.3, buffer_lunar: 0.3, buffer_anemo: 0.2, cc: 0.1, shield: 0.1}
+  bonuses:
+    - {role: moonsign, at_least: 2, bonus: 8, reason: "Ascendant Gleam with 2+ Moonsign characters"}
+
+freeze:
+  label: Freeze
+  signature: {require: [Cryo, Hydro], forbid: [Pyro, Dendro]}
+  ceiling: 0.95
+  sustain_penalty: 0  # frozen enemies cannot hit back
+  slots:
+    - {name: Cryo carry, roles: [carry_freeze], elements: [Cryo], core: true, weight: 2}
+    - name: Hydro applicator
+      roles: [offfield_app]
+      elements: [Hydro]
+      core: true
+      min_quality: 2
+      weight: 1.5
+      value: {base: 2, offfield_app: 0.15, buffer_general: 0.45}  # tuned on gcsim: Furina > Mona > Yelan
+    - name: Cryo support
+      roles: [buffer_cryo, offfield_app, buffer_general]
+      elements: [Cryo]
+      min_quality: 2
+      value: {base: 2, buffer_cryo: 0.4, buffer_general: 0.35, offfield_dps: 0.15, offfield_app: 0.1}
+    - name: Flex support
+      roles: [buffer_anemo, buffer_general, shield, healer]
+      value: {base: 2, buffer_anemo: 0.4, buffer_general: 0.3, cc: 0.1, healer: 0.1, shield: 0.1}
+  pair_bonuses:
+    - {pair: [Kamisato Ayaka, Shenhe], bonus: 5}
+
+melt:
+  label: Melt (Cryo carry)
+  signature: {require: [Cryo, Pyro], forbid: [Hydro]}
+  ceiling: 0.85
+  slots:
+    - {name: Cryo carry, roles: [carry_melt], elements: [Cryo], core: true, weight: 2}
+    - {name: Pyro applicator, roles: [offfield_app], elements: [Pyro], core: true, min_quality: 4, weight: 1.5}
+    - {name: ATK buffer, roles: [buffer_atk], weight: 1.5}
+    - {name: Flex support, roles: [buffer_anemo, shield, buffer_general]}
+
+national:
+  label: National (Xiangling, Xingqiu, Bennett, driver)
+  signature: {require: [Pyro, Hydro]}
+  ceiling: 0.9
+  slots:
+    - {name: Pyro off-field, roles: [offfield_dps], elements: [Pyro], core: true, min_quality: 4, weight: 2}
+    - {name: Hydro off-field, roles: [offfield_app], elements: [Hydro], core: true, min_quality: 4, weight: 1.5}
+    - {name: ATK buffer, roles: [buffer_atk], core: true, weight: 1.5}
+    - {name: Driver, roles: [carry_national_driver, buffer_anemo, buffer_overloaded]}
+
+vaporize_pyro:
+  label: Pyro vaporize carry
+  signature: {require: [Pyro, Hydro], forbid: [Dendro]}
+  ceiling: 0.85
+  slots:
+    - {name: Pyro carry, roles: [carry_vape], elements: [Pyro], core: true, weight: 2}
+    - {name: Hydro applicator, roles: [offfield_app], elements: [Hydro], core: true, min_quality: 4, weight: 1.5}
+    - {name: Buffer, roles: [buffer_atk, buffer_anemo, buffer_general]}
+    - {name: Flex support, roles: [shield, buffer_anemo, healer, buffer_general]}
+
+international:
+  label: International (Hydro carry with Pyro)
+  signature: {require: [Hydro, Pyro], forbid: [Dendro]}
+  ceiling: 0.85
+  slots:
+    - {name: Hydro carry, roles: [carry_international], elements: [Hydro], core: true, weight: 2}
+    - {name: Pyro off-field, roles: [offfield_dps], elements: [Pyro], core: true, min_quality: 4, weight: 1.5}
+    - {name: ATK buffer, roles: [buffer_atk], weight: 1.5}
+    - {name: Anemo buffer, roles: [buffer_anemo]}
+
+aggravate:
+  label: Aggravate (Quicken)
+  signature: {require: [Electro, Dendro], forbid: [Hydro]}
+  ceiling: 0.9
+  slots:
+    - {name: Electro carry, roles: [carry_aggravate], elements: [Electro], core: true, weight: 2}
+    - {name: Dendro applicator, roles: [offfield_app], elements: [Dendro], core: true, min_quality: 3, weight: 1.5}
+    - {name: Electro off-field, roles: [offfield_app], elements: [Electro], min_quality: 3}
+    - {name: Flex support, roles: [buffer_anemo, shield, healer, buffer_general, offfield_app]}
+
+hyperbloom:
+  label: Hyperbloom
+  signature: {require: [Dendro, Hydro, Electro]}
+  ceiling: 0.9
+  compare: archetype
+  slots:
+    - {name: Dendro applicator, roles: [offfield_app], elements: [Dendro], core: true, min_quality: 3, weight: 1.5}
+    - {name: Hydro applicator, roles: [offfield_app], elements: [Hydro], core: true, min_quality: 3, weight: 1.5}
+    - {name: Electro trigger, roles: [offfield_app], elements: [Electro], core: true, min_quality: 3, weight: 1.5}
+    - {name: Flex, roles: [offfield_app, em_share, healer, shield], elements: [Dendro, Hydro, Electro, Anemo, Geo]}
+
+nilou_bloom:
+  label: Nilou Bloom
+  signature: {only: [Hydro, Dendro]}
+  ceiling: 0.85
+  allowed_elements: [Hydro, Dendro]
+  slots:
+    - {name: Nilou, roles: [enables_bloom], core: true, weight: 2}
+    - {name: Dendro applicator, roles: [offfield_app], elements: [Dendro], core: true, min_quality: 3, weight: 1.5}
+    - {name: Hydro or Dendro, roles: [offfield_app, offfield_dps, healer]}
+    - {name: Hydro or Dendro, roles: [offfield_app, offfield_dps, healer]}
+
+electro_hypercarry:
+  label: Electro hypercarry
+  signature: {require: [Electro], forbid: [Dendro, Hydro]}
+  ceiling: 0.85
+  slots:
+    - {name: Electro carry, roles: [carry_hypercarry], elements: [Electro], core: true, weight: 2}
+    - {name: ATK buffer, roles: [buffer_atk], weight: 1.5}
+    - {name: Anemo buffer, roles: [buffer_anemo]}
+    - {name: Flex support, roles: [buffer_general, offfield_dps, shield]}
+
+mono_geo:
+  label: Mono Geo
+  signature: {require: [Geo], forbid: [Hydro, Dendro]}
+  ceiling: 0.75
+  slots:
+    - {name: Geo carry, roles: [carry_geo], elements: [Geo], core: true, weight: 2}
+    - {name: Geo support, roles: [offfield_dps, shield, buffer_general], elements: [Geo], core: true, weight: 1.5}
+    - {name: Geo support, roles: [offfield_dps, shield, buffer_general, offfield_app], elements: [Geo]}
+    - {name: Flex, roles: [buffer_general, buffer_atk, shield, offfield_dps], elements: [Geo, Pyro, Electro]}
+
+overloaded:
+  label: Chevreuse Overloaded
+  signature: {only: [Pyro, Electro]}
+  ceiling: 0.8
+  allowed_elements: [Pyro, Electro]
+  slots:
+    - {name: Chevreuse, roles: [buffer_overloaded], core: true, weight: 1.5}
+    - {name: Pyro damage, roles: [offfield_dps, carry_vape, carry_national_driver], elements: [Pyro], core: true, weight: 1.5}
+    - {name: Electro damage, roles: [offfield_dps, offfield_app, carry_hypercarry, carry_national_driver], elements: [Electro], core: true, weight: 1.5}
+    - {name: Flex, roles: [offfield_dps, offfield_app, buffer_atk, buffer_general, healer]}

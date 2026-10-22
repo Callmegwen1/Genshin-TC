@@ -1,0 +1,98 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Emilie:
+  schema: 3
+  element: Dendro
+  weapon: polearm
+  roles:
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Dendro
+      types:
+      - skill
+      - summon
+      - burst
+    application:
+    - element: Dendro
+      mode: on_field
+      strength: low
+    - element: Dendro
+      mode: off_field
+      strength: high
+    - element: Pyro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 50
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - summon
+    - burst
+  effects:
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 15% per 1,000 ATK, max 36%
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: aura_required
+      auras:
+      - burning
+      text: against Burning opponents
+    source: Rectification
+  - kind: other
+    target: party
+    affects:
+      reactions:
+      - burning
+    amount: 85% Pyro RES against Burning DMG
+    duration: while the Lumidouce Case is on the field
+    stacking: none
+    conditions: []
+    source: Headspace Capture
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - burning
+    requires:
+    - burning
+    aura_supplied:
+    - dendro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Shadow-Hunting Spear (Custom), Fragrance Extraction, Aromatic Explication,
+      Lingering Fragrance, Rectification, Headspace Capture'
+    community: 'How the character is played and engine measurements: off-field Dendro sub-DPS for Burning teams (10% field
+      share, 89% of her damage off field)'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

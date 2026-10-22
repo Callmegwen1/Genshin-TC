@@ -1,0 +1,34 @@
+Iansan:
+  schema: 2
+  provisional: true
+  role: support
+  element: Electro
+  weapon: polearm
+  analogue: Bennett          # simulated ATK buffer for the active character; Iansan's Kinetic Energy Scale follows the active character
+  field: {behaviour: off_field, share: [0.05, 0.15]}
+  personal_damage: {tier: minimal, share: [0.0, 0.08]}
+  application: {Electro.on: [0.5, 1.5]}
+  buffs:
+    - {kind: atk, target: active, condition: "Kinetic Energy Scale (Burst), stronger at 42+ Nightsoul points (Ardent Support!)",
+       text: "boosts the ATK of the current active party member, based on her ATK and Nightsoul points"}
+    - {kind: atk, target: self, condition: "15 s after Swift Stormflight hits (Enhanced Resistance Training)", text: "ATK +20% and extra Nightsoul points"}
+  sustain: {heal: low, shield: none}                        # heals the active character after a party Nightsoul Burst (Kinetic Energy Gradient Test)
+  reactions: {owns: [], enables: []}
+  preferred_systems: []
+  restrictions: []
+  synergies:
+    - {with: Mavuika, why: "Prydwen: mobile ATK-scaling Natlan carries; Mavuika's best team"}
+    - {with: Varesa, why: "mobile ATK-scaling carry"}
+    - {with: Chevreuse, why: "Overloaded teams Prydwen lists"}
+  roles: {buffer_atk: 5, buffer_general: 4, healer: 2, support_melt_pyro_carry: 4, support_overloaded_electro_carry: 4, support_overloaded_pyro_carry: 4, support_mono_pyro: 3}
+  sources:
+    amber: "Official kit text (Project Amber cache): Thunderbolt Rush, The Three Principles of Power, Enhanced Resistance Training, Kinetic Energy Gradient Test"
+    prydwen: "Prydwen guide: Support tier T0; teams Mavuika / Citlali / Iansan / Bennett (100), Varesa / Mavuika / Iansan / Chevreuse, Kinich / Durin / Nicole / Iansan"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: medium, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: judgment, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

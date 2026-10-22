@@ -1,0 +1,692 @@
+{
+ "benchmark_cases": [
+  "xiao_faruzan"
+ ],
+ "candidates": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 57.1,
+   "fit_source": "gcsim",
+   "label": "Xiao hypercarry · Vaporize",
+   "lead": "Xiao",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Xianyun",
+    "Xiao"
+   ],
+   "ranking": 53.3,
+   "route": "exact_community",
+   "sd": 5.7,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 46.1,
+   "fit_source": "gcsim",
+   "label": "Xiao on-field",
+   "lead": "Xiao",
+   "lineup": [
+    "Bennett",
+    "Faruzan",
+    "Xianyun",
+    "Xiao"
+   ],
+   "ranking": 43.0,
+   "route": "exact_community",
+   "sd": 4.6,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 45.0,
+   "fit_source": "gcsim",
+   "label": "Xiao on-field",
+   "lead": "Xiao",
+   "lineup": [
+    "Faruzan",
+    "Xianyun",
+    "Xiao",
+    "Zhongli"
+   ],
+   "ranking": 42.0,
+   "route": "exact_community",
+   "sd": 4.5,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 41.3,
+   "fit_source": "gcsim",
+   "label": "Xiao on-field · incidental Swirl",
+   "lead": "Xiao",
+   "lineup": [
+    "Bennett",
+    "Faruzan",
+    "Furina",
+    "Xiao"
+   ],
+   "ranking": 38.6,
+   "route": "exact_community",
+   "sd": 4.1,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "mixed",
+   "evidence_state": "simulation",
+   "expected": 44.2,
+   "fit_source": "gcsim",
+   "label": "Xiao on-field · incidental Swirl",
+   "lead": "Xiao",
+   "lineup": [
+    "Faruzan",
+    "Furina",
+    "Xianyun",
+    "Xiao"
+   ],
+   "ranking": 37.4,
+   "route": "exact_community",
+   "sd": 10.1,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.3,
+   "fit_source": "pairmodel",
+   "label": "Xiao on-field · incidental Swirl",
+   "lead": "Xiao",
+   "lineup": [
+    "Faruzan",
+    "Furina",
+    "Xiao",
+    "Zhongli"
+   ],
+   "ranking": 35.8,
+   "route": "pair_model",
+   "sd": 3.6,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 37.8,
+   "fit_source": "pairmodel",
+   "label": "Xianyun on-field · incidental Swirl",
+   "lead": "Xianyun",
+   "lineup": [
+    "Bennett",
+    "Faruzan",
+    "Furina",
+    "Xianyun"
+   ],
+   "ranking": 35.3,
+   "route": "exact_community",
+   "sd": 3.8,
+   "template": "auto_mono_hydro",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "good",
+   "evidence_state": "simulation",
+   "expected": 36.5,
+   "fit_source": "gcsim",
+   "label": "Xiao on-field",
+   "lead": "Xiao",
+   "lineup": [
+    "Bennett",
+    "Faruzan",
+    "Xiao",
+    "Zhongli"
+   ],
+   "ranking": 34.7,
+   "route": "exact_community",
+   "sd": 2.6,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.2,
+   "fit_source": "pairmodel",
+   "label": "Xiao on-field",
+   "lead": "Xiao",
+   "lineup": [
+    "Bennett",
+    "Xianyun",
+    "Xiao",
+    "Zhongli"
+   ],
+   "ranking": 34.5,
+   "route": "pair_model",
+   "sd": 4.0,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 36.9,
+   "fit_source": "pairmodel",
+   "label": "Xiao on-field · incidental Swirl",
+   "lead": "Xiao",
+   "lineup": [
+    "Furina",
+    "Xianyun",
+    "Xiao",
+    "Zhongli"
+   ],
+   "ranking": 34.5,
+   "route": "pair_model",
+   "sd": 3.5,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 38.7,
+   "fit_source": "pairmodel",
+   "label": "Furina dual carry · Vaporize",
+   "lead": "Furina",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Xianyun",
+    "Zhongli"
+   ],
+   "ranking": 33.5,
+   "route": "pair_model",
+   "sd": 7.7,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 35.4,
+   "fit_source": "pairmodel",
+   "label": "Faruzan and Furina dual carry · incidental Vaporize, Swirl",
+   "lead": "Faruzan",
+   "lineup": [
+    "Bennett",
+    "Faruzan",
+    "Furina",
+    "Zhongli"
+   ],
+   "ranking": 30.3,
+   "route": "pair_model",
+   "sd": 7.7,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 37.1,
+   "fit_source": "pairmodel",
+   "label": "Xianyun and Furina dual carry · incidental Swirl",
+   "lead": "Xianyun",
+   "lineup": [
+    "Faruzan",
+    "Furina",
+    "Xianyun",
+    "Zhongli"
+   ],
+   "ranking": 29.9,
+   "route": "pair_model",
+   "sd": 10.7,
+   "template": "auto_mono_hydro",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.8,
+   "fit_source": "pairmodel",
+   "label": "Xiao on-field · Vaporize · incidental Swirl",
+   "lead": "Xiao",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Xiao",
+    "Zhongli"
+   ],
+   "ranking": 29.5,
+   "route": "pair_model",
+   "sd": 3.4,
+   "template": "auto_anemo_carry",
+   "tier": "C"
+  },
+  {
+   "evidence_quality": "",
+   "evidence_state": "interpolation",
+   "expected": 31.3,
+   "fit_source": "pairmodel",
+   "label": "Xianyun dual carry · incidental Swirl",
+   "lead": "Xianyun",
+   "lineup": [
+    "Bennett",
+    "Faruzan",
+    "Xianyun",
+    "Zhongli"
+   ],
+   "ranking": 25.3,
+   "route": "pair_model",
+   "sd": 8.9,
+   "template": "auto_geo_carry",
+   "tier": "C"
+  }
+ ],
+ "carries_for_supports": [
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Furina",
+    "Lyney",
+    "Xianyun"
+   ],
+   62.3
+  ],
+  [
+   "Gaming",
+   [
+    "Bennett",
+    "Furina",
+    "Gaming",
+    "Xianyun"
+   ],
+   58.3
+  ],
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Faruzan",
+    "Furina",
+    "Mavuika"
+   ],
+   57.8
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Xianyun",
+    "Zhongli"
+   ],
+   52.4
+  ],
+  [
+   "Kinich",
+   [
+    "Bennett",
+    "Furina",
+    "Kinich",
+    "Xianyun"
+   ],
+   51.4
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [
+    "Bennett",
+    "Furina",
+    "Xianyun",
+    "Xiao"
+   ],
+   "note": "No second team worth building yet.",
+   "score": 2.8,
+   "teams": [
+    [
+     "Bennett",
+     "Furina",
+     "Xianyun",
+     "Xiao"
+    ]
+   ]
+  },
+  "general": {
+   "core": [
+    "Bennett",
+    "Furina",
+    "Xianyun",
+    "Xiao"
+   ],
+   "note": "",
+   "score": 29.1,
+   "teams": [
+    [
+     "Bennett",
+     "Furina",
+     "Xianyun",
+     "Xiao"
+    ]
+   ]
+  },
+  "stygian": {
+   "core": [
+    "Bennett",
+    "Furina",
+    "Xianyun",
+    "Xiao"
+   ],
+   "note": "",
+   "score": 33.3,
+   "teams": [
+    [
+     "Bennett",
+     "Furina",
+     "Xianyun",
+     "Xiao"
+    ]
+   ]
+  },
+  "theater": {
+   "core": [],
+   "note": "1 competent teams over 4 characters, 3 of 7 elements",
+   "score": 37.0,
+   "teams": [
+    [
+     "Bennett",
+     "Furina",
+     "Xianyun",
+     "Xiao"
+    ]
+   ]
+  }
+ },
+ "plan": [
+  {
+   "evidence_quality": "unconfirmed",
+   "evidence_state": "simulation",
+   "expected": 57.1,
+   "fit_source": "gcsim",
+   "label": "Xiao hypercarry · Vaporize",
+   "lead": "Xiao",
+   "lineup": [
+    "Bennett",
+    "Furina",
+    "Xianyun",
+    "Xiao"
+   ],
+   "ranking": 53.3,
+   "route": "exact_community",
+   "sd": 5.7,
+   "template": "auto_anemo_carry",
+   "tier": "B"
+  }
+ ],
+ "plan_value": 33.3,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Faruzan",
+    "Furina",
+    "Mavuika"
+   ],
+   "decomposition": {
+    "best_team_gain": 4.5,
+    "displaced": [
+     "Xianyun",
+     "Xiao"
+    ],
+    "improved": [
+     "Bennett",
+     "Furina"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 20,
+    "redundancy_score": 0.42,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 4.6,
+   "gain": 4.5,
+   "kind": "sidegrade",
+   "name": "Mavuika",
+   "sd": 8.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Columbina",
+    "Furina",
+    "Xianyun",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 1.6,
+    "displaced": [
+     "Bennett",
+     "Xiao"
+    ],
+    "improved": [
+     "Furina",
+     "Xianyun"
+    ],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.16,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 1.3,
+   "gain": 1.6,
+   "kind": "new archetype",
+   "name": "Columbina",
+   "sd": 7.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Citlali",
+    "Faruzan",
+    "Xianyun",
+    "Xiao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 18,
+    "redundancy_score": 0.14,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Citlali",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Furina",
+    "Xianyun"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.3,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Escoffier",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Faruzan",
+    "Furina",
+    "Nahida",
+    "Xiao"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 17,
+    "redundancy_score": 0.16,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Nahida",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Neuvillette",
+    "Xianyun",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.15,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Neuvillette",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Furina",
+    "Skirk",
+    "Xianyun",
+    "Zhongli"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 3,
+    "redundancy_score": 0.1,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Skirk",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Faruzan",
+    "Varka",
+    "Xianyun"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 9,
+    "redundancy_score": 0.5,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Varka",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Faruzan",
+    "Furina",
+    "Xiao",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.21,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Xilonen",
+   "sd": 0.0,
+   "tier": "B"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Furina",
+    "Xianyun",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 19,
+    "redundancy_score": 0.52,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Yelan",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": [
+  "Xiao"
+ ]
+}

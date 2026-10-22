@@ -1,0 +1,37 @@
+Vesna:
+  schema: 2
+  provisional: true
+  role: carry
+  element: Anemo
+  weapon: sword
+  analogue: Xiao             # simulated Anemo on-field Normal Attack carry, played with Faruzan
+  field: {behaviour: on_field, share: [0.55, 0.8]}
+  personal_damage: {tier: high, share: [0.5, 0.75]}
+  application: {Anemo.on: [4.0, 8.0]}
+  buffs:
+    - {kind: reaction_conversion, target: party, condition: "always (Stellar Jubilee)",
+       text: "Cryo Swirl becomes Stellar Swirl; its Base DMG +0.7% per 100 of Vesna's ATK, max 14%"}
+    - {kind: atk, target: self, condition: "Radiance: Stellar Swirl (8 s after a Stellar Swirl)",
+       text: "ATK +6% per Cryo or Anemo member; EM +25 per member of another element"}
+    - {kind: damage_scaling, target: self, condition: "Disciplinary Action stacks (max 6)", text: "Spirit Blades deal +10% per stack"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [swirl-cryo], enables: [swirl-cryo], converts: {swirl-cryo: Stellar Swirl}}
+  preferred_systems: [swirl-cryo]
+  restrictions:
+    - {rule: needs_element, any_of: [Cryo], why: "her Radiance and Stellar Swirl need Cryo to swirl"}
+  synergies:
+    - {with: Odette, why: "in every team Prydwen lists for her"}
+    - {with: Faruzan, why: "Anemo buffs and shred"}
+  expected_archetypes:
+    auto_anemo_carry: {as: carry, quality: 4}
+  sources:
+    amber: "Official kit text (Project Amber cache): The Art of Victory, For the Tsaritsa!, Rite of Spring's Procession, Truth Prevails, Stellar Jubilee"
+    prydwen: "Prydwen guide: DPS tier T0; teams Vesna / Faruzan / Odette / Cryo Traveler (100), Vodyanitsa / Odette / Faruzan (100), Diona variant (75.4)"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: judgment, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}

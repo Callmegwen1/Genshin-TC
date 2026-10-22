@@ -1,0 +1,35 @@
+Chevreuse:
+  schema: 3
+  element: Pyro
+  weapon: polearm
+  roles: [buffer, debuffer, healer]
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage: {element: Pyro, types: [skill, burst]}
+    application: [{element: Pyro, mode: off_field, strength: low}]
+    energy: {burst_cost: 60, dependency: low}
+    sustain: {heal: medium, shield: none}
+  scaling: [{stat: hp, for: buff, source: [skill]}, {stat: hp, for: heal, source: [skill]}]
+  effects:
+    - {kind: res_shred, target: enemy, affects: {elements: [Pyro, Electro]}, amount: 0.40, duration: 6, stacking: none,
+       conditions: [{type: party_elements_only, elements: [Pyro, Electro], each_required: true, text: "all party members Pyro or Electro, at least one of each"},
+                    {type: reaction_required, reactions: [overloaded], text: "after a character triggers Overloaded"}],
+       source: "Vanguard's Coordinated Tactics"}
+    - {kind: atk_pct, target: matching_element_members, affects: {elements: [Pyro, Electro]}, amount: "1% per 1,000 of Chevreuse's Max HP, up to 40%",
+       duration: 30, stacking: none, conditions: [{type: reaction_required, reactions: [overloaded], text: "an Overcharged Ball needs a party Overloaded reaction"},
+                    {type: character_state, state: "Overcharged Ball fired", text: "after firing an Overcharged Ball"}],
+       source: "Vertical Force Coordination"}
+  conditions:
+    - {type: party_elements_only, elements: [Pyro, Electro], each_required: true,
+       text: "party ATK and Pyro/Electro RES shred after Overloaded need an all Pyro and Electro party"}
+  reactions: {owns: [], enables: [overloaded, vaporize, melt], requires: [overloaded], aura_supplied: [pyro], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Short-Range Rapid Interdiction Fire, Ring of Bursting Grenades, Vanguard's Coordinated Tactics, Vertical Force Coordination"
+    community: "How the character is played (KQM, Prydwen): Overloaded buffer in Pyro/Electro-only teams"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

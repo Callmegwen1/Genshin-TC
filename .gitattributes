@@ -1,0 +1,4 @@
+# shell scripts and the Dockerfile run on Linux: always LF
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf

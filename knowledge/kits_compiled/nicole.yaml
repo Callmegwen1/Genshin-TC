@@ -1,0 +1,140 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Nicole:
+  schema: 3
+  element: Pyro
+  weapon: catalyst
+  roles:
+  - buffer
+  - shielder
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Pyro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: atk
+    for: buff
+    source:
+    - skill
+  - stat: atk
+    for: shield
+    source:
+    - skill
+  effects:
+  - kind: atk
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 15% of Nicole's ATK, max 600, at talent level 10
+    duration: 20
+    stacking: none
+    conditions: []
+    source: 'Revelation: Uncreated Light (Grace of Kenosis, at talent level 10)'
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 398.13% ATK+3051 at talent level 10, 250% Pyro absorption
+    duration: 20
+    stacking: none
+    conditions: []
+    source: 'Revelation: Uncreated Light (Shield of Blazing Light, at talent level 10)'
+  - kind: atk
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 300
+    duration: while the observed character stays on field, within 20s of the skill
+    stacking: upgrade of Grace of Kenosis
+    conditions:
+    - type: character_state
+      state: on field for 3s (immediately for Hexerei characters)
+      text: observed active character stays on field 3s, or is Hexerei
+    source: Methexis (Guidance of Theosis)
+  - kind: atk
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 300
+    duration: 8
+    stacking: none
+    conditions:
+    - type: character_state
+      state: active party member's Elemental DMG hits an opponent
+      text: Elemental DMG from the active party member hits
+    source: Philokalia (Guidance of Theosis)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: Arcane Projection Coordinated Attack, 180% of the active character's ATK, their element, counted as their DMG;
+      up to 4 times
+    duration: 20
+    stacking: once every 3s
+    conditions: []
+    source: 'Revelation: Ladder of Divine Ascent (Arcane Projection, at talent level 10)'
+  - kind: flat_dmg
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 300% of Nicole's ATK added to Hexerei characters' Arcane Projections
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: 'Hexerei: Secret Rite needs at least 2 Hexerei characters in the party'
+    source: 'Witch''s Eve Rite: Light in the Darkness (Hexerei: Secret Rite)'
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Revelation: Uncreated Light, Revelation: Ladder of Divine Ascent, Methexis,
+      Philokalia, Witch''s Eve Rite: Light in the Darkness'
+    engine: 'Engine measurements: field share 12%, share of team damage 2%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,295 @@
+{
+ "benchmark_cases": [
+  "no_freeze_with_pyro"
+ ],
+ "candidates": [],
+ "carries_for_supports": [
+  [
+   "Mavuika",
+   [
+    "Bennett",
+    "Kamisato Ayaka",
+    "Mavuika",
+    "Xiangling"
+   ],
+   50.5
+  ],
+  [
+   "Chasca",
+   [
+    "Bennett",
+    "Chasca",
+    "Mona",
+    "Xiangling"
+   ],
+   33.6
+  ],
+  [
+   "Lyney",
+   [
+    "Bennett",
+    "Lyney",
+    "Mona",
+    "Xiangling"
+   ],
+   33.0
+  ],
+  [
+   "Arlecchino",
+   [
+    "Arlecchino",
+    "Bennett",
+    "Mona",
+    "Xiangling"
+   ],
+   32.2
+  ],
+  [
+   "Shikanoin Heizou",
+   [
+    "Bennett",
+    "Kamisato Ayaka",
+    "Shikanoin Heizou",
+    "Xiangling"
+   ],
+   32.0
+  ]
+ ],
+ "modes": {
+  "abyss": {
+   "core": [],
+   "note": "No second team worth building yet.",
+   "score": 0.0,
+   "teams": []
+  },
+  "general": {
+   "core": [],
+   "note": "",
+   "score": 0.0,
+   "teams": []
+  },
+  "stygian": {
+   "core": [],
+   "note": "",
+   "score": 0.0,
+   "teams": []
+  },
+  "theater": {
+   "core": [],
+   "note": "0 competent teams over 0 characters, 0 of 7 elements",
+   "score": 0.0,
+   "teams": []
+  }
+ },
+ "plan": [],
+ "plan_value": 0.0,
+ "pulls": [
+  {
+   "best_team": [
+    "Bennett",
+    "Kamisato Ayaka",
+    "Mavuika",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 50.5,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 2,
+    "redundancy_score": 0.12,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 34.5,
+   "gain": 30.5,
+   "kind": "new archetype",
+   "name": "Mavuika",
+   "sd": 5.9,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Kamisato Ayaka",
+    "Xiangling",
+    "Xilonen"
+   ],
+   "decomposition": {
+    "best_team_gain": 46.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 2,
+    "redundancy_score": 0.07,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 29.3,
+   "gain": 26.0,
+   "kind": "fills a gap",
+   "name": "Xilonen",
+   "sd": 4.8,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Escoffier",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 40.8,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 2,
+    "redundancy_score": 0.06,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 23.6,
+   "gain": 20.8,
+   "kind": "fills a gap",
+   "name": "Escoffier",
+   "sd": 4.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Citlali",
+    "Kamisato Ayaka",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 40.5,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "melt"
+    ],
+    "new_viable_teams": 2,
+    "redundancy_score": 0.04,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 23.4,
+   "gain": 20.5,
+   "kind": "fills a gap",
+   "name": "Citlali",
+   "sd": 4.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Columbina",
+    "Mona",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 31.7,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 1,
+    "redundancy_score": 0.06,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 14.4,
+   "gain": 11.7,
+   "kind": "fills a gap",
+   "name": "Columbina",
+   "sd": 4.0,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Mona",
+    "Xiangling",
+    "Yelan"
+   ],
+   "decomposition": {
+    "best_team_gain": 25.6,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 1,
+    "redundancy_score": 0.05,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 7.8,
+   "gain": 5.6,
+   "kind": "fills a gap",
+   "name": "Yelan",
+   "sd": 3.3,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Mona",
+    "Varka",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 22.6,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [
+     "vaporize"
+    ],
+    "new_viable_teams": 1,
+    "redundancy_score": 0.0,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 23.5,
+   "gain": 2.6,
+   "kind": "new archetype",
+   "name": "Varka",
+   "sd": 31.1,
+   "tier": "C"
+  },
+  {
+   "best_team": [
+    "Bennett",
+    "Mona",
+    "Nahida",
+    "Xiangling"
+   ],
+   "decomposition": {
+    "best_team_gain": 0.0,
+    "displaced": [],
+    "improved": [],
+    "new_mechanics": [],
+    "new_viable_teams": 0,
+    "redundancy_score": 0.05,
+    "second_team_gain": 0.0,
+    "support_contention": []
+   },
+   "expected": 0.0,
+   "gain": 0.0,
+   "kind": "no change",
+   "name": "Nahida",
+   "sd": 0.0,
+   "tier": "B"
+  }
+ ],
+ "viable_carries": []
+}

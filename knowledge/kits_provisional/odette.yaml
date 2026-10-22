@@ -1,0 +1,38 @@
+Odette:
+  schema: 2
+  provisional: true
+  role: sub_dps
+  element: Cryo
+  weapon: sword
+  analogue: Rosaria          # simulated off-field Cryo sub-DPS in Superconduct teams; Odette's Stellar conversion has no simulated equivalent
+  field: {behaviour: off_field, share: [0.1, 0.25]}
+  personal_damage: {tier: medium, share: [0.15, 0.35]}     # Prydwen ranks her Sub-DPS; Solo Dance Double attacks off-field
+  application: {Cryo.off: [2.0, 4.0], Cryo.on: [0.5, 1.5]}
+  buffs:
+    - {kind: reaction_conversion, target: party, condition: "always (Stellar Jubilee: Dance of Aurore)",
+       text: "Superconduct and Cryo Swirl become Stellar-Conduct and Stellar Swirl; their Base DMG +0.7% per 100 of Odette's ATK, max 14%"}
+    - {kind: other, target: party, condition: "when she summons her Solo Dance Double (Spring Rite of the Chosen One)",
+       text: "she gains 4 stacks of Marvelous Splendor, which Prydwen describes as supplied to the team"}
+    - {kind: dmg_bonus, target: self, condition: "Presto: Bluebird Finale (Snow Swan's Dream)", text: "Stellar Glimmer DMG she deals is increased"}
+  sustain: {heal: none, shield: none}
+  reactions: {owns: [], enables: [superconduct, swirl-cryo], converts: {superconduct: Stellar-Conduct, swirl-cryo: Stellar Swirl}}
+  preferred_systems: [superconduct, swirl-cryo]
+  restrictions:
+    - {rule: needs_element, any_of: [Electro, Anemo], why: "Stellar-Conduct needs Electro and Stellar Swirl needs Anemo; every team Prydwen lists has one"}
+  synergies:
+    - {with: Sandrone, why: "Prydwen: Sandrone's best teammate"}
+    - {with: Yae Miko, why: "off-field Electro for Stellar-Conduct"}
+    - {with: Faruzan, why: "Anemo for Stellar Swirl in Vesna and Mizuki teams"}
+  roles: {offfield_app: 5, offfield_dps: 4, support_superconduct_cryo_carry: 4, support_superconduct_electro_carry: 4, support_anemo_carry: 4, support_mono_cryo: 3}
+  sources:
+    amber: "Official kit text (Project Amber cache): Adagio: Phantom Night Dancers, Presto: Bluebird Finale, Spring Rite of the Chosen One, Pathetique of Pateticheskaya, Stellar Jubilee: Dance of Aurore"
+    prydwen: "Prydwen guide: Sub-DPS tier T0; teams with Sandrone / Yae Miko / Alyosha, Cyno / Yae Miko, Vesna / Faruzan, Yumemizuki Mizuki / Faruzan"
+    judgment: "Hand estimate from the kit text and Prydwen's teams; no measurement"
+  provenance:
+    "*": {source: amber, confidence: medium, method: manual}
+    analogue: {source: judgment, confidence: low, method: manual}
+    field: {source: judgment, confidence: low, method: manual}
+    personal_damage: {source: prydwen, confidence: low, method: manual}
+    application: {source: judgment, confidence: low, method: manual}
+    synergies: {source: prydwen, confidence: medium, method: manual}
+    restrictions: {source: prydwen, confidence: medium, method: manual}

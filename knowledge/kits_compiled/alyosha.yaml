@@ -1,0 +1,131 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Alyosha:
+  schema: 3
+  element: Electro
+  weapon: polearm
+  roles:
+  - healer
+  - buffer
+  - off_field_sub_dps
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Electro
+      types:
+      - skill
+      - burst
+      - summon
+    application:
+    - element: Electro
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 70
+      dependency: medium
+    sustain:
+      heal: medium
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+    - summon
+  - stat: atk
+    for: heal
+    source:
+    - burst
+  - stat: er
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: atk_pct
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 0.212
+    duration: 15
+    stacking: Hunter's Precision, at talent level 10; recipient not stated precisely (character who activates the Hunter's
+      Mark)
+    conditions:
+    - type: character_state
+      state: Hunter's Mark activated
+      text: Hunter's Precision is obtained when the Hunter's Mark is activated
+    source: Thunderbolt Strike (Hunter's Precision, at talent level 10)
+  - kind: heal
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 120% of Alyosha's ATK per Tugarin attack
+    duration: while Tugarin is on the field (14s at talent level 10)
+    stacking: none
+    conditions: []
+    source: Awakened by the Baying Hounds
+  - kind: dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - skill
+      - burst
+    amount: 0.35% per 1% Energy Recharge, max 70%
+    duration: unknown
+    stacking: max 70%
+    conditions: []
+    source: Suffer the Winter Wheat Will
+  - kind: reaction_bonus
+    target: active
+    affects:
+      elements:
+      - all
+      reactions: []
+    amount: 0.2
+    duration: with Hunter's Precision
+    stacking: Stellar-Conduct reaction DMG while on field
+    conditions:
+    - type: character_state
+      state: 'Radiance: Stellar-Conduct (inside a Polestar Field)'
+      text: 'Alyosha must be in Radiance: Stellar-Conduct'
+    source: 'Into the Fray (Radiance: Stellar-Conduct)'
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - aggravate
+    - electrocharged
+    - overloaded
+    - superconduct
+    - quicken
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (packet): Skirmishing Spear, Thunderbolt Strike, Hunter''s Advance, Awakened by the Baying Hounds,
+      Suffer the Winter Wheat Will, Into the Fray'
+    engine: Engine measurements in the packet and general knowledge of how such kits are played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

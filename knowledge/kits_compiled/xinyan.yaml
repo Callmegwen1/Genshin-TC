@@ -1,0 +1,103 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage unknown replaced by measured False
+Xinyan:
+  schema: 3
+  element: Pyro
+  weapon: claymore
+  roles:
+  - shielder
+  - buffer
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: medium
+    - element: Pyro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 60
+      dependency: medium
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - skill
+    - burst
+  - stat: def
+    for: shield
+    source:
+    - skill
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 'Level 1/2/3: 187.27% DEF + 1101 / 220.32% DEF + 1296 / 259.2% DEF + 1524, 250% effectiveness against Pyro, at
+      talent level 10'
+    duration: 12
+    stacking: level by opponents hit (Level 2 at 1, Level 3 at 2+ with the passive)
+    conditions: []
+    source: Sweeping Fervor (shield)
+  - kind: dmg_bonus
+    target: active
+    affects:
+      elements:
+      - Physical
+    amount: 0.15
+    duration: while shielded by Sweeping Fervor
+    stacking: none
+    conditions:
+    - type: character_state
+      state: shielded by Sweeping Fervor
+      text: character shielded by Sweeping Fervor
+    source: '"...Now That''s Rock ''N'' Roll!"'
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Dance on Fire, Sweeping Fervor, Riff Revolution, "The Show Goes On, Even
+      Without an Audience...", "...Now That''s Rock ''N'' Roll!"'
+    engine: 'Engine measurements: field share 25%, team damage share 23%, off-field share of own damage 23%, Pyro 2.9 on /
+      2.6 off field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

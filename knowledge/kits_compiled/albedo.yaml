@@ -1,0 +1,121 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Albedo:
+  schema: 3
+  element: Geo
+  weapon: sword
+  roles:
+  - off_field_sub_dps
+  - buffer
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: strong
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Geo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: on_field
+      strength: low
+    - element: Geo
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 40
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: def
+    for: damage
+    source:
+    - skill
+  - stat: atk
+    for: damage
+    source:
+    - burst
+  - stat: def
+    for: buff
+    source:
+    - 'Witch''s Eve Rite: Book of Blinding Light'
+  effects:
+  - kind: em
+    target: party
+    affects:
+      elements:
+      - all
+    amount: 125
+    duration: 10
+    stacking: none
+    conditions: []
+    source: 'Homuncular Nature (after using Rite of Progeniture: Tectonic Tide)'
+  - kind: dmg_bonus
+    target: party
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    amount: 4% per 1,000 of Albedo's DEF, max 12%
+    duration: 20
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: 'Hexerei: Secret Rite needs at least 2 Hexerei characters in the party'
+    source: 'Witch''s Eve Rite: Book of Blinding Light (Hexerei: Secret Rite, after creating a Solar Isotoma)'
+  - kind: dmg_bonus
+    target: party
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    amount: 10% per 1,000 of Albedo's DEF, max 30%, Hexerei party members only
+    duration: 20
+    stacking: none
+    conditions:
+    - type: hexerei_count
+      min: 2
+      text: 'Hexerei: Secret Rite needs at least 2 Hexerei characters in the party'
+    source: 'Witch''s Eve Rite: Book of Blinding Light (Hexerei: Secret Rite, after generating a Silver Isotoma)'
+  conditions: []
+  reactions:
+    owns:
+    - crystallize
+    enables: []
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Abiogenesis: Solar Isotoma, Rite of Progeniture: Tectonic Tide, Calcite
+      Might, Homuncular Nature, Witch''s Eve Rite: Book of Blinding Light'
+    engine: 'Engine measurements: field share 8%, off-field share of own damage 82%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

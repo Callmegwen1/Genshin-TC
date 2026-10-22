@@ -1,0 +1,116 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Yoimiya:
+  schema: 3
+  element: Pyro
+  weapon: bow
+  roles:
+  - on_field_carry
+  - buffer
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: some
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 60
+      dependency: low
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - normal
+    amount: Normal Attack arrows become Blazing Arrows converted to Pyro DMG, dealing 161.74% of Normal Attack DMG
+    duration: 10
+    stacking: at talent level 10; ends when Yoimiya leaves the field
+    conditions: []
+    source: Niwabi Fire-Dance (Niwabi Enshou)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+    amount: 2% per stack
+    duration: 3
+    stacking: 1 stack per Normal Attack hit during Niwabi Fire-Dance, max 10
+    conditions:
+    - type: character_state
+      state: Niwabi Fire-Dance
+      text: during Niwabi Fire-Dance
+    source: Tricks of the Trouble-Maker
+  - kind: atk_pct
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 10% + 1% per Tricks of the Trouble-Maker stack at Burst cast
+    duration: 15
+    stacking: none
+    conditions: []
+    source: Summer Night's Dawn
+  - kind: other
+    target: enemy
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - burst
+    amount: 'Aurous Blaze: hits by party members other than Yoimiya trigger an AoE Pyro explosion (219.6% at talent level
+      10), once per 2s'
+    duration: 10
+    stacking: none
+    conditions: []
+    source: Ryuukin Saxifrage (Aurous Blaze)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - vaporize
+    - melt
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Firework Flare-Up, Niwabi Fire-Dance, Ryuukin Saxifrage, Tricks of the
+      Trouble-Maker, Summer Night''s Dawn'
+    engine: 'Engine measurements: field share 56%, team damage share 52%, Pyro on 5.5 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

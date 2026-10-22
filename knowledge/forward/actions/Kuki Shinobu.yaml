@@ -1,0 +1,252 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Kuki Shinobu:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation BjDC6bq7fJfL (house builds)
+    - gcsim community rotation KMPPC6bqNNWN (house builds)
+    - gcsim community rotation Kj7CzkNPN7nb (house builds)
+    - gcsim community rotation WLCCDPDMPhPP (house builds)
+    - gcsim community rotation gr6hCKdCDT7m (house builds)
+    - gcsim community rotation jnzbqRQtbk9q (house builds)
+    - gcsim community rotation kwBDf9QmkHzt (house builds)
+    - gcsim community rotation pCGPmMRqKffn (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 23 of 23 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.833
+      particles: 4.0
+      hits:
+      - offset: 0.183
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 1.917
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 3.417
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 4.917
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 6.417
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 7.917
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 9.417
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 10.917
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 12.417
+        type: skill
+        table:
+        - skill
+        - Grass Ring of Sanctification DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+    burst:
+      duration: 1.033
+      particles: 0.0
+      hits:
+      - offset: 0.833
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 1.117
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 1.4
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 1.683
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 1.967
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 2.25
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 2.533
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 2.817
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 3.1
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 3.383
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 3.667
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+      - offset: 3.95
+        type: burst
+        table:
+        - burst
+        - Single Instance DMG
+        - 0
+        element: Electro
+        gauge: 0.0
+    dash:
+      duration: 0.333
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.3
+      particles: 0.0
+      hits:
+      - offset: 0.2
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.317
+      particles: 0.0
+      hits:
+      - offset: 0.217
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - dash
+    - attack
+  - - attack
+    - attack
+  - - attack
+    - dash
+  - - attack
+    - attack
+    - dash
+  follow:
+    skill: attack
+  first: skill
+  causal: {}

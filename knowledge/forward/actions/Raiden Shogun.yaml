@@ -1,0 +1,392 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Raiden Shogun:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation BgTqTjzNDfpP (house builds)
+    - gcsim community rotation JNqwJ6RCMWLh (house builds)
+    - gcsim community rotation cDBPNg6RLgpt (house builds)
+    - gcsim community rotation cTfBpzBftP6p (house builds)
+    - gcsim community rotation h6PnbkKfhRD9 (house builds)
+    - gcsim community rotation h97kFbH7Dn6K (house builds)
+    - gcsim community rotation kp9BJTmmcFhR (house builds)
+    - gcsim community rotation pPH8gNbW7dfM (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 23 of 44 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill: &id001
+      duration: 0.617
+      particles: 2.5
+      hits:
+      - offset: 0.85
+        table:
+        - skill
+        - Skill DMG
+        element: Electro
+        type: skill
+        gauge: 1.0
+    burst: &id002
+      duration: 1.85
+      do:
+      - copy:
+          from: resolve
+          to: resolve_used
+      - consume:
+          resource: resolve
+          amount: all
+      - enter: musou
+      hits:
+      - offset: 1.633
+        table:
+        - burst
+        - Musou no Hitotachi Base DMG
+        element: Electro
+        type: burst
+        gauge: 2.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 0
+    dash:
+      duration: 0.367
+      particles: 0.0
+      hits: []
+    attack#0:
+      duration: 0.383
+      particles: 0.0
+      hits: []
+    attack#4:
+      duration: 0.65
+      particles: 0.0
+      hits:
+      - offset: 0.567
+        type: normal
+        table:
+        - normal
+        - 5-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.233
+      particles: 0.0
+      hits:
+      - offset: 0.15
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    charge:
+      duration: 0.617
+      particles: 0.0
+      hits: []
+    attack#0@musou: &id003
+      duration: 0.42
+      hits:
+      - offset: 0.25
+        table:
+        - burst
+        - 1-Hit DMG
+        - 0
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+    attack#1@musou: &id004
+      duration: 0.32
+      hits:
+      - offset: 0.25
+        table:
+        - burst
+        - 2-Hit DMG
+        - 0
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+    attack#2@musou: &id005
+      duration: 0.53
+      hits:
+      - offset: 0.25
+        table:
+        - burst
+        - 3-Hit DMG
+        - 0
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+    attack#3@musou: &id006
+      duration: 0.55
+      hits:
+      - offset: 0.2
+        table:
+        - burst
+        - 4-Hit DMG
+        - 0
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+      - offset: 0.4
+        table:
+        - burst
+        - 4-Hit DMG
+        - 1
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+    attack#4@musou: &id007
+      duration: 0.65
+      hits:
+      - offset: 0.4
+        table:
+        - burst
+        - 5-Hit DMG
+        - 0
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+    charge@musou: &id008
+      duration: 0.6
+      hits:
+      - offset: 0.3
+        table:
+        - burst
+        - Charged Attack DMG
+        - 0
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+      - offset: 0.45
+        table:
+        - burst
+        - Charged Attack DMG
+        - 1
+        element: Electro
+        type: burst
+        icd: standard
+        gauge: 1.0
+        add_mult:
+          resource: resolve_used
+          per:
+            table:
+            - burst
+            - Resolve Bonus
+            - 1
+  fillers:
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+    - attack
+    - attack
+    - dash
+    - attack
+    - attack
+  - - attack
+    - attack
+    - attack
+    - attack
+  follow:
+    skill: attack
+    burst: attack
+  first: skill
+  causal:
+    facts: &id014
+      known:
+      - 'Resolve: 0.19 stacks per point of a teammate''s Burst energy cost, max 60, consumed by her Burst'
+      - Musou Isshin 7 s; attacks use the Burst table; energy restored to the party on hits
+      - 'Eye of Stormy Judgment: coordinated attacks on the active character''s hits (0.9 s ICD), Burst DMG bonus by energy cost'
+      assumed:
+      - Musou attack timings and the 5-restoration cap per Burst (gcsim-calibrated / TC knowledge)
+      unknown: []
+    resources: &id009
+      resolve:
+        max: 60
+        start: 0
+      resolve_used:
+        max: 60
+        start: 0
+    states: &id010
+      musou:
+        duration:
+          table:
+          - burst
+          - Musou Isshin Duration
+        lead: 1.633
+        ends_on_swap: true
+    rules: &id011
+    - 'on':
+        event: action
+        action: burst
+        by: party_others
+      do:
+      - gain:
+          resource: resolve
+          amount:
+            per_burst_cost: 0.19
+    - 'on':
+        event: hit
+        by: self
+        types:
+        - burst
+        while_state: musou
+      icd: 1.0
+      do:
+      - energy:
+          amount:
+            table:
+            - burst
+            - Musou Isshin Energy Restoration
+          to: party_others
+          max_per_state: 5
+    summons: &id012
+      eye:
+        start_on: skill
+        duration:
+          table:
+          - skill
+          - Duration
+        interval: 999
+        hits: []
+    procs: &id013
+      coordinated_attack:
+        'on':
+          event: hit
+          by: active
+        requires:
+          summon: eye
+        icd: 0.9
+        hits:
+        - offset: 0.1
+          table:
+          - skill
+          - Coordinated ATK DMG
+          element: Electro
+          type: skill
+          icd: standard
+          gauge: 1.0
+    actions:
+      skill: *id001
+      burst: *id002
+      attack#0@musou: *id003
+      attack#1@musou: *id004
+      attack#2@musou: *id005
+      attack#3@musou: *id006
+      attack#4@musou: *id007
+      charge@musou: *id008
+  resources: *id009
+  states: *id010
+  rules: *id011
+  summons: *id012
+  procs: *id013
+  facts: *id014

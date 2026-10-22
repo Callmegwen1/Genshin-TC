@@ -1,0 +1,97 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Layla:
+  schema: 3
+  element: Cryo
+  weapon: sword
+  roles:
+  - shielder
+  - applier
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: low
+    - element: Cryo
+      mode: off_field
+      strength: high
+    energy:
+      burst_cost: 40
+      dependency: low
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: hp
+    for: shield
+    source:
+    - skill
+  - stat: hp
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 19.44% of Layla's Max HP + 2288, 250% effectiveness against Cryo DMG
+    duration: 12
+    stacking: none; at talent level 10
+    conditions: []
+    source: Nights of Formal Focus (Curtain of Slumber at talent level 10)
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: Shield Strength +6% per stack
+    duration: until the Curtain of Slumber disappears
+    stacking: max 4 stacks, 1 per Night Star gained
+    conditions:
+    - type: character_state
+      state: Curtain of Slumber active
+      text: while protected by the Curtain of Slumber
+    source: Like Nascent Light (Deep Sleep)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    - swirl-cryo
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Nights of Formal Focus, Dream of the Star-Stream Shaker, Like Nascent
+      Light, Sweet Slumber Undisturbed'
+    community: 'Engine measurements and general play pattern: HP-scaling shielder with off-field Cryo application'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

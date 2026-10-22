@@ -1,0 +1,141 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Varesa:
+  schema: 3
+  element: Electro
+  weapon: catalyst
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Electro
+      types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    application:
+    - element: Electro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 70
+      dependency: high
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - plunge
+    - skill
+    - burst
+  effects:
+  - kind: atk_pct
+    target: self
+    affects:
+      elements:
+      - all
+    amount: 0.35
+    duration: 12
+    stacking: max 2 stacks, durations independent
+    conditions:
+    - type: character_state
+      state: party member triggers Nightsoul Burst
+      text: when a nearby party member triggers a Nightsoul Burst
+    source: The Hero Twice-Returned!
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Electro
+      damage_types:
+      - plunge
+    amount: 50% of Varesa's ATK on plunge ground impact; 180% of ATK in Fiery Passion
+    duration: 5
+    stacking: canceled once a ground impact hits an opponent
+    conditions: []
+    source: Tag-Team Triple Jump! (Rainbow Crash)
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - plunge
+      - burst
+    amount: 'Apex Drive after a Plunging Attack in Fiery Passion: special Burst Volcano Kablam ignores Burst CD and costs
+      30 Energy (724.75% at talent level 10, counts as Plunging Attack DMG)'
+    duration: unknown
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Fiery Passion
+      text: Varesa in the Fiery Passion state
+    source: Guardian Vent! (Apex Drive)
+  - kind: other
+    target: self
+    affects:
+      damage_types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    amount: 'Fiery Passion: entered at max Nightsoul points via plunges or by using the Burst; greater Normal/Charged/Plunging,
+      Skill and Burst DMG'
+    duration: up to 15s
+    stacking: none
+    conditions: []
+    source: By the Horns (Fiery Passion)
+  - kind: interruption
+    target: self
+    affects:
+      elements:
+      - all
+    amount: increased interruption resistance; Normal Attack press uses a Stamina-free Charged Attack
+    duration: 5
+    stacking: at talent level 10; canceled after a Charged Attack
+    conditions: []
+    source: Riding the Night-Rainbow (Follow-Up Strike)
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - electrocharged
+    - lunarcharged
+    - overloaded
+    - superconduct
+    - quicken
+    - aggravate
+    - hyperbloom
+    - swirl-electro
+    requires: []
+    aura_supplied:
+    - electro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): By the Horns, Riding the Night-Rainbow, Guardian Vent!, Tag-Team Triple
+      Jump!, The Hero Twice-Returned!'
+    engine: 'Engine measurements: field share 61%, team damage share 64%, Electro on 6.2 per rotation'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

@@ -1,0 +1,114 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 1 note(s).
+#   on_field_damage True replaced by measured False
+Chongyun:
+  schema: 3
+  element: Cryo
+  weapon: claymore
+  roles:
+  - applier
+  - debuffer
+  - enabler
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: sub_dps
+    damage:
+      element: Cryo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Cryo
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 40
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: active
+    affects:
+      elements:
+      - Cryo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Cryo infusion for Sword, Claymore and Polearm wielders in the Chonghua Frost Field
+    duration: 2.9s infusion, field lasts 10s (at talent level 10)
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Sword, Claymore or Polearm wielder inside the Chonghua Frost Field
+      text: only Sword, Claymore and Polearm-wielding characters within the field
+    source: 'Spirit Blade: Chonghua''s Layered Frost (Chonghua Frost Field)'
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+      damage_types:
+      - normal
+    amount: Normal ATK SPD +8%
+    duration: in the field
+    stacking: none
+    conditions:
+    - type: character_state
+      state: Sword, Claymore or Polearm wielder inside the Chonghua Frost Field
+      text: only Sword, Claymore and Polearm-wielding characters within the field
+    source: Steady Breathing
+  - kind: res_shred
+    target: enemy
+    affects:
+      elements:
+      - Cryo
+    amount: 0.1
+    duration: 8
+    stacking: none
+    conditions:
+    - type: character_state
+      state: hit by the spirit blade summoned when the Frost Field disappears
+      text: opponents hit by the blade when the field disappears
+    source: Rimechaser Blade
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - melt
+    - superconduct
+    - swirl-cryo
+    requires: []
+    aura_supplied:
+    - cryo
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Demonbane, Spirit Blade: Chonghua''s Layered Frost, Spirit Blade: Cloud-Parting
+      Star, Steady Breathing, Rimechaser Blade'
+    community: Engine measurements and general knowledge of how the character is played
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

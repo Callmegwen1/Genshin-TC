@@ -1,0 +1,232 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Ineffa:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 9HKFkCzLkMCL (house builds)
+    - gcsim community rotation DDG9TCNWWLMf (house builds)
+    - gcsim community rotation WbgzKTrtBMpF (house builds)
+    - gcsim community rotation f7bwCrWTJPwN (house builds)
+    - gcsim community rotation gtwPHjHhCzGM (house builds)
+    - gcsim community rotation htPBrkGBNQNb (house builds)
+    - gcsim community rotation pFRT87nmD9Pp (house builds)
+    - gcsim community rotation wNHmwLJH6RKJ (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 13 of 22 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.533
+      particles: 7.0
+      hits:
+      - offset: 0.067
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 0.433
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 1.967
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 3.95
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 5.933
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 7.917
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 9.9
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 11.883
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 13.867
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 15.85
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 17.833
+        type: skill
+        table:
+        - skill
+        - Birgitta Discharge DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+    wait:
+      duration: 0.2
+      particles: 0.0
+      hits:
+      - offset: 1.083
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+      - offset: 3.067
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+      - offset: 5.05
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+      - offset: 7.033
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+      - offset: 9.017
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+      - offset: 11.0
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+      - offset: 12.983
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+      - offset: 14.967
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+    burst:
+      duration: 2.1
+      particles: 0.0
+      hits:
+      - offset: 1.85
+        type: burst
+        table:
+        - burst
+        - Skill DMG
+        - 0
+        element: Electro
+        gauge: 1.0
+      - offset: 1.933
+        type: lunar
+        mult: 0.65
+        abil: Birgitta (A1)
+        source: gcsim
+        element: Electro
+        ignore_def: true
+        gauge: 0.0
+    attack#0:
+      duration: 0.15
+      particles: 0.0
+      hits:
+      - offset: 0.15
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - attack
+    - attack
+    - attack
+  follow: {}
+  first: skill
+  causal: {}

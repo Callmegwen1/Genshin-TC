@@ -1,0 +1,94 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Diluc:
+  schema: 3
+  element: Pyro
+  weapon: claymore
+  roles:
+  - on_field_carry
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage:
+      element: Pyro
+      types:
+      - normal
+      - charged
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: high
+    energy:
+      burst_cost: 40
+      dependency: medium
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: atk
+    for: damage
+    source:
+    - normal
+    - charged
+    - skill
+    - burst
+  effects:
+  - kind: infusion
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - normal
+      - charged
+      - plunge
+    amount: Pyro infusion of Diluc's weapon
+    duration: 8s at talent level 10, +4s from Blessing of Phoenix
+    stacking: none
+    conditions: []
+    source: Dawn (Infusion)
+  - kind: elemental_dmg_bonus
+    target: self
+    affects:
+      elements:
+      - Pyro
+    amount: 0.2
+    duration: during the Dawn Pyro infusion
+    stacking: none
+    conditions: []
+    source: Blessing of Phoenix
+  conditions: []
+  reactions:
+    owns:
+    - vaporize
+    - melt
+    enables:
+    - overloaded
+    - burning
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Tempered Sword, Searing Onslaught, Dawn, Relentless, Blessing of Phoenix'
+    engine: 'Engine measurements: field share 58%, team damage share 63%, Pyro 5.0 on field'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and kit text
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

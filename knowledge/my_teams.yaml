@@ -1,0 +1,4 @@
+# Teams you actually play. The report scores these first and weights them in build priorities.
+teams:
+  - [Flins, Aino, Ineffa, Sucrose]
+  - [Kamisato Ayaka, Mona, Shenhe, Kaedehara Kazuha]

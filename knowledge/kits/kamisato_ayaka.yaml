@@ -1,0 +1,31 @@
+Kamisato Ayaka:
+  schema: 3
+  element: Cryo
+  weapon: sword
+  roles: [on_field_carry]
+  behavior:
+    field_time: high
+    on_field_damage: true
+    off_field: none
+    driver: false
+    damage_ownership: carry
+    damage: {element: Cryo, types: [normal, charged, skill, burst]}
+    application: [{element: Cryo, mode: on_field, strength: high}]
+    energy: {burst_cost: 80, dependency: high}
+    sustain: {heal: none, shield: none}
+  scaling: [{stat: atk, for: damage, source: [normal, charged, skill, burst]}]
+  effects:
+    - {kind: dmg_bonus, target: self, affects: {damage_types: [normal, charged]}, amount: 0.30, duration: 6,
+       stacking: none, conditions: [], source: "Amatsumi Kunitsumi Sanctification (after Kamisato Art: Hyouka)"}
+    - {kind: elemental_dmg_bonus, target: self, affects: {elements: [Cryo]}, amount: 0.18, duration: 10, stacking: none,
+       conditions: [], source: "Kanten Senmyou Blessing (Senho's Cryo application hits)"}
+    - {kind: infusion, target: self, affects: {elements: [Cryo], damage_types: [normal, charged]}, amount: unknown,
+       duration: unknown, stacking: none, conditions: [], source: "Kamisato Art: Senho"}
+  conditions: []
+  reactions: {owns: [], enables: [freeze, melt, superconduct, swirl-cryo], requires: [], aura_supplied: [cryo], aura_consumed: []}
+  sources:
+    amber: "Official kit text (Project Amber cache): Kamisato Art: Hyouka, Senho, Soumetsu; Amatsumi Kunitsumi Sanctification; Kanten Senmyou Blessing"
+    community: "How the character is played (KQM, Prydwen): on-field Cryo carry, usually in Freeze"
+  provenance:
+    "*": {source: amber, span: "talents and passives", confidence: high, method: manual, reviewed: claude}
+    behavior: {source: community, span: "role in teams", confidence: medium, method: manual, reviewed: claude}

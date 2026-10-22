@@ -1,0 +1,129 @@
+# Character kits as numbers, for the theorycraft calculator (gtc/tc). YOU own this file.
+# Numbers come from gcsim's implementation unless the note says otherwise.
+#
+# effects: what a character does for the team (and themselves). Each effect has:
+#   kind:       stat         adds to a stat: em, atk, atk_pct, cr, cd, dmg_pct, hp, hp_pct
+#               react_bonus  adds to the reaction bonus term of the damage kinds listed in applies_to
+#               base_bonus   adds to the "base damage" multiplier of the kinds in applies_to (separate from DMG%)
+#               res_shred    lowers enemy RES of `element` (or every element when element: all)
+#               extra_hit    multiplies the Lunar-Charged reaction pool by (1 + value x uptime)
+#   target:     party, active (the on-field damage dealer), self, others (everyone but the caster)
+#   element:    for res_shred; 'swirled' means every Pyro, Hydro, Electro or Cryo element on the team
+#   constellation: the effect needs at least this constellation
+#   value:      a number, or {of: atk|hp|em|def, rate: r, per: n, cap: c} meaning min(stat / per * rate, cap)
+#               using the CASTER's stats
+#   uptime:     share of the rotation it is active (default 1)
+#   when:       conditions. moonsign_at_least: 2 means Ascendant Gleam. hexerei_at_least: 2.
+#   applies_to: damage kinds: direct, lunar_charged_direct, lunar_charged_reaction, swirl. Default: all of them.
+# abilities: how gcsim names this character's damage sources, mapped to a damage kind (default direct).
+# applies: elemental application strength off-field, 0 to 1. Used to keep reactions possible after a swap.
+# hits: own damage per rotation, for characters gcsim has never simulated (see kits_custom/).
+
+_rules:
+  # Prydwen describes this Ascendant Gleam party buff, but gcsim does not implement it, so it is off when
+  # the engine is checked against gcsim. The highest single contributor counts.
+  ascendant_gleam_non_moonsign:
+    in_gcsim: false
+    cap: 0.36
+    per_element:
+      Pyro: {of: atk, rate: 0.009, per: 100}
+      Electro: {of: atk, rate: 0.009, per: 100}
+      Cryo: {of: atk, rate: 0.009, per: 100}
+      Hydro: {of: hp, rate: 0.006, per: 1000}
+      Geo: {of: def, rate: 0.01, per: 100}
+      Anemo: {of: em, rate: 0.0225, per: 100}
+      Dendro: {of: em, rate: 0.0225, per: 100}
+
+Flins:
+  element: Electro
+  moonsign: 1
+  enables: [lunar_charged]
+  applies: {Electro: 1.0}
+  abilities:
+    Thunderous Symphony: lunar_charged_direct
+    lunarcharged: lunar_charged_reaction
+  effects:
+    - {kind: base_bonus, target: party, value: {of: atk, rate: 0.007, per: 100, cap: 0.14}, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: Moonsign passive}
+    - {kind: react_bonus, target: self, value: 0.20, when: {moonsign_at_least: 2}, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: A1}
+    - {kind: stat, stat: em, target: self, value: {of: atk, rate: 0.08, cap: 160}, note: "A4, 8% of ATK up to 160 (Prydwen)"}
+
+Ineffa:
+  element: Electro
+  moonsign: 1
+  enables: [lunar_charged]
+  applies: {Electro: 0.8}
+  abilities:
+    Birgitta (A1): lunar_charged_direct
+    lunarcharged: lunar_charged_reaction
+  effects:
+    - {kind: base_bonus, target: party, value: {of: atk, rate: 0.007, per: 100, cap: 0.14}, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: Moonsign passive}
+    - {kind: stat, stat: em, target: active, value: {of: atk, rate: 0.06}, uptime: 0.9, note: "A4, 20s after Burst"}
+
+Columbina:
+  element: Hydro
+  scaling: hp
+  moonsign: 1
+  enables: [lunar_charged, lunar_bloom, lunar_crystallize]
+  applies: {Hydro: 1.0}
+  abilities:
+    lunarcharged: lunar_charged_reaction
+  effects:
+    - {kind: base_bonus, target: party, value: {of: hp, rate: 0.002, per: 1000, cap: 0.07}, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: Moonsign passive}
+    - {kind: react_bonus, target: party, value: 0.37, uptime: 0.6, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: "Burst at talent 9; Burst every other rotation per Keqing Mains"}
+    - {kind: extra_hit, value: 0.33, uptime: 0.6, note: "A4: 33% chance of a second Lunar-Charged strike during her Burst"}
+
+Aino:
+  element: Hydro
+  moonsign: 1
+  applies: {Hydro: 0.8}
+  abilities:
+    lunarcharged: lunar_charged_reaction
+  effects:
+    - {kind: stat, stat: em, target: active, value: 80, constellation: 1, uptime: 0.8, note: C1}
+    - {kind: react_bonus, target: party, value: 0.35, constellation: 6, when: {moonsign_at_least: 2}, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: "C6: 15%, plus 20% with Ascendant Gleam"}
+
+Sucrose:
+  element: Anemo
+  hexerei: true
+  applies: {}
+  abilities:
+    swirl-electro: swirl
+    swirl-hydro: swirl
+    lunarcharged: lunar_charged_reaction
+  effects:
+    - {kind: stat, stat: em, target: others, value: 50, uptime: 0.6, note: "A1: characters of the swirled element"}
+    - {kind: stat, stat: em, target: others, value: {of: em, rate: 0.20}, uptime: 0.6, note: A4}
+
+Fischl:
+  element: Electro
+  hexerei: true
+  applies: {Electro: 1.0}
+  effects:
+    - {kind: stat, stat: em, target: party, value: 90, when: {hexerei_at_least: 2}, note: "Hexerei passive (Prydwen)"}
+    - {kind: stat, stat: em, target: party, value: 90, constellation: 6, when: {hexerei_at_least: 2}, note: "C6 Hexerei bonus (Prydwen)"}
+
+Furina:
+  element: Hydro
+  scaling: hp
+  applies: {Hydro: 0.6}
+  effects:
+    - {kind: stat, stat: dmg_pct, target: party, value: 0.75, uptime: 0.8, applies_to: [direct], note: "Burst fanfare at full stacks; DMG% does not affect Lunar damage"}
+
+Xilonen:
+  element: Geo
+  applies: {}
+  effects:
+    - {kind: res_shred, element: all, value: 0.36, uptime: 0.8, note: "Skill: RES shred for elements her Nightsoul converts (approximate)"}
+
+# Artifact sets with team or Lunar effects. `holder` effects use the holder's stats.
+_sets:
+  Night of the Sky's Unveiling:
+    - {kind: stat, stat: cr, target: self, value: 0.30, when: {moonsign_at_least: 2}, uptime: 0.9, note: "4pc: Gleaming Moon Intent"}
+    - {kind: react_bonus, target: party, value: 0.10, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: "Gleaming Moon Intent: +10% per distinct Gleaming Moon effect"}
+  Silken Moon's Serenade:
+    - {kind: stat, stat: em, target: party, value: 120, when: {moonsign_at_least: 2}, uptime: 0.9, note: "4pc: Gleaming Moon Devotion"}
+    - {kind: react_bonus, target: party, value: 0.10, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: "Gleaming Moon Devotion"}
+  Viridescent Venerer:
+    - {kind: res_shred, element: swirled, value: 0.40, uptime: 0.85, note: "4pc: RES of every element the holder swirls"}
+  Aubade of Morningstar and Moon:
+    - {kind: react_bonus, target: self, value: 0.60, when: {moonsign_at_least: 2}, applies_to: [lunar_charged_direct, lunar_charged_reaction], note: "4pc, 20% plus 40% with Ascendant Gleam"}

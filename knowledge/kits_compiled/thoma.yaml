@@ -1,0 +1,124 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Thoma:
+  schema: 3
+  element: Pyro
+  weapon: polearm
+  roles:
+  - shielder
+  - off_field_sub_dps
+  - applier
+  behavior:
+    field_time: low
+    on_field_damage: false
+    off_field: some
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Pyro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Pyro
+      mode: on_field
+      strength: medium
+    - element: Pyro
+      mode: off_field
+      strength: medium
+    energy:
+      burst_cost: 80
+      dependency: high
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: hp
+    for: shield
+    source:
+    - skill
+    - burst
+  - stat: hp
+    for: damage
+    source:
+    - burst
+  - stat: atk
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 12.96% of Thoma's Max HP + 1525; max 35.28% Max HP + 4153; 250% vs Pyro
+    duration: 8
+    stacking: absorption stacks with existing Blazing Barrier, at talent level 10
+    conditions: []
+    source: Blazing Blessing (Blazing Barrier, at talent level 10)
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 2.06% of Thoma's Max HP + 242 per Fiery Collapse; max 35.28% Max HP + 4153 (from Blazing Blessing); 250% vs Pyro
+    duration: 8
+    stacking: Fiery Collapse once every 1s on the active character's Normal Attacks during Scorching Ooyoroi (15s), at talent
+      level 10
+    conditions: []
+    source: Crimson Ooyoroi (Scorching Ooyoroi, at talent level 10)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 5% Shield Strength per stack
+    duration: 6
+    stacking: max 5 stacks, once every 0.3s
+    conditions: []
+    source: Imbricated Armor
+  - kind: flat_dmg
+    target: self
+    affects:
+      elements:
+      - Pyro
+      damage_types:
+      - burst
+    amount: 2.2% of Thoma's Max HP on Fiery Collapse
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: Flaming Assault
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - burning
+    - vaporize
+    - melt
+    - overloaded
+    - burgeon
+    - swirl-pyro
+    requires: []
+    aura_supplied:
+    - pyro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Blazing Blessing, Crimson Ooyoroi, Imbricated Armor, Flaming Assault'
+    community: 'How the character is played and engine measurements: off-field Pyro applier and shielder via Scorching Ooyoroi'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: community
+      span: role in teams and engine measurements
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

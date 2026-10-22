@@ -1,0 +1,303 @@
+# Kit file for the forward model (gtc/forward/kitfreeze.py). Regenerate with freeze(); edit `causal:`.
+Escoffier:
+  status:
+    release_status: released
+    kit_version: amber-current
+  provenance:
+    structure: gcsim-calibrated (behaviour of other teams' community rotations)
+    sources:
+    - gcsim community rotation 6nLHrpKpbqNk (house builds)
+    - gcsim community rotation 8ddhdFMntfJg (house builds)
+    - gcsim community rotation FzcfMQJmQw6j (house builds)
+    - gcsim community rotation MbRrPn9q78qb (house builds)
+    - gcsim community rotation pL8wMfBgBtfj (house builds)
+    - gcsim community rotation pnQpBLFrjzMC (house builds)
+    - gcsim community rotation wdWgfTPhWk77 (house builds)
+    - gcsim community rotation zGwddJGCBHpr (house builds)
+    excluded_reference_teams:
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Mona
+    - Kamisato Ayaka / Shenhe / Kaedehara Kazuha / Furina
+    - Kamisato Ayaka / Shenhe / Escoffier / Furina
+    - Kamisato Ayaka / Shenhe / Bennett / Xiangling
+    - Hu Tao / Xingqiu / Yelan / Zhongli
+    - Raiden Shogun / Xingqiu / Xiangling / Bennett
+    - Razor / Fischl / Bennett / Chevreuse
+    - Fischl / Nahida / Sucrose / Yae Miko
+    - Furina / Kuki Shinobu / Nahida / Yelan
+    - Neuvillette / Furina / Kaedehara Kazuha / Baizhu
+    - Nahida / Raiden Shogun / Razor / Xingqiu
+    - Flins / Aino / Ineffa / Sucrose
+    multipliers: 26 of 26 hits linked to Amber tables; the rest literal (gcsim)
+    application: 'Normal/Charged/Plunge: engine standard ICD; Skill/Burst: measured per cast'
+  actions:
+    skill:
+      duration: 0.558
+      particles: 4.0
+      hits:
+      - offset: 0.083
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 0.383
+        type: skill
+        table:
+        - skill
+        - Skill DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 1.383
+        type: skill
+        table:
+        - skill
+        - Surging Blade DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 2.55
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 3.533
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 4.5
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 5.483
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 6.45
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 7.433
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 8.4
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 9.383
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 10.35
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 11.333
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 12.3
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 13.283
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 14.25
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 15.233
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 16.2
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 17.183
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 18.15
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+      - offset: 19.133
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 0.0
+      - offset: 20.1
+        type: skill
+        table:
+        - skill
+        - Frosty Parfait DMG
+        - 0
+        element: Cryo
+        gauge: 1.0
+    jump:
+      duration: 0.083
+      particles: 0.0
+      hits: []
+    low_plunge:
+      duration: 1.267
+      particles: 0.0
+      hits:
+      - offset: 0.683
+        type: plunge
+        table:
+        - normal
+        - Low/High Plunge DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    burst:
+      duration: 1.8
+      particles: 0.0
+      hits:
+      - offset: 1.533
+        type: burst
+        table:
+        - burst
+        - Skill DMG
+        - 0
+        element: Cryo
+        gauge: 2.0
+    attack#0:
+      duration: 0.25
+      particles: 0.0
+      hits:
+      - offset: 0.117
+        type: normal
+        table:
+        - normal
+        - 1-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+    attack#1:
+      duration: 0.4
+      particles: 0.0
+      hits:
+      - offset: 0.267
+        type: normal
+        table:
+        - normal
+        - 2-Hit DMG
+        - 0
+        element: Physical
+        icd: standard
+        gauge: 1.0
+  fillers:
+  - - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+  - - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+    - jump
+    - low_plunge
+  - - attack
+    - attack
+  follow: {}
+  first: skill
+  causal: {}

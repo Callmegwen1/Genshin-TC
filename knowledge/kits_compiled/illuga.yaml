@@ -1,0 +1,170 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Illuga:
+  schema: 3
+  element: Geo
+  weapon: polearm
+  roles:
+  - buffer
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Geo
+      types:
+      - skill
+      - burst
+    application:
+    - element: Geo
+      mode: off_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: none
+  scaling:
+  - stat: em
+    for: buff
+    source:
+    - burst
+    - Demonhunter's Dusk
+  - stat: em
+    for: damage
+    source:
+    - skill
+    - burst
+  - stat: def
+    for: damage
+    source:
+    - skill
+    - burst
+  effects:
+  - kind: flat_dmg
+    target: active
+    affects:
+      elements:
+      - Geo
+      damage_types:
+      - normal
+      - charged
+      - plunge
+      - skill
+      - burst
+    amount: 60.48% of Illuga's Elemental Mastery per Nightingale's Song stack consumed
+    duration: 20
+    stacking: 21 stacks from the Burst, +5 per Geo Construct (max 15 extra); one stack per opponent hit; at talent level 10
+    conditions: []
+    source: Shadowless Reflection (Nightingale's Song, at talent level 10)
+  - kind: flat_dmg
+    target: active
+    affects:
+      elements:
+      - Geo
+      reactions:
+      - lunarcrystallize
+    amount: 406.66% of Illuga's Elemental Mastery when the DMG is Lunar-Crystallize
+    duration: 20
+    stacking: consumes Nightingale's Song stacks; at talent level 10
+    conditions:
+    - type: reaction_required
+      reactions:
+      - lunarcrystallize
+      text: DMG inflicted by Lunar-Crystallize
+    source: Shadowless Reflection (Nightingale's Song Lunar-Crystallize bonus, at talent level 10)
+  - kind: crit_rate
+    target: party_others
+    affects:
+      elements:
+      - Geo
+    amount: 0.05
+    duration: 20
+    stacking: none
+    conditions: []
+    source: Torchforger's Covenant (Lightkeeper's Oath)
+  - kind: crit_dmg
+    target: party_others
+    affects:
+      elements:
+      - Geo
+    amount: 0.1
+    duration: 20
+    stacking: none
+    conditions: []
+    source: Torchforger's Covenant (Lightkeeper's Oath)
+  - kind: em
+    target: party_others
+    affects:
+      elements:
+      - all
+    amount: 50
+    duration: 20
+    stacking: none
+    conditions:
+    - type: character_state
+      state: 'Moonsign: Ascendant Gleam'
+      text: party's Moonsign is Ascendant Gleam
+    source: 'Torchforger''s Covenant (Moonsign: Ascendant Gleam)'
+  - kind: flat_dmg
+    target: active
+    affects:
+      elements:
+      - Geo
+    amount: 7% / 14% / 24% of Illuga's Elemental Mastery with 1 / 2 / 3 Hydro or Geo members (48% / 96% / 160% for Lunar-Crystallize)
+    duration: while Nightingale's Song is active
+    stacking: per Nightingale's Song stack consumed
+    conditions:
+    - type: party_element_count
+      elements:
+      - Hydro
+      - Geo
+      full: 3
+      text: bonus scales with 1/2/3 Hydro or Geo party members
+    source: Demonhunter's Dusk
+  - kind: other
+    target: party
+    affects:
+      elements:
+      - all
+    amount: party's Moonsign increased by 1 level
+    duration: unknown
+    stacking: none
+    conditions: []
+    source: 'Moonsign Benediction: Unwithering in Winter'
+  conditions:
+  - type: party_element_count
+    elements:
+    - Hydro
+    - Geo
+    full: 3
+    text: Nightingale's Song bonus scales with the number of Hydro or Geo party members (full with three)
+  reactions:
+    owns: []
+    enables:
+    - crystallize
+    - lunarcrystallize
+    requires: []
+    aura_supplied: []
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Dawnbearing Songbird, Shadowless Reflection, Torchforger''s Covenant,
+      Demonhunter''s Dusk, Moonsign Benediction: Unwithering in Winter'
+    engine: 'Engine measurements: field share, damage share and element application from community simulations'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true

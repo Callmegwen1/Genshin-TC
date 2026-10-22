@@ -1,0 +1,107 @@
+# Compiled by gtc/kitcompile.py from the official kit text (LLM extraction, offline).
+# Not human-reviewed. Checks: 0 note(s).
+Dahlia:
+  schema: 3
+  element: Hydro
+  weapon: sword
+  roles:
+  - shielder
+  - buffer
+  behavior:
+    field_time: minimal
+    on_field_damage: false
+    off_field: none
+    driver: false
+    damage_ownership: incidental
+    damage:
+      element: Hydro
+      types:
+      - skill
+      - burst
+    application:
+    - element: Hydro
+      mode: on_field
+      strength: low
+    energy:
+      burst_cost: 60
+      dependency: unknown
+    sustain:
+      heal: none
+      shield: strong
+  scaling:
+  - stat: hp
+    for: shield
+    source:
+    - burst
+  - stat: hp
+    for: buff
+    source:
+    - Prayer of Well-Wrought Joy
+  effects:
+  - kind: shield
+    target: active
+    affects:
+      elements:
+      - all
+    amount: 6.05% Max HP+712 at talent level 10, 250% Hydro absorption; re-summoned by consuming Benison stacks when broken
+    duration: Favonian Favor duration (12s at talent level 10)
+    stacking: up to 4 Benison stacks per Favonian Favor duration
+    conditions: []
+    source: Radiant Psalter (Shield of Sacred Favor, at talent level 10)
+  - kind: other
+    target: active
+    affects:
+      elements:
+      - all
+    amount: ATK SPD +0.5% per 1,000 of Dahlia's Max HP, max 20%
+    duration: while affected by Favonian Favor
+    stacking: none
+    conditions: []
+    source: Prayer of Well-Wrought Joy
+  - kind: other
+    target: self
+    affects:
+      elements:
+      - all
+      reactions:
+      - freeze
+    amount: 2 Benison stacks
+    duration: unknown
+    stacking: once every 8s
+    conditions:
+    - type: reaction_required
+      reactions:
+      - freeze
+      text: characters with Favonian Favor trigger Frozen
+    source: The Wind's Gentle Grace
+  conditions: []
+  reactions:
+    owns: []
+    enables:
+    - freeze
+    - vaporize
+    - electrocharged
+    - bloom
+    - swirl-hydro
+    requires: []
+    aura_supplied:
+    - hydro
+    aura_consumed: []
+  sources:
+    amber: 'Official kit text (Project Amber cache): Immersive Ordinance, Radiant Psalter, The Wind''s Gentle Grace, Prayer
+      of Well-Wrought Joy'
+    engine: 'Engine measurements: field share 11%, share of team damage 1%'
+  provenance:
+    '*':
+      source: amber
+      span: talents and passives
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+    behavior:
+      source: engine
+      span: engine measurements and role in teams
+      confidence: medium
+      method: llm_extracted
+      reviewed: pending
+  compiled: true
