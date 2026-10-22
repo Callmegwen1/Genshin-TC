@@ -281,6 +281,7 @@ resource "aws_ecs_service" "api" {
 # ------------------------------------------------------------------------------------------------------------------
 locals {
   github_enabled = var.github_repo != ""
+  github_subject = var.github_oidc_subject != "" ? var.github_oidc_subject : "repo:${var.github_repo}:ref:refs/heads/${var.github_branch}"
 }
 
 resource "aws_iam_openid_connect_provider" "github" {
@@ -305,7 +306,7 @@ data "aws_iam_policy_document" "github_trust" {
     condition {
       test     = "StringEquals"
       variable = "token.actions.githubusercontent.com:sub"
-      values   = ["repo:${var.github_repo}:ref:refs/heads/${var.github_branch}"]
+      values   = [local.github_subject]
     }
   }
 }

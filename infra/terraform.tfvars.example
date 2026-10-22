@@ -4,3 +4,4 @@ budget_email = "you@example.com"
 github_repo  = "your-github-username/Genshin-TC"
 # monthly_budget_usd = 10
 # desired_count      = 1   # 0 = no running task, no compute charges
+# github_oidc_subject = "repo:owner@<owner-id>/name@<repo-id>:ref:refs/heads/main"  # if GitHub sends the ID format

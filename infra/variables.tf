@@ -77,3 +77,13 @@ variable "log_retention_days" {
   type        = number
   default     = 14
 }
+
+variable "github_oidc_subject" {
+  description = <<-EOT
+    Exact "sub" claim of the workflow's OIDC token. Newer GitHub repositories use an immutable format with numeric IDs,
+    repo:owner@<owner-id>/name@<repo-id>:ref:refs/heads/main, which survives renames and cannot be claimed by a
+    re-created repo with the same name. Empty = the classic repo:owner/name:ref:refs/heads/<branch> format.
+  EOT
+  type        = string
+  default     = ""
+}
