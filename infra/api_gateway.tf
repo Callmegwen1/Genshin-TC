@@ -27,7 +27,9 @@ resource "aws_service_discovery_service" "api" {
       ttl  = 10
     }
   }
-  health_check_custom_config {} # ECS reports task health to Cloud Map; unhealthy tasks are deregistered
+  # No health_check_custom_config block: an empty block is stored by AWS as "none", which made every plan replace
+  # this service (the field forces replacement). ECS deregisters a task from Cloud Map when the task stops, and a task
+  # failing its container health check is stopped and replaced, so stale instances do not stay registered.
 }
 
 # The VPC Link's network interfaces live in the public subnets; they only need to reach the API tasks on 8000.
