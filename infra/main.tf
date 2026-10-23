@@ -352,9 +352,12 @@ data "aws_iam_policy_document" "github_deploy" {
     resources = ["*"]
   }
   statement {
-    sid       = "DeployService"
-    actions   = ["ecs:UpdateService", "ecs:DescribeServices"]
-    resources = [aws_ecs_service.api.id, aws_ecs_service.worker.id]
+    sid     = "DeployService"
+    actions = ["ecs:UpdateService", "ecs:DescribeServices"]
+    # ARNs built from names, not from the service resources: scaling a service (desired_count) then leaves this
+    # policy untouched instead of re-rendering it as "known after apply" on every start/stop.
+    resources = [for s in ["${local.name}-api", "${local.name}-worker"] :
+    "arn:aws:ecs:${var.region}:${local.account_id}:service/${aws_ecs_cluster.main.name}/${s}"]
   }
   statement {
     sid       = "FindTaskIp"

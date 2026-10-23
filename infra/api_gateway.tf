@@ -6,7 +6,8 @@
 # - The protected integration overwrites the x-gtc-caller-arn header with the signed caller's IAM ARN, so the app can
 #   record and scope jobs per caller; clients cannot spoof it (the gateway replaces any value they send).
 # - ECS registers each API task in Cloud Map as an SRV record (IP + port); the VPC Link integration discovers it.
-# - API Gateway cannot start ECS tasks: with desired_count = 0 the gateway returns 503 until a task is running.
+# - API Gateway cannot start ECS tasks: with desired_count = 0 Cloud Map has no instances and the gateway returns
+#   500 (observed) until a task is running.
 # - Both integrations overwrite the backend path with $request.path, so no stage prefix ever reaches the app.
 # - HTTP APIs time out integrations at 30 s, which is why no long computation runs behind a request (jobs are async).
 # ------------------------------------------------------------------------------------------------------------------

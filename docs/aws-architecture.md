@@ -1,7 +1,7 @@
 # GTC on AWS: architecture and decisions
 
-Status (2026-10-23): **Phase 1 is deployed** (synchronous API, paused). **Phase 2 is implemented and planned, NOT
-applied**: the Terraform plan and the code are ready; nothing below Phase 1 exists in AWS until the apply is approved.
+Status (2026-10-23): **Phase 2 is deployed and verified end to end**, then paused (API and worker at desired count 0).
+Deployment record: `reports/aws-phase2-deployed.md`.
 
 ## The story in one paragraph
 
@@ -55,7 +55,7 @@ Terraform state: S3 (versioned, encrypted, native lock file)
 ## Operating facts worth knowing
 
 - **API at zero tasks:** API Gateway cannot start an ECS task. With the API service at desired count 0, the gateway
-  returns 503. To demo: start the API service (and a worker), use it, scale back to 0.
+  returns HTTP 500 (observed: no Cloud Map instance to route to). To demo: start the API service (and a worker), use it, scale back to 0.
 - **Workers at zero:** jobs wait in the queue (4-day retention) and the "queue stale" alarm fires after 30 minutes.
 - **Heartbeat:** the worker extends its message's visibility every 60 s by 300 s. If an extension fails, the lease is
   treated as lost: the (idempotent) result is still written, but the stale receipt is not used. SQS caps a message's

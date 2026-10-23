@@ -149,7 +149,7 @@ resource "aws_cloudwatch_metric_alarm" "light_queue_age" {
 
 resource "aws_cloudwatch_metric_alarm" "api_5xx" {
   alarm_name          = "${local.name}-api-5xx"
-  alarm_description   = "API Gateway returned 5 or more 5xx responses in 5 minutes (includes 503 when no API task runs)"
+  alarm_description   = "API Gateway returned 5 or more 5xx responses in 5 minutes (includes the 500 returned while no API task runs)"
   namespace           = "AWS/ApiGateway"
   metric_name         = "5xx"
   dimensions          = { ApiId = aws_apigatewayv2_api.main.id, Stage = "$default" }
