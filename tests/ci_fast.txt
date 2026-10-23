@@ -5,6 +5,8 @@
 #   .venv/Scripts/python -m pytest -q
 # Usage: python -m pytest -q $(grep -v '^#' tests/ci_fast.txt)
 tests/test_api.py
+tests/test_jobs.py
+tests/test_jobs_aws_adapters.py
 tests/test_forward.py
 tests/test_model.py
 tests/test_engine.py

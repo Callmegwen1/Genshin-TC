@@ -1,21 +1,25 @@
-"""Cloud API for the theorycrafting engine: a thin FastAPI wrapper around the forward model's blind theorycraft.
+"""Cloud API for the theorycrafting engine (FastAPI).
 
-    GET  /health     liveness: {"status": "ok", ...}
-    POST /evaluate   {"lineup": ["A", "B", "C", "D"]} -> predicted team DPS from kits alone
+Async job API (the normal path):
+    POST /jobs/team            {"lineup": [4 names]}                          -> 202 job
+    POST /jobs/team-variant    {"lineup": [...], "replace": X, "with": Y}     -> 202 job
+    GET  /jobs/{job_id}        status, attempts, timestamps, error
+    GET  /jobs/{job_id}/result result document once SUCCEEDED
+Public:
+    GET  /health, GET /version
+Legacy / debug only:
+    POST /evaluate             synchronous ForwardModel call (~40-100 s). Disabled in AWS (ENABLE_SYNC_EVALUATE=0):
+                               API Gateway's 30 s integration timeout cannot carry it and the API task is sized small.
 
-Only characters with a hand-written forward-model kit (knowledge/forward/actions/*.yaml) are accepted. Any other
-name is rejected with 422 *before* the engine runs, because the engine's fallback for those characters is to run
-gcsim (a Windows binary that is not in the container).
+Authorization happens at API Gateway (AWS_IAM / SigV4 on /jobs routes). The gateway overwrites the
+x-gtc-caller-arn header with the signed caller's IAM ARN. With REQUIRE_GATEWAY_IDENTITY=1 (set in AWS) the app rejects
+/jobs requests that lack it, as defence in depth; jobs are visible only to the principal that submitted them.
 
-One prediction runs at a time (they are CPU-bound, about a minute each); a second concurrent request gets 429.
-Finished results are cached in memory, so a repeated lineup answers instantly and is never refused.
-
-Logs are one JSON object per line on stdout. ECS's awslogs driver ships stdout to CloudWatch Logs.
+Only characters with a hand-written forward-model kit are accepted (422 otherwise), because the engine's fallback for
+other characters needs gcsim, which is not in the image.
 """
 from __future__ import annotations
 
-import json
-import logging
 import os
 import sys
 import threading
@@ -24,7 +28,7 @@ import uuid
 from collections import OrderedDict
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
@@ -32,60 +36,42 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from gtc import KNOWLEDGE_DIR  # noqa: E402
+from api import identity  # noqa: E402
+from api.engine_adapter import KIT_DIR, UnsupportedCharacter, run_team, supported_characters  # noqa: E402
+from api.jobmodel import JobStatus  # noqa: E402
+from api.logs import event, get_logger  # noqa: E402
+from api.service import JobService, ValidationError  # noqa: E402
+from api.stores import from_environment  # noqa: E402
 from gtc.forward import FORWARD_VERSION  # noqa: E402
 
-KIT_DIR = KNOWLEDGE_DIR / "forward" / "actions"
+log = get_logger("gtc.api")
 CACHE_SIZE = int(os.environ.get("GTC_RESULT_CACHE", "64"))
-
-
-# ---- logging: JSON lines on stdout ------------------------------------------------------------------------------
-class _JsonFormatter(logging.Formatter):
-    def format(self, record: logging.LogRecord) -> str:
-        out = {"ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(record.created)), "level": record.levelname,
-               "msg": record.getMessage()}
-        out.update(getattr(record, "fields", {}))
-        if record.exc_info:
-            out["exc"] = self.formatException(record.exc_info)
-        return json.dumps(out, default=str)
-
-
-log = logging.getLogger("gtc.api")
-if not log.handlers:
-    _h = logging.StreamHandler(sys.stdout)
-    _h.setFormatter(_JsonFormatter())
-    log.addHandler(_h)
-    log.setLevel(logging.INFO)
-    log.propagate = False
-
-
-def _log(msg: str, level: int = logging.INFO, exc_info=False, **fields) -> None:
-    log.log(level, msg, extra={"fields": fields}, exc_info=exc_info)
-
-
-# ---- supported characters ---------------------------------------------------------------------------------------
-def supported_characters() -> list[str]:
-    """Characters with a hand-written kit file. Read from the directory listing, so the names keep the exact case of
-    the files (Linux filesystems are case-sensitive)."""
-    return sorted(p.stem for p in KIT_DIR.glob("*.yaml"))
-
+SYNC_ENABLED = os.environ.get("ENABLE_SYNC_EVALUATE", "1") == "1"
+REQUIRE_GATEWAY_IDENTITY = os.environ.get("REQUIRE_GATEWAY_IDENTITY", "0") == "1"
+CALLER_HEADER = "x-gtc-caller-arn"
 
 SUPPORTED = supported_characters()
 _BY_LOWER = {n.lower(): n for n in SUPPORTED}
 
+backends = from_environment()
+jobs = JobService(backends)
 
-class EvaluateRequest(BaseModel):
+app = FastAPI(title="Genshin Theorycrafting Engine API", version=FORWARD_VERSION,
+              description="ForwardModel team evaluation as asynchronous jobs (stable subset of the engine).")
+
+
+class TeamRequest(BaseModel):
     lineup: list[str] = Field(..., min_length=4, max_length=4,
                               examples=[["Kamisato Ayaka", "Shenhe", "Kaedehara Kazuha", "Yelan"]])
 
 
-# ---- concurrency and cache ---------------------------------------------------------------------------------------
-_busy = threading.Lock()
-_cache: "OrderedDict[tuple, dict]" = OrderedDict()
-_cache_lock = threading.Lock()
+class TeamVariantRequest(BaseModel):
+    lineup: list[str] = Field(..., min_length=4, max_length=4)
+    replace: str = Field(..., min_length=1, max_length=64)
+    with_: str = Field(..., alias="with", min_length=1, max_length=64)
 
-app = FastAPI(title="Genshin Theorycrafting Engine API", version=FORWARD_VERSION,
-              description="Team DPS predicted from character kits by the forward model (stable subset).")
+
+EvaluateRequest = TeamRequest   # legacy name
 
 
 @app.middleware("http")
@@ -95,79 +81,135 @@ async def access_log(request: Request, call_next):
     try:
         response = await call_next(request)
     except Exception:
-        _log("unhandled error", logging.ERROR, exc_info=True, request_id=rid, path=request.url.path)
+        event(log, "unhandled error", 40, exc_info=True, request_id=rid, path=request.url.path)
         raise
     response.headers["x-request-id"] = rid
-    _log("request", request_id=rid, method=request.method, path=request.url.path, status=response.status_code,
-         ms=round((time.perf_counter() - t0) * 1000), client=request.client.host if request.client else None)
+    event(log, "request", request_id=rid, method=request.method, path=request.url.path,
+          status=response.status_code, ms=round((time.perf_counter() - t0) * 1000),
+          client=request.client.host if request.client else None)
     return response
 
+
+# ------------------------------------------------------------------------------------------- public
 
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok", "engine_version": FORWARD_VERSION, "supported_characters": len(SUPPORTED)}
 
 
+@app.get("/version")
+def version() -> dict:
+    return {**identity.version_info(), "sync_evaluate_enabled": SYNC_ENABLED}
+
+
+# ------------------------------------------------------------------------------------------- jobs
+
+def _caller(arn: str | None) -> str:
+    if REQUIRE_GATEWAY_IDENTITY and not arn:
+        raise HTTPException(401, {"error": "requests must come through the API gateway with IAM authorization"})
+    return arn or ""
+
+
+def _job_response(job, code: int = 202) -> JSONResponse:
+    body = job.public()
+    body["links"] = {"self": f"/jobs/{job.job_id}", "result": f"/jobs/{job.job_id}/result"}
+    return JSONResponse(body, status_code=code)
+
+
+@app.post("/jobs/team")
+def submit_team(req: TeamRequest, x_gtc_caller_arn: str | None = Header(default=None)) -> JSONResponse:
+    caller = _caller(x_gtc_caller_arn)
+    try:
+        job = jobs.submit_team(req.lineup, caller)
+    except ValidationError as e:
+        event(log, "validation_failed", route="/jobs/team", error=e.detail.get("error"))
+        raise HTTPException(422, e.detail)
+    return _job_response(job, 200 if job.cache_hit else 202)
+
+
+@app.post("/jobs/team-variant")
+def submit_team_variant(req: TeamVariantRequest, x_gtc_caller_arn: str | None = Header(default=None)) -> JSONResponse:
+    caller = _caller(x_gtc_caller_arn)
+    try:
+        job = jobs.submit_team_variant(req.lineup, req.replace, req.with_, caller)
+    except ValidationError as e:
+        event(log, "validation_failed", route="/jobs/team-variant", error=e.detail.get("error"))
+        raise HTTPException(422, e.detail)
+    return _job_response(job, 200 if job.cache_hit else 202)
+
+
+@app.get("/jobs/{job_id}")
+def get_job(job_id: str, x_gtc_caller_arn: str | None = Header(default=None)) -> dict:
+    job = jobs.get(job_id, _caller(x_gtc_caller_arn))
+    if job is None:
+        raise HTTPException(404, {"error": "job not found"})
+    return job.public()
+
+
+@app.get("/jobs/{job_id}/result")
+def get_result(job_id: str, x_gtc_caller_arn: str | None = Header(default=None)) -> JSONResponse:
+    job = jobs.get(job_id, _caller(x_gtc_caller_arn))
+    if job is None:
+        raise HTTPException(404, {"error": "job not found"})
+    event(log, "result_requested", job_id=job_id, status=job.status)
+    if job.status in (JobStatus.QUEUED.value, JobStatus.RUNNING.value):
+        return JSONResponse({"job_id": job_id, "status": job.status, "status_message": job.status_message},
+                            status_code=202, headers={"Retry-After": "15"})
+    if job.status == JobStatus.FAILED.value:
+        return JSONResponse({"job_id": job_id, "status": job.status, "error": job.error}, status_code=409)
+    doc = _hot_get(job.result_location)
+    if doc is None:
+        event(log, "result_missing", 40, job_id=job_id, result_location=job.result_location)
+        return JSONResponse({"job_id": job_id, "status": job.status, "error": "result document is missing"},
+                            status_code=500)
+    return JSONResponse({"job_id": job_id, "job_type": job.job_type, "input": job.input, "cache_hit": job.cache_hit,
+                         "result": doc})
+
+
+_hot: "OrderedDict[str, dict]" = OrderedDict()   # small in-process hot cache in front of the result store
+_hot_lock = threading.Lock()
+
+
+def _hot_get(key: str) -> dict | None:
+    with _hot_lock:
+        if key in _hot:
+            _hot.move_to_end(key)
+            return _hot[key]
+    doc = backends.results.get(key)
+    if doc is not None:
+        with _hot_lock:
+            _hot[key] = doc
+            while len(_hot) > CACHE_SIZE:
+                _hot.popitem(last=False)
+    return doc
+
+
+# ------------------------------------------------------------------------------------------- legacy / debug
+
+_busy = threading.Lock()
+_cache: "OrderedDict[tuple, dict]" = OrderedDict()
+_cache_lock = threading.Lock()
+
+
 def _canonical(lineup: list[str]) -> list[str]:
-    names, unknown = [], []
-    for raw in lineup:
-        n = _BY_LOWER.get(raw.strip().lower())
-        (names.append(n) if n else unknown.append(raw))
-    if unknown:
-        raise HTTPException(422, {"error": "unsupported character", "unsupported": unknown,
-                                  "supported": SUPPORTED})
-    if len(set(names)) != len(names):
-        raise HTTPException(422, {"error": "a lineup cannot contain the same character twice", "lineup": names})
-    return names
+    try:
+        return jobs.team(lineup)
+    except ValidationError as e:
+        raise HTTPException(422, e.detail)
 
 
 def _run(lineup: list[str]) -> dict:
-    """Engine call. Imports are lazy so /health answers without loading the engine."""
-    from gtc.forward.blind import theorycraft
-    from gtc.forward.decompose import _label
-    from gtc.forward.library import load_hand
-
-    # defence in depth: never let a name without a kit file reach the gcsim fallback in library.build
-    missing = [m for m in lineup if load_hand(m) is None]
-    if missing:
-        raise HTTPException(422, {"error": "unsupported character", "unsupported": missing, "supported": SUPPORTED})
-
-    r = theorycraft(lineup, profile="neutral")
-    ev = r["evaluation"]
-    search = r.get("search") or {}
-    return {
-        "lineup": lineup,
-        "engine_version": FORWARD_VERSION,
-        "dps": round(ev.dps),
-        "total_damage": round(ev.total_damage),
-        "rotation_seconds": round(ev.rotation_duration, 2),
-        "strategy": _label(r["plan"]),
-        "per_character_dps": {k: round(v) for k, v in ev.per_character.items()},
-        "damage_share": {k: round(v, 4) for k, v in ev.damage_share.items()},
-        "per_reaction": {k: round(v) for k, v in ev.per_reaction.items()},
-        "top_buffs": dict(sorted(((k, round(v, 4)) for k, v in ev.buff_contributions.items()),
-                                 key=lambda kv: -kv[1])[:10]),
-        "field_time": {k: round(v, 2) for k, v in ev.field_time.items()},
-        "energy": ev.energy,
-        "coverage": round(ev.coverage, 4),
-        "uncertainty_relative_sd": round(ev.uncertainty, 4),
-        "confidence": ev.confidence,
-        "unknown": ev.unknown,
-        "assumptions": ev.assumptions,
-        "search": {
-            "candidates_evaluated": search.get("evaluated"),
-            "base_search_seconds": search.get("seconds"),
-            "time_limit_seconds": search.get("time_limit_seconds"),
-            "limit_hit": search.get("limit_hit"),            # "time", "plans" or null
-            "ended_by_time_limit": search.get("limit_hit") == "time",
-            "note": search.get("bounded") or None,
-        },
-    }
+    try:
+        return run_team(lineup)
+    except UnsupportedCharacter as e:
+        raise HTTPException(422, {"error": "unsupported character", "unsupported": e.names, "supported": SUPPORTED})
 
 
-@app.post("/evaluate")
-def evaluate(req: EvaluateRequest) -> JSONResponse:
-    # sync endpoint: FastAPI runs it in a worker thread, so /health stays responsive during a prediction
+@app.post("/evaluate", deprecated=True)
+def evaluate(req: TeamRequest) -> JSONResponse:
+    """LEGACY / DEBUG: synchronous evaluation. Use POST /jobs/team."""
+    if not SYNC_ENABLED:
+        raise HTTPException(404, {"error": "synchronous evaluation is disabled here; use POST /jobs/team"})
     lineup = _canonical(req.lineup)
     key = tuple(lineup)
     with _cache_lock:
@@ -175,20 +217,20 @@ def evaluate(req: EvaluateRequest) -> JSONResponse:
             _cache.move_to_end(key)
             return JSONResponse({**_cache[key], "cached": True})
     if not _busy.acquire(blocking=False):
-        _log("evaluation refused: busy", logging.WARNING, lineup=lineup)
+        event(log, "evaluation refused: busy", 30, lineup=lineup)
         return JSONResponse({"error": "another evaluation is running; retry later"}, status_code=429,
                             headers={"Retry-After": "60"})
     t0 = time.perf_counter()
     try:
-        _log("evaluation started", lineup=lineup)
+        event(log, "evaluation started", lineup=lineup)
         out = _run(lineup)
         out["seconds"] = round(time.perf_counter() - t0, 1)
-        _log("evaluation finished", lineup=lineup, dps=out["dps"], seconds=out["seconds"],
-             limit_hit=out["search"]["limit_hit"], candidates=out["search"]["candidates_evaluated"])
+        event(log, "evaluation finished", lineup=lineup, dps=out["dps"], seconds=out["seconds"],
+              limit_hit=out["search"]["limit_hit"], candidates=out["search"]["candidates_evaluated"])
     except HTTPException:
         raise
     except Exception as e:  # noqa: BLE001
-        _log("evaluation failed", logging.ERROR, exc_info=True, lineup=lineup)
+        event(log, "evaluation failed", 40, exc_info=True, lineup=lineup)
         raise HTTPException(500, {"error": "the engine could not evaluate this lineup", "type": type(e).__name__})
     finally:
         _busy.release()
@@ -197,3 +239,10 @@ def evaluate(req: EvaluateRequest) -> JSONResponse:
         while len(_cache) > CACHE_SIZE:
             _cache.popitem(last=False)
     return JSONResponse({**out, "cached": False})
+
+
+# local convenience: GTC_INLINE_WORKER=1 runs a worker thread inside the API process (memory backend demos only)
+if os.environ.get("GTC_INLINE_WORKER") == "1" and os.environ.get("GTC_BACKEND", "memory") == "memory":
+    from api.worker import Worker
+
+    threading.Thread(target=Worker(backends).run_forever, kwargs={"wait_seconds": 1}, daemon=True).start()

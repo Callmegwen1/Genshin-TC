@@ -1,13 +1,21 @@
 terraform {
-  required_version = ">= 1.6"
+  required_version = ">= 1.10" # S3 native state locking (use_lockfile)
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
   }
-  # State is local (infra/terraform.tfstate, git-ignored) for this first version: one person, one machine.
-  # Upgrade path: an S3 backend with native locking, so CI or a second machine can run Terraform safely.
+  # Remote state: S3 bucket created by infra/bootstrap (versioned, encrypted, private, TLS-only).
+  # Locking: native S3 lock file (Terraform >= 1.10); no DynamoDB lock table.
+  # The bucket name is account-specific and comes from backend.hcl (git-ignored; see backend.hcl.example):
+  #   terraform init -backend-config=backend.hcl
+  backend "s3" {
+    key          = "gtc/staging/terraform.tfstate"
+    region       = "us-east-2"
+    encrypt      = true
+    use_lockfile = true
+  }
 }
 
 provider "aws" {

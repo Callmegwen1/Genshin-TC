@@ -57,8 +57,9 @@ resource "aws_route_table_association" "public" {
   route_table_id = aws_route_table.public.id
 }
 
-# Stateful firewall on the task's network interface: port 8000 from one CIDR (your IP) only. All outbound is allowed
-# so the task can pull its image and ship logs.
+# Stateful firewall on the API task's network interface. Phase 2: port 8000 only from the API Gateway VPC Link's
+# security group (api_gateway.tf). All outbound is allowed so the task can reach ECR, SQS, DynamoDB, S3 and logs.
+# (The description below is historical: changing a security group's description forces its replacement.)
 resource "aws_security_group" "api" {
   name        = "${local.name}-api"
   description = "GTC API: port 8000 from the allowed CIDR only"
@@ -67,6 +68,7 @@ resource "aws_security_group" "api" {
 }
 
 resource "aws_vpc_security_group_ingress_rule" "api_8000" {
+  count             = var.enable_direct_access ? 1 : 0 # debug only; normal traffic arrives through API Gateway
   security_group_id = aws_security_group.api.id
   description       = "API from the allowed CIDR"
   ip_protocol       = "tcp"
@@ -214,10 +216,11 @@ resource "aws_ecs_cluster" "main" {
 resource "aws_ecs_task_definition" "api" {
   family                   = "${local.name}-api"
   requires_compatibilities = ["FARGATE"]
-  network_mode             = "awsvpc" # each task gets its own network interface and security group
-  cpu                      = var.task_cpu
-  memory                   = var.task_memory
+  network_mode             = "awsvpc"    # each task gets its own network interface and security group
+  cpu                      = var.api_cpu # Phase 2: the API only validates, queues and reads; workers compute
+  memory                   = var.api_memory
   execution_role_arn       = aws_iam_role.execution.arn
+  task_role_arn            = aws_iam_role.api_task.arn # the API's own AWS permissions (iam_tasks.tf)
   runtime_platform {
     operating_system_family = "LINUX"
     cpu_architecture        = "X86_64"
@@ -228,8 +231,15 @@ resource "aws_ecs_task_definition" "api" {
     essential    = true
     portMappings = [{ containerPort = 8000, protocol = "tcp" }]
     environment = [
-      { name = "GTC_SEARCH_SECONDS", value = tostring(var.search_seconds) },
+      { name = "GTC_SEARCH_SECONDS", value = tostring(var.search_seconds) }, # part of the dedupe hash: same as worker
       { name = "GTC_CACHE_OFFLINE", value = "1" },
+      { name = "GTC_BACKEND", value = "aws" },
+      { name = "GTC_JOBS_TABLE", value = aws_dynamodb_table.jobs.name },
+      { name = "GTC_RESULTS_BUCKET", value = aws_s3_bucket.results.bucket },
+      { name = "GTC_LIGHT_QUEUE_URL", value = aws_sqs_queue.light.url },
+      { name = "ENABLE_SYNC_EVALUATE", value = "0" },     # legacy synchronous route off in AWS
+      { name = "REQUIRE_GATEWAY_IDENTITY", value = "1" }, # /jobs routes need the gateway-set caller header
+      { name = "AWS_DEFAULT_REGION", value = var.region },
     ]
     readonlyRootFilesystem = true # the engine writes nothing in offline mode
     user                   = "10001"
@@ -261,7 +271,14 @@ resource "aws_ecs_service" "api" {
   network_configuration {
     subnets          = aws_subnet.public[*].id
     security_groups  = [aws_security_group.api.id]
-    assign_public_ip = true # no NAT and no load balancer: the task is reached on its own public IP
+    assign_public_ip = true # no NAT: the public IP is only for outbound (ECR, AWS APIs); inbound comes via VPC Link
+  }
+
+  # Cloud Map registration (SRV: IP + port) that API Gateway's VPC Link integration resolves (api_gateway.tf)
+  service_registries {
+    registry_arn   = aws_service_discovery_service.api.arn
+    container_name = "api"
+    container_port = 8000
   }
 
   deployment_circuit_breaker { # a deployment whose tasks keep failing is rolled back automatically
@@ -337,7 +354,7 @@ data "aws_iam_policy_document" "github_deploy" {
   statement {
     sid       = "DeployService"
     actions   = ["ecs:UpdateService", "ecs:DescribeServices"]
-    resources = [aws_ecs_service.api.id]
+    resources = [aws_ecs_service.api.id, aws_ecs_service.worker.id]
   }
   statement {
     sid       = "FindTaskIp"
@@ -345,9 +362,9 @@ data "aws_iam_policy_document" "github_deploy" {
     resources = ["*"]
   }
   statement {
-    sid       = "PassExecutionRole" # registering a task definition hands this role to ECS
+    sid       = "PassTaskRoles" # registering a task definition hands these roles to ECS, and only to ECS
     actions   = ["iam:PassRole"]
-    resources = [aws_iam_role.execution.arn]
+    resources = [aws_iam_role.execution.arn, aws_iam_role.api_task.arn, aws_iam_role.worker_task.arn]
     condition {
       test     = "StringEquals"
       variable = "iam:PassedToService"

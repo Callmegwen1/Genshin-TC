@@ -1,0 +1,4 @@
+# Copy to backend.hcl (git-ignored) and put your account ID in the bucket name, then:
+#   terraform init -backend-config=backend.hcl
+# Account ID: aws sts get-caller-identity --query Account --output text
+bucket = "gtc-tfstate-<account-id>"

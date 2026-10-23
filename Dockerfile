@@ -25,11 +25,18 @@ RUN python -m compileall -q gtc api \
  && test "$(ls data/sources/cache/amber | wc -l)" -gt 300 \
  && useradd --system --uid 10001 --no-create-home --shell /usr/sbin/nologin app
 
+# deployment facts reported by GET /version (CI passes --build-arg GTC_COMMIT=<sha> ...); never secrets.
+# Declared last so a new commit does not invalidate the dependency and code layers above.
+ARG GTC_COMMIT=local
+ARG GTC_BUILD_TIME=unknown
+ARG GTC_IMAGE_TAG=local
+ENV GTC_COMMIT=${GTC_COMMIT} GTC_BUILD_TIME=${GTC_BUILD_TIME} GTC_IMAGE_TAG=${GTC_IMAGE_TAG}
+
 USER 10001
 EXPOSE 8000
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
   CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4)"]
 
-# one worker: predictions are CPU-bound and the API runs one at a time by design
+# API mode by default. Worker mode: the same image with command ["python", "-m", "api.worker"] (ECS task definition)
 CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1", "--no-access-log"]

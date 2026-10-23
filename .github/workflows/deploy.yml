@@ -1,10 +1,15 @@
-# CI/CD: on every push to main, run the fast test subset, build the API image, push it to ECR and roll it out on ECS.
-# AWS access is OIDC: GitHub signs a token for this workflow run and AWS exchanges it for 1-hour credentials of the
+# CI/CD (fast deployment gate): on every push to main
+#   fast tests -> build ONE image -> push to ECR -> new task-definition revisions for the API and the worker
+#   -> roll out both ECS services -> verify GET /version reports this commit (when the API is running).
+# Slow engine validation lives in validation.yml and never blocks a deploy.
+#
+# AWS access is OIDC: GitHub signs a token for this run and AWS exchanges it for 1-hour credentials of the
 # gtc-github-deploy role (infra/main.tf). No AWS keys are stored in GitHub.
 #
 # Repository variables (Settings > Secrets and variables > Actions > Variables):
 #   AWS_DEPLOY_ROLE_ARN   terraform output github_deploy_role_arn
 #   CACHE_BUCKET          terraform output cache_bucket
+#   GTC_API_URL           terraform output api_url   (public /version is used for deployment verification)
 name: deploy
 
 on:
@@ -25,9 +30,6 @@ env:
   AWS_REGION: us-east-2
   ECR_REPOSITORY: gtc-api
   ECS_CLUSTER: gtc-cluster
-  ECS_SERVICE: gtc-api
-  TASK_FAMILY: gtc-api
-  CONTAINER_NAME: api
   GTC_CACHE_OFFLINE: "1" # tests and image use the cache from S3, never the network
 
 jobs:
@@ -37,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - uses: aws-actions/configure-aws-credentials@v5
+      - uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
@@ -53,7 +55,7 @@ jobs:
       - name: Install
         run: pip install -e . -r api/requirements-dev.txt
 
-      - name: Fast test subset (API + forward model + regression)
+      - name: Fast test subset (API, async jobs, forward model, regression)
         # the full 415-test suite needs local-only data (account snapshots, community sims): run it locally
         run: python -m pytest -q $(grep -v '^#' tests/ci_fast.txt)
 
@@ -64,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - uses: aws-actions/configure-aws-credentials@v5
+      - uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
@@ -85,32 +87,70 @@ jobs:
           if aws ecr describe-images --repository-name "$ECR_REPOSITORY" --image-ids imageTag="${{ github.sha }}" >/dev/null 2>&1; then
             echo "image for this commit already in ECR"
           else
-            docker build --platform linux/amd64 --provenance=false -t "$IMAGE" .
+            docker build --platform linux/amd64 --provenance=false \
+              --build-arg GTC_COMMIT="${{ github.sha }}" \
+              --build-arg GTC_IMAGE_TAG="${{ github.sha }}" \
+              --build-arg GTC_BUILD_TIME="$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+              -t "$IMAGE" .
             docker push "$IMAGE"
           fi
           echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
 
-      - name: Current task definition
-        run: aws ecs describe-task-definition --task-definition "$TASK_FAMILY" --query taskDefinition > task-definition.json
+      # Each family's latest revision (registered by Terraform or the previous deploy) keeps its environment, role and
+      # command; only the image changes.
+      - name: Current task definitions
+        run: |
+          aws ecs describe-task-definition --task-definition gtc-api --query taskDefinition > api-task.json
+          aws ecs describe-task-definition --task-definition gtc-worker --query taskDefinition > worker-task.json
 
-      - name: New task definition revision with this image
-        id: render
+      - name: API revision with this image
+        id: render_api
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: task-definition.json
-          container-name: ${{ env.CONTAINER_NAME }}
+          task-definition: api-task.json
+          container-name: api
           image: ${{ steps.image.outputs.image }}
 
-      - name: Deploy to ECS and wait until stable
+      - name: Worker revision with this image
+        id: render_worker
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: worker-task.json
+          container-name: worker
+          image: ${{ steps.image.outputs.image }}
+
+      - name: Deploy the API service and wait until stable
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
-          task-definition: ${{ steps.render.outputs.task-definition }}
+          task-definition: ${{ steps.render_api.outputs.task-definition }}
           cluster: ${{ env.ECS_CLUSTER }}
-          service: ${{ env.ECS_SERVICE }}
+          service: gtc-api
           wait-for-service-stability: true
 
-      - name: Report the new public IP
-        # the security group admits only the owner's IP, so the runner cannot smoke-test; it reports where to look
+      - name: Deploy the worker service and wait until stable
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.render_worker.outputs.task-definition }}
+          cluster: ${{ env.ECS_CLUSTER }}
+          service: gtc-worker
+          wait-for-service-stability: true
+
+      - name: Verify GET /version reports this commit
+        # Services may be paused at desired count 0 to save money: then there is nothing to verify, and the new
+        # revision is used the next time the service is started.
         run: |
-          IP=$(bash scripts/ecs_ip.sh "$ECS_CLUSTER" "$ECS_SERVICE")
-          echo "Deployed ${{ github.sha }} at http://$IP:8000" | tee -a "$GITHUB_STEP_SUMMARY"
+          DESIRED=$(aws ecs describe-services --cluster "$ECS_CLUSTER" --services gtc-api --query 'services[0].desiredCount' --output text)
+          if [ "$DESIRED" = "0" ] || [ -z "${{ vars.GTC_API_URL }}" ]; then
+            echo "API service paused (desired=$DESIRED) or GTC_API_URL unset: skipping live verification" | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          for i in $(seq 30); do
+            COMMIT=$(curl -fsS "${{ vars.GTC_API_URL }}/version" | python3 -c 'import json,sys; print(json.load(sys.stdin)["app_commit"])' || true)
+            if [ "$COMMIT" = "${{ github.sha }}" ]; then
+              echo "Verified: ${{ vars.GTC_API_URL }}/version reports ${{ github.sha }}" | tee -a "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::/version did not report ${{ github.sha }} (last: $COMMIT)"
+          exit 1

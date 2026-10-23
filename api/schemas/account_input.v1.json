@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gtc.account.v1",
+  "title": "GTC sanitized account input v1",
+  "description": "Game data the account analysis needs, with no HoYoLAB credentials and no account identifiers. Produced on the user's machine by a sanitizer after the HoYoLAB import; the cloud service never receives cookies, tokens or the UID.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "roster"],
+  "properties": {
+    "schema_version": {"const": "gtc.account.v1"},
+    "profile": {"enum": ["neutral"], "default": "neutral"},
+    "roster": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 200,
+      "items": {"$ref": "#/$defs/character"}
+    },
+    "spare_weapons": {
+      "type": "array",
+      "maxItems": 2000,
+      "items": {"$ref": "#/$defs/weapon"}
+    }
+  },
+  "$defs": {
+    "character": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "element", "rarity", "level", "constellation", "talents", "weapon"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 64},
+        "element": {"enum": ["Pyro", "Hydro", "Electro", "Cryo", "Anemo", "Geo", "Dendro"]},
+        "rarity": {"type": "integer", "minimum": 4, "maximum": 5},
+        "level": {"type": "integer", "minimum": 1, "maximum": 100},
+        "constellation": {"type": "integer", "minimum": 0, "maximum": 6},
+        "talents": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["normal", "skill", "burst"],
+          "properties": {
+            "normal": {"type": "integer", "minimum": 1, "maximum": 10},
+            "skill": {"type": "integer", "minimum": 1, "maximum": 10},
+            "burst": {"type": "integer", "minimum": 1, "maximum": 10},
+            "normal_bonus": {"type": "integer", "minimum": 0, "maximum": 3, "default": 0},
+            "skill_bonus": {"type": "integer", "minimum": 0, "maximum": 3, "default": 0},
+            "burst_bonus": {"type": "integer", "minimum": 0, "maximum": 3, "default": 0}
+          }
+        },
+        "weapon": {"$ref": "#/$defs/weapon"},
+        "artifacts": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {"$ref": "#/$defs/artifact"}
+        },
+        "stats": {
+          "type": "object",
+          "description": "Computed panel stats keyed by GOOD stat keys.",
+          "additionalProperties": {"type": "number"}
+        }
+      }
+    },
+    "weapon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "rarity", "level", "refinement"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 80},
+        "rarity": {"type": "integer", "minimum": 1, "maximum": 5},
+        "level": {"type": "integer", "minimum": 1, "maximum": 90},
+        "refinement": {"type": "integer", "minimum": 1, "maximum": 5},
+        "ascension": {"type": ["integer", "null"], "minimum": 0, "maximum": 6},
+        "type": {"type": ["integer", "string"]}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slot", "set_name", "rarity", "level", "main_stat"],
+      "properties": {
+        "slot": {"type": "integer", "minimum": 1, "maximum": 5},
+        "set_name": {"type": "string", "maxLength": 80},
+        "rarity": {"type": "integer", "minimum": 1, "maximum": 5},
+        "level": {"type": "integer", "minimum": 0, "maximum": 20},
+        "main_stat": {"type": "string", "maxLength": 40},
+        "main_value": {"type": "number"},
+        "substats": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["key", "value"],
+            "properties": {
+              "key": {"type": "string", "maxLength": 40},
+              "value": {"type": "number"},
+              "rolls": {"type": "integer", "minimum": 0, "maximum": 10}
+            }
+          }
+        }
+      }
+    }
+  }
+}

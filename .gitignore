@@ -23,10 +23,12 @@ reports/
 web/data/
 
 # ---- Terraform: state holds resource IDs and can hold secrets ---------------
-infra/.terraform/
-infra/*.tfstate
-infra/*.tfstate.*
-infra/*.tfvars
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+infra/state-backups/
+**/*.tfvars
+**/backend.hcl
 !infra/*.tfvars.example
 infra/.terraform.lock.hcl.bak
 crash.log

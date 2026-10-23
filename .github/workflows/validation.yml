@@ -1,0 +1,49 @@
+# Heavy validation (slow): real ForwardModel runs through the async job path, checked against the synchronous call.
+# Runs weekly and on demand. It never blocks a deployment; deploy.yml keeps the fast gate.
+#
+#   fast gate (deploy.yml):  ~1 min of unit/API/job/adapter tests that must pass before any image ships
+#   validation (this file):  ~2-3 min of real engine evaluations; a failure here is investigated, not auto-deployed
+#
+# Stays local-only (cannot run on a clean CI checkout): the rotation-generator and phase G-N suites need the local
+# gcsim binary and simulation archive, and 48 tests need private local data (account snapshot, community data).
+name: validation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-2
+  GTC_CACHE_OFFLINE: "1"
+  GTC_SEARCH_SECONDS: "60" # same search limit as the cloud workers
+
+jobs:
+  engine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download the game-data cache from S3
+        run: aws s3 sync "s3://${{ vars.CACHE_BUCKET }}/amber" data/sources/cache/amber --only-show-errors
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+          cache: pip
+
+      - name: Install
+        run: pip install -e . -r api/requirements-dev.txt
+
+      - name: Async result identical to the synchronous ForwardModel call (real engine, cloud search limit)
+        run: python -m pytest -q tests/test_jobs_engine.py
